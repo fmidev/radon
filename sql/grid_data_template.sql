@@ -23,12 +23,19 @@ SET default_table_access_method = heap;
 --
 -- Name: grid_data_template; Type: TABLE; Schema: public; Owner: radon_admin
 --
+DROP TABLE IF EXISTS public.grid_data_template;
 
 CREATE TABLE public.grid_data_template (
     producer_id integer NOT NULL,
     analysis_time timestamp with time zone NOT NULL,
     geometry_id integer NOT NULL,
     param_id integer NOT NULL,
+    production_type_id int DEFAULT 1,
+    aggregation_id integer NOT NULL,
+    aggregation_period interval NOT NULL default '00:00:00',
+    processing_type_id integer NOT NULL,
+    processing_type_value numeric NOT NULL default '-1'::integer,
+    processing_type_value2 numeric NOT NULL default '-1'::integer,
     level_id integer NOT NULL,
     level_value numeric NOT NULL,
     level_value2 numeric DEFAULT '-1'::integer NOT NULL,
@@ -75,7 +82,7 @@ COMMENT ON COLUMN public.grid_data_template.last_updated IS 'Fixed column for la
 --
 
 ALTER TABLE ONLY public.grid_data_template
-    ADD CONSTRAINT grid_data_template_pkey PRIMARY KEY (producer_id, analysis_time, geometry_id, param_id, level_id, level_value, level_value2, forecast_period, forecast_type_id, forecast_type_value);
+    ADD CONSTRAINT grid_data_template_pkey PRIMARY KEY (producer_id, analysis_time, geometry_id, param_id, production_type_id, aggregation_id, aggregation_period, processing_type_id, processing_type_value, processing_type_value2, level_id, level_value, level_value2, forecast_period, forecast_type_id, forecast_type_value);
 
 
 --
@@ -139,6 +146,22 @@ ALTER TABLE ONLY public.grid_data_template
 
 ALTER TABLE ONLY public.grid_data_template
     ADD CONSTRAINT grid_data_template_param_fkey FOREIGN KEY (param_id) REFERENCES public.param(id);
+
+
+--
+-- Name: grid_data_template grid_data_template_aggregation_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
+--
+
+ALTER TABLE ONLY public.grid_data_template
+    ADD CONSTRAINT grid_data_template_aggregation_fkey FOREIGN KEY (aggregation_id) REFERENCES public.aggregation(id);
+
+
+--
+-- Name: grid_data_template grid_data_template_processing_type_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
+--
+
+ALTER TABLE ONLY public.grid_data_template
+    ADD CONSTRAINT grid_data_template_processing_type_fkey FOREIGN KEY (processing_type_id) REFERENCES public.processing_type(id);
 
 
 --

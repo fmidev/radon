@@ -1,0 +1,366 @@
+DROP TABLE IF EXISTS param_v2_to_v1 CASCADE;
+
+CREATE TABLE param_v2_to_v1 (
+  id serial not null primary key,
+  producer_id int not null,
+  v2_param_id int not null references param(id),
+  production_type_id int not null references production_type(id) default 1,
+  aggregation_id int not null references aggregation(id) default 1,
+  aggregation_period interval not null default '00:00:00',
+  processing_type_id int not null references processing_type(id) default 1,
+  processing_type_value numeric not null default -1,
+  processing_type_value2 numeric not null default -1,
+  no_fixed_aggregation_period bool not null default false,
+  v1_param_name varchar(50) not null,
+  CHECK (no_fixed_aggregation_period = FALSE or (no_fixed_aggregation_period = TRUE AND aggregation_period = '00:00:00'))
+);
+
+CREATE OR REPLACE VIEW
+  param_v2_to_v1_v
+AS
+SELECT
+  v.producer_id,
+  f.name AS producer_name,
+  v.v2_param_id AS v2_param_id,
+  p.name AS v2_param_name,
+  v.production_type_id,
+  pt.name AS production_type_name,
+  v.aggregation_id,
+  a.name AS aggregation_name,
+  v.aggregation_period,
+  v.processing_type_id,
+  pty.name AS processing_type_name,
+  v.processing_type_value,
+  v.processing_type_value2,
+  v.no_fixed_aggregation_period,
+  v.v1_param_name
+FROM
+  param_v2_to_v1 v
+JOIN param p ON (p.id = v.v2_param_id)
+JOIN production_type pt ON (pt.id = v.production_type_id)
+JOIN aggregation a ON (v.aggregation_id = a.id)
+JOIN processing_type pty ON (pty.id = v.processing_type_id)
+LEFT OUTER JOIN fmi_producer f ON (f.id = v.producer_id)
+;
+
+CREATE OR REPLACE FUNCTION
+  param_V2_to_v1_producer_check_f()
+RETURNS TRIGGER
+AS $$
+DECLARE
+  id_ INT;
+BEGIN
+  IF NEW.producer_id = -1 THEN
+    RETURN NEW;
+  ELSE
+    SELECT id INTO id_ FROM fmi_producer WHERE id = NEW.producer_id;
+
+    IF NOT FOUND THEN
+      RAISE EXCEPTION 'Producer id % not found', NEW.producer_id;
+    END IF;
+  END IF;
+  RETURN NEW;
+END;
+$$ LANGUAGE PLPGSQL SECURITY DEFINER;
+
+CREATE TRIGGER param_v2_to_v1_producer_id_trg AFTER INSERT OR UPDATE ON public.param_v2_to_v1 FOR EACH ROW EXECUTE FUNCTION public.param_V2_to_v1_producer_check_f();
+
+CREATE UNIQUE INDEX param_v2_to_v1_uniq_idx ON param_v2_to_v1 (producer_id, v2_param_id, production_type_id, aggregation_id, aggregation_period, processing_type_id, processing_type_value, processing_type_value2, no_fixed_aggregation_period);
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '00:00:00', DEFAULT, DEFAULT, DEFAULT, true, 'RR-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RRC-KGM2'), DEFAULT, 3, '00:00:00', DEFAULT, DEFAULT, DEFAULT, true, 'RRL-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RRL-KGM2'), DEFAULT, 3, '00:00:00', DEFAULT, DEFAULT, DEFAULT, true, 'RRC-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 1, '00:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'PRI-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RACC-KGM2'), DEFAULT, 1, '00:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'RRI-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'GR-KGM2'), DEFAULT, 3, '00:00:00', DEFAULT, DEFAULT, DEFAULT, true, 'GR-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'GR-KGM2'), DEFAULT, 1, '00:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'GRI-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'GR-KGM2'), DEFAULT, 3, '01:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'GRR-MMH');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '00:00:00', DEFAULT, DEFAULT, DEFAULT, true, 'SNACC-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 1, '00:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'SNRI-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '03:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'SN-3-MM');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '06:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'SN-6-MM');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '24:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'SN-24-MM');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '01:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'SNR-KGM2');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'EVAP-KGM2'), DEFAULT, 3, '00:00:00', DEFAULT, DEFAULT, DEFAULT, true, 'EVAP-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RACC-KGM2'), DEFAULT, 3, '00:00:00', DEFAULT, DEFAULT, DEFAULT, true, 'RACC-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '00:00:00', DEFAULT, DEFAULT, DEFAULT, true, 'RRS-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '03:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'RRS-3-MM');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RRC-KGM2'), DEFAULT, 3, '01:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'RRRC-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RRL-KGM2'), DEFAULT, 3, '01:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'RRRL-KGM2');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'SDNIRR-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'SDNIRR-JM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FLLAT-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'FLLAT-JM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FLSEN-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'FLSEN-JM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADGLOA-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'RADGLOA-JM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADGLOCA-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'RADGLOCA-JM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADLWA-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'RADLWA-JM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADLWCA-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'RADLWCA-JM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADSWA-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'RADSWA-JM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RNETLWA-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'RNETLWA-JM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RNETSWA-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'RNETSWA-JM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RTOPLWA-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'RTOPLWA-JM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RTOPSWA-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'RTOPSWA-JM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'BLDIS-JM2'), DEFAULT, 3, '00:00:00', 1, DEFAULT, DEFAULT, true, 'BLDIS-JM2');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADLWA-JM2'), DEFAULT, 1, '00:00:00', 1, DEFAULT, DEFAULT, false, 'RADLW-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADSWA-JM2'), DEFAULT, 1, '00:00:00', 1, DEFAULT, DEFAULT, false, 'RADSW-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RNETLWA-JM2'), DEFAULT, 1, '00:00:00', 1, DEFAULT, DEFAULT, false, 'RNETLW-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RTOPSWA-JM2'), DEFAULT, 1, '00:00:00', 1, DEFAULT, DEFAULT, false, 'RTOPSW-WM2');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADSW-WM2'), DEFAULT, 2, '01:00:00', 1, DEFAULT, DEFAULT, false, 'RADSW-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADLW-WM2'), DEFAULT, 2, '01:00:00', 1, DEFAULT, DEFAULT, false, 'RADLW-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADGLO-WM2'), DEFAULT, 2, '01:00:00', 1, DEFAULT, DEFAULT, false, 'RADGLO-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADGLOC-WM2'), DEFAULT, 2, '01:00:00', 1, DEFAULT, DEFAULT, false, 'RADGLOC-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RNETLW-WM2'), DEFAULT, 2, '01:00:00', 1, DEFAULT, DEFAULT, false, 'RNETLW-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADSW-WM2'), DEFAULT, 2, '03:00:00', 1, DEFAULT, DEFAULT, false, 'RADSW-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADLW-WM2'), DEFAULT, 2, '03:00:00', 1, DEFAULT, DEFAULT, false, 'RADLW-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADGLO-WM2'), DEFAULT, 2, '03:00:00', 1, DEFAULT, DEFAULT, false, 'RADGLO-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADGLOC-WM2'), DEFAULT, 2, '03:00:00', 1, DEFAULT, DEFAULT, false, 'RADGLOC-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RNETLW-WM2'), DEFAULT, 2, '03:00:00', 1, DEFAULT, DEFAULT, false, 'RNETLW-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADSW-WM2'), DEFAULT, 2, '06:00:00', 1, DEFAULT, DEFAULT, false, 'RADSW-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADLW-WM2'), DEFAULT, 2, '06:00:00', 1, DEFAULT, DEFAULT, false, 'RADLW-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADGLO-WM2'), DEFAULT, 2, '06:00:00', 1, DEFAULT, DEFAULT, false, 'RADGLO-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADGLOC-WM2'), DEFAULT, 2, '06:00:00', 1, DEFAULT, DEFAULT, false, 'RADGLOC-WM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RNETLW-WM2'), DEFAULT, 2, '06:00:00', 1, DEFAULT, DEFAULT, false, 'RNETLW-WM2');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, 4, '01:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'TMAX-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, 5, '01:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'TMIN-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, 4, '03:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'TMAX-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, 5, '03:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'TMIN-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, 4, '06:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'TMAX-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, 5, '06:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'TMIN-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), 7, 4, '03:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'TMAX3H-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), 7, 5, '03:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'TMIN3H-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), 8, 4, '06:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'TMAX6H-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), 8, 5, '06:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'TMIN6H-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, 4, '00:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'TMAX-K'); -- analysis hour
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, 5, '00:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'TMIN-K'); -- analysis hour
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-C'), DEFAULT, 1, '00:00:00', 4, 273.15, DEFAULT, false, 'PROB-TC-0');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-C'), DEFAULT, 1, '00:00:00', 4, 259.15, DEFAULT, false, 'PROB-TC-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-C'), DEFAULT, 1, '00:00:00', 4, 254.15, DEFAULT, false, 'PROB-TC-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-C'), DEFAULT, 1, '00:00:00', 4, 249.15, DEFAULT, false, 'PROB-TC-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-C'), DEFAULT, 1, '00:00:00', 4, 244.15, DEFAULT, false, 'PROB-TC-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-C'), DEFAULT, 1, '00:00:00', 4, 238.15, DEFAULT, false, 'PROB-TC-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, 1, '00:00:00', 2, 299.15, DEFAULT, false, 'PROB-TW-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, 1, '00:00:00', 2, 301.15, DEFAULT, false, 'PROB-TW-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, 1, '00:00:00', 2, 304.15, DEFAULT, false, 'PROB-TW-3');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'CSI-N'), DEFAULT, 1, '00:00:00', 2, 30, DEFAULT, false, 'PROB-CSI-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'CSI-N'), DEFAULT, 1, '00:00:00', 2, 60, DEFAULT, false, 'PROB-CSI-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'CSI-N'), DEFAULT, 1, '00:00:00', 2, 100, DEFAULT, false, 'PROB-CSI-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'POT-PRCNT'), DEFAULT, 1, '00:00:00', 2, 1, DEFAULT, false, 'PROB-POT-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'POT-PRCNT'), DEFAULT, 1, '00:00:00', 2, 30, DEFAULT, false, 'PROB-POT-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'POT-PRCNT'), DEFAULT, 1, '00:00:00', 2, 60, DEFAULT, false, 'PROB-POT-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '3:00:00', 2, 0.3, DEFAULT, false, 'PROB-RR3-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '3:00:00', 2, 3, DEFAULT, false, 'PROB-RR3-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '3:00:00', 2, 6, DEFAULT, false, 'PROB-RR3-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '3:00:00', 2, 10, DEFAULT, false, 'PROB-RR3-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '3:00:00', 2, 20, DEFAULT, false, 'PROB-RR3-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '3:00:00', 2, 0.01, DEFAULT, false, 'PROB-RR3-6');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '6:00:00', 2, 1, DEFAULT, false, 'PROB-RR6-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '6:00:00', 2, 10, DEFAULT, false, 'PROB-RR6-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '6:00:00', 2, 20, DEFAULT, false, 'PROB-RR6-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '12:00:00', 2, 1, DEFAULT, false, 'PROB-RR12-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '12:00:00', 2, 10, DEFAULT, false, 'PROB-RR12-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '12:00:00', 2, 20, DEFAULT, false, 'PROB-RR12-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '24:00:00', 2, 1, DEFAULT, false, 'PROB-RR24-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '24:00:00', 2, 10, DEFAULT, false, 'PROB-RR24-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '24:00:00', 2, 20, DEFAULT, false, 'PROB-RR24-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '24:00:00', 2, 30, DEFAULT, false, 'PROB-RR24-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '24:00:00', 2, 50, DEFAULT, false, 'PROB-RR24-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '24:00:00', 2, 70, DEFAULT, false, 'PROB-RR24-6');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '24:00:00', 2, 100, DEFAULT, false, 'PROB-RR24-7');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'PRECFORM-N'), DEFAULT, DEFAULT, DEFAULT, 6, 0, DEFAULT, false, 'PROB-DRIZZLE');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'PRECFORM-N'), DEFAULT, DEFAULT, DEFAULT, 6, 1, DEFAULT, false, 'PROB-RAIN');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'PRECFORM-N'), DEFAULT, DEFAULT, DEFAULT, 6, 2, DEFAULT, false, 'PROB-SLEET');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'PRECFORM-N'), DEFAULT, DEFAULT, DEFAULT, 6, 3, DEFAULT, false, 'PROB-SNOW');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'PRECFORM-N'), DEFAULT, DEFAULT, DEFAULT, 6, 4, DEFAULT, false, 'PROB-FRDRZZL');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'PRECFORM-N'), DEFAULT, DEFAULT, DEFAULT, 6, 5, DEFAULT, false, 'PROB-FRRAIN');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'PRECFORM-N'), DEFAULT, DEFAULT, DEFAULT, 7, 4, 5, false, 'PROB-FRPREC');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'POTPRECF-N'), DEFAULT, DEFAULT, DEFAULT, 6, 0, DEFAULT, false, 'PROB-POTDRIZZLE');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'POTPRECF-N'), DEFAULT, DEFAULT, DEFAULT, 6, 1, DEFAULT, false, 'PROB-POTRAIN');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'POTPRECF-N'), DEFAULT, DEFAULT, DEFAULT, 6, 2, DEFAULT, false, 'PROB-POTSLEET');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'POTPRECF-N'), DEFAULT, DEFAULT, DEFAULT, 6, 3, DEFAULT, false, 'PROB-POTSNOW');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'POTPRECF-N'), DEFAULT, DEFAULT, DEFAULT, 6, 4, DEFAULT, false, 'PROB-POTFRDRZZL');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'POTPRECF-N'), DEFAULT, DEFAULT, DEFAULT, 6, 5, DEFAULT, false, 'PROB-POTFRRAIN');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'CBTCU-FL'), DEFAULT, DEFAULT, DEFAULT, 2, 0, DEFAULT, false, 'PROB-CBTCU-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'CEIL-M'), DEFAULT, DEFAULT, DEFAULT, 5, 61, DEFAULT, false, 'PROB-CEIL-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'CEIL-M'), DEFAULT, DEFAULT, DEFAULT, 5, 152, DEFAULT, false, 'PROB-CEIL-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'CEIL-M'), DEFAULT, DEFAULT, DEFAULT, 5, 305, DEFAULT, false, 'PROB-CEIL-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'CEIL-M'), DEFAULT, DEFAULT, DEFAULT, 5, 457, DEFAULT, false, 'PROB-CEIL-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '1:00:00', 2, 15, DEFAULT, false, 'PROB-WG-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '1:00:00', 2, 20, DEFAULT, false, 'PROB-WG-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '1:00:00', 2, 25, DEFAULT, false, 'PROB-WG-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '1:00:00', 2, 30, DEFAULT, false, 'PROB-WG-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '1:00:00', 2, 35, DEFAULT, false, 'PROB-WG-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FF-MS'), DEFAULT, DEFAULT, DEFAULT, 2, 11, DEFAULT, false, 'PROB-W-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FF-MS'), DEFAULT, DEFAULT, DEFAULT, 2, 14, DEFAULT, false, 'PROB-W-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FF-MS'), DEFAULT, DEFAULT, DEFAULT, 2, 17, DEFAULT, false, 'PROB-W-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FF-MS'), DEFAULT, DEFAULT, DEFAULT, 2, 21, DEFAULT, false, 'PROB-W-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FF-MS'), DEFAULT, DEFAULT, DEFAULT, 2, 25, DEFAULT, false, 'PROB-W-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FF-MS'), DEFAULT, DEFAULT, DEFAULT, 2, 32, DEFAULT, false, 'PROB-W-6');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'VV-M'), DEFAULT, DEFAULT, DEFAULT, 5, 600, DEFAULT, false, 'PROB-VV-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'VV-M'), DEFAULT, DEFAULT, DEFAULT, 5, 1000, DEFAULT, false, 'PROB-VV-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'VV-M'), DEFAULT, DEFAULT, DEFAULT, 5, 1500, DEFAULT, false, 'PROB-VV-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'VV-M'), DEFAULT, DEFAULT, DEFAULT, 5, 3000, DEFAULT, false, 'PROB-VV-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'VV-M'), DEFAULT, DEFAULT, DEFAULT, 5, 5000, DEFAULT, false, 'PROB-VV-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'VV-M'), 5, DEFAULT, DEFAULT, 5, 600, DEFAULT, false, 'PROB-VV2-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'VV-M'), 5, DEFAULT, DEFAULT, 5, 1000, DEFAULT, false, 'PROB-VV2-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'VV-M'), 5, DEFAULT, DEFAULT, 5, 1500, DEFAULT, false, 'PROB-VV2-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'VV-M'), 5, DEFAULT, DEFAULT, 5, 3000, DEFAULT, false, 'PROB-VV2-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'VV-M'), 5, DEFAULT, DEFAULT, 5, 5000, DEFAULT, false, 'PROB-VV2-5');
+
+-- Producer specific settings
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '06:00:00', 2, 1, DEFAULT, false, 'PROB-RR-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '06:00:00', 2, 10, DEFAULT, false, 'PROB-RR-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '06:00:00', 2, 20, DEFAULT, false, 'PROB-RR-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '06:00:00', 2, 0.4, DEFAULT, false, 'PROB-RR-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'CAPE-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 50, DEFAULT, false, 'PROB-CAPE-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'CAPE-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 500, DEFAULT, false, 'PROB-CAPE-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'CAPE-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 1000, DEFAULT, false, 'PROB-CAPE-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'CAPE-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 1500, DEFAULT, false, 'PROB-CAPE-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '6:00:00', 2, 1, DEFAULT, false, 'PROB-SN-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '6:00:00', 2, 5, DEFAULT, false, 'PROB-SN-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '6:00:00', 2, 10, DEFAULT, false, 'PROB-SN-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '6:00:00', 2, 20, DEFAULT, false, 'PROB-SN-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '6:00:00', 2, 30, DEFAULT, false, 'PROB-SN-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '6:00:00', 2, 50, DEFAULT, false, 'PROB-SN-6');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '24:00:00', 2, 1, DEFAULT, false, 'PROB-SN24-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '24:00:00', 2, 5, DEFAULT, false, 'PROB-SN24-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '24:00:00', 2, 10, DEFAULT, false, 'PROB-SN24-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '24:00:00', 2, 20, DEFAULT, false, 'PROB-SN24-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '24:00:00', 2, 30, DEFAULT, false, 'PROB-SN24-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 242, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '24:00:00', 2, 50, DEFAULT, false, 'PROB-SN24-6');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '01:00:00', 2, 1, DEFAULT, false, 'PROB-RR-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '01:00:00', 2, 5, DEFAULT, false, 'PROB-RR-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '01:00:00', 2, 10, DEFAULT, false, 'PROB-RR-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '01:00:00', 2, 20, DEFAULT, false, 'PROB-RR-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '01:00:00', 2, 35, DEFAULT, false, 'PROB-RR-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '01:00:00', 2, 45, DEFAULT, false, 'PROB-RR-6');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '01:00:00', 2, 0.025, DEFAULT, false, 'PROB-RR-7');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '01:00:00', 10, 20, 33, false, 'PROB-WG-AGG-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '01:00:00', 10, 20, 33, false, 'PROB-RR-AGG-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'PRECFORM-N'), DEFAULT, 1, '00:00:00', 13, 7, 33, false, 'PROB-HAIL-AGG-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'FL-MPLTY-N'), DEFAULT, 1, '00:00:00', 10, 25, 33, false, 'PROB-FLASH-AGG-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'CAPE-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 100, DEFAULT, false, 'PROB-CAPE-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'CAPE-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 500, DEFAULT, false, 'PROB-CAPE-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'CAPE-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 1000, DEFAULT, false, 'PROB-CAPE-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'CAPE-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 1500, DEFAULT, false, 'PROB-CAPE-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'CAPE-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 2000, DEFAULT, false, 'PROB-CAPE-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'CAPE1040-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 50, DEFAULT, false, 'PROB-CAPE1040-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'CAPE1040-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 100, DEFAULT, false, 'PROB-CAPE1040-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'CAPE1040-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 500, DEFAULT, false, 'PROB-CAPE1040-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'CAPE1040-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 1000, DEFAULT, false, 'PROB-CAPE1040-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'CAPE1040-JKG'), DEFAULT, DEFAULT, DEFAULT, 2, 1500, DEFAULT, false, 'PROB-CAPE1040-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '1:00:00', 2, 0.3, DEFAULT, false, 'PROB-SN-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '1:00:00', 2, 1, DEFAULT, false, 'PROB-SN-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '1:00:00', 2, 2, DEFAULT, false, 'PROB-SN-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '1:00:00', 2, 4, DEFAULT, false, 'PROB-SN-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '1:00:00', 2, 6, DEFAULT, false, 'PROB-SN-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '1:00:00', 2, 10, DEFAULT, false, 'PROB-SN-6');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '3:00:00', 2, 1, DEFAULT, false, 'PROB-SN3-1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '3:00:00', 2, 2, DEFAULT, false, 'PROB-SN3-2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '3:00:00', 2, 5, DEFAULT, false, 'PROB-SN3-3');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '3:00:00', 2, 10, DEFAULT, false, 'PROB-SN3-4');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '3:00:00', 2, 15, DEFAULT, false, 'PROB-SN3-5');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, 260, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '3:00:00', 2, 25, DEFAULT, false, 'PROB-SN3-6');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, 1, '00:00:00', 15, DEFAULT, DEFAULT, false, 'T-BIASC-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RH-0TO1'), DEFAULT, 1, '00:00:00', 15, DEFAULT, DEFAULT, false, 'RH-BIASC-0TO1');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FF-MS'), DEFAULT, 1, '00:00:00', 15, DEFAULT, DEFAULT, false, 'FF-BIASC-MS');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '01:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'FFG-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '03:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'FFG-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '06:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'FFG-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '24:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'FFG24-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), 3, 4, '01:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'FFG2-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), 3, 4, '03:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'FFG2-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), 3, 4, '06:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'FFG2-MS');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'PRECFORM-N'), 2, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, false, 'PRECFORM2-N');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'CEIL-M'), 4, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, false, 'CEIL-2-M');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'VV-M'), 5, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, false, 'VV2-M');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'PRECFORM-N'), 6, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, false, 'PRECFORM4-N');
+
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RAIL-N'), DEFAULT, DEFAULT, DEFAULT, 16, DEFAULT, DEFAULT, false, 'RAIL-MEAN-N');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'SNOWLOAD-KGM2'), DEFAULT, DEFAULT, DEFAULT, 16, DEFAULT, DEFAULT, false, 'SNOWLOAD-MEAN-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'SNOWLOAD-KGM2'), DEFAULT, DEFAULT, DEFAULT, 17, DEFAULT, DEFAULT, false, 'SNOWLOAD-STDDEV-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'TD-K'), DEFAULT, DEFAULT, DEFAULT, 16, DEFAULT, DEFAULT, false, 'TD-MEAN-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'TD-K'), DEFAULT, DEFAULT, DEFAULT, 17, DEFAULT, DEFAULT, false, 'TD-STDDEV-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, DEFAULT, DEFAULT, 16, DEFAULT, DEFAULT, false, 'T-MEAN-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'T-K'), DEFAULT, DEFAULT, DEFAULT, 17, DEFAULT, DEFAULT, false, 'T-STDDEV-K');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'P-PA'), DEFAULT, DEFAULT, DEFAULT, 16, DEFAULT, DEFAULT, false, 'P-MEAN-PA');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'P-PA'), DEFAULT, DEFAULT, DEFAULT, 17, DEFAULT, DEFAULT, false, 'P-STDDEV-PA');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FF-MS'), DEFAULT, DEFAULT, DEFAULT, 16, DEFAULT, DEFAULT, false, 'FF-MEAN-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FF-MS'), DEFAULT, DEFAULT, DEFAULT, 17, DEFAULT, DEFAULT, false, 'FF-STDDEV-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '01:00:00', 16, DEFAULT, DEFAULT, false, 'FFG-MEAN-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '01:00:00', 17, DEFAULT, DEFAULT, false, 'FFG-STDDEV-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '03:00:00', 16, DEFAULT, DEFAULT, false, 'FFG-MEAN-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '03:00:00', 17, DEFAULT, DEFAULT, false, 'FFG-STDDEV-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '06:00:00', 16, DEFAULT, DEFAULT, false, 'FFG-MEAN-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '06:00:00', 17, DEFAULT, DEFAULT, false, 'FFG-STDDEV-MS');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT,3, '01:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'RRRS-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT,3, '01:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'RRR-KGM2');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT,3, '03:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'RR-3-MM');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT,3, '06:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'RR-6-MM');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT,3, '12:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'RR-12-MM');
+INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT,3, '24:00:00', DEFAULT, DEFAULT, DEFAULT, false, 'RR-24-MM');
+
+
+DO $$
+DECLARE
+    params text[] := ARRAY['T-K', 'TD-K', 'FF-MS', 'N-0TO1', 'NLM-PRCNT', 'P-PA', 'SNOWLOAD-KGM2']; 
+    param_name text;
+    fractiles int[] := ARRAY[0, 10, 25, 50, 75, 90, 100];
+    fractile int;
+BEGIN
+    FOREACH param_name IN ARRAY params LOOP
+	RAISE NOTICE 'Adding fractile mappings for param: %', param_name;
+        FOREACH fractile IN ARRAY fractiles LOOP
+           INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = param_name), DEFAULT, DEFAULT, DEFAULT, 8, fractile, DEFAULT, false, 'F' || fractile ||'-'||param_name);
+        END LOOP;
+    END LOOP;
+END;
+$$;
+
+DO $$
+DECLARE
+    fractiles int[] := ARRAY[0, 10, 25, 50, 75, 90, 100];
+    fractile int;
+BEGIN
+    FOREACH fractile IN ARRAY fractiles LOOP
+       RAISE NOTICE 'Adding special parameter fractile mapping for fractile %', fractile;
+       INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'SNACC-KGM2'), DEFAULT, 3, '24:00:00', 8, fractile, DEFAULT, false, 'F' || fractile ||'-SN-24-MM');
+       INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RRS-KGM2'), DEFAULT, 3, '24:00:00', 8, fractile, DEFAULT, false, 'F' || fractile ||'-RRS-24-MM');
+       INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '03:00:00', 8, fractile, DEFAULT, false, 'F' || fractile ||'-RR-3-MM');
+       INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RR-KGM2'), DEFAULT, 3, '24:00:00', 8, fractile, DEFAULT, false, 'F' || fractile ||'-RR-24-MM');
+       INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADGLO-WM2'), DEFAULT, 2, '01:00:00', 8, fractile, DEFAULT, false, 'F' || fractile ||'-RADGLO-WM2');
+       INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADGLO-WM2'), DEFAULT, 2, '03:00:00', 8, fractile, DEFAULT, false, 'F' || fractile ||'-RADGLO-WM2');
+       INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'RADGLO-WM2'), DEFAULT, 2, '06:00:00', 8, fractile, DEFAULT, false, 'F' || fractile ||'-RADGLO-WM2');
+       INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '01:00:00', 8, fractile, DEFAULT, false, 'F' || fractile ||'-FFG-MS');
+       INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '03:00:00', 8, fractile, DEFAULT, false, 'F' || fractile ||'-FFG-MS');
+       INSERT INTO param_v2_to_v1 VALUES (DEFAULT, -1, (SELECT id FROM param WHERE name = 'FFG-MS'), DEFAULT, 4, '06:00:00', 8, fractile, DEFAULT, false, 'F' || fractile ||'-FFG-MS');
+    END LOOP;
+END;
+$$;
+
+CREATE OR REPLACE FUNCTION check_for_unknown_param(v21_param_name TEXT, param_name TEXT, aggregation_id INT, processing_type_id INT)
+RETURNS VARCHAR(50) AS $$
+BEGIN
+    IF v21_param_name IS NOT NULL THEN
+      RETURN v21_param_name;
+    ELSIF aggregation_id = 1 AND processing_type_id = 1 THEN
+      RETURN param_name;
+    ELSE
+      RETURN 'UNKNOWN_'||param_name;
+    END IF; 
+END;
+$$ IMMUTABLE LANGUAGE PLPGSQL SECURITY DEFINER;

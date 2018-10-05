@@ -31,7 +31,6 @@ CREATE TABLE public.param_grib2_template (
     number integer NOT NULL,
     last_updater text,
     last_updated timestamp with time zone,
-    type_of_statistical_processing integer DEFAULT '-1'::integer NOT NULL,
     CONSTRAINT param_grib2_template_category_check CHECK ((category >= 0)),
     CONSTRAINT param_grib2_template_discipline_check CHECK ((discipline >= 0)),
     CONSTRAINT param_grib2_template_number_check CHECK ((number >= 0))

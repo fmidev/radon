@@ -1,0 +1,2 @@
+DELETE FROM param WHERE name LIKE 'PROB-TC-%' OR name LIKE 'PROB-CSI-%' OR name LIKE 'PROB-POT-%' OR name IN ('RRI-KGM2', 'SNRI-KGM2', 'GRI-KGM2');
+

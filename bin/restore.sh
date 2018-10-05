@@ -108,6 +108,8 @@ for f in producer_class producer_class-data \
 	level_grib1 level_grib1-data \
 	level_grib2 level_grib2-data \
 	interpolation_method interpolation_method-data \
+        aggregation aggregation-data \
+        processing_type processing_type-data \
 	param_unit param_unit-data \
 	param param-data \
 	param_grib1 param_grib1-data \

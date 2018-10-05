@@ -1,0 +1,16 @@
+UPDATE _TABLE_ SET aggregation_id = 4, aggregation_period = '01:00:00' WHERE param_id IN (SELECT id FROM param WHERE name IN ('FFG-MS')) AND forecast_period <= '90:00:00';
+UPDATE _TABLE_ SET aggregation_id = 4, aggregation_period = '03:00:00' WHERE param_id IN (SELECT id FROM param WHERE name IN ('FFG-MS')) AND forecast_period > '90:00:00' and forecast_period <= '144:00:00';
+UPDATE _TABLE_ SET aggregation_id = 4, aggregation_period = '06:00:00' WHERE param_id IN (SELECT id FROM param WHERE name IN ('FFG-MS')) AND forecast_period > '144:00:00';
+UPDATE _TABLE_ SET aggregation_id = 4, aggregation_period = '03:00:00', production_type_id = 3, param_id = (SELECT id FROM param WHERE name IN ('FFG-MS')) WHERE param_id IN (SELECT id FROM param WHERE name IN ('FFG3H-MS'));
+UPDATE _TABLE_ SET aggregation_id = 4, aggregation_period = '01:00:00', param_id = (SELECT id FROM param WHERE name = 'T-K') WHERE param_id IN (SELECT id FROM param WHERE name IN ('TMAX-K')) AND forecast_period <= '90:00:00';
+UPDATE _TABLE_ SET aggregation_id = 5, aggregation_period = '01:00:00', param_id = (SELECT id FROM param WHERE name = 'T-K') WHERE param_id IN (SELECT id FROM param WHERE name IN ('TMIN-K')) AND forecast_period <= '90:00:00';
+UPDATE _TABLE_ SET aggregation_id = 4, aggregation_period = '03:00:00', param_id = (SELECT id FROM param WHERE name = 'T-K') WHERE param_id IN (SELECT id FROM param WHERE name IN ('TMAX-K')) AND forecast_period > '90:00:00' AND forecast_period <= '144:00:00';
+UPDATE _TABLE_ SET aggregation_id = 5, aggregation_period = '03:00:00', param_id = (SELECT id FROM param WHERE name = 'T-K') WHERE param_id IN (SELECT id FROM param WHERE name IN ('TMIN-K')) AND forecast_period > '90:00:00' AND forecast_period <= '144:00:00';
+UPDATE _TABLE_ SET aggregation_id = 4, aggregation_period = '01:00:00', param_id = (SELECT id FROM param WHERE name = 'T-K') WHERE param_id IN (SELECT id FROM param WHERE name IN ('TMAX-K')) AND forecast_period > '144:00:00';
+UPDATE _TABLE_ SET aggregation_id = 5, aggregation_period = '01:00:00', param_id = (SELECT id FROM param WHERE name = 'T-K') WHERE param_id IN (SELECT id FROM param WHERE name IN ('TMIN-K')) AND forecast_period > '144:00:00';
+UPDATE _TABLE_ SET aggregation_id = 5, aggregation_period = '01:00:00', param_id = (SELECT id FROM param WHERE name = 'T-K') WHERE param_id IN (SELECT id FROM param WHERE name IN ('TMIN-K')) AND forecast_period <= '90:00:00';
+UPDATE _TABLE_ SET production_type_id = 7, aggregation_id = 4, aggregation_period = '03:00:00', param_id = (SELECT id FROM param WHERE name = 'T-K') WHERE param_id IN (SELECT id FROM param WHERE name IN ('TMAX3H-K'));
+UPDATE _TABLE_ SET production_type_id = 7, aggregation_id = 5, aggregation_period = '03:00:00', param_id = (SELECT id FROM param WHERE name = 'T-K') WHERE param_id IN (SELECT id FROM param WHERE name IN ('TMIN3H-K'));
+UPDATE _TABLE_ SET production_type_id = 8, aggregation_id = 4, aggregation_period = '06:00:00', param_id = (SELECT id FROM param WHERE name = 'T-K') WHERE param_id IN (SELECT id FROM param WHERE name IN ('TMAX6H-K'));
+UPDATE _TABLE_ SET production_type_id = 8, aggregation_id = 5, aggregation_period = '06:00:00', param_id = (SELECT id FROM param WHERE name = 'T-K') WHERE param_id IN (SELECT id FROM param WHERE name IN ('TMIN6H-K'));
+
