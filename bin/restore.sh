@@ -13,6 +13,9 @@ echo "CREATE DATABASE radon OWNER postgres" | psql $PSQL_ARGS -d postgres
 export PGDATABASE=radon
 
 echo "CREATE SCHEMA audit" | psql $PSQL_ARGS
+echo "CREATE SCHEMA data" | psql $PSQL_ARGS
+
+echo "GRANT ALL ON SCHEMA data TO radon_rw" | psql $PSQL_ARGS
 
 # extensions
 
