@@ -28,6 +28,7 @@ CREATE TABLE param_grib2 (
     number integer NOT NULL,
     level_id integer,
     level_value numeric,
+    type_of_statistical_processing integer NOT NULL default (-1),
     last_updater text,
     last_updated timestamp with time zone
 );
@@ -90,7 +91,7 @@ ALTER TABLE ONLY param_grib2
 --
 
 ALTER TABLE ONLY param_grib2
-    ADD CONSTRAINT param_grib2_producer_id_uniq UNIQUE (producer_id, param_id, discipline, category, number, level_id, level_value);
+    ADD CONSTRAINT param_grib2_producer_id_uniq UNIQUE (producer_id, param_id, discipline, category, number, level_id, level_value, type_of_statistical_processing);
 
 
 --

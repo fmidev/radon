@@ -25,6 +25,7 @@ CREATE VIEW param_grib2_v AS
     g.number,
     l.id AS level_id,
     l.name AS level_name,
+    g.type_of_statistical_processing,
     g.level_value,
     g.last_updater,
     g.last_updated

@@ -24,11 +24,12 @@ CREATE TABLE param_grib2_template (
     discipline integer NOT NULL,
     category integer NOT NULL,
     number integer NOT NULL,
+    type_of_statistical_processing integer NOT NULL DEFAULT(-1),
     last_updater text,
     last_updated timestamp with time zone,
     CONSTRAINT param_grib2_template_category_check CHECK ((category >= 0)),
     CONSTRAINT param_grib2_template_discipline_check CHECK ((discipline >= 0)),
-    CONSTRAINT param_grib2_template_number_check CHECK ((number >= 0))
+    CONSTRAINT param_grib2_template_number_check CHECK ((number >= 0) AND (number <= 255))
 );
 
 
@@ -39,7 +40,7 @@ ALTER TABLE public.param_grib2_template OWNER TO wetodb;
 --
 
 ALTER TABLE ONLY param_grib2_template
-    ADD CONSTRAINT param_grib2_template_pkey PRIMARY KEY (param_id, discipline, category, number);
+    ADD CONSTRAINT param_grib2_template_pkey PRIMARY KEY (param_id, discipline, category, number, type_of_statistical_processing);
 
 
 --

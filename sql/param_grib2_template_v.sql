@@ -21,6 +21,7 @@ CREATE VIEW param_grib2_template_v AS
     t.category,
     t.discipline,
     t.number,
+    t.type_of_statistical_processing,
     t.last_updater,
     t.last_updated
    FROM param_grib2_template t,
