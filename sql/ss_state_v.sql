@@ -18,19 +18,17 @@ SET search_path = public, pg_catalog;
 CREATE VIEW ss_state_v AS
  SELECT s.producer_id,
     s.geometry_id,
-    g.name AS geometry_name,
     s.forecast_type_id,
-    f.name AS forecast_type_name,
     s.forecast_type_value,
     s.analysis_time,
     s.forecast_period,
     s.table_name,
+    a.delete_time,
     s.last_updater,
     s.last_updated
    FROM ss_state s,
-    geom g,
-    forecast_type f
-  WHERE ((s.geometry_id = g.id) AND (s.forecast_type_id = f.id));
+    as_grid a
+  WHERE ((a.producer_id = s.producer_id) AND (a.geometry_id = s.geometry_id) AND (a.analysis_time = s.analysis_time));
 
 
 ALTER TABLE public.ss_state_v OWNER TO postgres;
