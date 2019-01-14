@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: producer_grib; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY producer_grib (id, producer_id, ident, centre, last_updater, last_updated) FROM stdin;
+COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_updated) FROM stdin;
 1	1	1	86	\N	\N
 92	34	201	34	\N	\N
 3	3	1	82	\N	\N
@@ -82,6 +86,8 @@ COPY producer_grib (id, producer_id, ident, centre, last_updater, last_updated) 
 27	131	149	98	wetodb	2018-06-05 09:44:37.320202+00
 29	133	114	98	wetodb	2018-06-05 09:44:37.320202+00
 28	132	214	98	wetodb	2018-06-05 09:44:37.320202+00
+114	281	202	86	\N	\N
+113	189	189	88	wetodb	2018-09-20 10:00:52.201369+00
 \.
 
 
@@ -89,7 +95,7 @@ COPY producer_grib (id, producer_id, ident, centre, last_updater, last_updated) 
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('producer_grib_id_seq', 112, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 114, true);
 
 
 --

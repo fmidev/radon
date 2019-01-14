@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: station; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY station (id, name, "position", elevation, description, elevation_altimeter, external_information, is_mobile, last_updater, last_updated) FROM stdin;
+COPY public.station (id, name, "position", elevation, description, elevation_altimeter, external_information, is_mobile, last_updater, last_updated) FROM stdin;
 100118	vt1 Pitkäporras R	0101000020E6100000D5E76A2BF6D736403B70CE88D2364E40	39	\N	\N	\N	t	\N	\N
 100119	vt1 Pitkäporras O	0101000020E61000000E2DB29DEFD73640D712F241CF364E40	39	\N	\N	\N	t	\N	\N
 100120	vt1 Hajala R	0101000020E6100000295C8FC2F5F83640AB3E575BB1374E40	87	\N	\N	\N	t	\N	\N
@@ -18828,7 +18832,7 @@ COPY station (id, name, "position", elevation, description, elevation_altimeter,
 -- Name: station_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('station_id_seq', 1, true);
+SELECT pg_catalog.setval('public.station_id_seq', 1, true);
 
 
 --

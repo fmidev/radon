@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: station_probability_limit; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY station_probability_limit (id, station_id, param_id, probability_limit, last_updater, last_updated) FROM stdin;
+COPY public.station_probability_limit (id, station_id, param_id, probability_limit, last_updater, last_updated) FROM stdin;
 1	100539	1050	-80	\N	\N
 2	100539	1051	115	\N	\N
 3	100539	1052	140	\N	\N
@@ -79,7 +83,7 @@ COPY station_probability_limit (id, station_id, param_id, probability_limit, las
 -- Name: station_probability_limit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('station_probability_limit_id_seq', 56, true);
+SELECT pg_catalog.setval('public.station_probability_limit_id_seq', 56, true);
 
 
 --

@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: param_grib1; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_indicator, level_id, level_value, last_updater, last_updated, ident, centre) FROM stdin;
+COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timerange_indicator, level_id, level_value, last_updater, last_updated, ident, centre) FROM stdin;
 2181	230	694	203	127	0	\N	\N	\N	\N	\N	\N
 3209	206	166	207	2	0	\N	\N	\N	\N	\N	\N
 3	1	221	1	79	4	\N	\N	\N	\N	\N	\N
@@ -318,6 +322,7 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 315	3	138	1	51	0	\N	\N	\N	\N	\N	\N
 3575	4	767	253	184	0	3	\N	wetodb	2017-08-02 08:11:19.433145+00	\N	\N
 3483	242	1024	207	36	0	\N	\N	\N	\N	\N	\N
+3875	4	500	253	115	0	\N	\N	\N	\N	\N	\N
 2375	242	759	207	196	0	\N	\N	\N	\N	\N	\N
 320	3	163	1	52	0	\N	\N	\N	\N	\N	\N
 2285	131	426	3	20	0	\N	\N	\N	\N	\N	\N
@@ -1272,7 +1277,10 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 1309	230	589	203	159	0	\N	\N	\N	\N	\N	\N
 1310	210	589	203	159	0	\N	\N	\N	\N	\N	\N
 1311	240	589	203	159	0	\N	\N	\N	\N	\N	\N
+3876	4	501	253	116	0	\N	\N	\N	\N	\N	\N
+3877	230	1204	203	252	0	\N	\N	\N	\N	\N	\N
 1314	210	565	203	161	0	\N	\N	\N	\N	\N	\N
+3878	240	1204	203	237	0	\N	\N	\N	\N	\N	\N
 1317	230	407	203	163	0	\N	\N	\N	\N	\N	\N
 1318	210	407	203	163	0	\N	\N	\N	\N	\N	\N
 1319	240	407	203	163	0	\N	\N	\N	\N	\N	\N
@@ -1841,7 +1849,7 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 2158	199	661	253	54	0	\N	\N	\N	\N	\N	\N
 2159	199	52	253	58	0	\N	\N	\N	\N	\N	\N
 2160	199	139	253	2	0	7	\N	\N	\N	\N	\N
-2161	199	163	253	52	0	\N	\N	\N	\N	\N	\N
+3884	101	1223	206	160	0	\N	\N	\N	\N	\N	\N
 2162	199	461	253	209	0	\N	\N	\N	\N	\N	\N
 2163	199	426	253	20	0	\N	\N	\N	\N	\N	\N
 2164	199	162	253	17	0	\N	\N	\N	\N	\N	\N
@@ -2267,6 +2275,16 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 881	132	452	140	231	10	\N	\N	postgres	2017-01-07 08:14:54.097016+00	\N	\N
 883	132	447	140	229	10	\N	\N	postgres	2017-01-07 08:14:54.097016+00	\N	\N
 3459	500	153	1	11	0	\N	\N	\N	\N	\N	\N
+3879	122	153	128	167	0	\N	\N	\N	\N	\N	\N
+3880	122	738	128	51	0	\N	\N	\N	\N	\N	\N
+3881	122	739	128	52	0	\N	\N	\N	\N	\N	\N
+3882	122	162	128	168	0	\N	\N	\N	\N	\N	\N
+3883	122	158	128	129	0	\N	\N	\N	\N	\N	\N
+2161	199	769	253	52	0	\N	\N	wetodb	2018-10-06 09:25:40.399165+00	\N	\N
+3885	101	411	206	161	0	\N	\N	\N	\N	\N	\N
+3887	131	598	128	40	0	\N	\N	wetodb	2018-11-12 05:51:10.326139+00	\N	\N
+3889	131	1233	132	228	5	\N	\N	wetodb	2019-01-09 06:28:27.73068+00	\N	\N
+3888	131	1232	132	49	2	\N	\N	wetodb	2019-01-09 06:29:20.059237+00	\N	\N
 \.
 
 
@@ -2274,7 +2292,7 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 -- Name: param_grib1_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('param_grib1_id_seq', 3874, true);
+SELECT pg_catalog.setval('public.param_grib1_id_seq', 3889, true);
 
 
 --

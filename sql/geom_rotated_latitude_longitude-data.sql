@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: geom_rotated_latitude_longitude; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY geom_rotated_latitude_longitude (id, name, ni, nj, first_point, di, dj, scanning_mode, south_pole, description, last_updater, last_updated) FROM stdin;
+COPY public.geom_rotated_latitude_longitude (id, name, ni, nj, first_point, di, dj, scanning_mode, south_pole, description, last_updater, last_updated) FROM stdin;
 1068	ECEUR0200G2	331	289	0101000020E61000000000000000E074409A99999999993640	0.2	0.2	+x-y	0101000020E610000000000000000000000000000000003EC0	ECMWF Europe, rotated 0.2 degrees, GRIB2 version	\N	\N
 1090	ECEDIT100	201	221	0101000020E610000000000000000024C00000000000002A40	0.1	0.1	+x-y	0101000020E610000000000000000034400000000000003EC0	EC editing area in 0.1 deg	\N	\N
 1091	ECEDIT100G2	201	221	0101000020E61000000000000000E075400000000000002A40	0.1	0.1	+x-y	0101000020E610000000000000000000000000000000003EC0	EC editing area in 0.1 deg GRIB 2	\N	\N

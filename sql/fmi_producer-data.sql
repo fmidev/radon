@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: fmi_producer; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY fmi_producer (id, name, description, class_id, last_updater, last_updated, type_id) FROM stdin;
+COPY public.fmi_producer (id, name, description, class_id, last_updater, last_updated, type_id) FROM stdin;
 48	GEPS	GEM NAEFS Global Ensemble Prediction System	1	\N	\N	3
 54	GEFS	Global Ensemble Forecast System (NOAA)	1	\N	\N	3
 206	GLAMEPSMTA	Postprocessed fields for GLAMEPS	1	\N	\N	1
@@ -36,19 +40,16 @@ COPY fmi_producer (id, name, description, class_id, last_updater, last_updated, 
 180	FMIBLEND	FMI blend of models	1	\N	\N	3
 243	ECGEPSMTA	ECMWF Ensemble Forecast System post processed fields	1	wetodb	2017-06-12 11:25:32	3
 181	SMARTMET	Smartmet editor	1	\N	\N	1
-52	Enfuser	FMI Air Quality fusion model	1	\N	\N	1
+261	MEPS_PREOPMTA	Postprocessed fields for MEPS preop	1	wetodb	2018-10-08 05:18:55	3
 280	SMARTMETMTA	Postprocessed fields for SmartMet	1	\N	\N	1
 2027	ECMWF_LS_KALMAN	ECMWF forecast post-processed with Kalman and landscape interpolation	3	\N	\N	1
-10	MEPS_PREOP	MEPS preop experiment	1	\N	\N	1
-261	MEPS_PREOPMTA	Postprocessed fields for MEPS preop	1	\N	\N	1
 501	IASIL2	IASI L2 satellite soundings	1	wetodb	2018-02-19 08:44:59	2
-182	BLENDW	FMI blend of models weight fields	1	\N	\N	3
 183	BLENDR	FMI blend of models raw fields	1	\N	\N	3
 184	BLENDB	FMI blend of models bias fields	1	\N	\N	3
 7	MNWC	MEPS Nowcasting	1	\N	\N	1
 136	ECGERA5	ECMWF global ERA 5 reanalysis	1	wetodb	2018-02-28 14:55:23	1
 270	MNWCMTA	MEPS Nowcasting post processed fields	1	\N	\N	1
-189	METAN	METNO Scandinavia analysis	1	\N	\N	2
+10	MEPS_PREOP	MEPS preop experiment	1	wetodb	2018-09-28 05:27:38	3
 109	LAPSSCAN	LAPS analysis for Scandinavian area	1	wetodb	2018-02-19 08:45:42	2
 103	LAPS	Finnish LAPS analysis	1	postgres	2016-05-26 08:49:27	2
 105	MTLICE	Jääeditori	1	postgres	2017-05-02 05:34:04	1
@@ -91,13 +92,14 @@ COPY fmi_producer (id, name, description, class_id, last_updater, last_updated, 
 2156	OASECM	Water level forecast OAAS-ECMWF	3	postgres	2016-05-26 08:42:00	1
 2157	WETMBE	Water level forecast Wetehinen-MBE	3	postgres	2016-05-26 08:42:00	1
 2158	WETECM	Water level forecast Wetehinen-ECMWF	3	postgres	2016-05-26 08:42:00	1
-2159	BESTGU	Water level forecast best guess	3	postgres	2016-05-26 08:42:00	1
 2160	OASRCRAW	Water level forecast OAAS-RCR Raw fields	3	postgres	2016-05-26 08:42:00	1
 2161	OASECRAW	Water level forecast OAAS-EC Raw fields	3	postgres	2016-05-26 08:42:00	1
 130	ECG_ERA	ECMWF global ERA-Interim	1	postgres	2016-05-26 08:58:01	1
 120	ECMOSKRIGING	ECMWF MOS Kriging gridded	1	postgres	2016-06-15 09:29:22	1
 2164	OASECKALMAN	OAAS EC forecast with Kalman filter	3	postgres	2016-05-26 08:42:00	1
 2165	WETRCRKALMAN	Wetehinen RCR forecast with Kalman filter	3	postgres	2016-05-26 08:42:00	1
+281	SMARTMETNWC	SmartMet producer with nowcasting applied	1	wetodb	2018-10-29 07:18:17	1
+182	BLENDW	FMI blend of models weight (MAE) fields	1	wetodb	2018-11-07 13:39:43	3
 2166	WETECKALMAN	Wetehinen EC forecast with Kalman filter	3	postgres	2016-05-26 08:42:00	1
 149	MYOCEAN	-	1	postgres	2016-05-26 08:42:00	1
 170	ICON_GLO	DWD Global Model ICON	1	postgres	2016-05-26 08:42:00	1
@@ -105,6 +107,8 @@ COPY fmi_producer (id, name, description, class_id, last_updater, last_updated, 
 2028	ECMOS2	MOS from ECMWF model, 2nd version	3	postgres	2016-05-26 08:42:00	1
 134	ECGEPS	ECMWF Ensemble Forecast System	1	postgres	2016-05-26 08:47:01	3
 1016	WATLEV	Water level data from FIMR	3	postgres	2016-05-26 08:59:14	6
+189	METAN	METNO Scandinavia analysis	1	wetodb	2018-09-19 09:23:51	2
+52	ENFUSER	FMI Air Quality fusion model	1	wetodb	2018-10-05 04:52:34	1
 \.
 
 

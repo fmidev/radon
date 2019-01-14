@@ -2,24 +2,28 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: param; Type: TABLE; Schema: public; Owner: wetodb; Tablespace: 
+-- Name: param; Type: TABLE; Schema: public; Owner: wetodb
 --
 
-CREATE TABLE param (
+CREATE TABLE public.param (
     id integer NOT NULL,
     name character varying(50) NOT NULL,
     version integer DEFAULT 1 NOT NULL,
@@ -37,21 +41,21 @@ ALTER TABLE public.param OWNER TO wetodb;
 -- Name: COLUMN param.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
 --
 
-COMMENT ON COLUMN param.last_updater IS 'Fixed column for last updater';
+COMMENT ON COLUMN public.param.last_updater IS 'Fixed column for last updater';
 
 
 --
 -- Name: COLUMN param.last_updated; Type: COMMENT; Schema: public; Owner: wetodb
 --
 
-COMMENT ON COLUMN param.last_updated IS 'Fixed column for last updating time';
+COMMENT ON COLUMN public.param.last_updated IS 'Fixed column for last updating time';
 
 
 --
 -- Name: param_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
 --
 
-CREATE SEQUENCE param_id_seq
+CREATE SEQUENCE public.param_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -65,71 +69,68 @@ ALTER TABLE public.param_id_seq OWNER TO wetodb;
 -- Name: param_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
 --
 
-ALTER SEQUENCE param_id_seq OWNED BY param.id;
+ALTER SEQUENCE public.param_id_seq OWNED BY public.param.id;
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: param id; Type: DEFAULT; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY param ALTER COLUMN id SET DEFAULT nextval('param_id_seq'::regclass);
+ALTER TABLE ONLY public.param ALTER COLUMN id SET DEFAULT nextval('public.param_id_seq'::regclass);
 
 
 --
--- Name: param_name_version_idx; Type: CONSTRAINT; Schema: public; Owner: wetodb; Tablespace: 
+-- Name: param param_name_version_idx; Type: CONSTRAINT; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY param
+ALTER TABLE ONLY public.param
     ADD CONSTRAINT param_name_version_idx UNIQUE (name, version);
 
 
 --
--- Name: param_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb; Tablespace: 
+-- Name: param param_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY param
+ALTER TABLE ONLY public.param
     ADD CONSTRAINT param_pkey PRIMARY KEY (id);
 
 
 --
--- Name: audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
 --
 
-CREATE TRIGGER audit_trigger_row AFTER UPDATE ON param FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
-
-
---
--- Name: param_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
---
-
-CREATE TRIGGER param_store_last_updated_trg BEFORE UPDATE ON param FOR EACH ROW EXECUTE PROCEDURE store_last_updated_f();
+CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.param FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: param_interpolation_id_idx; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param param_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY param
-    ADD CONSTRAINT param_interpolation_id_idx FOREIGN KEY (interpolation_id) REFERENCES interpolation_method(id);
-
-
---
--- Name: param_unit_id_idx; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
---
-
-ALTER TABLE ONLY param
-    ADD CONSTRAINT param_unit_id_idx FOREIGN KEY (unit_id) REFERENCES param_unit(id);
+CREATE TRIGGER param_store_last_updated_trg BEFORE UPDATE ON public.param FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: param; Type: ACL; Schema: public; Owner: wetodb
+-- Name: param param_interpolation_id_idx; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
 --
 
-REVOKE ALL ON TABLE param FROM PUBLIC;
-REVOKE ALL ON TABLE param FROM wetodb;
-GRANT ALL ON TABLE param TO wetodb;
-GRANT SELECT ON TABLE param TO radon_ro;
-GRANT INSERT,DELETE,UPDATE ON TABLE param TO radon_rw;
+ALTER TABLE ONLY public.param
+    ADD CONSTRAINT param_interpolation_id_idx FOREIGN KEY (interpolation_id) REFERENCES public.interpolation_method(id);
+
+
+--
+-- Name: param param_unit_id_idx; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+--
+
+ALTER TABLE ONLY public.param
+    ADD CONSTRAINT param_unit_id_idx FOREIGN KEY (unit_id) REFERENCES public.param_unit(id);
+
+
+--
+-- Name: TABLE param; Type: ACL; Schema: public; Owner: wetodb
+--
+
+GRANT SELECT ON TABLE public.param TO radon_ro;
+GRANT INSERT,DELETE,UPDATE ON TABLE public.param TO radon_rw;
 
 
 --

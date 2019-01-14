@@ -2,24 +2,28 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: param_grib1; Type: TABLE; Schema: public; Owner: wetodb; Tablespace: 
+-- Name: param_grib1; Type: TABLE; Schema: public; Owner: wetodb
 --
 
-CREATE TABLE param_grib1 (
+CREATE TABLE public.param_grib1 (
     id integer NOT NULL,
     producer_id integer NOT NULL,
     param_id integer NOT NULL,
@@ -44,21 +48,21 @@ ALTER TABLE public.param_grib1 OWNER TO wetodb;
 -- Name: COLUMN param_grib1.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
 --
 
-COMMENT ON COLUMN param_grib1.last_updater IS 'Fixed column for last updater';
+COMMENT ON COLUMN public.param_grib1.last_updater IS 'Fixed column for last updater';
 
 
 --
 -- Name: COLUMN param_grib1.last_updated; Type: COMMENT; Schema: public; Owner: wetodb
 --
 
-COMMENT ON COLUMN param_grib1.last_updated IS 'Fixed column for last updating time';
+COMMENT ON COLUMN public.param_grib1.last_updated IS 'Fixed column for last updating time';
 
 
 --
 -- Name: param_grib1_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
 --
 
-CREATE SEQUENCE param_grib1_id_seq
+CREATE SEQUENCE public.param_grib1_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -72,86 +76,83 @@ ALTER TABLE public.param_grib1_id_seq OWNER TO wetodb;
 -- Name: param_grib1_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
 --
 
-ALTER SEQUENCE param_grib1_id_seq OWNED BY param_grib1.id;
+ALTER SEQUENCE public.param_grib1_id_seq OWNED BY public.param_grib1.id;
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: param_grib1 id; Type: DEFAULT; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY param_grib1 ALTER COLUMN id SET DEFAULT nextval('param_grib1_id_seq'::regclass);
+ALTER TABLE ONLY public.param_grib1 ALTER COLUMN id SET DEFAULT nextval('public.param_grib1_id_seq'::regclass);
 
 
 --
--- Name: param_grib1_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb; Tablespace: 
+-- Name: param_grib1 param_grib1_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY param_grib1
+ALTER TABLE ONLY public.param_grib1
     ADD CONSTRAINT param_grib1_pkey PRIMARY KEY (id);
 
 
 --
--- Name: param_grib1_producer_id_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb; Tablespace: 
+-- Name: param_grib1 param_grib1_producer_id_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY param_grib1
+ALTER TABLE ONLY public.param_grib1
     ADD CONSTRAINT param_grib1_producer_id_uniq UNIQUE (producer_id, param_id, table_version, number, timerange_indicator, level_id, level_value);
 
 
 --
--- Name: audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param_grib1 audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
 --
 
-CREATE TRIGGER audit_trigger_row AFTER UPDATE ON param_grib1 FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
-
-
---
--- Name: param_grib1_duplicate_check_trg; Type: TRIGGER; Schema: public; Owner: wetodb
---
-
-CREATE TRIGGER param_grib1_duplicate_check_trg BEFORE INSERT ON param_grib1 FOR EACH ROW EXECUTE PROCEDURE param_grib1_duplicate_check_f();
+CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.param_grib1 FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: param_grib1_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param_grib1 param_grib1_duplicate_check_trg; Type: TRIGGER; Schema: public; Owner: wetodb
 --
 
-CREATE TRIGGER param_grib1_store_last_updated_trg BEFORE UPDATE ON param_grib1 FOR EACH ROW EXECUTE PROCEDURE store_last_updated_f();
-
-
---
--- Name: param_grib1_fmi_producers_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
---
-
-ALTER TABLE ONLY param_grib1
-    ADD CONSTRAINT param_grib1_fmi_producers_fkey FOREIGN KEY (producer_id) REFERENCES fmi_producer(id);
+CREATE TRIGGER param_grib1_duplicate_check_trg BEFORE INSERT ON public.param_grib1 FOR EACH ROW EXECUTE PROCEDURE public.param_grib1_duplicate_check_f();
 
 
 --
--- Name: param_grib1_level_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_grib1 param_grib1_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY param_grib1
-    ADD CONSTRAINT param_grib1_level_fkey FOREIGN KEY (level_id) REFERENCES level(id);
-
-
---
--- Name: param_grib1_param_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
---
-
-ALTER TABLE ONLY param_grib1
-    ADD CONSTRAINT param_grib1_param_fkey FOREIGN KEY (param_id) REFERENCES param(id);
+CREATE TRIGGER param_grib1_store_last_updated_trg BEFORE UPDATE ON public.param_grib1 FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: param_grib1; Type: ACL; Schema: public; Owner: wetodb
+-- Name: param_grib1 param_grib1_fmi_producers_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
 --
 
-REVOKE ALL ON TABLE param_grib1 FROM PUBLIC;
-REVOKE ALL ON TABLE param_grib1 FROM wetodb;
-GRANT ALL ON TABLE param_grib1 TO wetodb;
-GRANT SELECT ON TABLE param_grib1 TO radon_ro;
-GRANT INSERT,DELETE,UPDATE ON TABLE param_grib1 TO radon_rw;
+ALTER TABLE ONLY public.param_grib1
+    ADD CONSTRAINT param_grib1_fmi_producers_fkey FOREIGN KEY (producer_id) REFERENCES public.fmi_producer(id);
+
+
+--
+-- Name: param_grib1 param_grib1_level_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+--
+
+ALTER TABLE ONLY public.param_grib1
+    ADD CONSTRAINT param_grib1_level_fkey FOREIGN KEY (level_id) REFERENCES public.level(id);
+
+
+--
+-- Name: param_grib1 param_grib1_param_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+--
+
+ALTER TABLE ONLY public.param_grib1
+    ADD CONSTRAINT param_grib1_param_fkey FOREIGN KEY (param_id) REFERENCES public.param(id);
+
+
+--
+-- Name: TABLE param_grib1; Type: ACL; Schema: public; Owner: wetodb
+--
+
+GRANT SELECT ON TABLE public.param_grib1 TO radon_ro;
+GRANT INSERT,DELETE,UPDATE ON TABLE public.param_grib1 TO radon_rw;
 
 
 --

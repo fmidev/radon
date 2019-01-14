@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Name: producer_param_v; Type: VIEW; Schema: public; Owner: postgres
 --
 
-CREATE VIEW producer_param_v AS
+CREATE VIEW public.producer_param_v AS
  SELECT po.id AS producer_id,
     po.name AS producer_name,
     pa.id AS param_id,
@@ -71,7 +75,7 @@ CREATE VIEW producer_param_v AS
             NULL::integer AS newbase_id,
             NULL::integer AS newbase_scale,
             NULL::integer AS newbase_base
-           FROM param_grib1 pg1
+           FROM public.param_grib1 pg1
         UNION ALL
          SELECT pg2.producer_id,
             pg2.param_id,
@@ -83,7 +87,7 @@ CREATE VIEW producer_param_v AS
             NULL::integer AS int4,
             NULL::integer AS int4,
             NULL::integer AS int4
-           FROM param_grib2 pg2
+           FROM public.param_grib2 pg2
         UNION ALL
          SELECT pn.producer_id,
             pn.param_id,
@@ -95,22 +99,19 @@ CREATE VIEW producer_param_v AS
             pn.univ_id AS newbase_id,
             pn.scale AS newbase_scale,
             pn.base AS newbase_base
-           FROM param_newbase pn) ss
-     JOIN param pa ON ((ss.param_id = pa.id)))
-     JOIN fmi_producer po ON ((ss.producer_id = po.id)))
+           FROM public.param_newbase pn) ss
+     JOIN public.param pa ON ((ss.param_id = pa.id)))
+     JOIN public.fmi_producer po ON ((ss.producer_id = po.id)))
   GROUP BY po.id, po.name, pa.id, pa.name, pa.version;
 
 
 ALTER TABLE public.producer_param_v OWNER TO postgres;
 
 --
--- Name: producer_param_v; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE producer_param_v; Type: ACL; Schema: public; Owner: postgres
 --
 
-REVOKE ALL ON TABLE producer_param_v FROM PUBLIC;
-REVOKE ALL ON TABLE producer_param_v FROM postgres;
-GRANT ALL ON TABLE producer_param_v TO postgres;
-GRANT SELECT ON TABLE producer_param_v TO PUBLIC;
+GRANT SELECT ON TABLE public.producer_param_v TO PUBLIC;
 
 
 --

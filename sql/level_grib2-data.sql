@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: level_grib2; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY level_grib2 (producer_id, level_id, grib_level_id, last_updater, last_updated) FROM stdin;
+COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, last_updated) FROM stdin;
 47	1	1	\N	\N
 47	7	101	\N	\N
 47	6	103	\N	\N
@@ -55,7 +59,7 @@ COPY level_grib2 (producer_id, level_id, grib_level_id, last_updater, last_updat
 180	1	1	\N	\N
 4	6	103	\N	\N
 4	3	105	\N	\N
-4	8	1	\N	\N
+281	6	103	\N	\N
 4	7	102	\N	\N
 4	5	8	\N	\N
 4	2	100	\N	\N
@@ -98,6 +102,16 @@ COPY level_grib2 (producer_id, level_id, grib_level_id, last_updater, last_updat
 184	1	1	\N	\N
 182	1	1	\N	\N
 182	6	103	\N	\N
+189	6	103	\N	\N
+189	7	101	\N	\N
+10	6	103	\N	\N
+10	3	105	\N	\N
+10	5	8	\N	\N
+4	1	1	wetodb	2018-10-08 13:00:08.155521+00
+10	1	1	\N	\N
+281	7	101	\N	\N
+134	1	1	\N	\N
+243	3	105	\N	\N
 \.
 
 

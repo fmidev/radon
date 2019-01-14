@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Name: param_v; Type: VIEW; Schema: public; Owner: postgres
 --
 
-CREATE VIEW param_v AS
+CREATE VIEW public.param_v AS
  SELECT p.id AS param_id,
     p.name AS param_name,
     p.version AS param_version,
@@ -24,22 +28,19 @@ CREATE VIEW param_v AS
     p.description AS param_description,
     p.last_updater,
     p.last_updated
-   FROM param p,
-    param_unit u,
-    interpolation_method i
+   FROM public.param p,
+    public.param_unit u,
+    public.interpolation_method i
   WHERE ((p.unit_id = u.id) AND (p.interpolation_id = i.id));
 
 
 ALTER TABLE public.param_v OWNER TO postgres;
 
 --
--- Name: param_v; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE param_v; Type: ACL; Schema: public; Owner: postgres
 --
 
-REVOKE ALL ON TABLE param_v FROM PUBLIC;
-REVOKE ALL ON TABLE param_v FROM postgres;
-GRANT ALL ON TABLE param_v TO postgres;
-GRANT SELECT ON TABLE param_v TO PUBLIC;
+GRANT SELECT ON TABLE public.param_v TO PUBLIC;
 
 
 --

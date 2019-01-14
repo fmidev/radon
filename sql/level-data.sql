@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: level; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY level (id, name, description, unit_id, last_updater, last_updated) FROM stdin;
+COPY public.level (id, name, description, unit_id, last_updater, last_updated) FROM stdin;
 1	GROUND	Ground or water surface	\N	\N	\N
 2	PRESSURE	Pressure level	\N	\N	\N
 3	HYBRID	Hybrid level	\N	\N	\N
@@ -39,7 +43,7 @@ COPY level (id, name, description, unit_id, last_updater, last_updated) FROM std
 -- Name: level_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('level_id_seq', 16, true);
+SELECT pg_catalog.setval('public.level_id_seq', 16, true);
 
 
 --

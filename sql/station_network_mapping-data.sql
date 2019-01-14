@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: station_network_mapping; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY station_network_mapping (id, station_id, network_id, local_station_id, begin_time, end_time, last_updater, last_updated) FROM stdin;
+COPY public.station_network_mapping (id, station_id, network_id, local_station_id, begin_time, end_time, last_updater, last_updated) FROM stdin;
 2	100002	4	1001	1900-01-01 00:00:00+00	\N	\N	\N
 3	100003	4	1002	1900-01-01 00:00:00+00	\N	\N	\N
 4	100004	4	1003	1900-01-01 00:00:00+00	\N	\N	\N
@@ -32920,7 +32924,7 @@ COPY station_network_mapping (id, station_id, network_id, local_station_id, begi
 -- Name: station_network_mapping_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('station_network_mapping_id_seq', 32911, true);
+SELECT pg_catalog.setval('public.station_network_mapping_id_seq', 32911, true);
 
 
 --

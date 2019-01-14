@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: level_grib1; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updated) FROM stdin;
+COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updated) FROM stdin;
 250	1	1	\N	\N
 130	3	109	\N	\N
 1	2	100	\N	\N
@@ -164,7 +168,6 @@ COPY level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updat
 2156	2	100	\N	\N
 2157	2	100	\N	\N
 2158	2	100	\N	\N
-2159	2	100	\N	\N
 7	5	8	\N	\N
 7	6	105	\N	\N
 112	2	100	\N	\N
@@ -187,7 +190,6 @@ COPY level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updat
 2156	3	109	\N	\N
 2157	3	109	\N	\N
 2158	3	109	\N	\N
-2159	3	109	\N	\N
 260	15	20	\N	\N
 112	3	109	\N	\N
 2125	3	109	\N	\N
@@ -204,7 +206,6 @@ COPY level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updat
 2156	1	1	\N	\N
 2157	1	1	\N	\N
 2158	1	1	\N	\N
-2159	1	1	\N	\N
 112	1	1	\N	\N
 2125	1	1	\N	\N
 2150	1	1	\N	\N
@@ -220,7 +221,6 @@ COPY level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updat
 2156	6	105	\N	\N
 2157	6	105	\N	\N
 2158	6	105	\N	\N
-2159	6	105	\N	\N
 112	6	105	\N	\N
 2125	6	105	\N	\N
 2150	6	105	\N	\N
@@ -236,7 +236,6 @@ COPY level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updat
 2156	7	102	\N	\N
 2157	7	102	\N	\N
 2158	7	102	\N	\N
-2159	7	102	\N	\N
 112	7	102	\N	\N
 2125	7	102	\N	\N
 2150	7	102	\N	\N
@@ -252,7 +251,6 @@ COPY level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updat
 2156	4	103	\N	\N
 2157	4	103	\N	\N
 2158	4	103	\N	\N
-2159	4	103	\N	\N
 112	4	103	\N	\N
 2125	4	103	\N	\N
 2150	4	103	\N	\N
@@ -270,7 +268,6 @@ COPY level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updat
 2156	5	8	\N	\N
 2157	5	8	\N	\N
 2158	5	8	\N	\N
-2159	5	8	\N	\N
 112	5	8	\N	\N
 2125	5	8	\N	\N
 2150	5	8	\N	\N
