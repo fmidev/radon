@@ -25,6 +25,8 @@ echo "CREATE EXTENSION hstore" | psql $PSQL_ARGS
 
 # users
 
+set +e
+
 echo "CREATE GROUP radon_rw" | psql $PSQL_ARGS
 echo "CREATE GROUP radon_ro" | psql $PSQL_ARGS
 echo "CREATE USER radon_client" | psql $PSQL_ARGS
@@ -33,6 +35,7 @@ echo "GRANT radon_ro TO radon_rw" | psql $PSQL_ARGS
 echo "GRANT radon_ro TO radon_client" | psql $PSQL_ARGS
 echo "GRANT radon_rw TO wetodb" | psql $PSQL_ARGS
 
+set -e
 set +u
 
 if [ -n "$RADON_WETODB_PASSWORD" ]; then
