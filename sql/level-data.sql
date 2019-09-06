@@ -34,8 +34,8 @@ COPY public.level (id, name, description, unit_id, last_updater, last_updated) F
 13	HEIGHT_LAYER	Layer between two metric heights above ground	2	\N	\N
 14	DEPTH_LAYER	Layer between two depths below land surface	63	\N	\N
 9	GROUND_DEPTH	Layer between two depths below land surface	63	wetodb	2017-08-18 07:01:00.767969+00
-16	MAX_WIND	Maximum wind level	\N	\N	\N
 15	ISOTHERMAL	Isothermal level, temperature in 1/100 K	\N	\N	\N
+16	MAXWIND	Maximum wind level	\N	wetodb	2019-04-24 05:57:57.715881+00
 \.
 
 

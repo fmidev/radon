@@ -168,6 +168,7 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 2156	2	100	\N	\N
 2157	2	100	\N	\N
 2158	2	100	\N	\N
+137	14	112	\N	\N
 7	5	8	\N	\N
 7	6	105	\N	\N
 112	2	100	\N	\N

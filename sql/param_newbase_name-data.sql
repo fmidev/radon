@@ -106,6 +106,14 @@ COPY public.param_newbase_name (id, univ_id, name, last_updater, last_updated) F
 98	1306	Sea Level Warning High (FMI)	\N	\N
 99	1307	Sea Level Warning Moderate High (FMI)	\N	\N
 100	1308	Sea Level Warning Very High (FMI)	\N	\N
+101	1395	Total Cloud Cover (FMI)	\N	\N
+102	1396	Low Cloud Cover (FMI)	\N	\N
+103	1397	Middle Cloud Cover (FMI)	\N	\N
+104	1398	High Cloud Cover (FMI)	\N	\N
+105	467	MaxGustMS	\N	\N
+106	61	Sea Surface Temperature	\N	\N
+107	21	Wind Speed	\N	\N
+108	22	Wind Direction	\N	\N
 \.
 
 
@@ -113,7 +121,7 @@ COPY public.param_newbase_name (id, univ_id, name, last_updater, last_updated) F
 -- Name: param_newbase_name_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.param_newbase_name_id_seq', 100, true);
+SELECT pg_catalog.setval('public.param_newbase_name_id_seq', 108, true);
 
 
 --

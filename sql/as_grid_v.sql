@@ -31,15 +31,13 @@ CREATE VIEW public.as_grid_v AS
     a.min_analysis_time,
     a.max_analysis_time,
     a.delete_time,
-    (c.reltuples)::integer AS record_count,
+    a.record_count,
     a.last_updater,
     a.last_updated
    FROM public.as_grid a,
     public.geom g,
-    public.fmi_producer f,
-    pg_class c,
-    pg_namespace n
-  WHERE ((a.geometry_id = g.id) AND (a.producer_id = f.id) AND (c.relname = (a.partition_name)::name) AND (c.relnamespace = n.oid) AND (n.nspname = (a.schema_name)::name));
+    public.fmi_producer f
+  WHERE ((a.geometry_id = g.id) AND (a.producer_id = f.id));
 
 
 ALTER TABLE public.as_grid_v OWNER TO postgres;
