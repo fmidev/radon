@@ -2,40 +2,41 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Name: level_v; Type: VIEW; Schema: public; Owner: postgres
 --
 
-CREATE VIEW level_v AS
+CREATE VIEW public.level_v AS
  SELECT l.id AS level_id,
     l.name AS level_name,
     u.name AS level_unit,
     l.last_updater,
     l.last_updated
-   FROM level l,
-    param_unit u
+   FROM public.level l,
+    public.param_unit u
   WHERE (l.unit_id = u.id);
 
 
 ALTER TABLE public.level_v OWNER TO postgres;
 
 --
--- Name: level_v; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE level_v; Type: ACL; Schema: public; Owner: postgres
 --
 
-REVOKE ALL ON TABLE level_v FROM PUBLIC;
-REVOKE ALL ON TABLE level_v FROM postgres;
-GRANT ALL ON TABLE level_v TO postgres;
-GRANT SELECT ON TABLE level_v TO PUBLIC;
+GRANT SELECT ON TABLE public.level_v TO PUBLIC;
 
 
 --

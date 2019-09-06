@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: geom; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning_mode, geom_param_1, geom_param_2, geom_param_3, description, last_updater, last_updated) FROM stdin;
+COPY public.geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning_mode, geom_param_1, geom_param_2, geom_param_3, description, last_updater, last_updated) FROM stdin;
 1050	MEPSNOFMI2500	5	739	949	0101000020E6100000D34D62105839FA3F6891ED7C3F054A40	2500	2500	+x+y	63	63	0	MEPS Scandinavia area without FMI extension	\N	\N
 1049	ECEUR0200	4	331	289	0101000020E61000000000000000003AC09A99999999993640	0.2	0.2	+x-y	-30	0	0	ECMWF Europe, rotated 0.2 degrees	postgres	2016-09-21 05:31:30.671101+00
 25	EGRR432325	1	432	325	0101000020E6100000000000000000000000000000008056C0	0.833	0.555	+x+y	0	0	0	Seasonal global forecast model of UK Met-office.	wetodb	2016-09-22 06:32:48.424987+00
@@ -63,6 +67,7 @@ COPY geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning_mode, 
 1091	ECEDIT100G2	4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 1092	METANSCAN1000	5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 1093	MEPS2500D	5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+1094	O80	6	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	wetodb	2018-07-09 07:57:39.309664+00
 51	ANAL1210200	4	121	121	0101000020E610000000000000000008C03333333333331FC0	0.2	0.2	+x+y	-30	0	0	Mesoanalyysi Fennoskandia	\N	\N
 999	AROME022	4	290	594	0101000020E6100000EC51B81E85EB014000000000000000C0	0.022	0.022	+x+y	-30	13	0	Arome malli .22 asteen hilassa	\N	\N
 112	EC0730175000	1	73	17	0101000020E610000000000000008066400000000000805640	5	5	+x-y	0	0	0	ECM 73x17_5000	\N	\N
@@ -84,6 +89,7 @@ COPY geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning_mode, 
 17	EGRR145073	1	145	73	0101000020E610000000000000008066C000000000008056C0	2.5	2.5	+x+y	0	0	0	Bracknell global grid	\N	\N
 124	EPS121441500	1	121	44	0101000020E610000000000000008056C00000000000803940	1.5	1.5	+x+y	0	0	0	ECMWF EPS-fields	\N	\N
 123	EPSORG12144	1	121	44	0101000020E610000000000000008056C00000000000805640	1.5	1.5	+x-y	0	0	0	ECMWF original EPS-fields	\N	\N
+1095	MEPSSCAN2500G2	5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 127	EPSSCAN	1	41	61	0101000020E610000000000000000014400000000000C05240	0.5	0.5	+x-y	0	0	0	ECMWF EPS fields for Scandinavia	\N	\N
 100	EUR194140200	4	194	140	0101000020E610000000000000000022C0CDCCCCCCCCCC26C0	0.2	0.2	+x+y	-30	0	0	Mesohirlam, EUR	\N	\N
 101	EUU194140200	4	194	140	0101000020E6100000CDCCCCCCCCCC21C0CDCCCCCCCCCC26C0	0.2	0.2	+x+y	-30	0	0	Mesohirlam, EUR, shift for u wind	\N	\N
@@ -112,7 +118,7 @@ COPY geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning_mode, 
 16	KWBC073037	1	73	37	0101000020E610000000000000008066C00000000000000000	5	2.5	+x+y	0	0	0	Washington  combined grid, northern hemisphere	\N	\N
 3	KWBCONEDEG	1	360	181	0101000020E610000000000000000000000000000000805640	1	1	+x-y	0	0	0	Washington global one degree resolution	\N	\N
 8	KWBG1000	1	360	181	0101000020E6100000000000000000000000000000008056C0	1	1	+x+y	0	0	0	Washington NCEP siirretty	\N	\N
-39	LAPS1000	2	400	300	0101000020E61000005839B4C876BE344091ED7C3F35DE4D40	1	1	+x+y	20	0	0	LAPS Analysis Area over Finland	\N	\N
+1097	VANADISG	1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 40	LAPS3000	2	270	400	0101000020E6100000AE47E17A14CE31408D976E1283B04D40	3	3	+x+y	20	0	0	LAPS Analysis Area over Finland	\N	\N
 41	LAPSSCAN	2	490	560	0101000020E610000083C0CAA145B61C40DBF97E6ABC244B40	3	3	+x+y	20	0	0	LAPS Analysis Area over Scandinavia	\N	\N
 165	MBE203153160	4	203	153	0101000020E61000003333333333331BC000000000000024C0	0.16	0.16	+x+y	-30	0	0	MBE Hirlam 203 x 153 1.60 deg	\N	\N
@@ -136,6 +142,8 @@ COPY geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning_mode, 
 407	MTEUR025	4	233	231	0101000020E610000000000000000032C000000000008041C0	0.25	0.25	+x+y	-30	0	0	Europe ,rotated 0.25 deg.	\N	\N
 422	MTFESC250	4	133	99	0101000020E61000000000000000001CC000000000008021C0	0.25	0.25	+x+y	-30	0	0	ECMWF fractiles semi-europe area (ie. enlargened scandinavia)	\N	\N
 214	MTHIPS125	2	58	45	0101000020E6100000CDCCCCCCCC4C33C06666666666E63840	125	125	+x+y	10	0	0	Polar stereographic area covering most of RCR	\N	\N
+1096	SMARTMETSMALL7500	2	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+1098	GLAMEPSG2	4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 213	MTHIPS25	2	290	225	0101000020E6100000CDCCCCCCCC4C33C06666666666E63840	25	25	+x+y	10	0	0	Polar stereographic area covering most of RCR	\N	\N
 211	MTHIPS50	2	144	120	0101000020E61000009A99999999D941C09A99999999993940	50	50	+x+y	0	0	0	Polar stereographic area covering most of HIR	\N	\N
 417	MTNOR025	1	1441	361	0101000020E610000000000000008066C00000000000000000	0.25	0.25	+x+y	0	0	0	ECMWF MTA Northern hemisphere 0.25 degrees	\N	\N
@@ -164,6 +172,7 @@ COPY geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning_mode, 
 304	TB_SMA_008	4	51	61	0101000020E6100000CDCCCCCCCCCC2440000000000000F03F	0.08	0.08	+x+y	-30	0	0	Testbed smaller area 0.08 deg	\N	\N
 303	TB_SMA_02	4	21	25	0101000020E6100000CDCCCCCCCCCC2440000000000000F03F	0.2	0.2	+x+y	-30	0	0	Testbed smaller area 0.2 deg	\N	\N
 606	WAM109123	1	166	196	0101000020E610000000000000000022400000000000804A40	0.133	0.067	+x+y	0	0	0	Area of MTL Wave model data	\N	\N
+1099	ECGSEASFIN040	1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
@@ -171,7 +180,7 @@ COPY geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning_mode, 
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('geom_id_seq', 1093, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1099, true);
 
 
 --

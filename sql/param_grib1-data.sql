@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: param_grib1; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_indicator, level_id, level_value, last_updater, last_updated, ident, centre) FROM stdin;
+COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timerange_indicator, level_id, level_value, last_updater, last_updated, ident, centre) FROM stdin;
 2181	230	694	203	127	0	\N	\N	\N	\N	\N	\N
 3209	206	166	207	2	0	\N	\N	\N	\N	\N	\N
 3	1	221	1	79	4	\N	\N	\N	\N	\N	\N
@@ -318,6 +322,7 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 315	3	138	1	51	0	\N	\N	\N	\N	\N	\N
 3575	4	767	253	184	0	3	\N	wetodb	2017-08-02 08:11:19.433145+00	\N	\N
 3483	242	1024	207	36	0	\N	\N	\N	\N	\N	\N
+3875	4	500	253	115	0	\N	\N	\N	\N	\N	\N
 2375	242	759	207	196	0	\N	\N	\N	\N	\N	\N
 320	3	163	1	52	0	\N	\N	\N	\N	\N	\N
 2285	131	426	3	20	0	\N	\N	\N	\N	\N	\N
@@ -683,7 +688,6 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 3524	112	462	204	179	0	6	\N	\N	\N	\N	\N
 2413	242	181	207	3	0	\N	\N	postgres	2016-09-01 10:29:31.845005+00	\N	\N
 695	53	169	2	31	0	\N	\N	\N	\N	\N	\N
-3801	122	1059	255	2	10	\N	\N	\N	\N	\N	\N
 3525	111	469	204	181	0	6	\N	\N	\N	\N	\N
 698	103	169	2	31	0	\N	\N	\N	\N	\N	\N
 699	50	169	2	31	0	\N	\N	\N	\N	\N	\N
@@ -691,7 +695,6 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 701	107	2	2	218	0	\N	\N	\N	\N	\N	\N
 2414	242	181	207	3	10	\N	\N	postgres	2016-09-01 10:29:31.845005+00	\N	\N
 703	53	2	2	218	0	\N	\N	\N	\N	\N	\N
-3802	122	1058	255	3	10	\N	\N	\N	\N	\N	\N
 705	109	2	2	218	0	\N	\N	\N	\N	\N	\N
 706	103	2	2	218	0	\N	\N	\N	\N	\N	\N
 707	50	2	2	218	0	\N	\N	\N	\N	\N	\N
@@ -699,7 +702,6 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 709	107	174	2	34	0	\N	\N	\N	\N	\N	\N
 2415	242	166	207	2	10	\N	\N	\N	\N	\N	\N
 711	53	174	2	34	0	\N	\N	\N	\N	\N	\N
-3788	122	154	255	1	10	\N	\N	wetodb	2018-03-28 09:37:26.634191+00	\N	\N
 713	109	174	2	34	0	\N	\N	\N	\N	\N	\N
 714	103	174	2	34	0	\N	\N	\N	\N	\N	\N
 715	50	174	2	34	0	\N	\N	\N	\N	\N	\N
@@ -1124,49 +1126,47 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 3660	240	1091	203	247	0	\N	\N	\N	\N	\N	\N
 3816	7	153	253	11	0	\N	\N	\N	\N	\N	\N
 1158	210	665	203	111	0	\N	\N	\N	\N	\N	\N
-1159	240	665	203	111	0	\N	\N	\N	\N	\N	\N
+3897	131	980	128	171	0	\N	\N	\N	\N	\N	\N
 3817	7	158	253	6	0	\N	\N	\N	\N	\N	\N
 3720	230	1094	203	148	0	\N	\N	wetodb	2017-10-05 07:21:47.827449+00	\N	\N
 1162	210	666	203	112	0	\N	\N	\N	\N	\N	\N
-1163	240	666	203	112	0	\N	\N	\N	\N	\N	\N
+3898	240	1281	203	180	0	\N	\N	\N	\N	\N	\N
 3721	240	1094	203	148	0	\N	\N	wetodb	2017-10-05 07:21:47.827449+00	\N	\N
 3722	230	1093	203	149	0	\N	\N	\N	\N	\N	\N
 1166	210	667	203	113	0	\N	\N	\N	\N	\N	\N
-1167	240	667	203	113	0	\N	\N	\N	\N	\N	\N
+3899	230	1281	203	180	0	\N	\N	\N	\N	\N	\N
 3723	240	1093	203	149	0	\N	\N	\N	\N	\N	\N
 3818	7	171	1	33	0	\N	\N	\N	\N	\N	\N
 1170	210	668	203	114	0	\N	\N	\N	\N	\N	\N
-1171	240	668	203	114	0	\N	\N	\N	\N	\N	\N
+3900	135	598	128	39	0	\N	\N	\N	\N	\N	\N
 3819	7	171	253	33	0	\N	\N	\N	\N	\N	\N
 3820	7	174	1	34	0	\N	\N	\N	\N	\N	\N
 1174	210	669	203	115	0	\N	\N	\N	\N	\N	\N
-1175	240	669	203	115	0	\N	\N	\N	\N	\N	\N
 3821	7	174	253	34	0	\N	\N	\N	\N	\N	\N
 3822	7	179	253	61	4	\N	\N	\N	\N	\N	\N
 1178	210	670	203	116	0	\N	\N	\N	\N	\N	\N
-1179	240	670	203	116	0	\N	\N	\N	\N	\N	\N
+3901	137	598	171	39	10	\N	\N	wetodb	2019-06-07 11:34:03.11585+00	\N	\N
 3823	7	195	253	7	0	\N	\N	\N	\N	\N	\N
 3824	7	214	253	15	2	\N	\N	\N	\N	\N	\N
 1182	210	671	203	117	0	\N	\N	\N	\N	\N	\N
-1183	240	671	203	117	0	\N	\N	\N	\N	\N	\N
 3825	7	215	253	16	2	\N	\N	\N	\N	\N	\N
 3826	7	216	1	11	0	\N	\N	\N	\N	\N	\N
 1186	210	672	203	118	0	\N	\N	\N	\N	\N	\N
-1187	240	672	203	118	0	\N	\N	\N	\N	\N	\N
+3906	137	598	171	40	10	\N	\N	wetodb	2019-06-07 11:40:26.848768+00	\N	\N
 3827	7	220	253	187	0	\N	\N	\N	\N	\N	\N
 3828	7	276	253	186	0	\N	\N	\N	\N	\N	\N
 1190	210	673	203	119	0	\N	\N	\N	\N	\N	\N
-1191	240	673	203	119	0	\N	\N	\N	\N	\N	\N
+3909	242	809	207	230	0	\N	\N	wetodb	2019-07-31 10:10:30.586142+00	\N	\N
 3829	7	314	253	111	4	\N	\N	\N	\N	\N	\N
 3830	7	316	253	112	4	\N	\N	\N	\N	\N	\N
 1194	210	674	203	120	0	\N	\N	\N	\N	\N	\N
-1195	240	674	203	120	0	\N	\N	\N	\N	\N	\N
+3910	242	814	207	231	0	\N	\N	\N	\N	\N	\N
 3831	7	317	253	115	4	\N	\N	\N	\N	\N	\N
 3832	7	318	253	117	4	\N	\N	\N	\N	\N	\N
 1198	210	675	203	121	0	\N	\N	\N	\N	\N	\N
-1199	240	675	203	121	0	\N	\N	\N	\N	\N	\N
+3911	242	965	207	232	0	\N	\N	\N	\N	\N	\N
 1202	210	676	203	122	0	\N	\N	\N	\N	\N	\N
-1203	240	676	203	122	0	\N	\N	\N	\N	\N	\N
+3912	242	964	207	233	0	\N	\N	\N	\N	\N	\N
 1205	230	39	203	126	0	\N	\N	\N	\N	\N	\N
 1206	210	39	203	126	0	\N	\N	\N	\N	\N	\N
 1207	240	39	203	126	0	\N	\N	\N	\N	\N	\N
@@ -1178,6 +1178,7 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 1215	240	329	203	129	0	\N	\N	\N	\N	\N	\N
 1325	230	324	203	165	4	\N	\N	wetodb	2017-05-17 05:58:50.249819+00	\N	\N
 1217	230	370	203	130	0	\N	\N	\N	\N	\N	\N
+3913	242	963	207	234	0	\N	\N	\N	\N	\N	\N
 1218	210	370	203	130	0	\N	\N	\N	\N	\N	\N
 1219	240	370	203	130	0	\N	\N	\N	\N	\N	\N
 1326	210	324	203	165	4	\N	\N	wetodb	2017-05-17 05:58:50.249819+00	\N	\N
@@ -1272,7 +1273,10 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 1309	230	589	203	159	0	\N	\N	\N	\N	\N	\N
 1310	210	589	203	159	0	\N	\N	\N	\N	\N	\N
 1311	240	589	203	159	0	\N	\N	\N	\N	\N	\N
+3876	4	501	253	116	0	\N	\N	\N	\N	\N	\N
+3877	230	1204	203	252	0	\N	\N	\N	\N	\N	\N
 1314	210	565	203	161	0	\N	\N	\N	\N	\N	\N
+3878	240	1204	203	237	0	\N	\N	\N	\N	\N	\N
 1317	230	407	203	163	0	\N	\N	\N	\N	\N	\N
 1318	210	407	203	163	0	\N	\N	\N	\N	\N	\N
 1319	240	407	203	163	0	\N	\N	\N	\N	\N	\N
@@ -1841,7 +1845,7 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 2158	199	661	253	54	0	\N	\N	\N	\N	\N	\N
 2159	199	52	253	58	0	\N	\N	\N	\N	\N	\N
 2160	199	139	253	2	0	7	\N	\N	\N	\N	\N
-2161	199	163	253	52	0	\N	\N	\N	\N	\N	\N
+3884	101	1223	206	160	0	\N	\N	\N	\N	\N	\N
 2162	199	461	253	209	0	\N	\N	\N	\N	\N	\N
 2163	199	426	253	20	0	\N	\N	\N	\N	\N	\N
 2164	199	162	253	17	0	\N	\N	\N	\N	\N	\N
@@ -2267,6 +2271,29 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 881	132	452	140	231	10	\N	\N	postgres	2017-01-07 08:14:54.097016+00	\N	\N
 883	132	447	140	229	10	\N	\N	postgres	2017-01-07 08:14:54.097016+00	\N	\N
 3459	500	153	1	11	0	\N	\N	\N	\N	\N	\N
+3879	122	153	128	167	0	\N	\N	\N	\N	\N	\N
+3882	122	162	128	168	0	\N	\N	\N	\N	\N	\N
+3883	122	158	128	129	0	\N	\N	\N	\N	\N	\N
+2161	199	769	253	52	0	\N	\N	wetodb	2018-10-06 09:25:40.399165+00	\N	\N
+3885	101	411	206	161	0	\N	\N	\N	\N	\N	\N
+3887	131	598	128	40	0	\N	\N	wetodb	2018-11-12 05:51:10.326139+00	\N	\N
+3890	260	1228	207	16	0	\N	\N	\N	\N	\N	\N
+3891	131	1229	132	229	5	\N	\N	\N	\N	\N	\N
+3889	131	1233	132	228	5	\N	\N	wetodb	2019-01-09 06:28:27.73068+00	\N	\N
+3888	131	1232	132	49	2	\N	\N	wetodb	2019-01-09 06:29:20.059237+00	\N	\N
+3894	240	196	203	190	0	\N	\N	\N	\N	\N	\N
+3892	131	1230	132	50	2	\N	\N	wetodb	2019-01-16 09:02:31.778893+00	\N	\N
+3895	240	197	203	191	0	\N	\N	\N	\N	\N	\N
+3896	240	198	203	192	0	\N	\N	\N	\N	\N	\N
+3914	242	962	207	235	0	\N	\N	\N	\N	\N	\N
+3915	242	804	207	236	0	\N	\N	\N	\N	\N	\N
+3916	120	153	128	167	0	\N	\N	\N	\N	\N	\N
+3917	120	158	128	129	0	\N	\N	\N	\N	\N	\N
+3918	120	162	128	168	0	\N	\N	\N	\N	\N	\N
+3919	120	738	128	51	0	\N	\N	\N	\N	\N	\N
+3920	120	739	128	52	0	\N	\N	\N	\N	\N	\N
+3880	122	738	128	201	2	\N	\N	wetodb	2019-09-03 11:06:25.044726+00	\N	\N
+3881	122	739	128	202	2	\N	\N	wetodb	2019-09-03 11:06:25.044726+00	\N	\N
 \.
 
 
@@ -2274,7 +2301,7 @@ COPY param_grib1 (id, producer_id, param_id, table_version, number, timerange_in
 -- Name: param_grib1_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('param_grib1_id_seq', 3874, true);
+SELECT pg_catalog.setval('public.param_grib1_id_seq', 3920, true);
 
 
 --

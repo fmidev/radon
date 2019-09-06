@@ -2,24 +2,28 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: producer_class; Type: TABLE; Schema: public; Owner: wetodb; Tablespace: 
+-- Name: producer_class; Type: TABLE; Schema: public; Owner: wetodb
 --
 
-CREATE TABLE producer_class (
+CREATE TABLE public.producer_class (
     id integer NOT NULL,
     name character varying(50) NOT NULL,
     description text NOT NULL,
@@ -34,7 +38,7 @@ ALTER TABLE public.producer_class OWNER TO wetodb;
 -- Name: producer_class_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
 --
 
-CREATE SEQUENCE producer_class_id_seq
+CREATE SEQUENCE public.producer_class_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -48,55 +52,52 @@ ALTER TABLE public.producer_class_id_seq OWNER TO wetodb;
 -- Name: producer_class_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
 --
 
-ALTER SEQUENCE producer_class_id_seq OWNED BY producer_class.id;
+ALTER SEQUENCE public.producer_class_id_seq OWNED BY public.producer_class.id;
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: producer_class id; Type: DEFAULT; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY producer_class ALTER COLUMN id SET DEFAULT nextval('producer_class_id_seq'::regclass);
+ALTER TABLE ONLY public.producer_class ALTER COLUMN id SET DEFAULT nextval('public.producer_class_id_seq'::regclass);
 
 
 --
--- Name: producer_class_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb; Tablespace: 
+-- Name: producer_class producer_class_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY producer_class
+ALTER TABLE ONLY public.producer_class
     ADD CONSTRAINT producer_class_name_uniq UNIQUE (name);
 
 
 --
--- Name: producer_class_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb; Tablespace: 
+-- Name: producer_class producer_class_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY producer_class
+ALTER TABLE ONLY public.producer_class
     ADD CONSTRAINT producer_class_pkey PRIMARY KEY (id);
 
 
 --
--- Name: audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: producer_class audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
 --
 
-CREATE TRIGGER audit_trigger_row AFTER UPDATE ON producer_class FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
-
-
---
--- Name: producer_class_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
---
-
-CREATE TRIGGER producer_class_store_last_updated_trg BEFORE UPDATE ON producer_class FOR EACH ROW EXECUTE PROCEDURE store_last_updated_f();
+CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.producer_class FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: producer_class; Type: ACL; Schema: public; Owner: wetodb
+-- Name: producer_class producer_class_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
 --
 
-REVOKE ALL ON TABLE producer_class FROM PUBLIC;
-REVOKE ALL ON TABLE producer_class FROM wetodb;
-GRANT ALL ON TABLE producer_class TO wetodb;
-GRANT SELECT ON TABLE producer_class TO radon_ro;
-GRANT INSERT,DELETE,UPDATE ON TABLE producer_class TO radon_rw;
+CREATE TRIGGER producer_class_store_last_updated_trg BEFORE UPDATE ON public.producer_class FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
+
+
+--
+-- Name: TABLE producer_class; Type: ACL; Schema: public; Owner: wetodb
+--
+
+GRANT SELECT ON TABLE public.producer_class TO radon_ro;
+GRANT INSERT,DELETE,UPDATE ON TABLE public.producer_class TO radon_rw;
 
 
 --

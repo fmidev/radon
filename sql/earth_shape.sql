@@ -2,24 +2,28 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: earth_shape; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+-- Name: earth_shape; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE earth_shape (
+CREATE TABLE public.earth_shape (
     id integer NOT NULL,
     a numeric NOT NULL,
     b numeric NOT NULL,
@@ -35,7 +39,7 @@ ALTER TABLE public.earth_shape OWNER TO postgres;
 -- Name: earth_shape_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE earth_shape_id_seq
+CREATE SEQUENCE public.earth_shape_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -49,48 +53,46 @@ ALTER TABLE public.earth_shape_id_seq OWNER TO postgres;
 -- Name: earth_shape_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE earth_shape_id_seq OWNED BY earth_shape.id;
+ALTER SEQUENCE public.earth_shape_id_seq OWNED BY public.earth_shape.id;
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: earth_shape id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY earth_shape ALTER COLUMN id SET DEFAULT nextval('earth_shape_id_seq'::regclass);
+ALTER TABLE ONLY public.earth_shape ALTER COLUMN id SET DEFAULT nextval('public.earth_shape_id_seq'::regclass);
 
 
 --
--- Name: earth_shape_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: earth_shape earth_shape_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY earth_shape
+ALTER TABLE ONLY public.earth_shape
     ADD CONSTRAINT earth_shape_pkey PRIMARY KEY (id);
 
 
 --
--- Name: audit_trigger_row; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: earth_shape audit_trigger_row; Type: TRIGGER; Schema: public; Owner: postgres
 --
 
-CREATE TRIGGER audit_trigger_row AFTER UPDATE ON earth_shape FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
-
-
---
--- Name: earth_shape_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: postgres
---
-
-CREATE TRIGGER earth_shape_store_last_updated_trg BEFORE UPDATE ON earth_shape FOR EACH ROW EXECUTE PROCEDURE store_last_updated_f();
+CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.earth_shape FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: earth_shape; Type: ACL; Schema: public; Owner: postgres
+-- Name: earth_shape earth_shape_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: postgres
 --
 
-REVOKE ALL ON TABLE earth_shape FROM PUBLIC;
-REVOKE ALL ON TABLE earth_shape FROM postgres;
-GRANT ALL ON TABLE earth_shape TO postgres;
-GRANT SELECT ON TABLE earth_shape TO radon_ro;
+CREATE TRIGGER earth_shape_store_last_updated_trg BEFORE UPDATE ON public.earth_shape FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
+
+
+--
+-- Name: TABLE earth_shape; Type: ACL; Schema: public; Owner: postgres
+--
+
+GRANT SELECT ON TABLE public.earth_shape TO radon_ro;
 
 
 --
 -- PostgreSQL database dump complete
 --
+

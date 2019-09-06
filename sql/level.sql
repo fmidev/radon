@@ -2,24 +2,28 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: level; Type: TABLE; Schema: public; Owner: wetodb; Tablespace: 
+-- Name: level; Type: TABLE; Schema: public; Owner: wetodb
 --
 
-CREATE TABLE level (
+CREATE TABLE public.level (
     id integer NOT NULL,
     name character varying(50) NOT NULL,
     description text NOT NULL,
@@ -35,21 +39,21 @@ ALTER TABLE public.level OWNER TO wetodb;
 -- Name: COLUMN level.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
 --
 
-COMMENT ON COLUMN level.last_updater IS 'Fixed column for last updater';
+COMMENT ON COLUMN public.level.last_updater IS 'Fixed column for last updater';
 
 
 --
 -- Name: COLUMN level.last_updated; Type: COMMENT; Schema: public; Owner: wetodb
 --
 
-COMMENT ON COLUMN level.last_updated IS 'Fixed column for last updating time';
+COMMENT ON COLUMN public.level.last_updated IS 'Fixed column for last updating time';
 
 
 --
 -- Name: level_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
 --
 
-CREATE SEQUENCE level_id_seq
+CREATE SEQUENCE public.level_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -63,55 +67,52 @@ ALTER TABLE public.level_id_seq OWNER TO wetodb;
 -- Name: level_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
 --
 
-ALTER SEQUENCE level_id_seq OWNED BY level.id;
+ALTER SEQUENCE public.level_id_seq OWNED BY public.level.id;
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: level id; Type: DEFAULT; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY level ALTER COLUMN id SET DEFAULT nextval('level_id_seq'::regclass);
+ALTER TABLE ONLY public.level ALTER COLUMN id SET DEFAULT nextval('public.level_id_seq'::regclass);
 
 
 --
--- Name: level_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb; Tablespace: 
+-- Name: level level_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY level
+ALTER TABLE ONLY public.level
     ADD CONSTRAINT level_name_uniq UNIQUE (name);
 
 
 --
--- Name: level_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb; Tablespace: 
+-- Name: level level_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
 --
 
-ALTER TABLE ONLY level
+ALTER TABLE ONLY public.level
     ADD CONSTRAINT level_pkey PRIMARY KEY (id);
 
 
 --
--- Name: audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: level audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
 --
 
-CREATE TRIGGER audit_trigger_row AFTER UPDATE ON level FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
-
-
---
--- Name: level_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
---
-
-CREATE TRIGGER level_store_last_updated_trg BEFORE UPDATE ON level FOR EACH ROW EXECUTE PROCEDURE store_last_updated_f();
+CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.level FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: level; Type: ACL; Schema: public; Owner: wetodb
+-- Name: level level_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
 --
 
-REVOKE ALL ON TABLE level FROM PUBLIC;
-REVOKE ALL ON TABLE level FROM wetodb;
-GRANT ALL ON TABLE level TO wetodb;
-GRANT SELECT ON TABLE level TO radon_ro;
-GRANT INSERT,DELETE,UPDATE ON TABLE level TO radon_rw;
+CREATE TRIGGER level_store_last_updated_trg BEFORE UPDATE ON public.level FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
+
+
+--
+-- Name: TABLE level; Type: ACL; Schema: public; Owner: wetodb
+--
+
+GRANT SELECT ON TABLE public.level TO radon_ro;
+GRANT INSERT,DELETE,UPDATE ON TABLE public.level TO radon_rw;
 
 
 --

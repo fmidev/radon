@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: producer_meta; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY producer_meta (producer_id, attribute, value, last_updater, last_updated) FROM stdin;
+COPY public.producer_meta (producer_id, attribute, value, last_updater, last_updated) FROM stdin;
 1	last hybrid level number	65	\N	\N
 199	last hybrid level number	65	\N	\N
 210	last hybrid level number	65	\N	\N
@@ -52,6 +56,15 @@ COPY producer_meta (producer_id, attribute, value, last_updater, last_updated) F
 270	last hybrid level number	65	\N	\N
 7	first hybrid level number	1	\N	\N
 7	last hybrid level number	65	\N	\N
+10	ensemble size	1	\N	\N
+261	ensemble size	1	\N	\N
+243	last hybrid level number	91	\N	\N
+243	first hybrid level number	31	\N	\N
+10	first hybrid level number	1	\N	\N
+270	ensemble size	1	\N	\N
+10	last hybrid level number	65	\N	\N
+261	last hybrid level number	65	\N	\N
+261	first hybrid level number	1	\N	\N
 \.
 
 

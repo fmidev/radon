@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: param_unit; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY param_unit (id, name, description, last_updater, last_updated) FROM stdin;
+COPY public.param_unit (id, name, description, last_updater, last_updated) FROM stdin;
 1	Kg	Kilograms	\N	\N
 2	m	Meters	\N	\N
 3	K	Kelvins	\N	\N
@@ -39,15 +43,12 @@ COPY param_unit (id, name, description, last_updater, last_updated) FROM stdin;
 21	hPa	hectoPascal	\N	\N
 22	kPa	 	\N	\N
 23	hm	 	\N	\N
-24	NOTINUSE	  	\N	\N
 25	unitpolluant m-2	 	\N	\N
 26	unitpolluant m-3	 	\N	\N
-27	Pa/s	Pa/s	\N	\N
 28	0_1	0 ou 1	\N	\N
 29	fl	niveau de vol	\N	\N
 30	No Unit	Not Applicable	\N	\N
 31	kt	Knots	\N	\N
-32	kg/m2/h	kg / m2 / hour = mm / h	\N	\N
 40	V	Volt	\N	\N
 50	hPa 10-1	Tenths of HectoPascals	\N	\N
 51	C 10-1	Tenths of Celsius	\N	\N
@@ -82,13 +83,16 @@ COPY param_unit (id, name, description, last_updater, last_updated) FROM stdin;
 81	ms	Milliseconds	\N	\N
 82	ft	Feet	\N	\N
 83	J m-2	Joule per square meter	\N	\N
-84	g/m2	Grams per square meter	\N	\N
 85	g/l	Grams per litre	\N	\N
 86	psu	Practical salinity unit (parts per thousand)	\N	\N
 87	kg m-3	Kilograms per cubic metre	\N	\N
 88	s-2	inverse square seconds	\N	\N
 90	-1 to 1	-1 to 1	\N	\N
 89	Pa	Pascal	\N	\N
+27	Pa s-1	Pa/s	wetodb	2018-11-12 05:44:33
+32	kg m-2 h-1	kg / m2 / hour = mm / h	wetodb	2018-11-12 05:45:13
+84	g m-2	Grams per square meter	wetodb	2018-11-12 05:46:14
+91	m3 m-3	Cubic meters per cubic meters	wetodb	2018-11-12 05:46:45
 \.
 
 
@@ -96,7 +100,7 @@ COPY param_unit (id, name, description, last_updater, last_updated) FROM stdin;
 -- Name: param_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('param_unit_id_seq', 89, true);
+SELECT pg_catalog.setval('public.param_unit_id_seq', 91, true);
 
 
 --

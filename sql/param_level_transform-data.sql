@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: param_level_transform; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY param_level_transform (id, producer_id, param_id, other_level_id, other_level_value, fmi_level_id, fmi_level_value, last_updater, last_updated) FROM stdin;
+COPY public.param_level_transform (id, producer_id, param_id, other_level_id, other_level_value, fmi_level_id, fmi_level_value, last_updater, last_updated) FROM stdin;
 1	134	153	1	\N	6	\N	\N	\N
 2	134	438	1	\N	6	\N	\N	\N
 3	134	559	1	\N	6	\N	\N	\N
@@ -26,7 +30,7 @@ COPY param_level_transform (id, producer_id, param_id, other_level_id, other_lev
 8	131	654	8	\N	6	\N	\N	\N
 9	131	187	1	\N	6	\N	\N	\N
 10	131	1	1	\N	6	\N	\N	\N
-11	131	153	1	\N	6	\N	\N	\N
+11	131	153	1	0	6	2	wetodb	2018-09-07 09:13:11.514023+00
 12	131	689	1	\N	6	\N	\N	\N
 13	131	184	1	\N	6	\N	\N	\N
 14	131	186	1	\N	6	\N	\N	\N
@@ -110,6 +114,23 @@ COPY param_level_transform (id, producer_id, param_id, other_level_id, other_lev
 118	53	510	1	\N	6	0	\N	\N
 120	53	559	1	\N	6	0	\N	\N
 121	53	426	1	\N	6	0	\N	\N
+125	189	139	7	\N	4	\N	\N	\N
+126	281	139	7	\N	4	\N	\N	\N
+127	109	509	1	0	6	0	\N	\N
+128	120	154	6	0	6	2	\N	\N
+129	107	509	1	0	6	0	\N	\N
+130	107	143	1	0	6	0	\N	\N
+134	109	441	1	0	6	0	\N	\N
+132	131	598	9	0	1	0	\N	\N
+133	131	598	9	7	1	7	\N	\N
+135	131	980	1	0	6	2	\N	\N
+143	120	153	6	0	6	2	\N	\N
+144	120	162	6	0	6	2	\N	\N
+138	134	162	1	0	6	2	\N	\N
+139	137	598	14	0	1	0	wetodb	2019-06-12 06:53:59.819234+00
+140	137	598	14	7	1	7	wetodb	2019-06-12 07:09:10.024556+00
+141	170	179	1	\N	6	0	\N	\N
+142	243	774	6	0	1	0	wetodb	2019-07-03 12:17:28.047664+00
 \.
 
 
@@ -117,7 +138,7 @@ COPY param_level_transform (id, producer_id, param_id, other_level_id, other_lev
 -- Name: param_level_transform_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('param_level_transform_id_seq', 124, true);
+SELECT pg_catalog.setval('public.param_level_transform_id_seq', 144, true);
 
 
 --

@@ -2,23 +2,26 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: param_precision; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY param_precision (id, param_id, "precision", last_updater, last_updated) FROM stdin;
+COPY public.param_precision (id, param_id, "precision", last_updater, last_updated) FROM stdin;
 2	1026	0	\N	\N
 3	719	0	\N	\N
-4	559	0	\N	\N
 5	379	1	\N	\N
 6	386	1	\N	\N
 7	63	1	\N	\N
@@ -32,7 +35,6 @@ COPY param_precision (id, param_id, "precision", last_updater, last_updated) FRO
 17	169	0	\N	\N
 18	374	2	\N	\N
 19	711	1	\N	\N
-20	377	1	\N	\N
 97	370	6	\N	\N
 1	153	1	\N	\N
 24	166	1	\N	\N
@@ -48,10 +50,10 @@ COPY param_precision (id, param_id, "precision", last_updater, last_updated) FRO
 34	188	1	\N	\N
 35	372	2	\N	\N
 36	704	1	\N	\N
-37	375	1	\N	\N
+4	559	1	\N	\N
 38	373	2	\N	\N
 39	707	1	\N	\N
-40	376	1	\N	\N
+337	1227	0	\N	\N
 41	219	2	\N	\N
 314	1089	1	\N	\N
 43	438	2	\N	\N
@@ -134,7 +136,6 @@ COPY param_precision (id, param_id, "precision", last_updater, last_updated) FRO
 311	964	2	\N	\N
 312	965	2	\N	\N
 52	163	2	\N	\N
-316	1091	1	\N	\N
 54	504	3	\N	\N
 55	506	3	\N	\N
 56	181	3	\N	\N
@@ -201,6 +202,9 @@ COPY param_precision (id, param_id, "precision", last_updater, last_updated) FRO
 220	881	1	\N	\N
 221	882	1	\N	\N
 222	883	1	\N	\N
+20	377	2	\N	\N
+316	1091	2	\N	\N
+339	238	3	\N	\N
 223	884	1	\N	\N
 224	885	1	\N	\N
 225	886	1	\N	\N
@@ -239,6 +243,40 @@ COPY param_precision (id, param_id, "precision", last_updater, last_updated) FRO
 258	967	0	\N	\N
 259	968	0	\N	\N
 260	969	0	\N	\N
+37	375	2	\N	\N
+40	376	2	\N	\N
+336	1129	2	\N	\N
+340	239	3	\N	\N
+341	240	3	\N	\N
+342	241	3	\N	\N
+343	242	3	\N	\N
+344	263	3	\N	\N
+345	264	3	\N	\N
+346	265	3	\N	\N
+347	266	3	\N	\N
+348	267	3	\N	\N
+349	564	3	\N	\N
+350	1012	3	\N	\N
+351	1013	3	\N	\N
+352	1014	3	\N	\N
+353	1015	3	\N	\N
+354	1016	3	\N	\N
+355	1017	3	\N	\N
+356	255	3	\N	\N
+357	256	3	\N	\N
+358	681	3	\N	\N
+359	682	3	\N	\N
+360	683	3	\N	\N
+361	684	3	\N	\N
+362	1092	3	\N	\N
+363	1095	3	\N	\N
+364	1207	3	\N	\N
+365	1209	3	\N	\N
+366	1210	3	\N	\N
+367	1211	3	\N	\N
+368	1212	3	\N	\N
+369	1213	3	\N	\N
+370	1214	3	\N	\N
 \.
 
 
@@ -246,7 +284,7 @@ COPY param_precision (id, param_id, "precision", last_updater, last_updated) FRO
 -- Name: param_precision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('param_precision_id_seq', 335, true);
+SELECT pg_catalog.setval('public.param_precision_id_seq', 370, true);
 
 
 --

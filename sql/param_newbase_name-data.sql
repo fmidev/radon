@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: param_newbase_name; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY param_newbase_name (id, univ_id, name, last_updater, last_updated) FROM stdin;
+COPY public.param_newbase_name (id, univ_id, name, last_updater, last_updated) FROM stdin;
 1	1239	Wind Gust (FMI)	\N	\N
 2	1207	QNH Pressure Nil Height (FMI)	\N	\N
 3	1232	Visibility (FMI)	\N	\N
@@ -86,6 +90,30 @@ COPY param_newbase_name (id, univ_id, name, last_updater, last_updated) FROM std
 82	200	Grid Scale Precipitation Intensity	\N	\N
 83	201	Subgrid Scale Precipitation Intensity	\N	\N
 84	1208	Instant Precipitation mm/h	\N	\N
+85	260	Probability of Thunder (FMI)	\N	\N
+86	532	Sea Ice Cover	\N	\N
+87	276	Cloud Water kg/kg	\N	\N
+88	277	Cloud Ice kg/kg	\N	\N
+89	1174	Cloud Top m	\N	\N
+90	1219	Probability of Drizzle (FMI)	\N	\N
+91	1220	Probability of Rain (FMI)	\N	\N
+92	1221	Probability of Sleet (FMI)	\N	\N
+93	1222	Probability of Snow (FMI)	\N	\N
+94	1223	Probability of Freezing Drizzle (FMI)	\N	\N
+95	1224	Probability of Freezing Rain (FMI)	\N	\N
+96	1361	Probability of Freezing Drizzle or Freezing Rain (FMI)	\N	\N
+97	1305	Sea Level Warning Low (FMI)	\N	\N
+98	1306	Sea Level Warning High (FMI)	\N	\N
+99	1307	Sea Level Warning Moderate High (FMI)	\N	\N
+100	1308	Sea Level Warning Very High (FMI)	\N	\N
+101	1395	Total Cloud Cover (FMI)	\N	\N
+102	1396	Low Cloud Cover (FMI)	\N	\N
+103	1397	Middle Cloud Cover (FMI)	\N	\N
+104	1398	High Cloud Cover (FMI)	\N	\N
+105	467	MaxGustMS	\N	\N
+106	61	Sea Surface Temperature	\N	\N
+107	21	Wind Speed	\N	\N
+108	22	Wind Direction	\N	\N
 \.
 
 
@@ -93,7 +121,7 @@ COPY param_newbase_name (id, univ_id, name, last_updater, last_updated) FROM std
 -- Name: param_newbase_name_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('param_newbase_name_id_seq', 84, true);
+SELECT pg_catalog.setval('public.param_newbase_name_id_seq', 108, true);
 
 
 --

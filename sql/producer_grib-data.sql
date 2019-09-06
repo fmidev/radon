@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: producer_grib; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY producer_grib (id, producer_id, ident, centre, last_updater, last_updated) FROM stdin;
+COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_updated) FROM stdin;
 1	1	1	86	\N	\N
 92	34	201	34	\N	\N
 3	3	1	82	\N	\N
@@ -44,7 +48,6 @@ COPY producer_grib (id, producer_id, ident, centre, last_updater, last_updated) 
 26	119	119	86	\N	\N
 41	149	149	88	\N	\N
 96	121	121	86	wetodb	2017-05-29 11:04:22.044312+00
-80	134	149	98	wetodb	2018-06-05 19:28:11.70763+00
 30	150	150	86	\N	\N
 31	151	151	86	\N	\N
 32	152	152	86	\N	\N
@@ -70,18 +73,22 @@ COPY producer_grib (id, producer_id, ident, centre, last_updater, last_updated) 
 101	280	201	86	\N	\N
 100	170	2	78	wetodb	2017-11-09 14:48:42.772784+00
 107	182	182	86	\N	\N
-102	10	40	233	wetodb	2018-01-26 07:09:36.477914+00
+115	137	147	98	\N	\N
 103	261	205	86	\N	\N
 105	120	120	86	\N	\N
 106	501	110	86	\N	\N
 108	183	183	86	\N	\N
 109	184	184	86	\N	\N
-110	7	41	251	\N	\N
+110	7	11	251	wetodb	2019-05-15 11:04:46.824339+00
 111	270	207	86	\N	\N
 112	135	147	98	\N	\N
-27	131	149	98	wetodb	2018-06-05 09:44:37.320202+00
-29	133	114	98	wetodb	2018-06-05 09:44:37.320202+00
-28	132	214	98	wetodb	2018-06-05 09:44:37.320202+00
+114	281	202	86	\N	\N
+113	189	189	88	wetodb	2018-09-20 10:00:52.201369+00
+102	10	1	251	wetodb	2019-05-21 13:54:45.045252+00
+27	131	150	98	wetodb	2019-06-11 09:08:14.635523+00
+80	134	150	98	wetodb	2019-06-11 09:08:14.635523+00
+29	133	115	98	wetodb	2019-06-11 09:08:14.635523+00
+28	132	215	98	wetodb	2019-06-11 09:08:14.635523+00
 \.
 
 
@@ -89,7 +96,7 @@ COPY producer_grib (id, producer_id, ident, centre, last_updater, last_updated) 
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('producer_grib_id_seq', 112, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 115, true);
 
 
 --

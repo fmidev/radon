@@ -2,29 +2,33 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: geom_reduced_gaussian; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+-- Name: geom_reduced_gaussian; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE geom_reduced_gaussian (
+CREATE TABLE public.geom_reduced_gaussian (
     id integer NOT NULL,
     name text NOT NULL,
     nj integer NOT NULL,
-    first_point geometry(Point,4326) NOT NULL,
-    last_point geometry(Point,4326) NOT NULL,
+    first_point public.geometry(Point,4326) NOT NULL,
+    last_point public.geometry(Point,4326) NOT NULL,
     scanning_mode text NOT NULL,
     n integer NOT NULL,
     points_along_parallels integer[] NOT NULL,
@@ -38,74 +42,71 @@ CREATE TABLE geom_reduced_gaussian (
 ALTER TABLE public.geom_reduced_gaussian OWNER TO postgres;
 
 --
--- Name: geom_reduced_gaussian_name_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: geom_reduced_gaussian geom_reduced_gaussian_name_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY geom_reduced_gaussian
+ALTER TABLE ONLY public.geom_reduced_gaussian
     ADD CONSTRAINT geom_reduced_gaussian_name_uniq UNIQUE (name);
 
 
 --
--- Name: geom_reduced_gaussian_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: geom_reduced_gaussian geom_reduced_gaussian_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY geom_reduced_gaussian
+ALTER TABLE ONLY public.geom_reduced_gaussian
     ADD CONSTRAINT geom_reduced_gaussian_pkey PRIMARY KEY (id);
 
 
 --
--- Name: geom_reduced_gaussian_geom_fkey_02_idx; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+-- Name: geom_reduced_gaussian_geom_fkey_02_idx; Type: INDEX; Schema: public; Owner: postgres
 --
 
-CREATE INDEX geom_reduced_gaussian_geom_fkey_02_idx ON geom_reduced_gaussian USING btree (name);
-
-
---
--- Name: geom_reduced_gaussian_geom_fkey_idx; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
---
-
-CREATE INDEX geom_reduced_gaussian_geom_fkey_idx ON geom_reduced_gaussian USING btree (id);
+CREATE INDEX geom_reduced_gaussian_geom_fkey_02_idx ON public.geom_reduced_gaussian USING btree (name);
 
 
 --
--- Name: audit_trigger_row; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: geom_reduced_gaussian_geom_fkey_idx; Type: INDEX; Schema: public; Owner: postgres
 --
 
-CREATE TRIGGER audit_trigger_row AFTER UPDATE ON geom_reduced_gaussian FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
-
-
---
--- Name: geom_reduced_gaussian_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: postgres
---
-
-CREATE TRIGGER geom_reduced_gaussian_store_last_updated_trg AFTER UPDATE ON geom_reduced_gaussian FOR EACH ROW EXECUTE PROCEDURE store_last_updated_f();
+CREATE INDEX geom_reduced_gaussian_geom_fkey_idx ON public.geom_reduced_gaussian USING btree (id);
 
 
 --
--- Name: geom_reduced_gaussian_geom_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_reduced_gaussian audit_trigger_row; Type: TRIGGER; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY geom_reduced_gaussian
-    ADD CONSTRAINT geom_reduced_gaussian_geom_fkey FOREIGN KEY (id) REFERENCES geom(id);
-
-
---
--- Name: geom_reduced_gaussian_geom_fkey_02; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY geom_reduced_gaussian
-    ADD CONSTRAINT geom_reduced_gaussian_geom_fkey_02 FOREIGN KEY (name) REFERENCES geom(name);
+CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.geom_reduced_gaussian FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: geom_reduced_gaussian; Type: ACL; Schema: public; Owner: postgres
+-- Name: geom_reduced_gaussian geom_reduced_gaussian_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: postgres
 --
 
-REVOKE ALL ON TABLE geom_reduced_gaussian FROM PUBLIC;
-REVOKE ALL ON TABLE geom_reduced_gaussian FROM postgres;
-GRANT ALL ON TABLE geom_reduced_gaussian TO postgres;
-GRANT INSERT,DELETE,UPDATE ON TABLE geom_reduced_gaussian TO radon_rw;
-GRANT SELECT ON TABLE geom_reduced_gaussian TO radon_ro;
+CREATE TRIGGER geom_reduced_gaussian_store_last_updated_trg AFTER UPDATE ON public.geom_reduced_gaussian FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
+
+
+--
+-- Name: geom_reduced_gaussian geom_reduced_gaussian_geom_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.geom_reduced_gaussian
+    ADD CONSTRAINT geom_reduced_gaussian_geom_fkey FOREIGN KEY (id) REFERENCES public.geom(id);
+
+
+--
+-- Name: geom_reduced_gaussian geom_reduced_gaussian_geom_fkey_02; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.geom_reduced_gaussian
+    ADD CONSTRAINT geom_reduced_gaussian_geom_fkey_02 FOREIGN KEY (name) REFERENCES public.geom(name);
+
+
+--
+-- Name: TABLE geom_reduced_gaussian; Type: ACL; Schema: public; Owner: postgres
+--
+
+GRANT INSERT,DELETE,UPDATE ON TABLE public.geom_reduced_gaussian TO radon_rw;
+GRANT SELECT ON TABLE public.geom_reduced_gaussian TO radon_ro;
 
 
 --

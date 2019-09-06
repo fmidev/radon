@@ -2,20 +2,24 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
 -- Data for Name: projection; Type: TABLE DATA; Schema: public; Owner: wetodb
 --
 
-COPY projection (id, name, description, grib1_number, grib2_number, last_updater, last_updated) FROM stdin;
+COPY public.projection (id, name, description, grib1_number, grib2_number, last_updater, last_updated) FROM stdin;
 1	Equidistant cylindrical	Latitude/Longitude/or Equidistant Cylindrical or Plate Carree projection	0	0	\N	\N
 2	Polar stereographic	(Polar) stereographic projection	5	20	\N	\N
 3	Azimuthal equidistant	Azimuthal equidistant	\N	110	\N	\N
@@ -29,7 +33,7 @@ COPY projection (id, name, description, grib1_number, grib2_number, last_updater
 -- Name: projection_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('projection_id_seq', 33, true);
+SELECT pg_catalog.setval('public.projection_id_seq', 33, true);
 
 
 --

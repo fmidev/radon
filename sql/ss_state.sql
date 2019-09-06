@@ -2,28 +2,32 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: ss_state; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+-- Name: ss_state; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE ss_state (
+CREATE TABLE public.ss_state (
     producer_id integer NOT NULL,
     geometry_id integer NOT NULL,
     forecast_type_id integer NOT NULL,
-    forecast_type_value numeric DEFAULT (-1) NOT NULL,
+    forecast_type_value numeric DEFAULT '-1'::integer NOT NULL,
     analysis_time timestamp without time zone NOT NULL,
     forecast_period interval NOT NULL,
     table_name text NOT NULL,
@@ -35,46 +39,43 @@ CREATE TABLE ss_state (
 ALTER TABLE public.ss_state OWNER TO postgres;
 
 --
--- Name: ss_state_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: ss_state ss_state_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY ss_state
+ALTER TABLE ONLY public.ss_state
     ADD CONSTRAINT ss_state_pkey PRIMARY KEY (producer_id, geometry_id, analysis_time, forecast_period, forecast_type_id, forecast_type_value);
 
 
 --
--- Name: ss_state_forecast_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: ss_state ss_state_forecast_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY ss_state
-    ADD CONSTRAINT ss_state_forecast_type_id_fkey FOREIGN KEY (forecast_type_id) REFERENCES forecast_type(id);
-
-
---
--- Name: ss_state_geometry_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY ss_state
-    ADD CONSTRAINT ss_state_geometry_id_fkey FOREIGN KEY (geometry_id) REFERENCES geom(id);
+ALTER TABLE ONLY public.ss_state
+    ADD CONSTRAINT ss_state_forecast_type_id_fkey FOREIGN KEY (forecast_type_id) REFERENCES public.forecast_type(id);
 
 
 --
--- Name: ss_state_producer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: ss_state ss_state_geometry_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY ss_state
-    ADD CONSTRAINT ss_state_producer_id_fkey FOREIGN KEY (producer_id) REFERENCES fmi_producer(id);
+ALTER TABLE ONLY public.ss_state
+    ADD CONSTRAINT ss_state_geometry_id_fkey FOREIGN KEY (geometry_id) REFERENCES public.geom(id);
 
 
 --
--- Name: ss_state; Type: ACL; Schema: public; Owner: postgres
+-- Name: ss_state ss_state_producer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-REVOKE ALL ON TABLE ss_state FROM PUBLIC;
-REVOKE ALL ON TABLE ss_state FROM postgres;
-GRANT ALL ON TABLE ss_state TO postgres;
-GRANT SELECT ON TABLE ss_state TO radon_ro;
-GRANT INSERT,DELETE,UPDATE ON TABLE ss_state TO radon_rw;
+ALTER TABLE ONLY public.ss_state
+    ADD CONSTRAINT ss_state_producer_id_fkey FOREIGN KEY (producer_id) REFERENCES public.fmi_producer(id);
+
+
+--
+-- Name: TABLE ss_state; Type: ACL; Schema: public; Owner: postgres
+--
+
+GRANT SELECT ON TABLE public.ss_state TO radon_ro;
+GRANT INSERT,DELETE,UPDATE ON TABLE public.ss_state TO radon_rw;
 
 
 --
