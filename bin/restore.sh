@@ -15,8 +15,6 @@ export PGDATABASE=radon
 echo "CREATE SCHEMA audit" | psql $PSQL_ARGS
 echo "CREATE SCHEMA data" | psql $PSQL_ARGS
 
-echo "GRANT ALL ON SCHEMA data TO radon_rw" | psql $PSQL_ARGS
-
 # extensions
 
 echo "CREATE EXTENSION postgis" | psql $PSQL_ARGS
@@ -32,6 +30,8 @@ echo "CREATE USER wetodb" | psql $PSQL_ARGS
 echo "GRANT radon_ro TO radon_rw" | psql $PSQL_ARGS
 echo "GRANT radon_ro TO radon_client" | psql $PSQL_ARGS
 echo "GRANT radon_rw TO wetodb" | psql $PSQL_ARGS
+
+echo "GRANT ALL ON SCHEMA data TO radon_rw" | psql $PSQL_ARGS
 
 set +u
 
@@ -110,7 +110,7 @@ for f in producer_class producer_class-data \
 	grid_data_template previ_data_template \
 	tm_world_borders-0.3 ; do
   echo "file: $f.sql"
-  psql $PSQL_ARGS -f $f.sql
+  psql $PSQL_ARGS -f $f.sql > /dev/null
 done
 
 
