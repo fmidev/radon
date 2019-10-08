@@ -36,6 +36,9 @@ CREATE TABLE public.grid_data_template (
     forecast_type_value numeric DEFAULT '-1'::integer NOT NULL,
     file_location text NOT NULL,
     file_server text NOT NULL,
+    message_no integer,
+    byte_offset bigint,
+    byte_length bigint,
     last_updater text DEFAULT "session_user"(),
     last_updated timestamp with time zone DEFAULT clock_timestamp()
 );
