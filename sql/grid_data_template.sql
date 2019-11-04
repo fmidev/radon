@@ -36,6 +36,8 @@ CREATE TABLE public.grid_data_template (
     forecast_type_value numeric DEFAULT '-1'::integer NOT NULL,
     file_location text NOT NULL,
     file_server text NOT NULL,
+    file_format_id integer NOT NULL,
+    file_protocol_id integer NOT NULL,
     message_no integer,
     byte_offset bigint,
     byte_length bigint,
@@ -120,6 +122,10 @@ ALTER TABLE ONLY public.grid_data_template
 
 ALTER TABLE ONLY public.grid_data_template
     ADD CONSTRAINT grid_data_template_param_fkey FOREIGN KEY (param_id) REFERENCES public.param(id);
+ALTER TABLE ONLY public.grid_data_template
+    ADD CONSTRAINT grid_data_template_file_type_fkey FOREIGN KEY (file_format_id) REFERENCES public.file_format(id);
+ALTER TABLE ONLY public.grid_data_template
+    ADD CONSTRAINT grid_data_template_file_protocol_fkey FOREIGN KEY (file_protocol_id) REFERENCES public.file_protocol(id);
 
 
 --
