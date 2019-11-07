@@ -118,6 +118,7 @@ COPY public.geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning
 16	KWBC073037	1	73	37	0101000020E610000000000000008066C00000000000000000	5	2.5	+x+y	0	0	0	Washington  combined grid, northern hemisphere	\N	\N
 3	KWBCONEDEG	1	360	181	0101000020E610000000000000000000000000000000805640	1	1	+x-y	0	0	0	Washington global one degree resolution	\N	\N
 8	KWBG1000	1	360	181	0101000020E6100000000000000000000000000000008056C0	1	1	+x+y	0	0	0	Washington NCEP siirretty	\N	\N
+1097	VANADISG	1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 40	LAPS3000	2	270	400	0101000020E6100000AE47E17A14CE31408D976E1283B04D40	3	3	+x+y	20	0	0	LAPS Analysis Area over Finland	\N	\N
 41	LAPSSCAN	2	490	560	0101000020E610000083C0CAA145B61C40DBF97E6ABC244B40	3	3	+x+y	20	0	0	LAPS Analysis Area over Scandinavia	\N	\N
 165	MBE203153160	4	203	153	0101000020E61000003333333333331BC000000000000024C0	0.16	0.16	+x+y	-30	0	0	MBE Hirlam 203 x 153 1.60 deg	\N	\N
@@ -142,6 +143,7 @@ COPY public.geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning
 422	MTFESC250	4	133	99	0101000020E61000000000000000001CC000000000008021C0	0.25	0.25	+x+y	-30	0	0	ECMWF fractiles semi-europe area (ie. enlargened scandinavia)	\N	\N
 214	MTHIPS125	2	58	45	0101000020E6100000CDCCCCCCCC4C33C06666666666E63840	125	125	+x+y	10	0	0	Polar stereographic area covering most of RCR	\N	\N
 1096	SMARTMETSMALL7500	2	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+1098	GLAMEPSG2	4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 213	MTHIPS25	2	290	225	0101000020E6100000CDCCCCCCCC4C33C06666666666E63840	25	25	+x+y	10	0	0	Polar stereographic area covering most of RCR	\N	\N
 211	MTHIPS50	2	144	120	0101000020E61000009A99999999D941C09A99999999993940	50	50	+x+y	0	0	0	Polar stereographic area covering most of HIR	\N	\N
 417	MTNOR025	1	1441	361	0101000020E610000000000000008066C00000000000000000	0.25	0.25	+x+y	0	0	0	ECMWF MTA Northern hemisphere 0.25 degrees	\N	\N
@@ -170,6 +172,7 @@ COPY public.geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning
 304	TB_SMA_008	4	51	61	0101000020E6100000CDCCCCCCCCCC2440000000000000F03F	0.08	0.08	+x+y	-30	0	0	Testbed smaller area 0.08 deg	\N	\N
 303	TB_SMA_02	4	21	25	0101000020E6100000CDCCCCCCCCCC2440000000000000F03F	0.2	0.2	+x+y	-30	0	0	Testbed smaller area 0.2 deg	\N	\N
 606	WAM109123	1	166	196	0101000020E610000000000000000022400000000000804A40	0.133	0.067	+x+y	0	0	0	Area of MTL Wave model data	\N	\N
+1099	ECGSEASFIN040	1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
@@ -177,7 +180,7 @@ COPY public.geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1096, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1099, true);
 
 
 --

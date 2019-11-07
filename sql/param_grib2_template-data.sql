@@ -25,7 +25,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 177	0	2	8	\N	\N	-1
 201	0	1	37	\N	\N	1
 523	0	2	9	\N	\N	-1
-322	0	1	19	\N	\N	-1
+1265	0	200	150	\N	\N	-1
 411	0	2	22	\N	\N	-1
 506	0	1	201	\N	\N	1
 214	0	0	4	\N	\N	-1
@@ -34,10 +34,8 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 169	0	2	0	\N	\N	-1
 171	0	2	2	\N	\N	-1
 174	0	2	3	\N	\N	-1
-181	0	1	202	\N	\N	1
 642	0	19	7	\N	\N	-1
 768	0	6	204	\N	\N	-1
-719	0	19	192	\N	\N	-1
 139	0	3	0	\N	\N	-1
 139	0	3	1	\N	\N	-1
 321	0	1	73	\N	\N	1
@@ -71,7 +69,6 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 52	0	6	0	\N	\N	-1
 224	0	1	55	\N	\N	-1
 656	0	1	14	\N	\N	-1
-1073	10	3	0	\N	\N	-1
 1074	0	2	19	\N	\N	-1
 658	0	1	6	\N	\N	-1
 1075	0	0	15	\N	\N	-1
@@ -85,7 +82,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 653	0	19	11	\N	\N	-1
 1078	0	19	5	\N	\N	-1
 98	0	0	11	\N	\N	-1
-88	0	0	10	\N	\N	-1
+88	0	0	10	\N	\N	1
 188	0	7	2	\N	\N	-1
 187	0	6	1	\N	\N	-1
 654	0	6	6	\N	\N	-1
@@ -93,6 +90,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 196	0	6	3	\N	\N	-1
 197	0	6	4	\N	\N	-1
 198	0	6	5	\N	\N	-1
+2	0	1	19	\N	\N	-1
 1035	0	1	61	\N	\N	-1
 44	0	1	60	\N	\N	-1
 499	0	5	5	\N	\N	-1
@@ -109,11 +107,14 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1085	0	3	16	\N	\N	-1
 1086	0	3	17	\N	\N	-1
 502	0	4	3	\N	\N	-1
+461	0	17	0	\N	\N	-1
 313	0	0	2	\N	\N	-1
+1235	0	202	22	\N	\N	-1
 411	0	2	21	\N	\N	-1
 750	1	1	2	\N	\N	-1
 500	0	5	3	\N	\N	-1
 1048	0	6	8	\N	\N	-1
+1236	0	202	23	\N	\N	-1
 694	0	6	13	\N	\N	-1
 5	0	200	0	\N	\N	-1
 6	0	200	1	\N	\N	-1
@@ -172,6 +173,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1095	0	200	66	\N	\N	-1
 1012	0	200	67	\N	\N	-1
 1013	0	200	68	\N	\N	-1
+1237	0	202	24	\N	\N	-1
 1049	0	1	41	\N	\N	1
 89	0	0	11	\N	\N	1
 1014	0	200	69	\N	\N	-1
@@ -236,7 +238,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1147	0	200	127	\N	\N	-1
 786	0	200	128	\N	\N	-1
 787	0	200	129	\N	\N	-1
-509	0	1	53	\N	\N	1
+823	0	202	31	\N	\N	-1
 1151	0	200	130	\N	\N	-1
 1152	0	200	131	\N	\N	-1
 1153	0	200	132	\N	\N	-1
@@ -249,6 +251,9 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1166	0	200	139	\N	\N	-1
 1167	0	200	140	\N	\N	-1
 1168	0	200	141	\N	\N	-1
+510	0	1	53	\N	\N	1
+1238	0	202	25	\N	\N	-1
+1239	0	202	26	\N	\N	-1
 970	0	1	204	\N	\N	-1
 1169	0	200	143	\N	\N	-1
 905	0	201	0	\N	\N	-1
@@ -265,9 +270,8 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 136	0	6	26	\N	\N	-1
 999	0	200	222	\N	\N	-1
 501	0	4	2	\N	\N	-1
-164	0	6	194	\N	\N	-1
 369	0	3	10	\N	\N	-1
-700	0	19	193	\N	\N	-1
+1240	0	202	27	\N	\N	-1
 904	0	201	1	\N	\N	-1
 903	0	201	2	\N	\N	-1
 902	0	201	3	\N	\N	-1
@@ -285,7 +289,6 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 334	0	201	15	\N	\N	-1
 335	0	201	16	\N	\N	-1
 336	0	201	17	\N	\N	-1
-336	0	201	18	\N	\N	-1
 337	0	201	19	\N	\N	-1
 338	0	201	20	\N	\N	-1
 339	0	201	21	\N	\N	-1
@@ -328,11 +331,12 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 959	0	201	46	\N	\N	-1
 960	0	201	47	\N	\N	-1
 961	0	201	48	\N	\N	-1
+1241	0	202	28	\N	\N	-1
 962	0	201	49	\N	\N	-1
 963	0	201	50	\N	\N	-1
 964	0	201	51	\N	\N	-1
 965	0	201	52	\N	\N	-1
-362	0	201	52	\N	\N	-1
+1267	0	202	47	\N	\N	-1
 363	0	201	53	\N	\N	-1
 363	0	201	54	\N	\N	-1
 364	0	201	55	\N	\N	-1
@@ -364,7 +368,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 820	0	201	81	\N	\N	-1
 821	0	201	82	\N	\N	-1
 822	0	201	83	\N	\N	-1
-823	0	201	83	\N	\N	-1
+1268	0	202	48	\N	\N	-1
 824	0	201	84	\N	\N	-1
 824	0	201	85	\N	\N	-1
 825	0	201	86	\N	\N	-1
@@ -560,6 +564,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1212	0	200	147	\N	\N	-1
 1213	0	200	148	\N	\N	-1
 1214	0	200	149	\N	\N	-1
+1247	0	202	32	\N	\N	-1
 1204	0	7	19	\N	\N	-1
 182	0	1	208	\N	\N	1
 1215	0	202	15	\N	\N	-1
@@ -579,7 +584,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1201	0	4	13	\N	\N	1
 318	0	4	3	\N	\N	1
 1202	0	1	65	\N	\N	1
-342	0	1	65	\N	\N	-1
+1248	0	202	33	\N	\N	-1
 214	0	0	0	\N	\N	2
 215	0	0	0	\N	\N	3
 655	0	3	18	\N	\N	-1
@@ -587,6 +592,39 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 596	0	2	24	\N	\N	2
 1222	0	3	8	\N	\N	-1
 186	0	1	10	\N	\N	1
+1249	0	202	34	\N	\N	-1
+1250	0	202	35	\N	\N	-1
+1269	0	202	49	\N	\N	-1
+1242	0	202	29	\N	\N	-1
+1243	0	202	30	\N	\N	-1
+1251	0	202	36	\N	\N	-1
+1252	0	202	37	\N	\N	-1
+1253	0	202	38	\N	\N	-1
+1254	0	202	39	\N	\N	-1
+1255	0	202	40	\N	\N	-1
+1256	0	202	41	\N	\N	-1
+1257	0	202	42	\N	\N	-1
+1258	0	202	43	\N	\N	-1
+1259	0	202	44	\N	\N	-1
+1260	0	202	45	\N	\N	-1
+1261	0	202	46	\N	\N	-1
+1270	0	202	50	\N	\N	-1
+1073	10	3	0	\N	\N	-1
+1271	0	202	51	\N	\N	-1
+1272	0	202	52	\N	\N	-1
+1273	0	202	53	\N	\N	-1
+1274	0	202	54	\N	\N	-1
+1275	0	202	55	\N	\N	-1
+1276	0	202	56	\N	\N	-1
+159	0	0	3	\N	\N	-1
+1277	0	202	57	\N	\N	-1
+1278	0	202	58	\N	\N	-1
+1279	0	202	59	\N	\N	-1
+1280	0	202	60	\N	\N	-1
+1283	0	200	151	\N	\N	-1
+1284	0	200	152	\N	\N	-1
+1285	0	200	153	\N	\N	-1
+461	0	17	4	\N	\N	0
 \.
 
 

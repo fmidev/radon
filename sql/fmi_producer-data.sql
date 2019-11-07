@@ -25,7 +25,6 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 206	GLAMEPSMTA	Postprocessed fields for GLAMEPS	1	\N	\N	1
 5	GLAMEPS	GLAMEPS	1	\N	\N	3
 4	MEPS	MEPS ensemble from Metcoop	1	postgres	2016-09-24 12:58:27	3
-241	ERAMTA	Postprocessed fields for ECMWF ERA-Interim	1	\N	\N	1
 34	JRA55	JMA JRA-55 reanalysis	1	postgres	2016-12-31 10:40:31	1
 6	GLAMEPSCAL	GLAMEPS calibrated fields	1	\N	\N	3
 135	ECGSEASONAL	ECMWF seasonal forecast	1	\N	\N	3
@@ -92,6 +91,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 2156	OASECM	Water level forecast OAAS-ECMWF	3	postgres	2016-05-26 08:42:00	1
 2157	WETMBE	Water level forecast Wetehinen-MBE	3	postgres	2016-05-26 08:42:00	1
 2158	WETECM	Water level forecast Wetehinen-ECMWF	3	postgres	2016-05-26 08:42:00	1
+241	ERA5MTA	Postprocessed fields for ECMWF ERA5	1	wetodb	2019-02-02 07:21:28	1
 2160	OASRCRAW	Water level forecast OAAS-RCR Raw fields	3	postgres	2016-05-26 08:42:00	1
 2161	OASECRAW	Water level forecast OAAS-EC Raw fields	3	postgres	2016-05-26 08:42:00	1
 130	ECG_ERA	ECMWF global ERA-Interim	1	postgres	2016-05-26 08:58:01	1
@@ -109,6 +109,8 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 1016	WATLEV	Water level data from FIMR	3	postgres	2016-05-26 08:59:14	6
 189	METAN	METNO Scandinavia analysis	1	wetodb	2018-09-19 09:23:51	2
 52	ENFUSER	FMI Air Quality fusion model	1	wetodb	2018-10-05 04:52:34	1
+137	ECGSEASMEAN	ECMWF seasonal forecast mean values	1	\N	\N	1
+220	ICONMTA	ICON postprocessed fields	1	\N	\N	1
 \.
 
 

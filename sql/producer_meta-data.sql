@@ -60,7 +60,11 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 261	ensemble size	1	\N	\N
 243	last hybrid level number	91	\N	\N
 243	first hybrid level number	31	\N	\N
+10	first hybrid level number	1	\N	\N
 270	ensemble size	1	\N	\N
+10	last hybrid level number	65	\N	\N
+261	last hybrid level number	65	\N	\N
+261	first hybrid level number	1	\N	\N
 \.
 
 

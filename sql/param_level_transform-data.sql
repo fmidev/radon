@@ -120,8 +120,17 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 128	120	154	6	0	6	2	\N	\N
 129	107	509	1	0	6	0	\N	\N
 130	107	143	1	0	6	0	\N	\N
+134	109	441	1	0	6	0	\N	\N
 132	131	598	9	0	1	0	\N	\N
 133	131	598	9	7	1	7	\N	\N
+135	131	980	1	0	6	2	\N	\N
+143	120	153	6	0	6	2	\N	\N
+144	120	162	6	0	6	2	\N	\N
+138	134	162	1	0	6	2	\N	\N
+139	137	598	14	0	1	0	wetodb	2019-06-12 06:53:59.819234+00
+140	137	598	14	7	1	7	wetodb	2019-06-12 07:09:10.024556+00
+141	170	179	1	\N	6	0	\N	\N
+142	243	774	6	0	1	0	wetodb	2019-07-03 12:17:28.047664+00
 \.
 
 
@@ -129,7 +138,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 -- Name: param_level_transform_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.param_level_transform_id_seq', 133, true);
+SELECT pg_catalog.setval('public.param_level_transform_id_seq', 144, true);
 
 
 --

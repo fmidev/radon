@@ -220,6 +220,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 204	FRNTSYM-N	1	30	1	Front Symbol	\N	\N
 1170	PM25-UGM3	1	65	1	PM25 concentration	\N	\N
 1230	SOT-WG-N	1	69	2	Shift Of Tails for wind gusts	\N	\N
+973	NM-0TO1	1	28	1	Middle Cloud Amount	wetodb	2019-03-26 06:06:51
 209	H-M	1	2	1	Cloud Height in  Meters	\N	\N
 210	CL-N	1	30	1	Low Cloud Type	\N	\N
 211	CM-N	1	30	1	Medium Cloud Type	\N	\N
@@ -414,12 +415,14 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 774	VV2-M	1	2	1	Visibility in meters, himan version	wetodb	2017-11-26 07:43:58
 1233	EFI-RR--1TO1	1	90	2	Extreme Forecast Index for precipitation	\N	\N
 405	SSICING-N	1	64	1	Sea spray icing for major oceans	\N	\N
+1235	F0-SNOWLOAD-KGM2	1	18	1	0th fractal snowload in EPS	\N	\N
 407	MOL-M	1	2	1	Inverse of Monin-Obukhov length, i.e. 1/L in m-1	\N	\N
 408	FX-MS	1	15	1	Maximum Wind Speed in m/s	\N	\N
 409	RRT-H	1	59	1	Period of Rain Amount in Hours	\N	\N
 410	DS-D	1	5	1	Direction of the Ship in Degrees	\N	\N
 411	FFG-MS	1	15	1	Instantaneous Wind Speed in m/s	\N	\N
 412	P-HPA	1	21	1	Pressure in hPa	\N	\N
+1236	F10-SNOWLOAD-KGM2	1	18	1	10th fractal snowload in EPS	\N	\N
 414	TD2M-C	1	58	1	Dew Point Temperature at 2m in Celsius	\N	\N
 415	RRON-N	1	30	1	Rain On or Off	\N	\N
 416	SSON-N	1	30	1	SunShine On or Off	\N	\N
@@ -570,6 +573,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 554	H0C-M	1	2	1	Height of 0 C level in meters	\N	\N
 555	FLMOM-PA	1	7	1	Scalar momentum flux in Pa	\N	\N
 556	ICEIND-N	1	64	1	Indicator of icing risk for ships	\N	\N
+1237	F25-SNOWLOAD-KGM2	1	18	1	25th fractal snowload in EPS	\N	\N
 558	SIGNIFICANCE	1	30	1	Vertical Sounding Significance.	\N	\N
 559	CAPE-JKG	1	77	1	Convective available potential energy	\N	\N
 560	WSTOR-MM	1	60	1	Thickness of water layer on road	\N	\N
@@ -737,7 +741,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1071	ALBDO-PRCNT	1	6	1	Albedo	\N	\N
 711	EL-K	1	3	1	Temperature of EL in K	\N	\N
 1182	WEATHERNUMBER-N	1	69	2	Weather number describing the state of weather, precursor to Smart weather symbol	\N	\N
-1073	WTMP	1	3	1	Water temperature	\N	\N
+1262	LFC-LAST-M	1	2	1	Height of last LFC in meters	\N	\N
 1074	WMIXE-JKG	1	77	1	Wind mixing energy	\N	\N
 1075	VPTMP-K	1	3	1	Virtual potential temperature	\N	\N
 1076	UICE-MS	1	15	1	U-Component of Ice Drift	\N	\N
@@ -782,7 +786,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 828	F5-FFG-MS	1	15	1	5th fractal wind gust speed in EPS	\N	\N
 829	F2.5-FFG-MS	1	15	1	2.5th fractal wind gust speed in EPS	\N	\N
 830	F1-FFG-MS	1	15	1	1st fractal wind gust speed in EPS	\N	\N
-973	NM-0TO1	1	28	1	Low Cloud Amount	\N	\N
 832	F99-CAPE-JKG	1	77	1	99th fractal CAPE in EPS	\N	\N
 833	F97.5-CAPE-JKG	1	77	1	97.5th fractal CAPE in EPS	\N	\N
 834	F95-CAPE-JKG	1	77	1	95th fractal CAPE in EPS	\N	\N
@@ -913,7 +916,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 950	F100-TD-K	1	3	1	100th fractal dewpoint temperature in EPS	\N	\N
 951	F99-TD-K	1	3	1	99th fractal dewpoint temperature in EPS	\N	\N
 952	F97.5-TD-K	1	3	1	97.5th fractal dewpoint temperature in EPS	\N	\N
-974	NH-0TO1	1	28	1	Low Cloud Amount	\N	\N
+1263	LFC-LAST-K	1	3	1	Temperature of last LFC in meters	\N	\N
 954	F95-TD-K	1	3	1	95th fractal dewpoint temperature in EPS	\N	\N
 955	F87.5-TD-K	1	3	1	87.5th fractal dewpoint temperature in EPS	\N	\N
 956	F50-TD-K	1	3	1	50th fractal dewpoint temperature in EPS	\N	\N
@@ -1050,7 +1053,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1201	SDNIRR-JM2	1	83	1	Surface direct normal irradiation	\N	\N
 1202	RACC-KGM2	1	18	1	Rain accumulation in mm	\N	\N
 1203	GDD-C	1	58	1	Growing degree days	\N	\N
-461	FL-MPLTY-N	1	69	1	Multiplicity Of The Flash, strikes / 5min / area 30kmx30km	wetodb	2018-04-04 10:27:46
 1205	PROB-WG-AGG-1	1	6	1	Probability of reaching wind gust speed more than given value threshold, aggregated over area and/or time	\N	\N
 1206	PROB-HAIL-AGG-1	1	6	1	Probability of hail, aggregated over area and/or time	\N	\N
 1207	PROB-RR-AGG-1	1	6	1	Probability of reaching some precipitation threshold value, aggregated over area and/or time	\N	\N
@@ -1133,6 +1135,51 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 406	ICINGWARN-N	1	64	2	Icing warning index, values between 0 ... 4	wetodb	2018-11-26 06:22:54
 557	GROWPER-N	1	69	2	Growth period on/off	wetodb	2018-11-26 06:22:54
 997	PPRET-N	1	69	2	Potential precipitation type	wetodb	2018-11-26 06:22:54
+1238	F50-SNOWLOAD-KGM2	1	18	1	50th fractal snowload in EPS	\N	\N
+1239	F75-SNOWLOAD-KGM2	1	18	1	75th fractal snowload in EPS	\N	\N
+1240	F90-SNOWLOAD-KGM2	1	18	1	90th fractal snowload in EPS	\N	\N
+1241	F100-SNOWLOAD-KGM2	1	18	1	100th fractal snowload in EPS	\N	\N
+1247	F10-TMAX-K	1	3	1	10th fractal maximum temperature in EPS	\N	\N
+1248	F25-TMAX-K	1	3	1	25th fractal maximum temperature in EPS	\N	\N
+1249	F75-TMAX-K	1	3	1	75th fractal maximum temperature in EPS	\N	\N
+1250	F90-TMAX-K	1	3	1	90th fractal maximum temperature in EPS	\N	\N
+1251	F10-TMIN-K	1	3	1	10th fractal minimum temperature in EPS	\N	\N
+1242	SNOWLOAD-MEAN-KGM2	1	18	1	Mean value of snowload in EPS	wetodb	2019-01-23 07:07:21
+1243	SNOWLOAD-STDDEV-KGM2	1	18	1	Standard deviation of snowload in EPS	wetodb	2019-01-23 07:07:30
+1252	F25-TMIN-K	1	3	1	25th fractal minimum temperature in EPS	\N	\N
+1253	F75-TMIN-K	1	3	1	75th fractal minimum temperature in EPS	\N	\N
+1254	F90-TMIN-K	1	3	1	90th fractal minimum temperature in EPS	\N	\N
+1255	F0-RR-24-MM	1	18	1	0th fractal precipitation in EPS	\N	\N
+1256	F10-RR-24-MM	1	18	1	10th fractal precipitation in EPS	\N	\N
+1257	F25-RR-24-MM	1	18	1	25th fractal precipitation in EPS	\N	\N
+1258	F50-RR-24-MM	1	18	1	50th fractal precipitation in EPS	\N	\N
+1259	F75-RR-24-MM	1	18	1	75th fractal precipitation in EPS	\N	\N
+1260	F90-RR-24-MM	1	18	1	90th fractal precipitation in EPS	\N	\N
+1261	F100-RR-24-MM	1	18	1	100th fractal precipitation in EPS	\N	\N
+1073	WTMP-K	1	3	1	Water temperature	wetodb	2019-03-04 06:53:57
+974	NH-0TO1	1	28	1	High Cloud Amount	wetodb	2019-03-26 06:06:51
+1264	LFC-LAST-HPA	1	21	1	Height of last LFC in hPa	\N	\N
+1265	PROB-FOG-1	1	6	1	Probability of fog	\N	\N
+1282	PROB-FLASH-AGG-1	1	6	1	Probability of flash (lightning), aggregated over area and/or time	\N	\N
+1267	F0-RR-24-KGM2	1	18	1	0th fractal 24h total precipitation in EPS	\N	\N
+1268	F10-RR-24-KGM2	1	18	1	10th fractal 24h total precipitation in EPS	\N	\N
+1269	F25-RR-24-KGM2	1	18	1	25th fractal 24h total precipitation in EPS	\N	\N
+1270	F50-RR-24-KGM2	1	18	1	50th fractal 24h total precipitation in EPS	\N	\N
+1271	F75-RR-24-KGM2	1	18	1	75th fractal 24h total precipitation in EPS	\N	\N
+1272	F90-RR-24-KGM2	1	18	1	90th fractal 24h total precipitation in EPS	\N	\N
+1273	F100-RR-24-KGM2	1	18	1	100th fractal 24h total precipitation in EPS	\N	\N
+1274	F0-RR-120-KGM2	1	18	1	0th fractal 120h total precipitation in EPS	\N	\N
+1275	F10-RR-120-KGM2	1	18	1	10th fractal 120h total precipitation in EPS	\N	\N
+1276	F25-RR-120-KGM2	1	18	1	25th fractal 120h total precipitation in EPS	\N	\N
+1277	F50-RR-120-KGM2	1	18	1	50th fractal 120h total precipitation in EPS	\N	\N
+1278	F75-RR-120-KGM2	1	18	1	75th fractal 120h total precipitation in EPS	\N	\N
+1279	F90-RR-120-KGM2	1	18	1	90th fractal 120h total precipitation in EPS	\N	\N
+1280	F100-RR-120-KGM2	1	18	1	100th fractal 120h total precipitation in EPS	\N	\N
+1281	CSI-N	1	30	1	Convective severity index	\N	\N
+1283	PROB-CSI-1	1	6	1	Probability of reaching some CSI threshold value	\N	\N
+1284	PROB-CSI-2	1	6	1	Probability of reaching some CSI threshold value	\N	\N
+1285	PROB-CSI-3	1	6	1	Probability of reaching some CSI threshold value	\N	\N
+461	FL-MPLTY-N	1	69	1	Multiplicity Of The Flash, strikes / time unit / area	wetodb	2019-08-23 09:42:26
 \.
 
 
@@ -1140,7 +1187,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1233, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1285, true);
 
 
 --
