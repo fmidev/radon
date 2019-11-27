@@ -39,7 +39,7 @@ CREATE TABLE public.geom_latitude_longitude (
 );
 
 
-ALTER TABLE public.geom_latitude_longitude OWNER TO postgres;
+ALTER TABLE public.geom_latitude_longitude OWNER TO radon_admin;
 
 --
 -- Name: geom_latitude_longitude geom_latitude_longitude_name_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres

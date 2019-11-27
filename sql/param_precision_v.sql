@@ -31,7 +31,7 @@ CREATE VIEW public.param_precision_v AS
   WHERE (pp.param_id = p.id);
 
 
-ALTER TABLE public.param_precision_v OWNER TO postgres;
+ALTER TABLE public.param_precision_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE param_precision_v; Type: ACL; Schema: public; Owner: postgres

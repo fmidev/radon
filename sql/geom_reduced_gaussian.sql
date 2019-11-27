@@ -39,7 +39,7 @@ CREATE TABLE public.geom_reduced_gaussian (
 );
 
 
-ALTER TABLE public.geom_reduced_gaussian OWNER TO postgres;
+ALTER TABLE public.geom_reduced_gaussian OWNER TO radon_admin;
 
 --
 -- Name: geom_reduced_gaussian geom_reduced_gaussian_name_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres

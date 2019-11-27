@@ -34,7 +34,7 @@ CREATE VIEW public.param_newbase_v AS
      JOIN public.param p ON ((p.id = n.param_id)));
 
 
-ALTER TABLE public.param_newbase_v OWNER TO postgres;
+ALTER TABLE public.param_newbase_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE param_newbase_v; Type: ACL; Schema: public; Owner: postgres

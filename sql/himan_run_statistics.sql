@@ -33,7 +33,7 @@ CREATE TABLE public.himan_run_statistics (
 );
 
 
-ALTER TABLE public.himan_run_statistics OWNER TO postgres;
+ALTER TABLE public.himan_run_statistics OWNER TO radon_admin;
 
 --
 -- Name: himan_run_statistics_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -47,7 +47,7 @@ CREATE SEQUENCE public.himan_run_statistics_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.himan_run_statistics_id_seq OWNER TO postgres;
+ALTER TABLE public.himan_run_statistics_id_seq OWNER TO radon_admin;
 
 --
 -- Name: himan_run_statistics_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres

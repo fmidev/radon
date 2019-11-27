@@ -32,7 +32,7 @@ CREATE TABLE public.producer_type (
 );
 
 
-ALTER TABLE public.producer_type OWNER TO postgres;
+ALTER TABLE public.producer_type OWNER TO radon_admin;
 
 --
 -- Name: producer_type_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -46,7 +46,7 @@ CREATE SEQUENCE public.producer_type_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.producer_type_id_seq OWNER TO postgres;
+ALTER TABLE public.producer_type_id_seq OWNER TO radon_admin;
 
 --
 -- Name: producer_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres

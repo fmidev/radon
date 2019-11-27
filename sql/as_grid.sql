@@ -40,7 +40,7 @@ CREATE TABLE public.as_grid (
 );
 
 
-ALTER TABLE public.as_grid OWNER TO wetodb;
+ALTER TABLE public.as_grid OWNER TO radon_admin;
 
 --
 -- Name: COLUMN as_grid.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
@@ -68,7 +68,7 @@ CREATE SEQUENCE public.as_grid_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.as_grid_id_seq OWNER TO wetodb;
+ALTER TABLE public.as_grid_id_seq OWNER TO radon_admin;
 
 --
 -- Name: as_grid_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

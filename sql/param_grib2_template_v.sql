@@ -33,7 +33,7 @@ CREATE VIEW public.param_grib2_template_v AS
   WHERE (t.param_id = p.id);
 
 
-ALTER TABLE public.param_grib2_template_v OWNER TO postgres;
+ALTER TABLE public.param_grib2_template_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE param_grib2_template_v; Type: ACL; Schema: public; Owner: postgres

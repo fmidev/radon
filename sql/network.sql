@@ -32,7 +32,7 @@ CREATE TABLE public.network (
 );
 
 
-ALTER TABLE public.network OWNER TO wetodb;
+ALTER TABLE public.network OWNER TO radon_admin;
 
 --
 -- Name: network network_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb

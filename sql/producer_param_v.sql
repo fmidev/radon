@@ -105,7 +105,7 @@ CREATE VIEW public.producer_param_v AS
   GROUP BY po.id, po.name, pa.id, pa.name, pa.version;
 
 
-ALTER TABLE public.producer_param_v OWNER TO postgres;
+ALTER TABLE public.producer_param_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE producer_param_v; Type: ACL; Schema: public; Owner: postgres

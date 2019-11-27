@@ -34,7 +34,7 @@ CREATE VIEW public.station_v AS
   WHERE public.st_contains(w.geom, s."position");
 
 
-ALTER TABLE public.station_v OWNER TO postgres;
+ALTER TABLE public.station_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE station_v; Type: ACL; Schema: public; Owner: postgres

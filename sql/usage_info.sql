@@ -38,7 +38,7 @@ CREATE TABLE public.usage_info (
 );
 
 
-ALTER TABLE public.usage_info OWNER TO wetodb;
+ALTER TABLE public.usage_info OWNER TO radon_admin;
 
 --
 -- Name: usage_info usage_info_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb

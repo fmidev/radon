@@ -32,7 +32,7 @@ CREATE TABLE public.param_precision (
 );
 
 
-ALTER TABLE public.param_precision OWNER TO wetodb;
+ALTER TABLE public.param_precision OWNER TO radon_admin;
 
 --
 -- Name: param_precision_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
@@ -46,7 +46,7 @@ CREATE SEQUENCE public.param_precision_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.param_precision_id_seq OWNER TO wetodb;
+ALTER TABLE public.param_precision_id_seq OWNER TO radon_admin;
 
 --
 -- Name: param_precision_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

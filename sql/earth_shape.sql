@@ -33,7 +33,7 @@ CREATE TABLE public.earth_shape (
 );
 
 
-ALTER TABLE public.earth_shape OWNER TO postgres;
+ALTER TABLE public.earth_shape OWNER TO radon_admin;
 
 --
 -- Name: earth_shape_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -47,7 +47,7 @@ CREATE SEQUENCE public.earth_shape_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.earth_shape_id_seq OWNER TO postgres;
+ALTER TABLE public.earth_shape_id_seq OWNER TO radon_admin;
 
 --
 -- Name: earth_shape_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres

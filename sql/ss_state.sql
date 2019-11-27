@@ -36,7 +36,7 @@ CREATE TABLE public.ss_state (
 );
 
 
-ALTER TABLE public.ss_state OWNER TO postgres;
+ALTER TABLE public.ss_state OWNER TO radon_admin;
 
 --
 -- Name: ss_state ss_state_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres

@@ -31,7 +31,7 @@ CREATE VIEW public.station_wmo_v AS
   WHERE ((s.id = m.station_id) AND (m.network_id = 1));
 
 
-ALTER TABLE public.station_wmo_v OWNER TO postgres;
+ALTER TABLE public.station_wmo_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE station_wmo_v; Type: ACL; Schema: public; Owner: postgres

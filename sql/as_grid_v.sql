@@ -40,7 +40,7 @@ CREATE VIEW public.as_grid_v AS
   WHERE ((a.geometry_id = g.id) AND (a.producer_id = f.id));
 
 
-ALTER TABLE public.as_grid_v OWNER TO postgres;
+ALTER TABLE public.as_grid_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE as_grid_v; Type: ACL; Schema: public; Owner: postgres

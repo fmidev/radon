@@ -36,7 +36,7 @@ CREATE VIEW public.geom_reduced_gaussian_v AS
   WHERE ((g.id = grg.id) AND (g.projection_id = 6));
 
 
-ALTER TABLE public.geom_reduced_gaussian_v OWNER TO postgres;
+ALTER TABLE public.geom_reduced_gaussian_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE geom_reduced_gaussian_v; Type: ACL; Schema: public; Owner: postgres

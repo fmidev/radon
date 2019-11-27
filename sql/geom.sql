@@ -43,7 +43,7 @@ CREATE TABLE public.geom (
 );
 
 
-ALTER TABLE public.geom OWNER TO wetodb;
+ALTER TABLE public.geom OWNER TO radon_admin;
 
 --
 -- Name: COLUMN geom.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
@@ -71,7 +71,7 @@ CREATE SEQUENCE public.geom_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.geom_id_seq OWNER TO wetodb;
+ALTER TABLE public.geom_id_seq OWNER TO radon_admin;
 
 --
 -- Name: geom_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

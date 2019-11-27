@@ -32,7 +32,7 @@ CREATE VIEW public.param_netcdf_v AS
      JOIN public.param p ON ((p.id = n.param_id)));
 
 
-ALTER TABLE public.param_netcdf_v OWNER TO postgres;
+ALTER TABLE public.param_netcdf_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE param_netcdf_v; Type: ACL; Schema: public; Owner: postgres

@@ -32,7 +32,7 @@ CREATE TABLE public.interpolation_method (
 );
 
 
-ALTER TABLE public.interpolation_method OWNER TO wetodb;
+ALTER TABLE public.interpolation_method OWNER TO radon_admin;
 
 --
 -- Name: interpolation_method_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
@@ -46,7 +46,7 @@ CREATE SEQUENCE public.interpolation_method_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.interpolation_method_id_seq OWNER TO wetodb;
+ALTER TABLE public.interpolation_method_id_seq OWNER TO radon_admin;
 
 --
 -- Name: interpolation_method_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

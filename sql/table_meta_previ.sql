@@ -37,7 +37,7 @@ CREATE TABLE public.table_meta_previ (
 );
 
 
-ALTER TABLE public.table_meta_previ OWNER TO wetodb;
+ALTER TABLE public.table_meta_previ OWNER TO radon_admin;
 
 --
 -- Name: table_meta_previ_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
@@ -51,7 +51,7 @@ CREATE SEQUENCE public.table_meta_previ_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.table_meta_previ_id_seq OWNER TO wetodb;
+ALTER TABLE public.table_meta_previ_id_seq OWNER TO radon_admin;
 
 --
 -- Name: table_meta_previ_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

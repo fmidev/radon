@@ -39,7 +39,7 @@ CREATE TABLE public.as_previ (
 );
 
 
-ALTER TABLE public.as_previ OWNER TO wetodb;
+ALTER TABLE public.as_previ OWNER TO radon_admin;
 
 --
 -- Name: COLUMN as_previ.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
@@ -67,7 +67,7 @@ CREATE SEQUENCE public.as_previ_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.as_previ_id_seq OWNER TO wetodb;
+ALTER TABLE public.as_previ_id_seq OWNER TO radon_admin;
 
 --
 -- Name: as_previ_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

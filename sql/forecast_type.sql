@@ -32,7 +32,7 @@ CREATE TABLE public.forecast_type (
 );
 
 
-ALTER TABLE public.forecast_type OWNER TO wetodb;
+ALTER TABLE public.forecast_type OWNER TO radon_admin;
 
 --
 -- Name: forecast_type_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
@@ -46,7 +46,7 @@ CREATE SEQUENCE public.forecast_type_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.forecast_type_id_seq OWNER TO wetodb;
+ALTER TABLE public.forecast_type_id_seq OWNER TO radon_admin;
 
 --
 -- Name: forecast_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

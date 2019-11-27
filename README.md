@@ -5,8 +5,9 @@ Database schema for storing meteorological field data
 
 radon is a database schema built on top of PostgreSQL that can be used to store information on meterological fields. The relevant metadata from each field are extracted and stored to tables which makes easy querying. The data itself is not stored in the database. Radon database is a practical requirement for [Himan](https://github.com/fmidev/himan).
 
-By default radon contains two user accounts:
+By default radon contains three user accounts:
 
+* radon_admin, an account which owns all objects in the database
 * wetodb, an account with rw privileges
 * radon_client, an account with ro privileges
 
@@ -20,9 +21,10 @@ Note! Radon requires that each grib or netcdf message is in its own file, but fo
 git clone https://github.com/fmidev/radon
 docker build -t radon .
 docker run -d -p 5432:5432 \
-	-e POSTGRES_PASSWORD=password1
-	-e RADON_WETODB_PASSWORD=password2 \
-	-e RADON_RADONCLIENT_PASSWORD=password3 \
+	-e POSTGRES_PASSWORD=... \
+	-e RADON_RADON_ADMIN_PASSWORD=...
+	-e RADON_WETODB_PASSWORD=... \
+	-e RADON_RADONCLIENT_PASSWORD=... \
 	-t radon
 ```
 

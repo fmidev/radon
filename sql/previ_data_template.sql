@@ -40,7 +40,7 @@ CREATE TABLE public.previ_data_template (
 );
 
 
-ALTER TABLE public.previ_data_template OWNER TO wetodb;
+ALTER TABLE public.previ_data_template OWNER TO radon_admin;
 
 --
 -- Name: previ_data_template previ_data_template_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb

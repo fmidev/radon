@@ -43,7 +43,7 @@ CREATE TABLE public.geom_lambert_conformal (
 );
 
 
-ALTER TABLE public.geom_lambert_conformal OWNER TO postgres;
+ALTER TABLE public.geom_lambert_conformal OWNER TO radon_admin;
 
 --
 -- Name: geom_lambert_conformal geom_lambert_conformal_name_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres

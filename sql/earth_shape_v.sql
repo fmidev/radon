@@ -33,7 +33,7 @@ CREATE VIEW public.earth_shape_v AS
    FROM public.earth_shape;
 
 
-ALTER TABLE public.earth_shape_v OWNER TO postgres;
+ALTER TABLE public.earth_shape_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE earth_shape_v; Type: ACL; Schema: public; Owner: postgres

@@ -32,7 +32,7 @@ CREATE TABLE public.level_grib2 (
 );
 
 
-ALTER TABLE public.level_grib2 OWNER TO wetodb;
+ALTER TABLE public.level_grib2 OWNER TO radon_admin;
 
 --
 -- Name: level_grib2 level_grib2_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb

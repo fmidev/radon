@@ -34,7 +34,7 @@ CREATE TABLE public.projection (
 );
 
 
-ALTER TABLE public.projection OWNER TO wetodb;
+ALTER TABLE public.projection OWNER TO radon_admin;
 
 --
 -- Name: projection_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
@@ -48,7 +48,7 @@ CREATE SEQUENCE public.projection_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.projection_id_seq OWNER TO wetodb;
+ALTER TABLE public.projection_id_seq OWNER TO radon_admin;
 
 --
 -- Name: projection_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

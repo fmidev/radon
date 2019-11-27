@@ -33,7 +33,7 @@ CREATE VIEW public.station_probability_limit_v AS
   WHERE ((l.station_id = s.id) AND (l.param_id = p.id));
 
 
-ALTER TABLE public.station_probability_limit_v OWNER TO postgres;
+ALTER TABLE public.station_probability_limit_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE station_probability_limit_v; Type: ACL; Schema: public; Owner: postgres

@@ -36,7 +36,7 @@ CREATE VIEW public.world_borders_v AS
    FROM public."tm_world_borders-0.3";
 
 
-ALTER TABLE public.world_borders_v OWNER TO postgres;
+ALTER TABLE public.world_borders_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE world_borders_v; Type: ACL; Schema: public; Owner: postgres

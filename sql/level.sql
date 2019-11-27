@@ -33,7 +33,7 @@ CREATE TABLE public.level (
 );
 
 
-ALTER TABLE public.level OWNER TO wetodb;
+ALTER TABLE public.level OWNER TO radon_admin;
 
 --
 -- Name: COLUMN level.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
@@ -61,7 +61,7 @@ CREATE SEQUENCE public.level_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.level_id_seq OWNER TO wetodb;
+ALTER TABLE public.level_id_seq OWNER TO radon_admin;
 
 --
 -- Name: level_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

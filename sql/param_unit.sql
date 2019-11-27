@@ -32,7 +32,7 @@ CREATE TABLE public.param_unit (
 );
 
 
-ALTER TABLE public.param_unit OWNER TO wetodb;
+ALTER TABLE public.param_unit OWNER TO radon_admin;
 
 --
 -- Name: COLUMN param_unit.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
@@ -60,7 +60,7 @@ CREATE SEQUENCE public.param_unit_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.param_unit_id_seq OWNER TO wetodb;
+ALTER TABLE public.param_unit_id_seq OWNER TO radon_admin;
 
 --
 -- Name: param_unit_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

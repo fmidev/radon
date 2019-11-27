@@ -44,7 +44,7 @@ CREATE TABLE public.hybrid_level_height (
 );
 
 
-ALTER TABLE public.hybrid_level_height OWNER TO wetodb;
+ALTER TABLE public.hybrid_level_height OWNER TO radon_admin;
 
 --
 -- Name: hybrid_level_height hybrid_level_height_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb

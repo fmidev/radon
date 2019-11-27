@@ -35,7 +35,7 @@ CREATE TABLE public.param_netcdf (
 );
 
 
-ALTER TABLE public.param_netcdf OWNER TO wetodb;
+ALTER TABLE public.param_netcdf OWNER TO radon_admin;
 
 --
 -- Name: COLUMN param_netcdf.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
@@ -63,7 +63,7 @@ CREATE SEQUENCE public.param_netcdf_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.param_netcdf_id_seq OWNER TO wetodb;
+ALTER TABLE public.param_netcdf_id_seq OWNER TO radon_admin;
 
 --
 -- Name: param_netcdf_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

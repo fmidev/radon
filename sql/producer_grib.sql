@@ -33,7 +33,7 @@ CREATE TABLE public.producer_grib (
 );
 
 
-ALTER TABLE public.producer_grib OWNER TO wetodb;
+ALTER TABLE public.producer_grib OWNER TO radon_admin;
 
 --
 -- Name: producer_grib_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
@@ -47,7 +47,7 @@ CREATE SEQUENCE public.producer_grib_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.producer_grib_id_seq OWNER TO wetodb;
+ALTER TABLE public.producer_grib_id_seq OWNER TO radon_admin;
 
 --
 -- Name: producer_grib_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

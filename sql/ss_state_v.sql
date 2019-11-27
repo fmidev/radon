@@ -35,7 +35,7 @@ CREATE VIEW public.ss_state_v AS
   WHERE ((a.producer_id = s.producer_id) AND (a.geometry_id = s.geometry_id) AND (a.analysis_time = s.analysis_time));
 
 
-ALTER TABLE public.ss_state_v OWNER TO postgres;
+ALTER TABLE public.ss_state_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE ss_state_v; Type: ACL; Schema: public; Owner: postgres

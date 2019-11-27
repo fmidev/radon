@@ -32,7 +32,7 @@ CREATE TABLE public.file_format (
 );
 
 
-ALTER TABLE public.file_format OWNER TO wetodb;
+ALTER TABLE public.file_format OWNER TO radon_admin;
 
 --
 -- Name: file_format_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
@@ -47,7 +47,7 @@ CREATE SEQUENCE public.file_format_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.file_format_id_seq OWNER TO wetodb;
+ALTER TABLE public.file_format_id_seq OWNER TO radon_admin;
 
 --
 -- Name: file_format_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

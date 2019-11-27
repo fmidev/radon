@@ -32,7 +32,7 @@ CREATE TABLE public.producer_class (
 );
 
 
-ALTER TABLE public.producer_class OWNER TO wetodb;
+ALTER TABLE public.producer_class OWNER TO radon_admin;
 
 --
 -- Name: producer_class_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
@@ -46,7 +46,7 @@ CREATE SEQUENCE public.producer_class_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.producer_class_id_seq OWNER TO wetodb;
+ALTER TABLE public.producer_class_id_seq OWNER TO radon_admin;
 
 --
 -- Name: producer_class_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

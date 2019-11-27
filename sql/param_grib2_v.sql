@@ -39,7 +39,7 @@ CREATE VIEW public.param_grib2_v AS
      LEFT JOIN public.level l ON ((g.level_id = l.id)));
 
 
-ALTER TABLE public.param_grib2_v OWNER TO postgres;
+ALTER TABLE public.param_grib2_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE param_grib2_v; Type: ACL; Schema: public; Owner: postgres

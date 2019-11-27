@@ -41,7 +41,7 @@ CREATE VIEW public.geom_v AS
      JOIN public.projection p ON ((g.projection_id = p.id)));
 
 
-ALTER TABLE public.geom_v OWNER TO postgres;
+ALTER TABLE public.geom_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE geom_v; Type: ACL; Schema: public; Owner: postgres

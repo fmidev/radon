@@ -35,7 +35,7 @@ CREATE TABLE public.station_network_mapping (
 );
 
 
-ALTER TABLE public.station_network_mapping OWNER TO wetodb;
+ALTER TABLE public.station_network_mapping OWNER TO radon_admin;
 
 --
 -- Name: station_network_mapping_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
@@ -49,7 +49,7 @@ CREATE SEQUENCE public.station_network_mapping_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.station_network_mapping_id_seq OWNER TO wetodb;
+ALTER TABLE public.station_network_mapping_id_seq OWNER TO radon_admin;
 
 --
 -- Name: station_network_mapping_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

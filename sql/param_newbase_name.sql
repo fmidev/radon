@@ -32,7 +32,7 @@ CREATE TABLE public.param_newbase_name (
 );
 
 
-ALTER TABLE public.param_newbase_name OWNER TO postgres;
+ALTER TABLE public.param_newbase_name OWNER TO radon_admin;
 
 --
 -- Name: param_newbase_name_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -46,7 +46,7 @@ CREATE SEQUENCE public.param_newbase_name_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.param_newbase_name_id_seq OWNER TO postgres;
+ALTER TABLE public.param_newbase_name_id_seq OWNER TO radon_admin;
 
 --
 -- Name: param_newbase_name_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres

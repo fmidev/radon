@@ -46,7 +46,7 @@ CREATE TABLE public.grid_data_template (
 );
 
 
-ALTER TABLE public.grid_data_template OWNER TO wetodb;
+ALTER TABLE public.grid_data_template OWNER TO radon_admin;
 
 --
 -- Name: COLUMN grid_data_template.forecast_type_value; Type: COMMENT; Schema: public; Owner: wetodb

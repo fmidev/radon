@@ -37,7 +37,7 @@ CREATE TABLE public.station (
 );
 
 
-ALTER TABLE public.station OWNER TO wetodb;
+ALTER TABLE public.station OWNER TO radon_admin;
 
 --
 -- Name: COLUMN station.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
@@ -65,7 +65,7 @@ CREATE SEQUENCE public.station_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.station_id_seq OWNER TO wetodb;
+ALTER TABLE public.station_id_seq OWNER TO radon_admin;
 
 --
 -- Name: station_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

@@ -32,7 +32,7 @@ CREATE TABLE public.producer_meta (
 );
 
 
-ALTER TABLE public.producer_meta OWNER TO wetodb;
+ALTER TABLE public.producer_meta OWNER TO radon_admin;
 
 --
 -- Name: producer_meta producer_meta_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb

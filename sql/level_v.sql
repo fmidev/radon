@@ -30,7 +30,7 @@ CREATE VIEW public.level_v AS
   WHERE (l.unit_id = u.id);
 
 
-ALTER TABLE public.level_v OWNER TO postgres;
+ALTER TABLE public.level_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE level_v; Type: ACL; Schema: public; Owner: postgres

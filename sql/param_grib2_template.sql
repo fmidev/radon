@@ -37,7 +37,7 @@ CREATE TABLE public.param_grib2_template (
 );
 
 
-ALTER TABLE public.param_grib2_template OWNER TO wetodb;
+ALTER TABLE public.param_grib2_template OWNER TO radon_admin;
 
 --
 -- Name: param_grib2_template param_grib2_template_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb

@@ -28,7 +28,7 @@ CREATE VIEW public.producer_grib_v AS
   WHERE (r.producer_id = f.producer_id);
 
 
-ALTER TABLE public.producer_grib_v OWNER TO postgres;
+ALTER TABLE public.producer_grib_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE producer_grib_v; Type: ACL; Schema: public; Owner: postgres

@@ -35,7 +35,7 @@ CREATE VIEW public.geom_latitude_longitude_v AS
   WHERE ((g.id = gll.id) AND (g.projection_id = 1));
 
 
-ALTER TABLE public.geom_latitude_longitude_v OWNER TO postgres;
+ALTER TABLE public.geom_latitude_longitude_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE geom_latitude_longitude_v; Type: ACL; Schema: public; Owner: postgres

@@ -40,7 +40,7 @@ CREATE TABLE public."tm_world_borders-0.3" (
 );
 
 
-ALTER TABLE public."tm_world_borders-0.3" OWNER TO wetodb;
+ALTER TABLE public."tm_world_borders-0.3" OWNER TO radon_admin;
 
 --
 -- Name: tm_world_borders-0.3_gid_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
@@ -54,7 +54,7 @@ CREATE SEQUENCE public."tm_world_borders-0.3_gid_seq"
     CACHE 1;
 
 
-ALTER TABLE public."tm_world_borders-0.3_gid_seq" OWNER TO wetodb;
+ALTER TABLE public."tm_world_borders-0.3_gid_seq" OWNER TO radon_admin;
 
 --
 -- Name: tm_world_borders-0.3_gid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

@@ -29,7 +29,7 @@ CREATE VIEW public.himan_run_statistics_v AS
    FROM public.himan_run_statistics;
 
 
-ALTER TABLE public.himan_run_statistics_v OWNER TO postgres;
+ALTER TABLE public.himan_run_statistics_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE himan_run_statistics_v; Type: ACL; Schema: public; Owner: postgres

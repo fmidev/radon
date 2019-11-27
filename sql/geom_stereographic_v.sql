@@ -36,7 +36,7 @@ CREATE VIEW public.geom_stereographic_v AS
   WHERE ((g.id = gs.id) AND (g.projection_id = 2));
 
 
-ALTER TABLE public.geom_stereographic_v OWNER TO postgres;
+ALTER TABLE public.geom_stereographic_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE geom_stereographic_v; Type: ACL; Schema: public; Owner: postgres

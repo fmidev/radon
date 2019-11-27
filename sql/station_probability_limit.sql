@@ -33,7 +33,7 @@ CREATE TABLE public.station_probability_limit (
 );
 
 
-ALTER TABLE public.station_probability_limit OWNER TO postgres;
+ALTER TABLE public.station_probability_limit OWNER TO radon_admin;
 
 --
 -- Name: station_probability_limit_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -47,7 +47,7 @@ CREATE SEQUENCE public.station_probability_limit_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.station_probability_limit_id_seq OWNER TO postgres;
+ALTER TABLE public.station_probability_limit_id_seq OWNER TO radon_admin;
 
 --
 -- Name: station_probability_limit_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres

@@ -40,7 +40,7 @@ CREATE TABLE public.geom_stereographic (
 );
 
 
-ALTER TABLE public.geom_stereographic OWNER TO postgres;
+ALTER TABLE public.geom_stereographic OWNER TO radon_admin;
 
 --
 -- Name: geom_stereographic geom_stereographic_name_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres

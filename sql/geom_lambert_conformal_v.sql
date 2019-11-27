@@ -40,7 +40,7 @@ CREATE VIEW public.geom_lambert_conformal_v AS
   WHERE ((g.id = gs.id) AND (g.projection_id = 5));
 
 
-ALTER TABLE public.geom_lambert_conformal_v OWNER TO postgres;
+ALTER TABLE public.geom_lambert_conformal_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE geom_lambert_conformal_v; Type: ACL; Schema: public; Owner: postgres

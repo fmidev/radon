@@ -42,7 +42,7 @@ CREATE TABLE public.param_grib1 (
 );
 
 
-ALTER TABLE public.param_grib1 OWNER TO wetodb;
+ALTER TABLE public.param_grib1 OWNER TO radon_admin;
 
 --
 -- Name: COLUMN param_grib1.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
@@ -70,7 +70,7 @@ CREATE SEQUENCE public.param_grib1_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.param_grib1_id_seq OWNER TO wetodb;
+ALTER TABLE public.param_grib1_id_seq OWNER TO radon_admin;
 
 --
 -- Name: param_grib1_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb

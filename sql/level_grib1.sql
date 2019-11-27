@@ -33,7 +33,7 @@ CREATE TABLE public.level_grib1 (
 );
 
 
-ALTER TABLE public.level_grib1 OWNER TO wetodb;
+ALTER TABLE public.level_grib1 OWNER TO radon_admin;
 
 --
 -- Name: COLUMN level_grib1.last_updater; Type: COMMENT; Schema: public; Owner: wetodb

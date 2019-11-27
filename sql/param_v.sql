@@ -34,7 +34,7 @@ CREATE VIEW public.param_v AS
   WHERE ((p.unit_id = u.id) AND (p.interpolation_id = i.id));
 
 
-ALTER TABLE public.param_v OWNER TO postgres;
+ALTER TABLE public.param_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE param_v; Type: ACL; Schema: public; Owner: postgres

@@ -37,7 +37,7 @@ CREATE VIEW public.as_previ_v AS
   WHERE ((a.producer_id = p.id) AND (pg.relname = (a.partition_name)::name));
 
 
-ALTER TABLE public.as_previ_v OWNER TO postgres;
+ALTER TABLE public.as_previ_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE as_previ_v; Type: ACL; Schema: public; Owner: postgres

@@ -34,7 +34,7 @@ CREATE TABLE public.fmi_producer (
 );
 
 
-ALTER TABLE public.fmi_producer OWNER TO wetodb;
+ALTER TABLE public.fmi_producer OWNER TO radon_admin;
 
 --
 -- Name: TABLE fmi_producer; Type: COMMENT; Schema: public; Owner: wetodb
