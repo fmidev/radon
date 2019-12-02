@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: level_grib2; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: level_grib2; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.level_grib2 (
@@ -35,7 +35,7 @@ CREATE TABLE public.level_grib2 (
 ALTER TABLE public.level_grib2 OWNER TO radon_admin;
 
 --
--- Name: level_grib2 level_grib2_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: level_grib2 level_grib2_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.level_grib2
@@ -43,21 +43,21 @@ ALTER TABLE ONLY public.level_grib2
 
 
 --
--- Name: level_grib2 audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: level_grib2 audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.level_grib2 FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: level_grib2 level_grib2_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: level_grib2 level_grib2_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER level_grib2_store_last_updated_trg BEFORE UPDATE ON public.level_grib2 FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: level_grib2 level_grib2_fmi_producer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: level_grib2 level_grib2_fmi_producer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.level_grib2
@@ -65,7 +65,7 @@ ALTER TABLE ONLY public.level_grib2
 
 
 --
--- Name: level_grib2 level_grib2_level_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: level_grib2 level_grib2_level_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.level_grib2
@@ -73,7 +73,7 @@ ALTER TABLE ONLY public.level_grib2
 
 
 --
--- Name: TABLE level_grib2; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE level_grib2; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.level_grib2 TO radon_ro;

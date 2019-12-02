@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: geom; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: geom; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning_mode, geom_param_1, geom_param_2, geom_param_3, description, last_updater, last_updated) FROM stdin;
@@ -172,15 +172,16 @@ COPY public.geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning
 304	TB_SMA_008	4	51	61	0101000020E6100000CDCCCCCCCCCC2440000000000000F03F	0.08	0.08	+x+y	-30	0	0	Testbed smaller area 0.08 deg	\N	\N
 303	TB_SMA_02	4	21	25	0101000020E6100000CDCCCCCCCCCC2440000000000000F03F	0.2	0.2	+x+y	-30	0	0	Testbed smaller area 0.2 deg	\N	\N
 606	WAM109123	1	166	196	0101000020E610000000000000000022400000000000804A40	0.133	0.067	+x+y	0	0	0	Area of MTL Wave model data	\N	\N
+1101	NEMO801738	2	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	wetodb	2019-10-09 13:55:49.941264+00
 1099	ECGSEASFIN040	1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
 --
--- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
+-- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1099, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1101, true);
 
 
 --

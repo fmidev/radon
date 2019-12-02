@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: level_grib1; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: level_grib1; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updated) FROM stdin;

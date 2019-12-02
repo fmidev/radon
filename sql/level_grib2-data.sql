@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: level_grib2; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: level_grib2; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, last_updated) FROM stdin;
@@ -123,6 +123,24 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 7	1	1	\N	\N
 7	8	10	\N	\N
 131	8	10	\N	\N
+242	1	1	\N	\N
+242	3	105	\N	\N
+242	6	103	\N	\N
+11	6	103	\N	\N
+11	3	105	\N	\N
+11	7	102	\N	\N
+11	5	8	\N	\N
+11	2	100	\N	\N
+11	15	20	\N	\N
+11	1	1	\N	\N
+11	8	10	\N	\N
+265	1	1	\N	\N
+265	6	103	\N	\N
+265	3	105	\N	\N
+265	12	246	\N	\N
+265	15	20	\N	\N
+265	7	101	\N	\N
+265	2	100	\N	\N
 \.
 
 

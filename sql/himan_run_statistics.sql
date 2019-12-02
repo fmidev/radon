@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: himan_run_statistics; Type: TABLE; Schema: public; Owner: postgres
+-- Name: himan_run_statistics; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.himan_run_statistics (
@@ -36,7 +36,7 @@ CREATE TABLE public.himan_run_statistics (
 ALTER TABLE public.himan_run_statistics OWNER TO radon_admin;
 
 --
--- Name: himan_run_statistics_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: himan_run_statistics_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.himan_run_statistics_id_seq
@@ -50,21 +50,21 @@ CREATE SEQUENCE public.himan_run_statistics_id_seq
 ALTER TABLE public.himan_run_statistics_id_seq OWNER TO radon_admin;
 
 --
--- Name: himan_run_statistics_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: himan_run_statistics_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.himan_run_statistics_id_seq OWNED BY public.himan_run_statistics.id;
 
 
 --
--- Name: himan_run_statistics id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: himan_run_statistics id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.himan_run_statistics ALTER COLUMN id SET DEFAULT nextval('public.himan_run_statistics_id_seq'::regclass);
 
 
 --
--- Name: himan_run_statistics himan_run_statistics_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: himan_run_statistics himan_run_statistics_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.himan_run_statistics
@@ -72,14 +72,14 @@ ALTER TABLE ONLY public.himan_run_statistics
 
 
 --
--- Name: himan_run_statistics_1_idx; Type: INDEX; Schema: public; Owner: postgres
+-- Name: himan_run_statistics_1_idx; Type: INDEX; Schema: public; Owner: radon_admin
 --
 
 CREATE INDEX himan_run_statistics_1_idx ON public.himan_run_statistics USING btree (finish_time, configuration_name text_pattern_ops);
 
 
 --
--- Name: TABLE himan_run_statistics; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE himan_run_statistics; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.himan_run_statistics TO radon_ro;
@@ -87,7 +87,7 @@ GRANT INSERT ON TABLE public.himan_run_statistics TO radon_rw;
 
 
 --
--- Name: SEQUENCE himan_run_statistics_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE himan_run_statistics_id_seq; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT,UPDATE ON SEQUENCE public.himan_run_statistics_id_seq TO radon_rw;

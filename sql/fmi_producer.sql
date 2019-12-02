@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: fmi_producer; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: fmi_producer; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.fmi_producer (
@@ -37,49 +37,49 @@ CREATE TABLE public.fmi_producer (
 ALTER TABLE public.fmi_producer OWNER TO radon_admin;
 
 --
--- Name: TABLE fmi_producer; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: TABLE fmi_producer; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON TABLE public.fmi_producer IS 'Table contains FMI number and name for all producers.';
 
 
 --
--- Name: COLUMN fmi_producer.id; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN fmi_producer.id; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.fmi_producer.id IS 'Producer id (PRODUCER_ID)';
 
 
 --
--- Name: COLUMN fmi_producer.name; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN fmi_producer.name; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.fmi_producer.name IS 'Producer name (REF_PROD)';
 
 
 --
--- Name: COLUMN fmi_producer.class_id; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN fmi_producer.class_id; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.fmi_producer.class_id IS 'Producer class';
 
 
 --
--- Name: COLUMN fmi_producer.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN fmi_producer.last_updater; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.fmi_producer.last_updater IS 'Fixed column for last updater';
 
 
 --
--- Name: COLUMN fmi_producer.last_updated; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN fmi_producer.last_updated; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.fmi_producer.last_updated IS 'Fixed column for last updating time';
 
 
 --
--- Name: fmi_producer fmi_producer_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: fmi_producer fmi_producer_name_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.fmi_producer
@@ -87,7 +87,7 @@ ALTER TABLE ONLY public.fmi_producer
 
 
 --
--- Name: fmi_producer fmi_producers_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: fmi_producer fmi_producers_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.fmi_producer
@@ -95,21 +95,21 @@ ALTER TABLE ONLY public.fmi_producer
 
 
 --
--- Name: fmi_producer audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: fmi_producer audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.fmi_producer FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: fmi_producer fmi_producer_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: fmi_producer fmi_producer_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER fmi_producer_last_updated_trg BEFORE UPDATE ON public.fmi_producer FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: fmi_producer fmi_producer_producer_class_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: fmi_producer fmi_producer_producer_class_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.fmi_producer
@@ -117,7 +117,7 @@ ALTER TABLE ONLY public.fmi_producer
 
 
 --
--- Name: fmi_producer fmi_producer_producer_type_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: fmi_producer fmi_producer_producer_type_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.fmi_producer
@@ -125,7 +125,7 @@ ALTER TABLE ONLY public.fmi_producer
 
 
 --
--- Name: TABLE fmi_producer; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE fmi_producer; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.fmi_producer TO radon_ro;

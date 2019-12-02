@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: previ_data_template; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: previ_data_template; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.previ_data_template (
@@ -43,7 +43,7 @@ CREATE TABLE public.previ_data_template (
 ALTER TABLE public.previ_data_template OWNER TO radon_admin;
 
 --
--- Name: previ_data_template previ_data_template_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: previ_data_template previ_data_template_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.previ_data_template
@@ -51,21 +51,21 @@ ALTER TABLE ONLY public.previ_data_template
 
 
 --
--- Name: previ_data_template audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: previ_data_template audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.previ_data_template FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: previ_data_template previ_data_template_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: previ_data_template previ_data_template_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER previ_data_template_store_last_updated_trg BEFORE UPDATE ON public.previ_data_template FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: previ_data_template previ_data_template_forecast_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: previ_data_template previ_data_template_forecast_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.previ_data_template
@@ -73,7 +73,7 @@ ALTER TABLE ONLY public.previ_data_template
 
 
 --
--- Name: previ_data_template previ_data_template_level_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: previ_data_template previ_data_template_level_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.previ_data_template
@@ -81,7 +81,7 @@ ALTER TABLE ONLY public.previ_data_template
 
 
 --
--- Name: previ_data_template previ_data_template_param_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: previ_data_template previ_data_template_param_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.previ_data_template
@@ -89,7 +89,7 @@ ALTER TABLE ONLY public.previ_data_template
 
 
 --
--- Name: previ_data_template previ_data_template_producer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: previ_data_template previ_data_template_producer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.previ_data_template
@@ -97,7 +97,7 @@ ALTER TABLE ONLY public.previ_data_template
 
 
 --
--- Name: previ_data_template previ_data_template_station_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: previ_data_template previ_data_template_station_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.previ_data_template
@@ -105,7 +105,7 @@ ALTER TABLE ONLY public.previ_data_template
 
 
 --
--- Name: TABLE previ_data_template; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE previ_data_template; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.previ_data_template TO radon_ro;

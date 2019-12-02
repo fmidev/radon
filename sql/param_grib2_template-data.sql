@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: param_grib2_template; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: param_grib2_template; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.param_grib2_template (param_id, discipline, category, number, last_updater, last_updated, type_of_statistical_processing) FROM stdin;
@@ -610,6 +610,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1261	0	202	46	\N	\N	-1
 1270	0	202	50	\N	\N	-1
 1073	10	3	0	\N	\N	-1
+1296	0	202	61	\N	\N	-1
 1271	0	202	51	\N	\N	-1
 1272	0	202	52	\N	\N	-1
 1273	0	202	53	\N	\N	-1
@@ -625,6 +626,12 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1284	0	200	152	\N	\N	-1
 1285	0	200	153	\N	\N	-1
 461	0	17	4	\N	\N	0
+1297	0	202	62	\N	\N	-1
+1298	0	202	63	\N	\N	-1
+1299	0	202	64	\N	\N	-1
+1300	0	202	65	\N	\N	-1
+1301	0	202	66	\N	\N	-1
+1302	0	202	67	\N	\N	-1
 \.
 
 

@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: interpolation_method; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: interpolation_method; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.interpolation_method (
@@ -35,7 +35,7 @@ CREATE TABLE public.interpolation_method (
 ALTER TABLE public.interpolation_method OWNER TO radon_admin;
 
 --
--- Name: interpolation_method_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: interpolation_method_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.interpolation_method_id_seq
@@ -49,21 +49,21 @@ CREATE SEQUENCE public.interpolation_method_id_seq
 ALTER TABLE public.interpolation_method_id_seq OWNER TO radon_admin;
 
 --
--- Name: interpolation_method_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: interpolation_method_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.interpolation_method_id_seq OWNED BY public.interpolation_method.id;
 
 
 --
--- Name: interpolation_method id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: interpolation_method id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.interpolation_method ALTER COLUMN id SET DEFAULT nextval('public.interpolation_method_id_seq'::regclass);
 
 
 --
--- Name: interpolation_method interpolation_method_name_idx; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: interpolation_method interpolation_method_name_idx; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.interpolation_method
@@ -71,7 +71,7 @@ ALTER TABLE ONLY public.interpolation_method
 
 
 --
--- Name: interpolation_method interpolation_method_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: interpolation_method interpolation_method_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.interpolation_method
@@ -79,21 +79,21 @@ ALTER TABLE ONLY public.interpolation_method
 
 
 --
--- Name: interpolation_method audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: interpolation_method audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.interpolation_method FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: interpolation_method interpolation_method_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: interpolation_method interpolation_method_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER interpolation_method_last_updated_trg BEFORE UPDATE ON public.interpolation_method FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: TABLE interpolation_method; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE interpolation_method; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.interpolation_method TO radon_ro;

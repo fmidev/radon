@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: earth_shape_v; Type: VIEW; Schema: public; Owner: postgres
+-- Name: earth_shape_v; Type: VIEW; Schema: public; Owner: radon_admin
 --
 
 CREATE VIEW public.earth_shape_v AS
@@ -36,7 +36,7 @@ CREATE VIEW public.earth_shape_v AS
 ALTER TABLE public.earth_shape_v OWNER TO radon_admin;
 
 --
--- Name: TABLE earth_shape_v; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE earth_shape_v; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.earth_shape_v TO PUBLIC;

@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: geom_lambert_conformal; Type: TABLE; Schema: public; Owner: postgres
+-- Name: geom_lambert_conformal; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.geom_lambert_conformal (
@@ -46,7 +46,7 @@ CREATE TABLE public.geom_lambert_conformal (
 ALTER TABLE public.geom_lambert_conformal OWNER TO radon_admin;
 
 --
--- Name: geom_lambert_conformal geom_lambert_conformal_name_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_lambert_conformal geom_lambert_conformal_name_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom_lambert_conformal
@@ -54,7 +54,7 @@ ALTER TABLE ONLY public.geom_lambert_conformal
 
 
 --
--- Name: geom_lambert_conformal geom_lambert_conformal_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_lambert_conformal geom_lambert_conformal_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom_lambert_conformal
@@ -62,35 +62,35 @@ ALTER TABLE ONLY public.geom_lambert_conformal
 
 
 --
--- Name: geom_lambert_conformal_geom_fkey_02_idx; Type: INDEX; Schema: public; Owner: postgres
+-- Name: geom_lambert_conformal_geom_fkey_02_idx; Type: INDEX; Schema: public; Owner: radon_admin
 --
 
 CREATE INDEX geom_lambert_conformal_geom_fkey_02_idx ON public.geom_lambert_conformal USING btree (id);
 
 
 --
--- Name: geom_lambert_conformal_geom_fkey_03_idx; Type: INDEX; Schema: public; Owner: postgres
+-- Name: geom_lambert_conformal_geom_fkey_03_idx; Type: INDEX; Schema: public; Owner: radon_admin
 --
 
 CREATE INDEX geom_lambert_conformal_geom_fkey_03_idx ON public.geom_lambert_conformal USING btree (name);
 
 
 --
--- Name: geom_lambert_conformal audit_trigger_row; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: geom_lambert_conformal audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.geom_lambert_conformal FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: geom_lambert_conformal geom_lambert_conformal_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: geom_lambert_conformal geom_lambert_conformal_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER geom_lambert_conformal_store_last_updated_trg AFTER UPDATE ON public.geom_lambert_conformal FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: geom_lambert_conformal geom_lambert_conformal_geom_fkey_02; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_lambert_conformal geom_lambert_conformal_geom_fkey_02; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom_lambert_conformal
@@ -98,7 +98,7 @@ ALTER TABLE ONLY public.geom_lambert_conformal
 
 
 --
--- Name: geom_lambert_conformal geom_lambert_conformal_geom_fkey_03; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_lambert_conformal geom_lambert_conformal_geom_fkey_03; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom_lambert_conformal
@@ -106,7 +106,7 @@ ALTER TABLE ONLY public.geom_lambert_conformal
 
 
 --
--- Name: TABLE geom_lambert_conformal; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE geom_lambert_conformal; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.geom_lambert_conformal TO radon_ro;

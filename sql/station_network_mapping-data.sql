@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: station_network_mapping; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: station_network_mapping; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.station_network_mapping (id, station_id, network_id, local_station_id, begin_time, end_time, last_updater, last_updated) FROM stdin;
@@ -32921,7 +32921,7 @@ COPY public.station_network_mapping (id, station_id, network_id, local_station_i
 
 
 --
--- Name: station_network_mapping_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
+-- Name: station_network_mapping_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
 SELECT pg_catalog.setval('public.station_network_mapping_id_seq', 32911, true);

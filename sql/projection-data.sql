@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: projection; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: projection; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.projection (id, name, description, grib1_number, grib2_number, last_updater, last_updated) FROM stdin;
@@ -30,7 +30,7 @@ COPY public.projection (id, name, description, grib1_number, grib2_number, last_
 
 
 --
--- Name: projection_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
+-- Name: projection_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
 SELECT pg_catalog.setval('public.projection_id_seq', 33, true);

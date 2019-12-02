@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: geom_stereographic; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: geom_stereographic; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.geom_stereographic (id, name, ni, nj, first_point, di, dj, scanning_mode, orientation, description, last_updater, last_updated) FROM stdin;

@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5 (Debian 10.5-1.pgdg90+1)
--- Dumped by pg_dump version 10.5 (Debian 10.5-1.pgdg90+1)
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: file_format; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: file_format; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.file_format (id, name, description, last_updater, last_updated) FROM stdin;
@@ -28,7 +28,7 @@ COPY public.file_format (id, name, description, last_updater, last_updated) FROM
 
 
 --
--- Name: file_format_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
+-- Name: file_format_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
 SELECT pg_catalog.setval('public.file_format_id_seq', 4, true);

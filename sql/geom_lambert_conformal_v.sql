@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: geom_lambert_conformal_v; Type: VIEW; Schema: public; Owner: postgres
+-- Name: geom_lambert_conformal_v; Type: VIEW; Schema: public; Owner: radon_admin
 --
 
 CREATE VIEW public.geom_lambert_conformal_v AS
@@ -43,10 +43,11 @@ CREATE VIEW public.geom_lambert_conformal_v AS
 ALTER TABLE public.geom_lambert_conformal_v OWNER TO radon_admin;
 
 --
--- Name: TABLE geom_lambert_conformal_v; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE geom_lambert_conformal_v; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.geom_lambert_conformal_v TO radon_ro;
+GRANT SELECT ON TABLE public.geom_lambert_conformal_v TO PUBLIC;
 
 
 --

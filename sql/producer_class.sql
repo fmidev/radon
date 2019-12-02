@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: producer_class; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: producer_class; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.producer_class (
@@ -35,7 +35,7 @@ CREATE TABLE public.producer_class (
 ALTER TABLE public.producer_class OWNER TO radon_admin;
 
 --
--- Name: producer_class_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: producer_class_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.producer_class_id_seq
@@ -49,21 +49,21 @@ CREATE SEQUENCE public.producer_class_id_seq
 ALTER TABLE public.producer_class_id_seq OWNER TO radon_admin;
 
 --
--- Name: producer_class_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: producer_class_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.producer_class_id_seq OWNED BY public.producer_class.id;
 
 
 --
--- Name: producer_class id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: producer_class id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.producer_class ALTER COLUMN id SET DEFAULT nextval('public.producer_class_id_seq'::regclass);
 
 
 --
--- Name: producer_class producer_class_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: producer_class producer_class_name_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.producer_class
@@ -71,7 +71,7 @@ ALTER TABLE ONLY public.producer_class
 
 
 --
--- Name: producer_class producer_class_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: producer_class producer_class_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.producer_class
@@ -79,21 +79,21 @@ ALTER TABLE ONLY public.producer_class
 
 
 --
--- Name: producer_class audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: producer_class audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.producer_class FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: producer_class producer_class_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: producer_class producer_class_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER producer_class_store_last_updated_trg BEFORE UPDATE ON public.producer_class FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: TABLE producer_class; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE producer_class; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.producer_class TO radon_ro;

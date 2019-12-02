@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: fmi_producer; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: fmi_producer; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.fmi_producer (id, name, description, class_id, last_updater, last_updated, type_id) FROM stdin;
@@ -25,6 +25,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 206	GLAMEPSMTA	Postprocessed fields for GLAMEPS	1	\N	\N	1
 5	GLAMEPS	GLAMEPS	1	\N	\N	3
 4	MEPS	MEPS ensemble from Metcoop	1	postgres	2016-09-24 12:58:27	3
+11	CMEPS_PREOP	Continuous MEPS preop experiment	1	\N	\N	3
 34	JRA55	JMA JRA-55 reanalysis	1	postgres	2016-12-31 10:40:31	1
 6	GLAMEPSCAL	GLAMEPS calibrated fields	1	\N	\N	3
 135	ECGSEASONAL	ECMWF seasonal forecast	1	\N	\N	3
@@ -42,13 +43,13 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 261	MEPS_PREOPMTA	Postprocessed fields for MEPS preop	1	wetodb	2018-10-08 05:18:55	3
 280	SMARTMETMTA	Postprocessed fields for SmartMet	1	\N	\N	1
 2027	ECMWF_LS_KALMAN	ECMWF forecast post-processed with Kalman and landscape interpolation	3	\N	\N	1
+147	NEMO	FMI NEMO Ocean Model	1	\N	\N	1
 501	IASIL2	IASI L2 satellite soundings	1	wetodb	2018-02-19 08:44:59	2
 183	BLENDR	FMI blend of models raw fields	1	\N	\N	3
 184	BLENDB	FMI blend of models bias fields	1	\N	\N	3
 7	MNWC	MEPS Nowcasting	1	\N	\N	1
 136	ECGERA5	ECMWF global ERA 5 reanalysis	1	wetodb	2018-02-28 14:55:23	1
 270	MNWCMTA	MEPS Nowcasting post processed fields	1	\N	\N	1
-10	MEPS_PREOP	MEPS preop experiment	1	wetodb	2018-09-28 05:27:38	3
 109	LAPSSCAN	LAPS analysis for Scandinavian area	1	wetodb	2018-02-19 08:45:42	2
 103	LAPS	Finnish LAPS analysis	1	postgres	2016-05-26 08:49:27	2
 105	MTLICE	Jääeditori	1	postgres	2017-05-02 05:34:04	1
@@ -111,6 +112,8 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 52	ENFUSER	FMI Air Quality fusion model	1	wetodb	2018-10-05 04:52:34	1
 137	ECGSEASMEAN	ECMWF seasonal forecast mean values	1	\N	\N	1
 220	ICONMTA	ICON postprocessed fields	1	\N	\N	1
+10	MEPS_PREOP	MEPS preop experiment	1	wetodb	2019-09-30 10:27:38	1
+265	CMEPS_PREOPMTA	Postprocessed fields for CMEPS preop	1	\N	\N	3
 \.
 
 

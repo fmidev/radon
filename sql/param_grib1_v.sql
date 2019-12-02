@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: param_grib1_v; Type: VIEW; Schema: public; Owner: postgres
+-- Name: param_grib1_v; Type: VIEW; Schema: public; Owner: radon_admin
 --
 
 CREATE VIEW public.param_grib1_v AS
@@ -30,8 +30,6 @@ CREATE VIEW public.param_grib1_v AS
     l.id AS level_id,
     l.name AS level_name,
     g.level_value,
-    g.centre,
-    g.ident,
     g.last_updater,
     g.last_updated
    FROM (((public.param_grib1 g
@@ -43,7 +41,7 @@ CREATE VIEW public.param_grib1_v AS
 ALTER TABLE public.param_grib1_v OWNER TO radon_admin;
 
 --
--- Name: TABLE param_grib1_v; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE param_grib1_v; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.param_grib1_v TO PUBLIC;

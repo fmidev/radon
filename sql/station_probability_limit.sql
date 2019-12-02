@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: station_probability_limit; Type: TABLE; Schema: public; Owner: postgres
+-- Name: station_probability_limit; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.station_probability_limit (
@@ -36,7 +36,7 @@ CREATE TABLE public.station_probability_limit (
 ALTER TABLE public.station_probability_limit OWNER TO radon_admin;
 
 --
--- Name: station_probability_limit_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: station_probability_limit_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.station_probability_limit_id_seq
@@ -50,21 +50,21 @@ CREATE SEQUENCE public.station_probability_limit_id_seq
 ALTER TABLE public.station_probability_limit_id_seq OWNER TO radon_admin;
 
 --
--- Name: station_probability_limit_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: station_probability_limit_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.station_probability_limit_id_seq OWNED BY public.station_probability_limit.id;
 
 
 --
--- Name: station_probability_limit id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: station_probability_limit id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.station_probability_limit ALTER COLUMN id SET DEFAULT nextval('public.station_probability_limit_id_seq'::regclass);
 
 
 --
--- Name: station_probability_limit station_probability_limit_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: station_probability_limit station_probability_limit_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.station_probability_limit
@@ -72,28 +72,28 @@ ALTER TABLE ONLY public.station_probability_limit
 
 
 --
--- Name: station_probability_limit_uniq_idx; Type: INDEX; Schema: public; Owner: postgres
+-- Name: station_probability_limit_uniq_idx; Type: INDEX; Schema: public; Owner: radon_admin
 --
 
 CREATE UNIQUE INDEX station_probability_limit_uniq_idx ON public.station_probability_limit USING btree (station_id, param_id);
 
 
 --
--- Name: station_probability_limit station_probability_limit_audit_trigger_row_trg; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: station_probability_limit station_probability_limit_audit_trigger_row_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER station_probability_limit_audit_trigger_row_trg AFTER UPDATE ON public.station_probability_limit FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: station_probability_limit station_probability_limit_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: station_probability_limit station_probability_limit_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER station_probability_limit_store_last_updated_trg BEFORE UPDATE ON public.station_probability_limit FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: station_probability_limit station_probability_limit_param_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: station_probability_limit station_probability_limit_param_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.station_probability_limit
@@ -101,7 +101,7 @@ ALTER TABLE ONLY public.station_probability_limit
 
 
 --
--- Name: station_probability_limit station_probability_limit_station_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: station_probability_limit station_probability_limit_station_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.station_probability_limit
@@ -109,7 +109,7 @@ ALTER TABLE ONLY public.station_probability_limit
 
 
 --
--- Name: TABLE station_probability_limit; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE station_probability_limit; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.station_probability_limit TO radon_ro;
@@ -117,10 +117,10 @@ GRANT INSERT,DELETE,UPDATE ON TABLE public.station_probability_limit TO radon_rw
 
 
 --
--- Name: SEQUENCE station_probability_limit_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE station_probability_limit_id_seq; Type: ACL; Schema: public; Owner: radon_admin
 --
 
-GRANT UPDATE ON SEQUENCE public.station_probability_limit_id_seq TO radon_rw;
+GRANT SELECT,UPDATE ON SEQUENCE public.station_probability_limit_id_seq TO radon_rw;
 
 
 --

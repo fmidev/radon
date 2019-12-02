@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5 (Debian 10.5-1.pgdg90+1)
--- Dumped by pg_dump version 10.5 (Debian 10.5-1.pgdg90+1)
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: file_format; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: file_format; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.file_format (
@@ -35,7 +35,7 @@ CREATE TABLE public.file_format (
 ALTER TABLE public.file_format OWNER TO radon_admin;
 
 --
--- Name: file_format_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: file_format_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.file_format_id_seq
@@ -50,21 +50,21 @@ CREATE SEQUENCE public.file_format_id_seq
 ALTER TABLE public.file_format_id_seq OWNER TO radon_admin;
 
 --
--- Name: file_format_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: file_format_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.file_format_id_seq OWNED BY public.file_format.id;
 
 
 --
--- Name: file_format id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: file_format id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.file_format ALTER COLUMN id SET DEFAULT nextval('public.file_format_id_seq'::regclass);
 
 
 --
--- Name: file_format file_format_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: file_format file_format_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.file_format
@@ -72,17 +72,25 @@ ALTER TABLE ONLY public.file_format
 
 
 --
--- Name: file_format audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: file_format audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.file_format FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: file_format file_format_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: file_format file_format_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER file_format_last_updated_trg BEFORE UPDATE ON public.file_format FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
+
+
+--
+-- Name: TABLE file_format; Type: ACL; Schema: public; Owner: radon_admin
+--
+
+GRANT INSERT,DELETE,UPDATE ON TABLE public.file_format TO radon_rw;
+GRANT SELECT ON TABLE public.file_format TO radon_ro;
 
 
 --

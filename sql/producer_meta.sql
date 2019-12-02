@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: producer_meta; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: producer_meta; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.producer_meta (
@@ -35,7 +35,7 @@ CREATE TABLE public.producer_meta (
 ALTER TABLE public.producer_meta OWNER TO radon_admin;
 
 --
--- Name: producer_meta producer_meta_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: producer_meta producer_meta_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.producer_meta
@@ -43,14 +43,14 @@ ALTER TABLE ONLY public.producer_meta
 
 
 --
--- Name: producer_meta audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: producer_meta audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.producer_meta FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: producer_meta producer_meta_fmi_producer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: producer_meta producer_meta_fmi_producer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.producer_meta
@@ -58,7 +58,7 @@ ALTER TABLE ONLY public.producer_meta
 
 
 --
--- Name: TABLE producer_meta; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE producer_meta; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.producer_meta TO radon_ro;

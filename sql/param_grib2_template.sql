@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: param_grib2_template; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: param_grib2_template; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.param_grib2_template (
@@ -40,7 +40,7 @@ CREATE TABLE public.param_grib2_template (
 ALTER TABLE public.param_grib2_template OWNER TO radon_admin;
 
 --
--- Name: param_grib2_template param_grib2_template_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_grib2_template param_grib2_template_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_grib2_template
@@ -48,14 +48,14 @@ ALTER TABLE ONLY public.param_grib2_template
 
 
 --
--- Name: param_grib2_template param_grib2_template_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param_grib2_template param_grib2_template_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER param_grib2_template_store_last_updated_trg AFTER UPDATE ON public.param_grib2_template FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: param_grib2_template param_grib2_template_param_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_grib2_template param_grib2_template_param_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_grib2_template
@@ -63,7 +63,7 @@ ALTER TABLE ONLY public.param_grib2_template
 
 
 --
--- Name: TABLE param_grib2_template; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE param_grib2_template; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.param_grib2_template TO radon_ro;

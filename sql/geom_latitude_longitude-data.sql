@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: geom_latitude_longitude; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: geom_latitude_longitude; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.geom_latitude_longitude (id, name, ni, nj, first_point, di, dj, scanning_mode, description, last_updater, last_updated) FROM stdin;
@@ -29,7 +29,6 @@ COPY public.geom_latitude_longitude (id, name, ni, nj, first_point, di, dj, scan
 1082	ICONEUR00625	1097	657	0101000020E610000000000000000875400000000000803D40	0.0625	0.0625	+x+y	DWD ICON GDS europe nesting	\N	\N
 1083	TOPLINK	720	696	0101000020E61000000000000000F074400000000000805140	0.097357	0.068345	+x-y	Area for Toplink winter products	\N	\N
 1085	ICONGLO0125	2879	1441	0101000020E6100000000000000080664000000000008056C0	0.125	0.125	+x+y	DWD ICON GDS global	\N	\N
-1061	WAMBALMFC	764	775	0101000020E61000009E7B0F971C072240A9A44E4013814A40	0.027777	0.016666	+x+y	Copernicus WAM(BALMFC) area 1 nautical mile resolution	\N	\N
 1065	MOSKRIGING2	1126	461	0101000020E610000000000000000044C00000000000605240	0.1	0.1	+x-y	MOS Kriging area over Europe	\N	\N
 54	ENFUSORTUR	1926	1212	0101000020E6100000666D11205C0F36400000000000404E40	0.0001822434424	0.00008993361553	+x-y	Enfusor Turku area	\N	\N
 25	EGRR432325	432	325	0101000020E6100000000000000000000000000000008056C0	0.833	0.555	+x+y	Seasonal global forecast model of UK Met-office.	wetodb	2016-09-22 06:32:48.424987+00
@@ -89,6 +88,7 @@ COPY public.geom_latitude_longitude (id, name, ni, nj, first_point, di, dj, scan
 1006	COPERNICUS	4320	2041	0101000020E610000000000000008066C000000000000054C0	0.08333333582	0.08333333582	+x+y	Copernicus, global ocean	postgres	2016-08-29 09:12:27.356279+00
 1099	ECGSEASFIN040	35	31	0101000020E61000003333333333333340CDCCCCCCCCCC5140	0.4	0.4	+x-y	EC seasonal forecast Finland 0.4 degrees	\N	\N
 415	ECNOR025	1440	361	0101000020E610000000000000008066C00000000000805640	0.25	0.25	+x-y	ECMWF Northern hemisphere 0.25 degrees	\N	\N
+1061	WAMBALMFC	764	775	0101000020E6100000459AFC3F1C07224056A1FD1F12814A40	0.02777700126	0.01666600257	+x+y	Copernicus WAM(BALMFC) area 1 nautical mile resolution	\N	\N
 \.
 
 

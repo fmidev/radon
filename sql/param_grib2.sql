@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: param_grib2; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: param_grib2; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.param_grib2 (
@@ -41,21 +41,21 @@ CREATE TABLE public.param_grib2 (
 ALTER TABLE public.param_grib2 OWNER TO radon_admin;
 
 --
--- Name: COLUMN param_grib2.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN param_grib2.last_updater; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.param_grib2.last_updater IS 'Fixed column for last updater';
 
 
 --
--- Name: COLUMN param_grib2.last_updated; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN param_grib2.last_updated; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.param_grib2.last_updated IS 'Fixed column for last updating time';
 
 
 --
--- Name: param_grib2_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: param_grib2_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.param_grib2_id_seq
@@ -69,21 +69,21 @@ CREATE SEQUENCE public.param_grib2_id_seq
 ALTER TABLE public.param_grib2_id_seq OWNER TO radon_admin;
 
 --
--- Name: param_grib2_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: param_grib2_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.param_grib2_id_seq OWNED BY public.param_grib2.id;
 
 
 --
--- Name: param_grib2 id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: param_grib2 id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_grib2 ALTER COLUMN id SET DEFAULT nextval('public.param_grib2_id_seq'::regclass);
 
 
 --
--- Name: param_grib2 param_grib2_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_grib2 param_grib2_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_grib2
@@ -91,35 +91,35 @@ ALTER TABLE ONLY public.param_grib2
 
 
 --
--- Name: param_grib2_producer_id_uniq; Type: INDEX; Schema: public; Owner: wetodb
+-- Name: param_grib2_producer_id_uniq; Type: INDEX; Schema: public; Owner: radon_admin
 --
 
 CREATE UNIQUE INDEX param_grib2_producer_id_uniq ON public.param_grib2 USING btree (producer_id, param_id, discipline, category, number, level_id, level_value, type_of_statistical_processing);
 
 
 --
--- Name: param_grib2 audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param_grib2 audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.param_grib2 FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: param_grib2 param_grib2_duplicate_check_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param_grib2 param_grib2_duplicate_check_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER param_grib2_duplicate_check_trg BEFORE INSERT ON public.param_grib2 FOR EACH ROW EXECUTE PROCEDURE public.param_grib2_duplicate_check_f();
 
 
 --
--- Name: param_grib2 param_grib2_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param_grib2 param_grib2_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER param_grib2_store_last_updated_trg BEFORE UPDATE ON public.param_grib2 FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: param_grib2 param_grib2_fmi_producers_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_grib2 param_grib2_fmi_producers_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_grib2
@@ -127,7 +127,7 @@ ALTER TABLE ONLY public.param_grib2
 
 
 --
--- Name: param_grib2 param_grib2_level_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_grib2 param_grib2_level_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_grib2
@@ -135,7 +135,7 @@ ALTER TABLE ONLY public.param_grib2
 
 
 --
--- Name: param_grib2 param_grib2_parm_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_grib2 param_grib2_parm_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_grib2
@@ -143,11 +143,18 @@ ALTER TABLE ONLY public.param_grib2
 
 
 --
--- Name: TABLE param_grib2; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE param_grib2; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.param_grib2 TO radon_ro;
 GRANT INSERT,DELETE,UPDATE ON TABLE public.param_grib2 TO radon_rw;
+
+
+--
+-- Name: SEQUENCE param_grib2_id_seq; Type: ACL; Schema: public; Owner: radon_admin
+--
+
+GRANT SELECT,UPDATE ON SEQUENCE public.param_grib2_id_seq TO radon_rw;
 
 
 --

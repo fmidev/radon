@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: table_meta_grid; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: table_meta_grid; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.table_meta_grid (
@@ -41,7 +41,7 @@ CREATE TABLE public.table_meta_grid (
 ALTER TABLE public.table_meta_grid OWNER TO radon_admin;
 
 --
--- Name: table_meta_grid_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: table_meta_grid_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.table_meta_grid_id_seq
@@ -55,21 +55,21 @@ CREATE SEQUENCE public.table_meta_grid_id_seq
 ALTER TABLE public.table_meta_grid_id_seq OWNER TO radon_admin;
 
 --
--- Name: table_meta_grid_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: table_meta_grid_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.table_meta_grid_id_seq OWNED BY public.table_meta_grid.id;
 
 
 --
--- Name: table_meta_grid id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: table_meta_grid id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.table_meta_grid ALTER COLUMN id SET DEFAULT nextval('public.table_meta_grid_id_seq'::regclass);
 
 
 --
--- Name: table_meta_grid table_meta_grid_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: table_meta_grid table_meta_grid_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.table_meta_grid
@@ -77,7 +77,7 @@ ALTER TABLE ONLY public.table_meta_grid
 
 
 --
--- Name: table_meta_grid table_meta_grid_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: table_meta_grid table_meta_grid_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.table_meta_grid
@@ -85,28 +85,28 @@ ALTER TABLE ONLY public.table_meta_grid
 
 
 --
--- Name: table_meta_grid audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: table_meta_grid audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.table_meta_grid FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: table_meta_grid table_meta_grid_producer_class_id_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: table_meta_grid table_meta_grid_producer_class_id_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER table_meta_grid_producer_class_id_trg BEFORE INSERT OR UPDATE ON public.table_meta_grid FOR EACH ROW EXECUTE PROCEDURE public.table_meta_producer_class_id_f('table_meta_grid');
 
 
 --
--- Name: table_meta_grid table_meta_grid_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: table_meta_grid table_meta_grid_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER table_meta_grid_store_last_updated_trg BEFORE UPDATE ON public.table_meta_grid FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: table_meta_grid table_meta_grid_fmi_producer_fkey_02; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: table_meta_grid table_meta_grid_fmi_producer_fkey_02; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.table_meta_grid
@@ -114,7 +114,7 @@ ALTER TABLE ONLY public.table_meta_grid
 
 
 --
--- Name: table_meta_grid table_meta_grid_geom_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: table_meta_grid table_meta_grid_geom_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.table_meta_grid
@@ -122,11 +122,18 @@ ALTER TABLE ONLY public.table_meta_grid
 
 
 --
--- Name: TABLE table_meta_grid; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE table_meta_grid; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.table_meta_grid TO radon_ro;
 GRANT INSERT,DELETE,UPDATE ON TABLE public.table_meta_grid TO radon_rw;
+
+
+--
+-- Name: SEQUENCE table_meta_grid_id_seq; Type: ACL; Schema: public; Owner: radon_admin
+--
+
+GRANT SELECT ON SEQUENCE public.table_meta_grid_id_seq TO radon_rw;
 
 
 --

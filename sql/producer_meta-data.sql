@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: producer_meta; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: producer_meta; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.producer_meta (producer_id, attribute, value, last_updater, last_updated) FROM stdin;
@@ -65,6 +65,8 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 10	last hybrid level number	65	\N	\N
 261	last hybrid level number	65	\N	\N
 261	first hybrid level number	1	\N	\N
+265	ensemble size	9	\N	\N
+11	ensemble size	9	\N	\N
 \.
 
 

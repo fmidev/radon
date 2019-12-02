@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: station; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: station; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.station (id, name, "position", elevation, description, elevation_altimeter, external_information, is_mobile, last_updater, last_updated) FROM stdin;
@@ -18829,7 +18829,7 @@ COPY public.station (id, name, "position", elevation, description, elevation_alt
 
 
 --
--- Name: station_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
+-- Name: station_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
 SELECT pg_catalog.setval('public.station_id_seq', 1, true);

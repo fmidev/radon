@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: geom_stereographic; Type: TABLE; Schema: public; Owner: postgres
+-- Name: geom_stereographic; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.geom_stereographic (
@@ -43,7 +43,7 @@ CREATE TABLE public.geom_stereographic (
 ALTER TABLE public.geom_stereographic OWNER TO radon_admin;
 
 --
--- Name: geom_stereographic geom_stereographic_name_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_stereographic geom_stereographic_name_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom_stereographic
@@ -51,7 +51,7 @@ ALTER TABLE ONLY public.geom_stereographic
 
 
 --
--- Name: geom_stereographic geom_stereographic_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_stereographic geom_stereographic_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom_stereographic
@@ -59,35 +59,35 @@ ALTER TABLE ONLY public.geom_stereographic
 
 
 --
--- Name: geom_stereographic_geom_fkey_02_idx; Type: INDEX; Schema: public; Owner: postgres
+-- Name: geom_stereographic_geom_fkey_02_idx; Type: INDEX; Schema: public; Owner: radon_admin
 --
 
 CREATE INDEX geom_stereographic_geom_fkey_02_idx ON public.geom_stereographic USING btree (name);
 
 
 --
--- Name: geom_stereographic_geom_fkey_idx; Type: INDEX; Schema: public; Owner: postgres
+-- Name: geom_stereographic_geom_fkey_idx; Type: INDEX; Schema: public; Owner: radon_admin
 --
 
 CREATE INDEX geom_stereographic_geom_fkey_idx ON public.geom_stereographic USING btree (id);
 
 
 --
--- Name: geom_stereographic audit_trigger_row; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: geom_stereographic audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.geom_stereographic FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: geom_stereographic geom_stereographic_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: geom_stereographic geom_stereographic_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER geom_stereographic_store_last_updated_trg AFTER UPDATE ON public.geom_stereographic FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: geom_stereographic geom_stereographic_geom_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_stereographic geom_stereographic_geom_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom_stereographic
@@ -95,7 +95,7 @@ ALTER TABLE ONLY public.geom_stereographic
 
 
 --
--- Name: geom_stereographic geom_stereographic_geom_fkey_02; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_stereographic geom_stereographic_geom_fkey_02; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom_stereographic
@@ -103,7 +103,7 @@ ALTER TABLE ONLY public.geom_stereographic
 
 
 --
--- Name: TABLE geom_stereographic; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE geom_stereographic; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT INSERT,DELETE,UPDATE ON TABLE public.geom_stereographic TO radon_rw;

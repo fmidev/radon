@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: param_newbase_name; Type: TABLE; Schema: public; Owner: postgres
+-- Name: param_newbase_name; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.param_newbase_name (
@@ -35,7 +35,7 @@ CREATE TABLE public.param_newbase_name (
 ALTER TABLE public.param_newbase_name OWNER TO radon_admin;
 
 --
--- Name: param_newbase_name_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: param_newbase_name_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.param_newbase_name_id_seq
@@ -49,21 +49,21 @@ CREATE SEQUENCE public.param_newbase_name_id_seq
 ALTER TABLE public.param_newbase_name_id_seq OWNER TO radon_admin;
 
 --
--- Name: param_newbase_name_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: param_newbase_name_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.param_newbase_name_id_seq OWNED BY public.param_newbase_name.id;
 
 
 --
--- Name: param_newbase_name id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: param_newbase_name id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_newbase_name ALTER COLUMN id SET DEFAULT nextval('public.param_newbase_name_id_seq'::regclass);
 
 
 --
--- Name: param_newbase_name param_newbase_name_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: param_newbase_name param_newbase_name_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_newbase_name
@@ -71,7 +71,7 @@ ALTER TABLE ONLY public.param_newbase_name
 
 
 --
--- Name: param_newbase_name univ_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: param_newbase_name univ_id_key; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_newbase_name
@@ -79,28 +79,28 @@ ALTER TABLE ONLY public.param_newbase_name
 
 
 --
--- Name: param_newbase_name_univ_id_uniq_idx; Type: INDEX; Schema: public; Owner: postgres
+-- Name: param_newbase_name_univ_id_uniq_idx; Type: INDEX; Schema: public; Owner: radon_admin
 --
 
 CREATE UNIQUE INDEX param_newbase_name_univ_id_uniq_idx ON public.param_newbase_name USING btree (univ_id);
 
 
 --
--- Name: param_newbase_name param_newbase_name_audit_trigger_row_trg; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: param_newbase_name param_newbase_name_audit_trigger_row_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER param_newbase_name_audit_trigger_row_trg AFTER UPDATE ON public.param_newbase_name FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: param_newbase_name param_newbase_name_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: param_newbase_name param_newbase_name_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER param_newbase_name_store_last_updated_trg BEFORE UPDATE ON public.param_newbase_name FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: TABLE param_newbase_name; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE param_newbase_name; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.param_newbase_name TO radon_ro;
@@ -108,7 +108,7 @@ GRANT SELECT,INSERT,UPDATE ON TABLE public.param_newbase_name TO radon_rw;
 
 
 --
--- Name: SEQUENCE param_newbase_name_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE param_newbase_name_id_seq; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT ALL ON SEQUENCE public.param_newbase_name_id_seq TO radon_rw;

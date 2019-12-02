@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: usage_info; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: usage_info; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.usage_info (
@@ -41,7 +41,7 @@ CREATE TABLE public.usage_info (
 ALTER TABLE public.usage_info OWNER TO radon_admin;
 
 --
--- Name: usage_info usage_info_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: usage_info usage_info_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.usage_info
@@ -49,7 +49,7 @@ ALTER TABLE ONLY public.usage_info
 
 
 --
--- Name: TABLE usage_info; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE usage_info; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.usage_info TO radon_ro;

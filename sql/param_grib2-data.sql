@@ -16,14 +16,17 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: param_grib2; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: param_grib2; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number, level_id, level_value, last_updater, last_updated, type_of_statistical_processing) FROM stdin;
 517	260	1127	0	7	206	\N	\N	\N	\N	-1
 2	53	581	0	0	1	\N	\N	\N	\N	-1
+897	243	1228	0	192	3	\N	\N	\N	\N	-1
+898	109	1295	0	1	192	\N	\N	\N	\N	-1
 379	119	36	0	2	230	\N	\N	\N	\N	-1
 380	119	37	0	2	231	\N	\N	\N	\N	-1
+899	260	20	0	6	198	\N	\N	\N	\N	-1
 727	105	25	10	2	1	\N	\N	\N	\N	-1
 10	53	218	0	0	17	\N	\N	\N	\N	-1
 13	53	661	0	1	3	\N	\N	\N	\N	-1
@@ -488,7 +491,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 700	4	319	0	4	9	5	0	wetodb	2019-04-30 06:00:44.130123+00	1
 703	4	316	0	5	5	6	0	wetodb	2019-04-30 06:00:44.130123+00	1
 704	4	320	0	5	5	5	0	wetodb	2019-04-30 06:00:44.130123+00	1
-724	4	501	0	4	7	\N	\N	wetodb	2019-04-30 06:00:44.130123+00	-1
 714	4	979	0	4	7	5	0	wetodb	2019-04-30 06:00:44.130123+00	1
 715	4	979	0	4	7	6	0	wetodb	2019-04-30 06:00:44.130123+00	1
 723	4	317	0	5	4	\N	\N	wetodb	2019-04-30 06:00:44.130123+00	1
@@ -555,10 +557,10 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 
 
 --
--- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
+-- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib2_id_seq', 896, true);
+SELECT pg_catalog.setval('public.param_grib2_id_seq', 899, true);
 
 
 --

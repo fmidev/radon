@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: param; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: param; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.param (id, name, version, unit_id, interpolation_id, description, last_updater, last_updated) FROM stdin;
@@ -1053,9 +1053,11 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1201	SDNIRR-JM2	1	83	1	Surface direct normal irradiation	\N	\N
 1202	RACC-KGM2	1	18	1	Rain accumulation in mm	\N	\N
 1203	GDD-C	1	58	1	Growing degree days	\N	\N
+1286	LSM-0TO1	1	62	1	Land-Sea mask	\N	\N
 1205	PROB-WG-AGG-1	1	6	1	Probability of reaching wind gust speed more than given value threshold, aggregated over area and/or time	\N	\N
 1206	PROB-HAIL-AGG-1	1	6	1	Probability of hail, aggregated over area and/or time	\N	\N
 1207	PROB-RR-AGG-1	1	6	1	Probability of reaching some precipitation threshold value, aggregated over area and/or time	\N	\N
+1288	F0-IFFG-MS	1	15	1	0th fractal wind gust speed in EPS	\N	\N
 1120	PROB-CAPE1040-1	1	6	1	Probability of reaching some -10 .. -40 cape threshold value	wetodb	2017-09-27 12:42:54
 1121	PROB-CAPE1040-2	1	6	1	Probability of reaching some -10 .. -40 cape threshold value	wetodb	2017-09-27 12:42:54
 1122	PROB-CAPE1040-3	1	6	1	Probability of reaching some -10 .. -40 cape threshold value	wetodb	2017-09-27 12:43:14
@@ -1180,14 +1182,28 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1284	PROB-CSI-2	1	6	1	Probability of reaching some CSI threshold value	\N	\N
 1285	PROB-CSI-3	1	6	1	Probability of reaching some CSI threshold value	\N	\N
 461	FL-MPLTY-N	1	69	1	Multiplicity Of The Flash, strikes / time unit / area	wetodb	2019-08-23 09:42:26
+1295	PRECPHASE-0TO1	1	62	1	Precipitation phase as calculated by "Koistinen algorithm"	\N	\N
+1296	F100-NLM-PRCNT	1	6	1	100th fractal low and middle cloudiness in EPS	\N	\N
+1289	F10-IFFG-MS	1	15	1	10th fractal wind gust speed in EPS	\N	\N
+1290	F25-IFFG-MS	1	15	1	25th fractal wind gust speed in EPS	\N	\N
+1291	F50-IFFG-MS	1	15	1	50th fractal wind gust speed in EPS	\N	\N
+1292	F75-IFFG-MS	1	15	1	75th fractal wind gust speed in EPS	\N	\N
+1293	F90-IFFG-MS	1	15	1	90th fractal wind gust speed in EPS	\N	\N
+1294	F100-IFFG-MS	1	15	1	100th fractal wind gust speed in EPS	\N	\N
+1297	F90-NLM-PRCNT	1	6	1	90th fractal low and middle cloudiness in EPS	\N	\N
+1298	F75-NLM-PRCNT	1	6	1	75th fractal low and middle cloudiness in EPS	\N	\N
+1299	F50-NLM-PRCNT	1	6	1	50th fractal low and middle cloudiness in EPS	\N	\N
+1300	F25-NLM-PRCNT	1	6	1	25th fractal low and middle cloudiness in EPS	\N	\N
+1301	F10-NLM-PRCNT	1	6	1	10th fractal low and middle cloudiness in EPS	\N	\N
+1302	F0-NLM-PRCNT	1	6	1	0th fractal low and middle cloudiness in EPS	\N	\N
 \.
 
 
 --
--- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
+-- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1285, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1302, true);
 
 
 --

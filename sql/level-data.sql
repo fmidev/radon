@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: level; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: level; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.level (id, name, description, unit_id, last_updater, last_updated) FROM stdin;
@@ -40,7 +40,7 @@ COPY public.level (id, name, description, unit_id, last_updater, last_updated) F
 
 
 --
--- Name: level_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
+-- Name: level_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
 SELECT pg_catalog.setval('public.level_id_seq', 16, true);

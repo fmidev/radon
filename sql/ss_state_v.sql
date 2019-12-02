@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: ss_state_v; Type: VIEW; Schema: public; Owner: postgres
+-- Name: ss_state_v; Type: VIEW; Schema: public; Owner: radon_admin
 --
 
 CREATE VIEW public.ss_state_v AS
@@ -38,7 +38,7 @@ CREATE VIEW public.ss_state_v AS
 ALTER TABLE public.ss_state_v OWNER TO radon_admin;
 
 --
--- Name: TABLE ss_state_v; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE ss_state_v; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.ss_state_v TO PUBLIC;

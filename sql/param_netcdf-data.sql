@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: param_netcdf; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: param_netcdf; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, level_value, last_updater, last_updated) FROM stdin;
@@ -107,7 +107,7 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 
 
 --
--- Name: param_netcdf_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
+-- Name: param_netcdf_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
 SELECT pg_catalog.setval('public.param_netcdf_id_seq', 98, true);

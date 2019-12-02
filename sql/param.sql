@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: param; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: param; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.param (
@@ -38,21 +38,21 @@ CREATE TABLE public.param (
 ALTER TABLE public.param OWNER TO radon_admin;
 
 --
--- Name: COLUMN param.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN param.last_updater; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.param.last_updater IS 'Fixed column for last updater';
 
 
 --
--- Name: COLUMN param.last_updated; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN param.last_updated; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.param.last_updated IS 'Fixed column for last updating time';
 
 
 --
--- Name: param_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: param_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.param_id_seq
@@ -66,21 +66,21 @@ CREATE SEQUENCE public.param_id_seq
 ALTER TABLE public.param_id_seq OWNER TO radon_admin;
 
 --
--- Name: param_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: param_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.param_id_seq OWNED BY public.param.id;
 
 
 --
--- Name: param id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: param id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param ALTER COLUMN id SET DEFAULT nextval('public.param_id_seq'::regclass);
 
 
 --
--- Name: param param_name_version_idx; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param param_name_version_idx; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param
@@ -88,7 +88,7 @@ ALTER TABLE ONLY public.param
 
 
 --
--- Name: param param_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param param_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param
@@ -96,21 +96,21 @@ ALTER TABLE ONLY public.param
 
 
 --
--- Name: param audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.param FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: param param_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param param_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER param_store_last_updated_trg BEFORE UPDATE ON public.param FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: param param_interpolation_id_idx; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param param_interpolation_id_idx; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param
@@ -118,7 +118,7 @@ ALTER TABLE ONLY public.param
 
 
 --
--- Name: param param_unit_id_idx; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param param_unit_id_idx; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param
@@ -126,11 +126,18 @@ ALTER TABLE ONLY public.param
 
 
 --
--- Name: TABLE param; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE param; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.param TO radon_ro;
 GRANT INSERT,DELETE,UPDATE ON TABLE public.param TO radon_rw;
+
+
+--
+-- Name: SEQUENCE param_id_seq; Type: ACL; Schema: public; Owner: radon_admin
+--
+
+GRANT SELECT,UPDATE ON SEQUENCE public.param_id_seq TO radon_rw;
 
 
 --

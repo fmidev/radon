@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: station; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: station; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.station (
@@ -40,21 +40,21 @@ CREATE TABLE public.station (
 ALTER TABLE public.station OWNER TO radon_admin;
 
 --
--- Name: COLUMN station.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN station.last_updater; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.station.last_updater IS 'Fixed column for last updater';
 
 
 --
--- Name: COLUMN station.last_updated; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN station.last_updated; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.station.last_updated IS 'Fixed column for last updating time';
 
 
 --
--- Name: station_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: station_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.station_id_seq
@@ -68,21 +68,21 @@ CREATE SEQUENCE public.station_id_seq
 ALTER TABLE public.station_id_seq OWNER TO radon_admin;
 
 --
--- Name: station_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: station_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.station_id_seq OWNED BY public.station.id;
 
 
 --
--- Name: station id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: station id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.station ALTER COLUMN id SET DEFAULT nextval('public.station_id_seq'::regclass);
 
 
 --
--- Name: station station_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: station station_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.station
@@ -90,21 +90,21 @@ ALTER TABLE ONLY public.station
 
 
 --
--- Name: station audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: station audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.station FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: station station_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: station station_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER station_store_last_updated_trg BEFORE UPDATE ON public.station FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: TABLE station; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE station; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.station TO radon_ro;

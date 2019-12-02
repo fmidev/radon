@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: level_grib1; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: level_grib1; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.level_grib1 (
@@ -36,21 +36,21 @@ CREATE TABLE public.level_grib1 (
 ALTER TABLE public.level_grib1 OWNER TO radon_admin;
 
 --
--- Name: COLUMN level_grib1.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN level_grib1.last_updater; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.level_grib1.last_updater IS 'Fixed column for last updater';
 
 
 --
--- Name: COLUMN level_grib1.last_updated; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN level_grib1.last_updated; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.level_grib1.last_updated IS 'Fixed column for last updating time';
 
 
 --
--- Name: level_grib1 level_grib1_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: level_grib1 level_grib1_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.level_grib1
@@ -58,21 +58,21 @@ ALTER TABLE ONLY public.level_grib1
 
 
 --
--- Name: level_grib1 audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: level_grib1 audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.level_grib1 FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: level_grib1 level_grib1_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: level_grib1 level_grib1_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER level_grib1_store_last_updated_trg BEFORE UPDATE ON public.level_grib1 FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: level_grib1 level_grib1_fmi_producer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: level_grib1 level_grib1_fmi_producer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.level_grib1
@@ -80,7 +80,7 @@ ALTER TABLE ONLY public.level_grib1
 
 
 --
--- Name: level_grib1 level_grib1_level_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: level_grib1 level_grib1_level_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.level_grib1
@@ -88,7 +88,7 @@ ALTER TABLE ONLY public.level_grib1
 
 
 --
--- Name: TABLE level_grib1; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE level_grib1; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.level_grib1 TO radon_ro;

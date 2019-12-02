@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: producer_param_v; Type: VIEW; Schema: public; Owner: postgres
+-- Name: producer_param_v; Type: VIEW; Schema: public; Owner: radon_admin
 --
 
 CREATE VIEW public.producer_param_v AS
@@ -108,7 +108,7 @@ CREATE VIEW public.producer_param_v AS
 ALTER TABLE public.producer_param_v OWNER TO radon_admin;
 
 --
--- Name: TABLE producer_param_v; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE producer_param_v; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.producer_param_v TO PUBLIC;

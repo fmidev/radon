@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: geom; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: geom; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.geom (
@@ -46,21 +46,21 @@ CREATE TABLE public.geom (
 ALTER TABLE public.geom OWNER TO radon_admin;
 
 --
--- Name: COLUMN geom.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN geom.last_updater; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.geom.last_updater IS 'Fixed column for last updater';
 
 
 --
--- Name: COLUMN geom.last_updated; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN geom.last_updated; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.geom.last_updated IS 'Fixed column for last updating time';
 
 
 --
--- Name: geom_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: geom_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.geom_id_seq
@@ -74,21 +74,21 @@ CREATE SEQUENCE public.geom_id_seq
 ALTER TABLE public.geom_id_seq OWNER TO radon_admin;
 
 --
--- Name: geom_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: geom_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.geom_id_seq OWNED BY public.geom.id;
 
 
 --
--- Name: geom id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: geom id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom ALTER COLUMN id SET DEFAULT nextval('public.geom_id_seq'::regclass);
 
 
 --
--- Name: geom geom_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: geom geom_name_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom
@@ -96,7 +96,7 @@ ALTER TABLE ONLY public.geom
 
 
 --
--- Name: geom geom_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: geom geom_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom
@@ -104,28 +104,21 @@ ALTER TABLE ONLY public.geom
 
 
 --
--- Name: geom audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: geom audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.geom FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: geom geom_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
---
-
-CREATE TRIGGER geom_last_updated_trg BEFORE UPDATE ON public.geom FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
-
-
---
--- Name: geom geom_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: geom geom_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER geom_store_last_updated_trg BEFORE UPDATE ON public.geom FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: geom geom_projection_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: geom geom_projection_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom
@@ -133,12 +126,12 @@ ALTER TABLE ONLY public.geom
 
 
 --
--- Name: TABLE geom; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE geom; Type: ACL; Schema: public; Owner: radon_admin
 --
 
-REVOKE ALL ON TABLE public.geom FROM wetodb;
 GRANT SELECT ON TABLE public.geom TO radon_ro;
 GRANT INSERT,DELETE,UPDATE ON TABLE public.geom TO radon_rw;
+GRANT SELECT ON TABLE public.geom TO PUBLIC;
 
 
 --

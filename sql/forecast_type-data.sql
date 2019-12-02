@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: forecast_type; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: forecast_type; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.forecast_type (id, name, description, last_updater, last_updated) FROM stdin;
@@ -28,7 +28,7 @@ COPY public.forecast_type (id, name, description, last_updater, last_updated) FR
 
 
 --
--- Name: forecast_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
+-- Name: forecast_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
 SELECT pg_catalog.setval('public.forecast_type_id_seq', 33, true);

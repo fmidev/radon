@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: param_level_transform; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: param_level_transform; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.param_level_transform (id, producer_id, param_id, other_level_id, other_level_value, fmi_level_id, fmi_level_value, last_updater, last_updated) FROM stdin;
@@ -128,17 +128,21 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 144	120	162	6	0	6	2	\N	\N
 138	134	162	1	0	6	2	\N	\N
 139	137	598	14	0	1	0	wetodb	2019-06-12 06:53:59.819234+00
+145	134	318	1	\N	6	\N	\N	\N
+146	134	974	1	\N	6	\N	\N	\N
+147	134	973	1	\N	6	\N	\N	\N
 140	137	598	14	7	1	7	wetodb	2019-06-12 07:09:10.024556+00
 141	170	179	1	\N	6	0	\N	\N
+148	134	972	1	\N	6	\N	\N	\N
 142	243	774	6	0	1	0	wetodb	2019-07-03 12:17:28.047664+00
 \.
 
 
 --
--- Name: param_level_transform_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: param_level_transform_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_level_transform_id_seq', 144, true);
+SELECT pg_catalog.setval('public.param_level_transform_id_seq', 148, true);
 
 
 --

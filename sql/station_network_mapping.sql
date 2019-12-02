@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: station_network_mapping; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: station_network_mapping; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.station_network_mapping (
@@ -38,7 +38,7 @@ CREATE TABLE public.station_network_mapping (
 ALTER TABLE public.station_network_mapping OWNER TO radon_admin;
 
 --
--- Name: station_network_mapping_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: station_network_mapping_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.station_network_mapping_id_seq
@@ -52,21 +52,21 @@ CREATE SEQUENCE public.station_network_mapping_id_seq
 ALTER TABLE public.station_network_mapping_id_seq OWNER TO radon_admin;
 
 --
--- Name: station_network_mapping_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: station_network_mapping_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.station_network_mapping_id_seq OWNED BY public.station_network_mapping.id;
 
 
 --
--- Name: station_network_mapping id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: station_network_mapping id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.station_network_mapping ALTER COLUMN id SET DEFAULT nextval('public.station_network_mapping_id_seq'::regclass);
 
 
 --
--- Name: station_network_mapping station_network_mapping_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: station_network_mapping station_network_mapping_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.station_network_mapping
@@ -74,7 +74,7 @@ ALTER TABLE ONLY public.station_network_mapping
 
 
 --
--- Name: station_network_mapping station_network_mapping_station_id_network_id_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: station_network_mapping station_network_mapping_station_id_network_id_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.station_network_mapping
@@ -82,21 +82,21 @@ ALTER TABLE ONLY public.station_network_mapping
 
 
 --
--- Name: station_network_mapping audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: station_network_mapping audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.station_network_mapping FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: station_network_mapping station_network_mapping_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: station_network_mapping station_network_mapping_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER station_network_mapping_store_last_updated_trg BEFORE UPDATE ON public.station_network_mapping FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: station_network_mapping station_network_mapping_network_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: station_network_mapping station_network_mapping_network_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.station_network_mapping
@@ -104,7 +104,7 @@ ALTER TABLE ONLY public.station_network_mapping
 
 
 --
--- Name: station_network_mapping station_network_mapping_station_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: station_network_mapping station_network_mapping_station_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.station_network_mapping
@@ -112,7 +112,7 @@ ALTER TABLE ONLY public.station_network_mapping
 
 
 --
--- Name: TABLE station_network_mapping; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE station_network_mapping; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.station_network_mapping TO radon_ro;

@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: station_probability_limit; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: station_probability_limit; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.station_probability_limit (id, station_id, param_id, probability_limit, last_updater, last_updated) FROM stdin;
@@ -80,7 +80,7 @@ COPY public.station_probability_limit (id, station_id, param_id, probability_lim
 
 
 --
--- Name: station_probability_limit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: station_probability_limit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
 SELECT pg_catalog.setval('public.station_probability_limit_id_seq', 56, true);

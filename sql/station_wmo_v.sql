@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: station_wmo_v; Type: VIEW; Schema: public; Owner: postgres
+-- Name: station_wmo_v; Type: VIEW; Schema: public; Owner: radon_admin
 --
 
 CREATE VIEW public.station_wmo_v AS
@@ -34,7 +34,7 @@ CREATE VIEW public.station_wmo_v AS
 ALTER TABLE public.station_wmo_v OWNER TO radon_admin;
 
 --
--- Name: TABLE station_wmo_v; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE station_wmo_v; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.station_wmo_v TO PUBLIC;

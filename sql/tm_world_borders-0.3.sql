@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: tm_world_borders-0.3; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: tm_world_borders-0.3; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public."tm_world_borders-0.3" (
@@ -43,7 +43,7 @@ CREATE TABLE public."tm_world_borders-0.3" (
 ALTER TABLE public."tm_world_borders-0.3" OWNER TO radon_admin;
 
 --
--- Name: tm_world_borders-0.3_gid_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: tm_world_borders-0.3_gid_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public."tm_world_borders-0.3_gid_seq"
@@ -57,21 +57,21 @@ CREATE SEQUENCE public."tm_world_borders-0.3_gid_seq"
 ALTER TABLE public."tm_world_borders-0.3_gid_seq" OWNER TO radon_admin;
 
 --
--- Name: tm_world_borders-0.3_gid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: tm_world_borders-0.3_gid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public."tm_world_borders-0.3_gid_seq" OWNED BY public."tm_world_borders-0.3".gid;
 
 
 --
--- Name: tm_world_borders-0.3 gid; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: tm_world_borders-0.3 gid; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public."tm_world_borders-0.3" ALTER COLUMN gid SET DEFAULT nextval('public."tm_world_borders-0.3_gid_seq"'::regclass);
 
 
 --
--- Name: tm_world_borders-0.3 tm_world_borders-0.3_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: tm_world_borders-0.3 tm_world_borders-0.3_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public."tm_world_borders-0.3"
@@ -79,7 +79,7 @@ ALTER TABLE ONLY public."tm_world_borders-0.3"
 
 
 --
--- Name: TABLE "tm_world_borders-0.3"; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE "tm_world_borders-0.3"; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public."tm_world_borders-0.3" TO radon_ro;

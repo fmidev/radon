@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: level; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: level; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.level (
@@ -36,21 +36,21 @@ CREATE TABLE public.level (
 ALTER TABLE public.level OWNER TO radon_admin;
 
 --
--- Name: COLUMN level.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN level.last_updater; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.level.last_updater IS 'Fixed column for last updater';
 
 
 --
--- Name: COLUMN level.last_updated; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN level.last_updated; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.level.last_updated IS 'Fixed column for last updating time';
 
 
 --
--- Name: level_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: level_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.level_id_seq
@@ -64,21 +64,21 @@ CREATE SEQUENCE public.level_id_seq
 ALTER TABLE public.level_id_seq OWNER TO radon_admin;
 
 --
--- Name: level_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: level_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.level_id_seq OWNED BY public.level.id;
 
 
 --
--- Name: level id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: level id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.level ALTER COLUMN id SET DEFAULT nextval('public.level_id_seq'::regclass);
 
 
 --
--- Name: level level_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: level level_name_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.level
@@ -86,7 +86,7 @@ ALTER TABLE ONLY public.level
 
 
 --
--- Name: level level_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: level level_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.level
@@ -94,21 +94,21 @@ ALTER TABLE ONLY public.level
 
 
 --
--- Name: level audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: level audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.level FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: level level_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: level level_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER level_store_last_updated_trg BEFORE UPDATE ON public.level FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: TABLE level; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE level; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.level TO radon_ro;

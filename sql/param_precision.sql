@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: param_precision; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: param_precision; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.param_precision (
@@ -35,7 +35,7 @@ CREATE TABLE public.param_precision (
 ALTER TABLE public.param_precision OWNER TO radon_admin;
 
 --
--- Name: param_precision_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: param_precision_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.param_precision_id_seq
@@ -49,21 +49,21 @@ CREATE SEQUENCE public.param_precision_id_seq
 ALTER TABLE public.param_precision_id_seq OWNER TO radon_admin;
 
 --
--- Name: param_precision_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: param_precision_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.param_precision_id_seq OWNED BY public.param_precision.id;
 
 
 --
--- Name: param_precision id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: param_precision id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_precision ALTER COLUMN id SET DEFAULT nextval('public.param_precision_id_seq'::regclass);
 
 
 --
--- Name: param_precision param_precision_param_id_key; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_precision param_precision_param_id_key; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_precision
@@ -71,7 +71,7 @@ ALTER TABLE ONLY public.param_precision
 
 
 --
--- Name: param_precision param_precision_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_precision param_precision_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_precision
@@ -79,21 +79,21 @@ ALTER TABLE ONLY public.param_precision
 
 
 --
--- Name: param_precision audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param_precision audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.param_precision FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: param_precision param_precision_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param_precision param_precision_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER param_precision_store_last_updated_trg AFTER UPDATE ON public.param_precision FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: param_precision param_precision_param_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_precision param_precision_param_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_precision
@@ -101,7 +101,7 @@ ALTER TABLE ONLY public.param_precision
 
 
 --
--- Name: TABLE param_precision; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE param_precision; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE public.param_precision TO radon_rw;
@@ -109,10 +109,10 @@ GRANT SELECT ON TABLE public.param_precision TO radon_ro;
 
 
 --
--- Name: SEQUENCE param_precision_id_seq; Type: ACL; Schema: public; Owner: wetodb
+-- Name: SEQUENCE param_precision_id_seq; Type: ACL; Schema: public; Owner: radon_admin
 --
 
-GRANT UPDATE ON SEQUENCE public.param_precision_id_seq TO radon_rw;
+GRANT SELECT,UPDATE ON SEQUENCE public.param_precision_id_seq TO radon_rw;
 
 
 --

@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: forecast_type; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: forecast_type; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.forecast_type (
@@ -35,7 +35,7 @@ CREATE TABLE public.forecast_type (
 ALTER TABLE public.forecast_type OWNER TO radon_admin;
 
 --
--- Name: forecast_type_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: forecast_type_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.forecast_type_id_seq
@@ -49,21 +49,21 @@ CREATE SEQUENCE public.forecast_type_id_seq
 ALTER TABLE public.forecast_type_id_seq OWNER TO radon_admin;
 
 --
--- Name: forecast_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: forecast_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.forecast_type_id_seq OWNED BY public.forecast_type.id;
 
 
 --
--- Name: forecast_type id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: forecast_type id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.forecast_type ALTER COLUMN id SET DEFAULT nextval('public.forecast_type_id_seq'::regclass);
 
 
 --
--- Name: forecast_type forecast_type_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: forecast_type forecast_type_name_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.forecast_type
@@ -71,7 +71,7 @@ ALTER TABLE ONLY public.forecast_type
 
 
 --
--- Name: forecast_type forecast_type_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: forecast_type forecast_type_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.forecast_type
@@ -79,21 +79,21 @@ ALTER TABLE ONLY public.forecast_type
 
 
 --
--- Name: forecast_type audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: forecast_type audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.forecast_type FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: forecast_type forecast_type_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: forecast_type forecast_type_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER forecast_type_store_last_updated_trg BEFORE UPDATE ON public.forecast_type FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: TABLE forecast_type; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE forecast_type; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.forecast_type TO radon_ro;

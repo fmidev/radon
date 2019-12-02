@@ -41,7 +41,7 @@ CREATE TABLE audit.logged_actions (
 );
 
 
-ALTER TABLE audit.logged_actions OWNER TO radon_admin;
+ALTER TABLE audit.logged_actions OWNER TO postgres;
 
 --
 -- Name: logged_actions_event_id_seq; Type: SEQUENCE; Schema: audit; Owner: postgres
@@ -55,7 +55,7 @@ CREATE SEQUENCE audit.logged_actions_event_id_seq
     CACHE 1;
 
 
-ALTER TABLE audit.logged_actions_event_id_seq OWNER TO radon_admin;
+ALTER TABLE audit.logged_actions_event_id_seq OWNER TO postgres;
 
 --
 -- Name: logged_actions_event_id_seq; Type: SEQUENCE OWNED BY; Schema: audit; Owner: postgres
@@ -77,6 +77,13 @@ ALTER TABLE ONLY audit.logged_actions ALTER COLUMN event_id SET DEFAULT nextval(
 
 ALTER TABLE ONLY audit.logged_actions
     ADD CONSTRAINT logged_actions_pkey PRIMARY KEY (event_id);
+
+
+--
+-- Name: TABLE logged_actions; Type: ACL; Schema: audit; Owner: postgres
+--
+
+GRANT SELECT ON TABLE audit.logged_actions TO radon_rw;
 
 
 --

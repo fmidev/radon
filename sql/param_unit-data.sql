@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: param_unit; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: param_unit; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.param_unit (id, name, description, last_updater, last_updated) FROM stdin;
@@ -97,7 +97,7 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 
 
 --
--- Name: param_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
+-- Name: param_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
 SELECT pg_catalog.setval('public.param_unit_id_seq', 91, true);

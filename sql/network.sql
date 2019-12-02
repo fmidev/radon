@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: network; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: network; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.network (
@@ -35,7 +35,7 @@ CREATE TABLE public.network (
 ALTER TABLE public.network OWNER TO radon_admin;
 
 --
--- Name: network network_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: network network_name_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.network
@@ -43,7 +43,7 @@ ALTER TABLE ONLY public.network
 
 
 --
--- Name: network network_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: network network_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.network
@@ -51,21 +51,21 @@ ALTER TABLE ONLY public.network
 
 
 --
--- Name: network audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: network audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.network FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: network network_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: network network_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER network_store_last_updated_trg BEFORE UPDATE ON public.network FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: TABLE network; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE network; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.network TO radon_ro;

@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: network; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: network; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.network (id, name, description, last_updater, last_updated) FROM stdin;

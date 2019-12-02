@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: param_netcdf; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: param_netcdf; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.param_netcdf (
@@ -38,21 +38,21 @@ CREATE TABLE public.param_netcdf (
 ALTER TABLE public.param_netcdf OWNER TO radon_admin;
 
 --
--- Name: COLUMN param_netcdf.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN param_netcdf.last_updater; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.param_netcdf.last_updater IS 'Fixed column for last updater';
 
 
 --
--- Name: COLUMN param_netcdf.last_updated; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN param_netcdf.last_updated; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.param_netcdf.last_updated IS 'Fixed column for last updating time';
 
 
 --
--- Name: param_netcdf_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: param_netcdf_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.param_netcdf_id_seq
@@ -66,21 +66,21 @@ CREATE SEQUENCE public.param_netcdf_id_seq
 ALTER TABLE public.param_netcdf_id_seq OWNER TO radon_admin;
 
 --
--- Name: param_netcdf_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: param_netcdf_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.param_netcdf_id_seq OWNED BY public.param_netcdf.id;
 
 
 --
--- Name: param_netcdf id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: param_netcdf id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_netcdf ALTER COLUMN id SET DEFAULT nextval('public.param_netcdf_id_seq'::regclass);
 
 
 --
--- Name: param_netcdf param_netcdf_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_netcdf param_netcdf_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_netcdf
@@ -88,7 +88,7 @@ ALTER TABLE ONLY public.param_netcdf
 
 
 --
--- Name: param_netcdf param_netcdf_producer_id_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_netcdf param_netcdf_producer_id_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_netcdf
@@ -96,21 +96,21 @@ ALTER TABLE ONLY public.param_netcdf
 
 
 --
--- Name: param_netcdf audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param_netcdf audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.param_netcdf FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: param_netcdf param_netcdf_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: param_netcdf param_netcdf_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER param_netcdf_store_last_updated_trg BEFORE UPDATE ON public.param_netcdf FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: param_netcdf param_netcdf_fmi_producer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_netcdf param_netcdf_fmi_producer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_netcdf
@@ -118,7 +118,7 @@ ALTER TABLE ONLY public.param_netcdf
 
 
 --
--- Name: param_netcdf param_netcdf_level_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_netcdf param_netcdf_level_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_netcdf
@@ -126,7 +126,7 @@ ALTER TABLE ONLY public.param_netcdf
 
 
 --
--- Name: param_netcdf param_netcdf_param_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: param_netcdf param_netcdf_param_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.param_netcdf
@@ -134,7 +134,7 @@ ALTER TABLE ONLY public.param_netcdf
 
 
 --
--- Name: TABLE param_netcdf; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE param_netcdf; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.param_netcdf TO radon_ro;

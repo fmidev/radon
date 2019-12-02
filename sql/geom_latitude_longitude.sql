@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: geom_latitude_longitude; Type: TABLE; Schema: public; Owner: postgres
+-- Name: geom_latitude_longitude; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.geom_latitude_longitude (
@@ -42,7 +42,7 @@ CREATE TABLE public.geom_latitude_longitude (
 ALTER TABLE public.geom_latitude_longitude OWNER TO radon_admin;
 
 --
--- Name: geom_latitude_longitude geom_latitude_longitude_name_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_latitude_longitude geom_latitude_longitude_name_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom_latitude_longitude
@@ -50,7 +50,7 @@ ALTER TABLE ONLY public.geom_latitude_longitude
 
 
 --
--- Name: geom_latitude_longitude geom_latitude_longitude_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_latitude_longitude geom_latitude_longitude_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom_latitude_longitude
@@ -58,35 +58,35 @@ ALTER TABLE ONLY public.geom_latitude_longitude
 
 
 --
--- Name: geom_latitude_longitude_geom_fkey_02_idx; Type: INDEX; Schema: public; Owner: postgres
+-- Name: geom_latitude_longitude_geom_fkey_02_idx; Type: INDEX; Schema: public; Owner: radon_admin
 --
 
 CREATE INDEX geom_latitude_longitude_geom_fkey_02_idx ON public.geom_latitude_longitude USING btree (name);
 
 
 --
--- Name: geom_latitude_longitude_geom_fkey_idx; Type: INDEX; Schema: public; Owner: postgres
+-- Name: geom_latitude_longitude_geom_fkey_idx; Type: INDEX; Schema: public; Owner: radon_admin
 --
 
 CREATE INDEX geom_latitude_longitude_geom_fkey_idx ON public.geom_latitude_longitude USING btree (id);
 
 
 --
--- Name: geom_latitude_longitude audit_trigger_row; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: geom_latitude_longitude audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.geom_latitude_longitude FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: geom_latitude_longitude geom_latitude_longitude_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: geom_latitude_longitude geom_latitude_longitude_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER geom_latitude_longitude_store_last_updated_trg AFTER UPDATE ON public.geom_latitude_longitude FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: geom_latitude_longitude geom_latitude_longitude_geom_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_latitude_longitude geom_latitude_longitude_geom_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom_latitude_longitude
@@ -94,7 +94,7 @@ ALTER TABLE ONLY public.geom_latitude_longitude
 
 
 --
--- Name: geom_latitude_longitude geom_latitude_longitude_geom_fkey_02; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: geom_latitude_longitude geom_latitude_longitude_geom_fkey_02; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.geom_latitude_longitude
@@ -102,7 +102,7 @@ ALTER TABLE ONLY public.geom_latitude_longitude
 
 
 --
--- Name: TABLE geom_latitude_longitude; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE geom_latitude_longitude; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT INSERT,DELETE,UPDATE ON TABLE public.geom_latitude_longitude TO radon_rw;

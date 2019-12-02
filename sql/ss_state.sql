@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: ss_state; Type: TABLE; Schema: public; Owner: postgres
+-- Name: ss_state; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.ss_state (
@@ -39,7 +39,7 @@ CREATE TABLE public.ss_state (
 ALTER TABLE public.ss_state OWNER TO radon_admin;
 
 --
--- Name: ss_state ss_state_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: ss_state ss_state_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.ss_state
@@ -47,7 +47,7 @@ ALTER TABLE ONLY public.ss_state
 
 
 --
--- Name: ss_state ss_state_forecast_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: ss_state ss_state_forecast_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.ss_state
@@ -55,15 +55,7 @@ ALTER TABLE ONLY public.ss_state
 
 
 --
--- Name: ss_state ss_state_geometry_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.ss_state
-    ADD CONSTRAINT ss_state_geometry_id_fkey FOREIGN KEY (geometry_id) REFERENCES public.geom(id);
-
-
---
--- Name: ss_state ss_state_producer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: ss_state ss_state_producer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.ss_state
@@ -71,7 +63,7 @@ ALTER TABLE ONLY public.ss_state
 
 
 --
--- Name: TABLE ss_state; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE ss_state; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.ss_state TO radon_ro;

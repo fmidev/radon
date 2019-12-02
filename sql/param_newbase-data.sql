@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: param_newbase; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: param_newbase; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last_updater, last_updated) FROM stdin;
@@ -2216,6 +2216,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2883	151	304	1147	1	0	\N	\N
 2884	150	648	60	1	0	\N	\N
 2885	151	648	60	1	0	\N	\N
+4109	260	1296	1425	1	0	\N	\N
 3406	7	659	325	1	0	\N	\N
 2888	150	24	384	1	0	\N	\N
 2889	151	24	384	1	0	\N	\N
@@ -2289,6 +2290,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2680	260	63	4745	1	0	\N	\N
 2681	260	379	4749	1	0	\N	\N
 2682	230	372	4740	1	0	\N	\N
+4110	260	1297	1426	1	0	\N	\N
 2683	230	373	4741	1	0	\N	\N
 2684	230	374	4742	1	0	\N	\N
 2685	230	559	4743	1	0	\N	\N
@@ -2477,9 +2479,24 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 3108	240	377	4738	1	0	\N	\N
 3109	240	379	4729	1	0	\N	\N
 3050	52	990	4905	1	0	wetodb	2017-10-17 10:05:00.791125+00
+4083	11	153	4	1	-273.15	\N	\N
 3111	180	153	4	1	-273.15	\N	\N
 3112	180	163	13	1	0	\N	\N
 3113	180	166	21	1	0	\N	\N
+4084	242	804	946	1	0	\N	\N
+4085	242	962	942	1	0	\N	\N
+4086	242	963	939	1	0	\N	\N
+4087	242	809	935	1	0	\N	\N
+4088	242	964	931	1	0	\N	\N
+4089	242	965	928	1	0	\N	\N
+4090	242	814	920	1	0	\N	\N
+4091	281	438	79	100	0	\N	\N
+4092	242	1294	1117	1	0	\N	\N
+4093	242	1293	1118	1	0	\N	\N
+4094	242	1292	1119	1	0	\N	\N
+4095	242	1291	1120	1	0	\N	\N
+4096	242	1290	1121	1	0	\N	\N
+4097	242	1289	1122	1	0	\N	\N
 3931	230	329	47750	1	0	\N	\N
 3933	230	330	47510	1	0	\N	\N
 3935	230	592	47720	1	0	\N	\N
@@ -2555,7 +2572,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 687	131	972	273	100	0	wetodb	2017-12-07 12:33:07.531094+00
 3221	181	139	1	0.01	0	wetodb	2017-12-19 08:42:19.62796+00
 3255	181	411	417	1	0	\N	\N
-1099	152	24	384	100	0	wetodb	2017-12-20 07:31:00.824809+00
 1797	152	306	1151	100	0	wetodb	2017-12-20 07:31:00.824809+00
 1801	152	307	1153	100	0	wetodb	2017-12-20 07:31:00.824809+00
 15	101	412	1	1	0	wetodb	2017-12-20 09:27:52.517566+00
@@ -3089,7 +3105,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4045	230	1126	4789	1	0	\N	\N
 4046	240	1126	4789	1	0	\N	\N
 4074	260	1284	1422	100	0	\N	\N
-4035	4	501	117	1	0	\N	\N
+4082	242	1265	1412	100	0	wetodb	2019-11-08 11:50:07.428379+00
 4047	260	1126	4789	1	0	\N	\N
 4048	270	1126	4789	1	0	\N	\N
 4049	260	1282	1413	100	0	wetodb	2019-05-06 05:14:49.321152+00
@@ -3110,7 +3126,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4066	170	411	467	1	0	\N	\N
 4067	270	411	467	1	0	\N	\N
 4068	260	1015	100	0	0	\N	\N
-59	109	195	3	1	0	wetodb	2019-06-10 07:43:23.457202+00
+4098	242	1288	1123	1	0	\N	\N
 1027	109	441	353	1	0	wetodb	2019-06-10 07:44:52.898755+00
 4069	137	598	4806	1	0	\N	\N
 4070	137	598	4807	1	0	\N	\N
@@ -3123,14 +3139,38 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4078	120	153	4	1	-273.15	\N	\N
 4079	120	162	10	1	-273.15	\N	\N
 4080	120	163	13	1	0	\N	\N
+59	109	195	2	1	0	wetodb	2019-09-11 10:20:38.688678+00
+4099	109	166	21	1	0	\N	\N
+4100	109	169	20	1	0	\N	\N
+4101	242	1235	4679	1	0	\N	\N
+4102	242	1236	4680	1	0	\N	\N
+4103	242	1237	4681	1	0	\N	\N
+4104	242	1238	4682	1	0	\N	\N
+4105	242	1239	4683	1	0	\N	\N
+4106	242	1240	4684	1	0	\N	\N
+4107	242	1241	4685	1	0	\N	\N
+4108	109	1295	706	100	0	\N	\N
+4111	260	1298	1427	1	0	\N	\N
+4112	260	1299	1428	1	0	\N	\N
+4113	260	1300	1429	1	0	\N	\N
+4114	260	1301	1430	1	0	\N	\N
+4115	260	1302	1431	1	0	\N	\N
+4116	242	1296	1425	1	0	\N	\N
+4117	242	1297	1426	1	0	\N	\N
+4118	242	1298	1427	1	0	\N	\N
+4119	242	1299	1428	1	0	\N	\N
+4120	242	1300	1429	1	0	\N	\N
+4121	242	1301	1430	1	0	\N	\N
+4122	242	1302	1431	1	0	\N	\N
+1099	152	1084	384	100	0	wetodb	2019-11-28 11:42:08.948895+00
 \.
 
 
 --
--- Name: param_newbase_id_seq; Type: SEQUENCE SET; Schema: public; Owner: wetodb
+-- Name: param_newbase_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_id_seq', 4080, true);
+SELECT pg_catalog.setval('public.param_newbase_id_seq', 4122, true);
 
 
 --

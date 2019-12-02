@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: geom_rotated_latitude_longitude; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: geom_rotated_latitude_longitude; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
 COPY public.geom_rotated_latitude_longitude (id, name, ni, nj, first_point, di, dj, scanning_mode, south_pole, description, last_updater, last_updated) FROM stdin;

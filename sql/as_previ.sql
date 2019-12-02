@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: as_previ; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: as_previ; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.as_previ (
@@ -42,21 +42,21 @@ CREATE TABLE public.as_previ (
 ALTER TABLE public.as_previ OWNER TO radon_admin;
 
 --
--- Name: COLUMN as_previ.last_updater; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN as_previ.last_updater; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.as_previ.last_updater IS 'Fixed column for last updater';
 
 
 --
--- Name: COLUMN as_previ.last_updated; Type: COMMENT; Schema: public; Owner: wetodb
+-- Name: COLUMN as_previ.last_updated; Type: COMMENT; Schema: public; Owner: radon_admin
 --
 
 COMMENT ON COLUMN public.as_previ.last_updated IS 'Fixed column for last updating time';
 
 
 --
--- Name: as_previ_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: as_previ_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.as_previ_id_seq
@@ -70,21 +70,21 @@ CREATE SEQUENCE public.as_previ_id_seq
 ALTER TABLE public.as_previ_id_seq OWNER TO radon_admin;
 
 --
--- Name: as_previ_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: as_previ_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.as_previ_id_seq OWNED BY public.as_previ.id;
 
 
 --
--- Name: as_previ id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: as_previ id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.as_previ ALTER COLUMN id SET DEFAULT nextval('public.as_previ_id_seq'::regclass);
 
 
 --
--- Name: as_previ as_previ_partition_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: as_previ as_previ_partition_name_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.as_previ
@@ -92,7 +92,7 @@ ALTER TABLE ONLY public.as_previ
 
 
 --
--- Name: as_previ as_previ_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: as_previ as_previ_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.as_previ
@@ -100,28 +100,28 @@ ALTER TABLE ONLY public.as_previ
 
 
 --
--- Name: as_previ_producer_id_minmax_analysis_time_uniq_idx; Type: INDEX; Schema: public; Owner: wetodb
+-- Name: as_previ_producer_id_minmax_analysis_time_uniq_idx; Type: INDEX; Schema: public; Owner: radon_admin
 --
 
 CREATE UNIQUE INDEX as_previ_producer_id_minmax_analysis_time_uniq_idx ON public.as_previ USING btree (producer_id, min_analysis_time, max_analysis_time);
 
 
 --
--- Name: as_previ as_previ_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: as_previ as_previ_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER as_previ_store_last_updated_trg BEFORE UPDATE ON public.as_previ FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: as_previ audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: as_previ audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.as_previ FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: as_previ as_previ_fmi_producer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: as_previ as_previ_fmi_producer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.as_previ
@@ -129,7 +129,7 @@ ALTER TABLE ONLY public.as_previ
 
 
 --
--- Name: TABLE as_previ; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE as_previ; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.as_previ TO radon_ro;

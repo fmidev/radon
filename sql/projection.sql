@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: projection; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: projection; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.projection (
@@ -37,7 +37,7 @@ CREATE TABLE public.projection (
 ALTER TABLE public.projection OWNER TO radon_admin;
 
 --
--- Name: projection_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: projection_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.projection_id_seq
@@ -51,21 +51,21 @@ CREATE SEQUENCE public.projection_id_seq
 ALTER TABLE public.projection_id_seq OWNER TO radon_admin;
 
 --
--- Name: projection_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: projection_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.projection_id_seq OWNED BY public.projection.id;
 
 
 --
--- Name: projection id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: projection id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.projection ALTER COLUMN id SET DEFAULT nextval('public.projection_id_seq'::regclass);
 
 
 --
--- Name: projection projection_name_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: projection projection_name_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.projection
@@ -73,7 +73,7 @@ ALTER TABLE ONLY public.projection
 
 
 --
--- Name: projection projection_pkey; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: projection projection_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.projection
@@ -81,21 +81,21 @@ ALTER TABLE ONLY public.projection
 
 
 --
--- Name: projection audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: projection audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.projection FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: projection projection_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: projection projection_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER projection_store_last_updated_trg BEFORE UPDATE ON public.projection FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: TABLE projection; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE projection; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.projection TO radon_ro;

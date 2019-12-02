@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: producer_type; Type: TABLE; Schema: public; Owner: postgres
+-- Name: producer_type; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.producer_type (
@@ -35,7 +35,7 @@ CREATE TABLE public.producer_type (
 ALTER TABLE public.producer_type OWNER TO radon_admin;
 
 --
--- Name: producer_type_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: producer_type_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.producer_type_id_seq
@@ -49,21 +49,21 @@ CREATE SEQUENCE public.producer_type_id_seq
 ALTER TABLE public.producer_type_id_seq OWNER TO radon_admin;
 
 --
--- Name: producer_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: producer_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.producer_type_id_seq OWNED BY public.producer_type.id;
 
 
 --
--- Name: producer_type id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: producer_type id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.producer_type ALTER COLUMN id SET DEFAULT nextval('public.producer_type_id_seq'::regclass);
 
 
 --
--- Name: producer_type producer_type_name_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: producer_type producer_type_name_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.producer_type
@@ -71,7 +71,7 @@ ALTER TABLE ONLY public.producer_type
 
 
 --
--- Name: producer_type producer_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: producer_type producer_type_pkey; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.producer_type
@@ -79,21 +79,21 @@ ALTER TABLE ONLY public.producer_type
 
 
 --
--- Name: producer_type producer_type_audit_trigger_row_trg; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: producer_type producer_type_audit_trigger_row_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER producer_type_audit_trigger_row_trg AFTER UPDATE ON public.producer_type FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: producer_type producer_type_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: postgres
+-- Name: producer_type producer_type_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER producer_type_store_last_updated_trg BEFORE UPDATE ON public.producer_type FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: TABLE producer_type; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE producer_type; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.producer_type TO radon_ro;
@@ -101,10 +101,10 @@ GRANT INSERT,DELETE,UPDATE ON TABLE public.producer_type TO radon_rw;
 
 
 --
--- Name: SEQUENCE producer_type_id_seq; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE producer_type_id_seq; Type: ACL; Schema: public; Owner: radon_admin
 --
 
-GRANT SELECT ON SEQUENCE public.producer_type_id_seq TO radon_rw;
+GRANT SELECT,UPDATE ON SEQUENCE public.producer_type_id_seq TO radon_rw;
 
 
 --

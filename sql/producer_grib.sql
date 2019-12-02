@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: producer_grib; Type: TABLE; Schema: public; Owner: wetodb
+-- Name: producer_grib; Type: TABLE; Schema: public; Owner: radon_admin
 --
 
 CREATE TABLE public.producer_grib (
@@ -36,7 +36,7 @@ CREATE TABLE public.producer_grib (
 ALTER TABLE public.producer_grib OWNER TO radon_admin;
 
 --
--- Name: producer_grib_id_seq; Type: SEQUENCE; Schema: public; Owner: wetodb
+-- Name: producer_grib_id_seq; Type: SEQUENCE; Schema: public; Owner: radon_admin
 --
 
 CREATE SEQUENCE public.producer_grib_id_seq
@@ -50,21 +50,21 @@ CREATE SEQUENCE public.producer_grib_id_seq
 ALTER TABLE public.producer_grib_id_seq OWNER TO radon_admin;
 
 --
--- Name: producer_grib_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: wetodb
+-- Name: producer_grib_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
 --
 
 ALTER SEQUENCE public.producer_grib_id_seq OWNED BY public.producer_grib.id;
 
 
 --
--- Name: producer_grib id; Type: DEFAULT; Schema: public; Owner: wetodb
+-- Name: producer_grib id; Type: DEFAULT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.producer_grib ALTER COLUMN id SET DEFAULT nextval('public.producer_grib_id_seq'::regclass);
 
 
 --
--- Name: producer_grib producer_grib_centre_uniq; Type: CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: producer_grib producer_grib_centre_uniq; Type: CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.producer_grib
@@ -72,21 +72,21 @@ ALTER TABLE ONLY public.producer_grib
 
 
 --
--- Name: producer_grib audit_trigger_row; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: producer_grib audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.producer_grib FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
 
 
 --
--- Name: producer_grib producer_grib_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: wetodb
+-- Name: producer_grib producer_grib_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER producer_grib_store_last_updated_trg BEFORE UPDATE ON public.producer_grib FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
 
 
 --
--- Name: producer_grib producer_grib_fmi_producer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: wetodb
+-- Name: producer_grib producer_grib_fmi_producer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
 ALTER TABLE ONLY public.producer_grib
@@ -94,11 +94,18 @@ ALTER TABLE ONLY public.producer_grib
 
 
 --
--- Name: TABLE producer_grib; Type: ACL; Schema: public; Owner: wetodb
+-- Name: TABLE producer_grib; Type: ACL; Schema: public; Owner: radon_admin
 --
 
 GRANT SELECT ON TABLE public.producer_grib TO radon_ro;
 GRANT INSERT,DELETE,UPDATE ON TABLE public.producer_grib TO radon_rw;
+
+
+--
+-- Name: SEQUENCE producer_grib_id_seq; Type: ACL; Schema: public; Owner: radon_admin
+--
+
+GRANT SELECT,UPDATE ON SEQUENCE public.producer_grib_id_seq TO radon_rw;
 
 
 --
