@@ -34,7 +34,7 @@ echo "GRANT radon_ro TO radon_rw" | psql $PSQL_ARGS
 echo "GRANT radon_ro TO radon_client" | psql $PSQL_ARGS
 echo "GRANT radon_rw TO wetodb" | psql $PSQL_ARGS
 echo "ALTER DATABASE radon OWNER TO radon_admin" | psql $PSQL_ARGS
-echo "GRANT USAGE ON SCHEMA data TO radon_rw" | psql $PSQL_ARGS
+echo "GRANT USAGE ON SCHEMA data TO radon_ro" | psql $PSQL_ARGS
 
 set +u
 
