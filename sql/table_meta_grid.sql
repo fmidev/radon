@@ -133,7 +133,7 @@ GRANT INSERT,DELETE,UPDATE ON TABLE public.table_meta_grid TO radon_rw;
 -- Name: SEQUENCE table_meta_grid_id_seq; Type: ACL; Schema: public; Owner: radon_admin
 --
 
-GRANT SELECT ON SEQUENCE public.table_meta_grid_id_seq TO radon_rw;
+GRANT SELECT,UPDATE ON SEQUENCE public.table_meta_grid_id_seq TO radon_rw;
 
 
 --
