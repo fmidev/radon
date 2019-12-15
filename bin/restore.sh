@@ -39,6 +39,13 @@ echo "GRANT USAGE ON SCHEMA data TO radon_ro" | psql $PSQL_ARGS
 set +u
 
 if [ -n "$RADON_WETODB_PASSWORD" ]; then
+  echo "Setting radon_admin user password"
+  echo "ALTER USER radon_admin WITH PASSWORD '$RADON_RADON_ADMIN_PASSWORD'" | psql $PSQL_ARGS
+else
+  echo "Warning: Radon user radon_admin has no password set"
+fi
+
+if [ -n "$RADON_WETODB_PASSWORD" ]; then
   echo "Setting wetodb user password"
   echo "ALTER USER wetodb WITH PASSWORD '$RADON_WETODB_PASSWORD'" | psql $PSQL_ARGS
 else
