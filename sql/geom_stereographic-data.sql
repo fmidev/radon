@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped by pg_dump version 12.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,6 +12,7 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
@@ -47,7 +48,7 @@ COPY public.geom_stereographic (id, name, ni, nj, first_point, di, dj, scanning_
 40	LAPS3000	270	400	0101000020E61000009483D90418CE31402D27A1F485B04D40	3000	3000	+x+y	20	LAPS Analysis Area over Finland	\N	\N
 1073	SMARTMET7500	270	300	0101000020E610000000000000000018406666666666A64940	7494.389	7479.167	+x+y	20.0	SmartMet Scandinavian area 7500km resolution	\N	\N
 1079	IASI_L2	171	191	0101000020E6100000AED51EF642F11740A73B4F3C678D4940	12017.543	12015.707	+x+y	20.0	IASI L2 satellite area over Europe	\N	\N
-610	NEMO609719	609	719	0101000020E6100000F369FC5F817E55C0FF810740BB914440	12.5	12.5	+x+y	-45	Polar stereographic area	wetodb	2016-08-18 08:34:48.271252+00
+610	NEMO609719	609	743	0101000020E6100000ED530220361555C0A937FE9F9ED34340	12.5	12.5	+x+y	-45	Polar stereographic area	wetodb	2016-08-18 08:34:48.271252+00
 \.
 
 

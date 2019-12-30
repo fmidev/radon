@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped by pg_dump version 12.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,6 +12,7 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
@@ -29,6 +30,7 @@ COPY public.geom_latitude_longitude (id, name, ni, nj, first_point, di, dj, scan
 1082	ICONEUR00625	1097	657	0101000020E610000000000000000875400000000000803D40	0.0625	0.0625	+x+y	DWD ICON GDS europe nesting	\N	\N
 1083	TOPLINK	720	696	0101000020E61000000000000000F074400000000000805140	0.097357	0.068345	+x-y	Area for Toplink winter products	\N	\N
 1085	ICONGLO0125	2879	1441	0101000020E6100000000000000080664000000000008056C0	0.125	0.125	+x+y	DWD ICON GDS global	\N	\N
+1102	ECEUR0200CAL	331	226	0101000020E61000000000000000E074400000000000005240	0.2	0.2	+x-y	ECMWF Euro geometry for calibrated data	\N	\N
 1065	MOSKRIGING2	1126	461	0101000020E610000000000000000044C00000000000605240	0.1	0.1	+x-y	MOS Kriging area over Europe	\N	\N
 54	ENFUSORTUR	1926	1212	0101000020E6100000666D11205C0F36400000000000404E40	0.0001822434424	0.00008993361553	+x-y	Enfusor Turku area	\N	\N
 25	EGRR432325	432	325	0101000020E6100000000000000000000000000000008056C0	0.833	0.555	+x+y	Seasonal global forecast model of UK Met-office.	wetodb	2016-09-22 06:32:48.424987+00

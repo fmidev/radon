@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped by pg_dump version 12.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,6 +12,7 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
@@ -28,11 +29,16 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 380	119	37	0	2	231	\N	\N	\N	\N	-1
 899	260	20	0	6	198	\N	\N	\N	\N	-1
 727	105	25	10	2	1	\N	\N	\N	\N	-1
+901	241	1303	0	202	30	\N	\N	\N	\N	-1
 10	53	218	0	0	17	\N	\N	\N	\N	-1
+902	241	1304	0	202	33	\N	\N	\N	\N	-1
+903	241	1305	0	202	22	\N	\N	\N	\N	-1
 13	53	661	0	1	3	\N	\N	\N	\N	-1
+904	241	1306	0	202	24	\N	\N	\N	\N	-1
 15	53	506	0	1	7	\N	\N	\N	\N	-1
 493	260	326	0	1	228	\N	\N	wetodb	2018-10-27 16:42:21.501805+00	1
 17	53	184	0	1	9	\N	\N	\N	\N	-1
+905	241	1307	0	202	23	\N	\N	\N	\N	-1
 20	53	510	0	1	12	\N	\N	\N	\N	-1
 21	53	370	0	1	18	\N	\N	\N	\N	-1
 565	280	1181	0	19	193	\N	\N	\N	\N	-1
@@ -40,16 +46,28 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 24	53	52	0	1	23	\N	\N	\N	\N	-1
 25	53	509	0	1	29	\N	\N	\N	\N	-1
 26	53	201	0	1	37	\N	\N	\N	\N	-1
+906	241	1309	0	202	26	\N	\N	\N	\N	-1
 28	53	49	0	1	64	\N	\N	\N	\N	-1
 29	53	654	0	1	83	\N	\N	\N	\N	-1
 381	119	38	0	2	232	\N	\N	\N	\N	-1
 31	53	201	0	1	196	\N	\N	\N	\N	-1
+907	241	1311	0	202	28	\N	\N	\N	\N	-1
+908	241	1312	0	202	27	\N	\N	\N	\N	-1
+909	241	1313	0	202	29	\N	\N	\N	\N	-1
+910	241	362	0	201	52	\N	\N	\N	\N	-1
+912	241	1314	0	202	49	\N	\N	\N	\N	-1
 372	260	412	0	3	0	\N	\N	\N	\N	-1
 38	53	203	0	2	10	\N	\N	\N	\N	-1
+913	241	1247	0	202	47	\N	\N	\N	\N	-1
+914	241	1250	0	202	35	\N	\N	\N	\N	-1
 382	119	225	0	2	233	\N	\N	\N	\N	-1
+915	241	1251	0	202	36	\N	\N	\N	\N	-1
 43	53	595	0	2	23	\N	\N	\N	\N	-1
 44	53	596	0	2	24	\N	\N	\N	\N	-1
+916	241	1254	0	202	39	\N	\N	\N	\N	-1
+918	241	1315	0	202	42	\N	\N	\N	\N	-1
 47	53	434	0	3	2	\N	\N	\N	\N	-1
+928	243	20	0	6	192	\N	\N	\N	\N	-1
 49	53	158	0	3	5	\N	\N	\N	\N	-1
 52	53	498	0	4	0	\N	\N	\N	\N	-1
 53	53	40	0	4	1	\N	\N	\N	\N	-1
@@ -99,21 +117,29 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 567	280	189	0	19	194	\N	\N	\N	\N	-1
 116	47	581	0	0	1	\N	\N	\N	\N	-1
 67	53	187	0	6	1	\N	\N	wetodb	2018-10-09 12:15:49.678093+00	0
+919	241	1316	0	202	44	\N	\N	\N	\N	-1
 650	10	316	0	5	5	\N	\N	wetodb	2019-03-26 06:30:06.980264+00	1
 651	10	501	0	4	7	\N	\N	wetodb	2019-03-26 06:30:06.980264+00	-1
 124	47	218	0	0	17	\N	\N	\N	\N	-1
+921	241	1325	0	202	58	\N	\N	\N	\N	-1
 127	47	661	0	1	3	\N	\N	\N	\N	-1
+922	241	1324	0	202	57	\N	\N	\N	\N	-1
 129	47	441	0	1	7	\N	\N	\N	\N	-1
 130	47	179	0	1	8	\N	\N	\N	\N	-1
 131	47	184	0	1	9	\N	\N	\N	\N	-1
+923	241	1323	0	202	56	\N	\N	\N	\N	-1
 134	47	510	0	1	12	\N	\N	\N	\N	-1
 135	47	370	0	1	18	\N	\N	\N	\N	-1
 137	47	654	0	1	22	\N	\N	\N	\N	-1
 138	47	52	0	1	23	\N	\N	\N	\N	-1
 139	47	509	0	1	29	\N	\N	\N	\N	-1
 140	47	201	0	1	37	\N	\N	\N	\N	-1
+924	241	1321	0	202	54	\N	\N	\N	\N	-1
 142	47	49	0	1	64	\N	\N	\N	\N	-1
 143	47	654	0	1	83	\N	\N	\N	\N	-1
+925	241	1319	0	202	52	\N	\N	\N	\N	-1
+926	241	1318	0	202	51	\N	\N	\N	\N	-1
+927	241	1317	0	202	50	\N	\N	\N	\N	-1
 150	47	203	0	2	10	\N	\N	\N	\N	-1
 153	47	408	0	2	21	\N	\N	\N	\N	-1
 155	47	595	0	2	23	\N	\N	\N	\N	-1
@@ -560,7 +586,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 -- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib2_id_seq', 899, true);
+SELECT pg_catalog.setval('public.param_grib2_id_seq', 928, true);
 
 
 --

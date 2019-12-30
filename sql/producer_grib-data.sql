@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped by pg_dump version 12.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,6 +12,7 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
@@ -21,8 +22,7 @@ SET row_security = off;
 
 COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_updated) FROM stdin;
 1	1	1	86	\N	\N
-92	34	201	34	\N	\N
-3	3	1	82	\N	\N
+118	244	244	86	\N	\N
 83	4	40	251	\N	\N
 5	47	47	54	\N	\N
 6	49	49	74	\N	\N
@@ -98,7 +98,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.producer_grib_id_seq', 117, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 118, true);
 
 
 --

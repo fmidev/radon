@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped by pg_dump version 12.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,6 +12,7 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
@@ -1196,6 +1197,29 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1300	F25-NLM-PRCNT	1	6	1	25th fractal low and middle cloudiness in EPS	\N	\N
 1301	F10-NLM-PRCNT	1	6	1	10th fractal low and middle cloudiness in EPS	\N	\N
 1302	F0-NLM-PRCNT	1	6	1	0th fractal low and middle cloudiness in EPS	\N	\N
+1303	F10-TSEA-K	1	3	1	10th fractal sea temperature in EPS	\N	\N
+1304	F90-TSEA-K	1	3	1	90th fractal sea temperature in EPS	\N	\N
+1305	F0-TOTCWV-KGM2	1	18	1	0th fractal total column water vapour	\N	\N
+1306	F2.5-TOTCWV-KGM2	1	18	1	2.5th fractal total column water vapour	\N	\N
+1307	F10-TOTCWV-KGM2	1	18	1	10th fractal total column water vapour	\N	\N
+1308	F25-TOTCWV-KGM2	1	18	1	25th fractal total column water vapour	\N	\N
+1309	F50-TOTCWV-KGM2	1	18	1	50th fractal total column water vapour	\N	\N
+1310	F75-TOTCWV-KGM2	1	18	1	75th fractal total column water vapour	\N	\N
+1311	F90-TOTCWV-KGM2	1	18	1	90th fractal total column water vapour	\N	\N
+1312	F97.5-TOTCWV-KGM2	1	18	1	97.5th fractal total column water vapour	\N	\N
+1313	F100-TOTCWV-KGM2	1	18	1	100th fractal total column water vapour	\N	\N
+1314	F90-RRR-KGM2	1	18	1	90th fractal precipitation in EPS	\N	\N
+1315	F2.5-RR-24-MM	1	18	1	2.5th fractal precipitation in EPS	\N	\N
+1316	F97.5-RR-24-MM	1	18	1	97.5th fractal precipitation in EPS	\N	\N
+1317	F100-MRR-KGM2	1	18	1	100th fractal monthly precipitation in EPS	\N	\N
+1318	F97.5-MRR-KGM2	1	18	1	97.5th fractal monthly precipitation in EPS	\N	\N
+1319	F90-MRR-KGM2	1	18	1	90th fractal monthly precipitation in EPS	\N	\N
+1320	F75-MRR-KGM2	1	18	1	75th fractal monthly precipitation in EPS	\N	\N
+1321	F50-MRR-KGM2	1	18	1	50th fractal monthly precipitation in EPS	\N	\N
+1322	F25-MRR-KGM2	1	18	1	25th fractal monthly precipitation in EPS	\N	\N
+1323	F10-MRR-KGM2	1	18	1	10th fractal monthly precipitation in EPS	\N	\N
+1324	F2.5-MRR-KGM2	1	18	1	2.5th fractal monthly precipitation in EPS	\N	\N
+1325	F0-MRR-KGM2	1	18	1	0th fractal monthly precipitation in EPS	\N	\N
 \.
 
 
@@ -1203,7 +1227,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1302, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1325, true);
 
 
 --

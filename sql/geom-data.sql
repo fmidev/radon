@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped by pg_dump version 12.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,6 +12,7 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
@@ -33,7 +34,7 @@ COPY public.geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning
 1007	ECGLO0100	1	3600	1801	0101000020E610000000000000000000000000000000805640	0.1	0.1	+x-y	0	0	0	 ECMWF global 0.1 degrees	postgres	2016-03-23 18:20:11.449998+00
 1045	ECEUR0100G2	4	661	576	0101000020E61000000000000000E074400000000000803640	0.1	0.1	+x-y	-30	0	0	ECMWF Europe, rotated 0.1 degrees, GRIB2 version	\N	\N
 1043	MOSLAPS	2	980	840	0101000020E6100000736891ED7C21764016FBCBEEC9533E40	5000	5000	+x+y	20	0	0	MOS ECMWF LAPS gridded dataset	postgres	2016-05-04 05:34:58.955027+00
-610	NEMO609719	2	609	719	01010000008351499D807E55C07D3F355EBA914440	12.5	12.5	+x+y	-45	0	0	Polar stereographic area	wetodb	2016-08-18 08:34:48.271252+00
+1102	ECEUR0200CAL	1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 1006	COPERNICUS	1	4320	2041	0101000020E610000000000000008066C000000000000054C0	0.0833282	0.0833359	+x+y	0	0	0	Copernicus, global ocean	postgres	2016-08-29 09:12:27.356279+00
 1047	MOSKRIGING	1	1414	533	0101000020E610000014AE47E17AD44EC08FC2F5285C8F5340	0.0999985	0.0999985	+x-y	0	0	0	Mos Kriging area over Europe	postgres	2016-08-29 09:14:56.472962+00
 1048	ECERAINTERIM	1	500	251	0101000020E610000000000000000000000000000000805640	0.72	0.72	+x-y	0	0	0	ERA-Interim Global Analysis 500 x 251 0.72 deg	wetodb	2016-09-05 07:25:34.037904+00
@@ -174,6 +175,7 @@ COPY public.geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning
 606	WAM109123	1	166	196	0101000020E610000000000000000022400000000000804A40	0.133	0.067	+x+y	0	0	0	Area of MTL Wave model data	\N	\N
 1101	NEMO801738	2	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	wetodb	2019-10-09 13:55:49.941264+00
 1099	ECGSEASFIN040	1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+610	NEMO609719	2	609	743	0101000020E6100000ED530220361555C0A937FE9F9ED34340	12.5	12.5	+x+y	-45	0	0	Polar stereographic area	wetodb	2019-12-03 11:54:58.969064+00
 \.
 
 
@@ -181,7 +183,7 @@ COPY public.geom (id, name, projection_id, ni, nj, first_point, di, dj, scanning
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1101, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1102, true);
 
 
 --
