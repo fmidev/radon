@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped by pg_dump version 12.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,12 +12,11 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
 SET default_tablespace = '';
-
-SET default_with_oids = false;
 
 --
 -- Name: table_meta_previ; Type: TABLE; Schema: public; Owner: radon_admin
@@ -118,6 +117,13 @@ ALTER TABLE ONLY public.table_meta_previ
 
 GRANT SELECT ON TABLE public.table_meta_previ TO radon_ro;
 GRANT INSERT,DELETE,UPDATE ON TABLE public.table_meta_previ TO radon_rw;
+
+
+--
+-- Name: SEQUENCE table_meta_previ_id_seq; Type: ACL; Schema: public; Owner: radon_admin
+--
+
+GRANT SELECT,UPDATE ON SEQUENCE public.table_meta_previ_id_seq TO radon_rw;
 
 
 --

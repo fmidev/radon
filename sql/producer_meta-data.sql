@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped by pg_dump version 12.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,6 +12,7 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
@@ -66,6 +67,7 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 261	last hybrid level number	65	\N	\N
 261	first hybrid level number	1	\N	\N
 265	ensemble size	9	\N	\N
+244	ensemble size	51	\N	\N
 11	ensemble size	9	\N	\N
 \.
 

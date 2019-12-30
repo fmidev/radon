@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped by pg_dump version 12.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,6 +12,7 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
@@ -134,6 +135,9 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 11	15	20	\N	\N
 11	1	1	\N	\N
 11	8	10	\N	\N
+241	6	103	\N	\N
+244	3	105	\N	\N
+244	6	103	\N	\N
 265	1	1	\N	\N
 265	6	103	\N	\N
 265	3	105	\N	\N

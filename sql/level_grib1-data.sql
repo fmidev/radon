@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped by pg_dump version 12.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,6 +12,7 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
@@ -24,37 +25,30 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 130	3	109	\N	\N
 1	2	100	\N	\N
 242	1	1	\N	\N
-3	2	100	\N	\N
 250	6	105	\N	\N
 6	7	103	\N	\N
 1	6	1	\N	\N
 4	7	102	\N	\N
-3	6	1	\N	\N
 250	2	100	\N	\N
 130	14	112	wetodb	2016-11-17 09:25:24.197174+00
 1	3	109	\N	\N
 4	6	105	\N	\N
-3	3	109	\N	\N
 149	6	105	\N	\N
 4	7	103	\N	\N
 1	5	8	\N	\N
 5	2	100	\N	\N
-3	5	8	\N	\N
 131	9	112	\N	\N
 4	8	200	\N	\N
 1	4	103	\N	\N
 5	7	103	\N	\N
-3	4	103	\N	\N
 148	6	105	\N	\N
 130	2	100	\N	\N
 1	6	105	\N	\N
 5	6	105	\N	\N
-3	6	105	\N	\N
 130	1	1	\N	\N
 4	15	20	\N	\N
 1	7	102	\N	\N
 240	13	106	\N	\N
-3	7	102	\N	\N
 107	1	1	\N	\N
 240	12	246	\N	\N
 53	1	1	\N	\N
@@ -146,8 +140,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 210	6	163	\N	\N
 240	6	163	\N	\N
 230	13	106	\N	\N
-34	1	1	\N	\N
-34	6	105	\N	\N
 199	8	200	\N	\N
 2026	2	100	\N	\N
 301	6	105	\N	\N

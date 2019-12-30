@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped by pg_dump version 12.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,6 +12,7 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
@@ -26,7 +27,6 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 5	GLAMEPS	GLAMEPS	1	\N	\N	3
 4	MEPS	MEPS ensemble from Metcoop	1	postgres	2016-09-24 12:58:27	3
 11	CMEPS_PREOP	Continuous MEPS preop experiment	1	\N	\N	3
-34	JRA55	JMA JRA-55 reanalysis	1	postgres	2016-12-31 10:40:31	1
 6	GLAMEPSCAL	GLAMEPS calibrated fields	1	\N	\N	3
 135	ECGSEASONAL	ECMWF seasonal forecast	1	\N	\N	3
 260	MEPSMTA	Postprocessed fields for MEPS	1	postgres	2016-11-04 12:10:37	3
@@ -57,7 +57,6 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 131	ECG	ECMWF global deterministic weather model	1	postgres	2016-10-25 11:44:23	1
 1	HL2	Hirlam RCR-malli, alkuperäiset kentät	1	postgres	2016-05-26 08:42:00	1
 107	LAPSFIN	Finnish LAPS analysis, large area	1	wetodb	2018-02-19 08:52:58	2
-3	SMHI	Hirlam2 model of SMHI	1	postgres	2016-05-26 08:42:00	1
 47	GEM	GEM GDPS global forecast from Canada	1	postgres	2016-05-26 08:42:00	1
 49	EGRR_SEAS	UKMO global seasonal model	1	postgres	2016-05-26 08:42:00	1
 50	EGRR	Bracknell global model	1	postgres	2016-05-26 08:42:00	1
@@ -112,8 +111,9 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 52	ENFUSER	FMI Air Quality fusion model	1	wetodb	2018-10-05 04:52:34	1
 137	ECGSEASMEAN	ECMWF seasonal forecast mean values	1	\N	\N	1
 220	ICONMTA	ICON postprocessed fields	1	\N	\N	1
-10	MEPS_PREOP	MEPS preop experiment	1	wetodb	2019-09-30 10:27:38	1
 265	CMEPS_PREOPMTA	Postprocessed fields for CMEPS preop	1	\N	\N	3
+244	ECGEPSCALIB	ECMWF Ensemble Forecast System calibrated fields	1	\N	\N	3
+10	MEPS_PREOP	MEPS preop experiment	1	wetodb	2019-12-19 07:16:22	3
 \.
 
 
