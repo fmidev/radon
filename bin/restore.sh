@@ -38,7 +38,7 @@ echo "GRANT USAGE ON SCHEMA data TO radon_ro" | psql $PSQL_ARGS
 
 set +u
 
-if [ -n "$RADON_WETODB_PASSWORD" ]; then
+if [ -n "$RADON_RADON_ADMIN_PASSWORD" ]; then
   echo "Setting radon_admin user password"
   echo "ALTER USER radon_admin WITH PASSWORD '$RADON_RADON_ADMIN_PASSWORD'" | psql $PSQL_ARGS
 else
@@ -52,11 +52,11 @@ else
   echo "Warning: Radon user wetodb has no password set"
 fi
 
-if [ -n "$RADON_RADONCLIENT_PASSWORD" ]; then
+if [ -n "$RADON_RADON_CLIENT_PASSWORD" ]; then
   echo "Setting radon_client user password"
-  echo "ALTER USER radon_client WITH PASSWORD '$RADON_RADONCLIENT_PASSWORD'" | psql $PSQL_ARGS
+  echo "ALTER USER radon_client WITH PASSWORD '$RADON_RADON_CLIENT_PASSWORD'" | psql $PSQL_ARGS
 else
-  echo "Warning: Radon user neons_client has no password set"
+  echo "Warning: Radon user radon_client has no password set"
 fi
 
 set -u

@@ -1,10 +1,10 @@
-FROM postgres:10
+FROM postgres:12
 
 RUN echo 'Acquire::http::Proxy "http://wwwproxy.fmi.fi:8080";' >> /etc/apt/apt.conf
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
-		postgresql-10-postgis-2.4 postgresql-10-postgis-2.4-scripts \
+		postgresql-12-postgis-3 postgresql-12-postgis-3-scripts \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /docker-entrypoint-initdb.d/sql
