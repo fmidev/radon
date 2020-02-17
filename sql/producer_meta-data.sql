@@ -42,8 +42,8 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 260	first hybrid level number	1	\N	\N
 2167	ensemble size	51	\N	\N
 243	ensemble size	51	\N	\N
-4	ensemble size	10	\N	\N
-260	ensemble size	10	\N	\N
+4	ensemble size	15	\N	\N
+260	ensemble size	15	\N	\N
 206	ensemble size	52	\N	\N
 5	ensemble size	52	\N	\N
 6	ensemble size	52	\N	\N
