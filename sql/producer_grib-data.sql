@@ -23,7 +23,7 @@ SET row_security = off;
 COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_updated) FROM stdin;
 1	1	1	86	\N	\N
 118	244	244	86	\N	\N
-83	4	40	251	\N	\N
+83	4	0	251	\N	\N
 5	47	47	54	\N	\N
 6	49	49	74	\N	\N
 7	50	45	74	\N	\N
