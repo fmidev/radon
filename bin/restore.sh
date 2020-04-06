@@ -106,6 +106,7 @@ for f in producer_class producer_class-data \
 	param_newbase param_newbase-data \
 	param_newbase_name param_newbase_name-data \
 	param_netcdf param_netcdf-data \
+	param_geotiff \
 	param_level_transform param_level_transform-data \
 	param_precision param_precision-data \
 	as_grid \
