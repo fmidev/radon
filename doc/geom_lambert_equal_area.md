@@ -1,0 +1,19 @@
+geom_lambert_equal_area contains information about defined grids for LAEA.
+
+Definition includes both area/projection information and grid information.
+
+| column | data type | NOT NULL | description | foreign key |
+|---|---|---|---|---|
+| id | integer (serial) | X | auto-generated primary key | geom(id) |
+| name | text | X | Short name of this specific geom | geom(name) |
+| ni | int | X | Number of points in i-direction | |
+| nj | int | X | Number of points in j-dimension | |
+| first_point | geometry(Point,4326) | First point location of data in WGS84 | |
+| di | int | X | Distance between two grid points in i-direction in unit defined by projection | |
+| dj | int | X | Distance between two grid points in j-direction in unit defined by projection. Always positive! | |
+| scanning_mode | text | X | Starting corner of data. Possible values: +x+y, +x-y | |
+| orientation | numeric | Central longitude in degrees | |
+| latin | numeric | Standard parallel in degrees | |
+| description | text | | description of the ellipsoid | |
+| last_updater | text | | username of the last modifier | |
+| last_updated | timestamptz | | time of last modification | |

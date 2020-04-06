@@ -92,6 +92,7 @@ for f in producer_class producer_class-data \
 	geom_rotated_latitude_longitude geom_rotated_latitude_longitude-data \
 	geom_stereographic geom_stereographic-data \
 	geom_lambert_conformal geom_lambert_conformal-data \
+	geom_lambert_equal_area \
 	geom_reduced_gaussian geom_reduced_gaussian-data \
 	level level-data \
 	level_grib1 level_grib1-data \
