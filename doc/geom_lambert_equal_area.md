@@ -9,8 +9,8 @@ Definition includes both area/projection information and grid information.
 | ni | int | X | Number of points in i-direction | |
 | nj | int | X | Number of points in j-dimension | |
 | first_point | geometry(Point,4326) | First point location of data in WGS84 | |
-| di | int | X | Distance between two grid points in i-direction in unit defined by projection | |
-| dj | int | X | Distance between two grid points in j-direction in unit defined by projection. Always positive! | |
+| di | numeric | X | Distance between two grid points in i-direction in unit defined by projection | |
+| dj | numeric | X | Distance between two grid points in j-direction in unit defined by projection. Always positive! | |
 | scanning_mode | text | X | Starting corner of data. Possible values: +x+y, +x-y | |
 | orientation | numeric | Central longitude in degrees | |
 | latin | numeric | Standard parallel in degrees | |
