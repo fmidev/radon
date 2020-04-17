@@ -94,6 +94,8 @@ for f in producer_class producer_class-data \
 	geom_lambert_conformal geom_lambert_conformal-data \
 	geom_lambert_equal_area \
 	geom_reduced_gaussian geom_reduced_gaussian-data \
+	geom_transverse_mercator \
+	geotiff_metadata \
 	level level-data \
 	level_grib1 level_grib1-data \
 	level_grib2 level_grib2-data \
