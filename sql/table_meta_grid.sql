@@ -29,7 +29,7 @@ CREATE TABLE public.table_meta_grid (
     table_name character varying(50) NOT NULL,
     geometry_id integer NOT NULL,
     retention_period interval NOT NULL,
-    analysis_times integer[],
+    analysis_times numeric[],
     last_updater text,
     last_updated timestamp with time zone,
     partitioning_period text DEFAULT 'ANALYSISTIME'::text NOT NULL,

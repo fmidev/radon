@@ -28,7 +28,7 @@ CREATE TABLE public.table_meta_previ (
     schema_name character varying(50) DEFAULT 'data'::character varying,
     table_name character varying(50) NOT NULL,
     retention_period interval NOT NULL,
-    analysis_times integer[],
+    analysis_times numeric[],
     last_updater text,
     last_updated timestamp with time zone,
     partitioning_period text DEFAULT 'ANALYSISTIME'::text NOT NULL,
