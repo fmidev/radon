@@ -28,6 +28,7 @@ COPY public.projection (id, name, description, grib1_number, grib2_number, last_
 6	Reduced Gaussian	Reduced Gaussian	4	40	postgres	2016-09-21 06:00:10.92498+00
 4	Rotated Latitude/longitude	Rotated latitude/longitude	10	1	postgres	2016-09-21 07:50:39.864046+00
 7	Lambert Equal Area	Lambert azimuthal Equal Area (LAEA)	\N	140	\N	\N
+8	Transverse mercator	Transverse mercator	\N	12	\N	\N
 \.
 
 
