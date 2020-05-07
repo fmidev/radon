@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 12.1
+-- Dumped from database version 12.1
+-- Dumped by pg_dump version 12.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -145,6 +145,8 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 265	15	20	\N	\N
 265	7	101	\N	\N
 265	2	100	\N	\N
+244	1	1	\N	\N
+243	12	246	\N	\N
 \.
 
 

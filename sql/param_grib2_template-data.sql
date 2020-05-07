@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 12.1
+-- Dumped from database version 12.1
+-- Dumped by pg_dump version 12.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -36,7 +36,6 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 171	0	2	2	\N	\N	-1
 174	0	2	3	\N	\N	-1
 642	0	19	7	\N	\N	-1
-768	0	6	204	\N	\N	-1
 139	0	3	0	\N	\N	-1
 139	0	3	1	\N	\N	-1
 321	0	1	73	\N	\N	1
@@ -116,7 +115,6 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 500	0	5	3	\N	\N	-1
 1048	0	6	8	\N	\N	-1
 1236	0	202	23	\N	\N	-1
-694	0	6	13	\N	\N	-1
 5	0	200	0	\N	\N	-1
 6	0	200	1	\N	\N	-1
 7	0	200	2	\N	\N	-1
@@ -178,6 +176,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1049	0	1	41	\N	\N	1
 89	0	0	11	\N	\N	1
 1014	0	200	69	\N	\N	-1
+1379	0	6	204	\N	\N	-1
 1015	0	200	70	\N	\N	-1
 1016	0	200	71	\N	\N	-1
 1017	0	200	72	\N	\N	-1
@@ -261,7 +260,6 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 510	0	1	13	\N	\N	-1
 764	0	1	205	\N	\N	-1
 765	0	1	206	\N	\N	-1
-766	0	1	207	\N	\N	-1
 1094	0	7	16	\N	\N	-1
 333	0	7	4	\N	\N	-1
 592	0	7	8	\N	\N	-1
@@ -270,7 +268,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1125	0	2	25	\N	\N	-1
 136	0	6	26	\N	\N	-1
 999	0	200	222	\N	\N	-1
-501	0	4	2	\N	\N	-1
+766	0	1	207	\N	\N	1
 369	0	3	10	\N	\N	-1
 1240	0	202	27	\N	\N	-1
 904	0	201	1	\N	\N	-1
@@ -633,6 +631,39 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1300	0	202	65	\N	\N	-1
 1301	0	202	66	\N	\N	-1
 1302	0	202	67	\N	\N	-1
+1327	0	1	209	\N	\N	-1
+1314	0	202	68	\N	\N	-1
+1350	202	0	54	-1	\N	-1
+1351	202	0	55	-1	\N	-1
+1352	202	0	56	-1	\N	-1
+1353	202	0	57	-1	\N	-1
+1354	202	0	58	-1	\N	-1
+1355	202	0	59	-1	\N	-1
+1356	202	0	60	-1	\N	-1
+501	0	4	7	\N	\N	-1
+1358	0	200	154	\N	\N	-1
+1359	0	200	155	\N	\N	-1
+1360	0	200	156	\N	\N	-1
+1361	0	200	157	\N	\N	-1
+1362	0	200	158	\N	\N	-1
+1328	0	202	69	\N	\N	-1
+1329	0	202	70	\N	\N	-1
+1330	0	202	71	\N	\N	-1
+1331	0	202	72	\N	\N	-1
+1332	0	202	73	\N	\N	-1
+1333	0	202	74	\N	\N	-1
+1334	0	202	75	\N	\N	-1
+1363	1	0	210	1	\N	-1
+1364	202	0	76	-1	\N	-1
+1365	202	0	77	-1	\N	-1
+1366	202	0	78	-1	\N	-1
+1367	202	0	79	-1	\N	-1
+1368	202	0	80	-1	\N	-1
+1369	202	0	81	-1	\N	-1
+1370	202	0	82	-1	\N	-1
+982	0	0	0	\N	\N	6
+980	0	0	0	0	\N	0
+1374	0	6	13	\N	\N	-1
 \.
 
 

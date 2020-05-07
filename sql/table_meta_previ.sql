@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 12.1
+-- Dumped from database version 12.1
+-- Dumped by pg_dump version 12.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -18,6 +18,8 @@ SET row_security = off;
 
 SET default_tablespace = '';
 
+SET default_table_access_method = heap;
+
 --
 -- Name: table_meta_previ; Type: TABLE; Schema: public; Owner: radon_admin
 --
@@ -28,7 +30,7 @@ CREATE TABLE public.table_meta_previ (
     schema_name character varying(50) DEFAULT 'data'::character varying,
     table_name character varying(50) NOT NULL,
     retention_period interval NOT NULL,
-    analysis_times numeric[],
+    analysis_times integer[],
     last_updater text,
     last_updated timestamp with time zone,
     partitioning_period text DEFAULT 'ANALYSISTIME'::text NOT NULL,
@@ -86,21 +88,21 @@ ALTER TABLE ONLY public.table_meta_previ
 -- Name: table_meta_previ audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
-CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.table_meta_previ FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
+CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.table_meta_previ FOR EACH ROW EXECUTE FUNCTION audit.if_modified_func('true');
 
 
 --
 -- Name: table_meta_previ table_meta_previ_producer_class_id_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
-CREATE TRIGGER table_meta_previ_producer_class_id_trg BEFORE INSERT OR UPDATE ON public.table_meta_previ FOR EACH ROW EXECUTE PROCEDURE public.table_meta_producer_class_id_f('table_meta_previ');
+CREATE TRIGGER table_meta_previ_producer_class_id_trg BEFORE INSERT OR UPDATE ON public.table_meta_previ FOR EACH ROW EXECUTE FUNCTION public.table_meta_producer_class_id_f('table_meta_previ');
 
 
 --
 -- Name: table_meta_previ table_meta_previ_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
-CREATE TRIGGER table_meta_previ_store_last_updated_trg BEFORE UPDATE ON public.table_meta_previ FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
+CREATE TRIGGER table_meta_previ_store_last_updated_trg BEFORE UPDATE ON public.table_meta_previ FOR EACH ROW EXECUTE FUNCTION public.store_last_updated_f();
 
 
 --

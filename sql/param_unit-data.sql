@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 12.1
+-- Dumped from database version 12.1
+-- Dumped by pg_dump version 12.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -94,6 +94,8 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 32	kg m-2 h-1	kg / m2 / hour = mm / h	wetodb	2018-11-12 05:45:13
 84	g m-2	Grams per square meter	wetodb	2018-11-12 05:46:14
 91	m3 m-3	Cubic meters per cubic meters	wetodb	2018-11-12 05:46:45
+92	t m-2	Tonnes per square meter	\N	\N
+93	m2 m-2	square meters per square meters	\N	\N
 \.
 
 
@@ -101,7 +103,7 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 -- Name: param_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_unit_id_seq', 91, true);
+SELECT pg_catalog.setval('public.param_unit_id_seq', 92, true);
 
 
 --

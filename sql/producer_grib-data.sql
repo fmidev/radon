@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 12.1
+-- Dumped from database version 12.1
+-- Dumped by pg_dump version 12.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,7 +23,6 @@ SET row_security = off;
 COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_updated) FROM stdin;
 1	1	1	86	\N	\N
 118	244	244	86	\N	\N
-83	4	0	251	\N	\N
 5	47	47	54	\N	\N
 6	49	49	74	\N	\N
 7	50	45	74	\N	\N
@@ -91,6 +90,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 80	134	150	98	wetodb	2019-06-11 09:08:14.635523+00
 29	133	115	98	wetodb	2019-06-11 09:08:14.635523+00
 28	132	215	98	wetodb	2019-06-11 09:08:14.635523+00
+83	4	0	251	wetodb	2020-02-04 09:33:05.510264+00
 \.
 
 

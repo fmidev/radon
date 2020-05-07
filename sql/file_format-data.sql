@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 12.1
+-- Dumped from database version 12.1
+-- Dumped by pg_dump version 12.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -25,6 +25,7 @@ COPY public.file_format (id, name, description, last_updater, last_updated) FROM
 2	GRIBv2	GRIB version 2	\N	\N
 3	NetCDFv3	NetCDF version 3	\N	\N
 4	NetCDFv4	NetCDF version 4	\N	\N
+5	GeoTIFF	Georeferenced TIFF	\N	\N
 \.
 
 
@@ -32,7 +33,7 @@ COPY public.file_format (id, name, description, last_updater, last_updated) FROM
 -- Name: file_format_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.file_format_id_seq', 4, true);
+SELECT pg_catalog.setval('public.file_format_id_seq', 5, true);
 
 
 --

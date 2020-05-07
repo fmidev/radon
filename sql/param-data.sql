@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 12.1
+-- Dumped from database version 12.1
+-- Dumped by pg_dump version 12.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1082,12 +1082,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1139	PROB-VV2-4	1	6	1	Probability of Himan calculated visibility being lower than some threshold value	\N	\N
 1140	PROB-VV2-5	1	6	1	Probability of Himan calculated visibility being lower than some threshold value	\N	\N
 1141	PROB-VV2-6	1	6	1	Probability of Himan calculated visibility being lower than some threshold value	\N	\N
-1142	PROB-CLFT-1	1	6	1	Probability of cloud ceiling being lower than some threshold value	\N	\N
-1143	PROB-CLFT-2	1	6	1	Probability of cloud ceiling being lower than some threshold value	\N	\N
-1144	PROB-CLFT-3	1	6	1	Probability of cloud ceiling being lower than some threshold value	\N	\N
-1145	PROB-CLFT-4	1	6	1	Probability of cloud ceiling being lower than some threshold value	\N	\N
-1146	PROB-CLFT-5	1	6	1	Probability of cloud ceiling being lower than some threshold value	\N	\N
-1147	PROB-CLFT-6	1	6	1	Probability of cloud ceiling being lower than some threshold value	\N	\N
 1148	PROB-CBTCU-1	1	6	1	Probability of CB-clouds	\N	\N
 1198	PRECFORM4-N	1	69	2	Precipitation form, fourth version	\N	\N
 1162	PROB-FRPREC	1	28	1	Probability of freezing precitipation (rain or drizzle)	wetodb	2017-10-05 09:54:03
@@ -1220,6 +1214,61 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1323	F10-MRR-KGM2	1	18	1	10th fractal monthly precipitation in EPS	\N	\N
 1324	F2.5-MRR-KGM2	1	18	1	2.5th fractal monthly precipitation in EPS	\N	\N
 1325	F0-MRR-KGM2	1	18	1	0th fractal monthly precipitation in EPS	\N	\N
+1326	NEARW-N	1	30	1	Nearby weather index	wetodb	2020-01-20 08:30:00
+1327	SN-120-MM	1	60	2	Snow fall over the last 120 hours water equivalent	\N	\N
+1328	F0-SN-24-MM	1	18	1	0th fractal snowfall in EPS	\N	\N
+1329	F10-SN-24-MM	1	18	1	10th fractal snowfall in EPS	\N	\N
+1330	F25-SN-24-MM	1	18	1	25th fractal snowfall in EPS	\N	\N
+1331	F50-SN-24-MM	1	18	1	50th fractal snowfall in EPS	\N	\N
+1332	F75-SN-24-MM	1	18	1	75th fractal snowfall in EPS	\N	\N
+1333	F90-SN-24-MM	1	18	1	90th fractal snowfall in EPS	\N	\N
+1334	F100-SN-24-MM	1	18	1	100th fractal snowfall in EPS	\N	\N
+1340	F0-SN-120-MM	1	18	1	0th fractal snowfall in EPS	\N	\N
+1341	F10-SN-120-MM	1	18	1	10th fractal snowfall in EPS	\N	\N
+1342	F25-SN-120-MM	1	18	1	25th fractal snowfall in EPS	\N	\N
+1343	F50-SN-120-MM	1	18	1	50th fractal snowfall in EPS	\N	\N
+1344	F75-SN-120-MM	1	18	1	75th fractal snowfall in EPS	\N	\N
+1345	F90-SN-120-MM	1	18	1	90th fractal snowfall in EPS	\N	\N
+1346	F100-SN-120-MM	1	18	1	100th fractal snowfall in EPS	\N	\N
+1347	TCLW-KGM2	1	18	1	Total column liquid water	\N	\N
+1348	TCIW-KGM2	1	18	1	Total column cloud ice water	\N	\N
+1349	HCCT-M	1	2	1	Height of convective cloud top	\N	\N
+1350	F0-RR-120-MM	1	10	1	0th fractal 120h total precipitation in EPS	\N	\N
+1351	F10-RR-120-MM	1	10	1	10th fractal 120h total precipitation in EPS	\N	\N
+1352	F25-RR-120-MM	1	10	1	25th fractal 120h total precipitation in EPS	\N	\N
+1353	F50-RR-120-MM	1	10	1	50th fractal 120h total precipitation in EPS	\N	\N
+1354	F75-RR-120-MM	1	10	1	75th fractal 120h total precipitation in EPS	\N	\N
+1355	F90-RR-120-MM	1	10	1	90th fractal 120h total precipitation in EPS	\N	\N
+1356	F100-RR-120-MM	1	10	1	100th fractal 120h total precipitation in EPS	\N	\N
+1357	SD-TM2	1	91	1	Water equivalent of snow cover in m	\N	\N
+1358	PROB-FROST-1	1	28	1	Probability of frost	\N	\N
+1359	PROB-FROST-2	1	28	1	Probability of severe frost	\N	\N
+1360	PROB-POT-1	1	6	1	Probability of reaching POT of 1	\N	\N
+1361	PROB-POT-2	1	6	1	Probability of reaching POT of 30	\N	\N
+1362	PROB-POT-3	1	6	1	Probability of reaching POT of 60	\N	\N
+1363	RRS-24-MM	1	60	1	Solid Precipitation over last 24 hours water equivalent	\N	\N
+1364	F0-RRS-24-MM	1	18	1	0th fractal RRS in EPS	\N	\N
+1365	F10-RRS-24-MM	1	18	1	10th fractal RRS in EPS	\N	\N
+1366	F25-RRS-24-MM	1	18	1	25th fractal RRS in EPS	\N	\N
+1367	F50-RRS-24-MM	1	18	1	50th fractal 24h RRS in EPS	\N	\N
+1368	F75-RRS-24-MM	1	18	1	75th fractal 24h RRS in EPS	\N	\N
+1369	F90-RRS-24-MM	1	18	1	90th fractal 24h RRS in EPS	\N	\N
+1370	F100-RRS-24-MM	1	18	1	100th fractal 24h RRS in EPS	\N	\N
+1371	IEWSS-NM2S	1	78	1	Eastward surface stress due to turbulent processes, instantaneous	\N	\N
+1372	INSSS-NM2S	1	78	1	Northward surface stress due to turbulent processes, instantaneous	\N	\N
+1373	BLDIS-JM2	1	83	1	Boundary layer dissipation, accumulated	\N	\N
+1374	CEIL-M	1	2	1	Cloud ceiling height in meters. The height above the Earths surface of the base of the lowest layer of cloud with a covering of more than 50% of the model grid box. Cloud ceiling is a measurement used in the aviation industry to indicate airport landing conditions.	\N	\N
+1375	CVH-N	1	62	1	High vegetation cover	\N	\N
+1376	CVL-N	1	62	1	Low vegetation cover	\N	\N
+1377	LAI_HV-M2M2	1	93	1	Leaf area index high vegitation	\N	\N
+1378	LAI_LV-M2M2	1	93	1	Leaf area index low vegitation	\N	\N
+1379	CEIL-2-M	1	2	1	Cloud ceiling height in meters, second possible implementation of parameter	\N	\N
+1142	PROB-CEIL-1	1	6	1	Probability of cloud ceiling being lower than some threshold value	wetodb	2020-05-07 05:41:01
+1143	PROB-CEIL-2	1	6	1	Probability of cloud ceiling being lower than some threshold value	wetodb	2020-05-07 05:41:01
+1144	PROB-CEIL-3	1	6	1	Probability of cloud ceiling being lower than some threshold value	wetodb	2020-05-07 05:41:01
+1145	PROB-CEIL-4	1	6	1	Probability of cloud ceiling being lower than some threshold value	wetodb	2020-05-07 05:41:01
+1146	PROB-CEIL-5	1	6	1	Probability of cloud ceiling being lower than some threshold value	wetodb	2020-05-07 05:41:01
+1147	PROB-CEIL-6	1	6	1	Probability of cloud ceiling being lower than some threshold value	wetodb	2020-05-07 05:41:01
 \.
 
 
@@ -1227,7 +1276,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1325, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1379, true);
 
 
 --

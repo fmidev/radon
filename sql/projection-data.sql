@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 12.1
+-- Dumped from database version 12.1
+-- Dumped by pg_dump version 12.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -28,7 +28,7 @@ COPY public.projection (id, name, description, grib1_number, grib2_number, last_
 6	Reduced Gaussian	Reduced Gaussian	4	40	postgres	2016-09-21 06:00:10.92498+00
 4	Rotated Latitude/longitude	Rotated latitude/longitude	10	1	postgres	2016-09-21 07:50:39.864046+00
 7	Lambert Equal Area	Lambert azimuthal Equal Area (LAEA)	\N	140	\N	\N
-8	Transverse mercator	Transverse mercator	\N	12	\N	\N
+8	Transverse mercator	Transverse mercator	\N	12	radon_admin	2020-04-28 15:10:11.985117+00
 \.
 
 
@@ -36,7 +36,7 @@ COPY public.projection (id, name, description, grib1_number, grib2_number, last_
 -- Name: projection_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.projection_id_seq', 7, true);
+SELECT pg_catalog.setval('public.projection_id_seq', 8, true);
 
 
 --

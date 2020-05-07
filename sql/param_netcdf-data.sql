@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 12.1
+-- Dumped from database version 12.1
+-- Dumped by pg_dump version 12.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -104,6 +104,15 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 94	52	985	cnc_PM10	\N	\N	wetodb	2017-10-17 09:59:08.016178+00
 92	52	989	cnc_O3_gas	\N	\N	wetodb	2017-10-17 10:00:46.993013+00
 91	52	422	cnc_NO2_gas	\N	\N	wetodb	2017-10-17 10:01:57.020373+00
+108	147	303	SSU	\N	\N	\N	\N
+107	147	279	vice	\N	\N	\N	\N
+106	147	278	uice	\N	\N	\N	\N
+105	147	716	icethic	\N	\N	\N	\N
+104	147	24	icefrac	\N	\N	\N	\N
+109	147	304	SSV	\N	\N	wetodb	2020-04-06 06:41:36.508412+00
+103	147	269	SSS	\N	\N	\N	\N
+102	147	638	SST	\N	\N	\N	\N
+101	147	717	SSH_inst	\N	\N	\N	\N
 \.
 
 

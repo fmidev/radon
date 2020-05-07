@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 12.1
+-- Dumped from database version 12.1
+-- Dumped by pg_dump version 12.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -17,6 +17,8 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 SET default_tablespace = '';
+
+SET default_table_access_method = heap;
 
 --
 -- Name: interpolation_method; Type: TABLE; Schema: public; Owner: radon_admin
@@ -81,14 +83,14 @@ ALTER TABLE ONLY public.interpolation_method
 -- Name: interpolation_method audit_trigger_row; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
-CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.interpolation_method FOR EACH ROW EXECUTE PROCEDURE audit.if_modified_func('true');
+CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.interpolation_method FOR EACH ROW EXECUTE FUNCTION audit.if_modified_func('true');
 
 
 --
 -- Name: interpolation_method interpolation_method_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
-CREATE TRIGGER interpolation_method_last_updated_trg BEFORE UPDATE ON public.interpolation_method FOR EACH ROW EXECUTE PROCEDURE public.store_last_updated_f();
+CREATE TRIGGER interpolation_method_last_updated_trg BEFORE UPDATE ON public.interpolation_method FOR EACH ROW EXECUTE FUNCTION public.store_last_updated_f();
 
 
 --

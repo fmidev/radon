@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 12.1
+-- Dumped from database version 12.1
+-- Dumped by pg_dump version 12.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -61,7 +61,6 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 49	EGRR_SEAS	UKMO global seasonal model	1	postgres	2016-05-26 08:42:00	1
 50	EGRR	Bracknell global model	1	postgres	2016-05-26 08:42:00	1
 51	EDZW	Offenbach global model	1	postgres	2016-05-26 08:42:00	1
-152	HELMI	Helmi jÃ€Ã€malli	1	wetodb	2018-02-19 10:28:27	2
 53	KWBG	Washington global model GFS	1	postgres	2016-05-26 08:42:00	1
 102	TIESAA	FMI road condition model	1	postgres	2016-05-26 08:42:00	1
 250	GFSMTA	Postprocessed fields for GFS	1	postgres	2016-05-26 08:42:00	1
@@ -114,6 +113,9 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 265	CMEPS_PREOPMTA	Postprocessed fields for CMEPS preop	1	\N	\N	3
 244	ECGEPSCALIB	ECMWF Ensemble Forecast System calibrated fields	1	\N	\N	3
 10	MEPS_PREOP	MEPS preop experiment	1	wetodb	2019-12-19 07:16:22	3
+510	OPERA	Opera radar network	1	\N	\N	2
+110	PPN	FMI Probabilistic Precipitation Nowcasting	1	\N	\N	1
+152	HELMI	Helmi jäämalli	1	wetodb	2020-05-06 06:48:51	2
 \.
 
 

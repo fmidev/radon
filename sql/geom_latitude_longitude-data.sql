@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 12.1
+-- Dumped from database version 12.1
+-- Dumped by pg_dump version 12.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -91,6 +91,9 @@ COPY public.geom_latitude_longitude (id, name, ni, nj, first_point, di, dj, scan
 1099	ECGSEASFIN040	35	31	0101000020E61000003333333333333340CDCCCCCCCCCC5140	0.4	0.4	+x-y	EC seasonal forecast Finland 0.4 degrees	\N	\N
 415	ECNOR025	1440	361	0101000020E610000000000000008066C00000000000805640	0.25	0.25	+x-y	ECMWF Northern hemisphere 0.25 degrees	\N	\N
 1061	WAMBALMFC	764	775	0101000020E6100000459AFC3F1C07224056A1FD1F12814A40	0.02777700126	0.01666600257	+x+y	Copernicus WAM(BALMFC) area 1 nautical mile resolution	\N	\N
+1101	NEMO801738	801	738	0101000020E61000007749FF3F0C0720403AA9F59F31D34A40	0.02774277702	0.01664378308	+x+y	FMI NEMO Model	\N	\N
+1105	ECMOSEUR0125	520	372	0101000020E610000000000000000039C00000000000005240	0.125	0.125	+x-y	MOS ECMWF Europe archive data in 0.125 deg resolution	\N	\N
+1106	ECMOSEUR0100	650	465	0101000020E610000000000000000039C00000000000005240	0.1	0.1	+x-y	MOS ECMWF Europe archive data in 0.1 deg resolution	\N	\N
 \.
 
 
