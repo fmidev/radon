@@ -7,12 +7,23 @@ PSQL_ARGS="-v ON_ERROR_STOP=1 -Aqt"
 
 # tables 
 
-sql="SELECT relname FROM pg_class c JOIN pg_namespace n ON n.oid = c.relnamespace WHERE c.relkind = 'r' AND n.nspname IN ('public', 'audit') ORDER BY 1"
+sql="SELECT n.nspname||'.'||relname FROM pg_class c JOIN pg_namespace n ON n.oid = c.relnamespace WHERE c.relkind = 'r' AND n.nspname IN ('public', 'audit') ORDER BY 1"
 
 for t in $(echo $sql | psql $PSQL_ARGS); do
+  if [ "$t" = "public.tm_world_borders-0.3" ]; then
+    continue
+  fi
+
   echo table: $t
-  pg_dump -s -t \"$t\" -f $t.sql
-  pg_dump -a -t \"$t\" -f ${t}-data.sql
+
+  plainname=$(echo $t | cut -d '.' -f 2)
+
+  pg_dump -s -t $t -f $plainname.sql
+
+  if [ "$t" = "public.ss_state" ] || [ "$t" = "audit.logged_actions" ] || [ "$t" = "public.as_grid" ] || [ "$t" = "public.himan_run_statistics" ]; then
+    continue
+  fi
+  pg_dump -a -t $t -f ${plainname}-data.sql
 done
 
 rm -f ss_state-data.sql \
