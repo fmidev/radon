@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.1
--- Dumped by pg_dump version 12.2
+-- Dumped by pg_dump version 12.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1082,6 +1082,11 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1139	PROB-VV2-4	1	6	1	Probability of Himan calculated visibility being lower than some threshold value	\N	\N
 1140	PROB-VV2-5	1	6	1	Probability of Himan calculated visibility being lower than some threshold value	\N	\N
 1141	PROB-VV2-6	1	6	1	Probability of Himan calculated visibility being lower than some threshold value	\N	\N
+1380	WATLEV-N2000-CM	1	63	1	N2000 Water level in centimeters	\N	\N
+1381	FORESTAGE-Y	1	94	1	Forest age in years	\N	\N
+1382	FORESTLOCATION-N	1	30	1	Forest location 1-8	\N	\N
+1385	FORESTLENGTH-DM	1	95	1	Forest (tree) average length in dm	\N	\N
+1386	FORESTCANOPY-PRCNT	1	6	1	Forest canopy opacity in percents	\N	\N
 1148	PROB-CBTCU-1	1	6	1	Probability of CB-clouds	\N	\N
 1198	PRECFORM4-N	1	69	2	Precipitation form, fourth version	\N	\N
 1162	PROB-FRPREC	1	28	1	Probability of freezing precitipation (rain or drizzle)	wetodb	2017-10-05 09:54:03
@@ -1125,6 +1130,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1226	SNDACC-N	1	30	1	Snow drift accumulation since last snowfall	wetodb	2018-11-15 15:05:06
 174	V-MS	1	15	2	V wind in m/s	wetodb	2018-11-26 06:20:37
 164	CLDSYM-N	1	30	2	Cloud Symbol	wetodb	2018-11-26 06:22:54
+1387	FORESTTYPE-N	1	30	1	Main forest type of growth area (1-3)	\N	\N
 206	WW-N	1	30	2	Present Weather	wetodb	2018-11-26 06:22:54
 207	W1-N	1	30	2	Past Weather 1	wetodb	2018-11-26 06:22:54
 208	W2-N	1	30	2	Past Weather 2	wetodb	2018-11-26 06:22:54
@@ -1269,6 +1275,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1145	PROB-CEIL-4	1	6	1	Probability of cloud ceiling being lower than some threshold value	wetodb	2020-05-07 05:41:01
 1146	PROB-CEIL-5	1	6	1	Probability of cloud ceiling being lower than some threshold value	wetodb	2020-05-07 05:41:01
 1147	PROB-CEIL-6	1	6	1	Probability of cloud ceiling being lower than some threshold value	wetodb	2020-05-07 05:41:01
+1383	FORESTDIAMETER-CM	1	63	1	Forest (tree) average diameter in cm	radon_admin	2020-06-15 12:57:11
 \.
 
 
@@ -1276,7 +1283,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1379, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1387, true);
 
 
 --

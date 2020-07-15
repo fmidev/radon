@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.1
--- Dumped by pg_dump version 12.2
+-- Dumped by pg_dump version 12.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -244,7 +244,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 259	131	39	0	5	1	\N	\N	\N	\N	-1
 260	131	500	0	5	2	\N	\N	\N	\N	-1
 268	131	187	0	6	7	\N	\N	\N	\N	-1
-270	131	209	0	6	13	\N	\N	\N	\N	-1
+969	243	1281	0	7	210	\N	\N	\N	\N	-1
 271	131	583	0	6	17	\N	\N	\N	\N	-1
 272	131	654	0	6	18	\N	\N	\N	\N	-1
 273	131	52	0	6	19	\N	\N	\N	\N	-1
@@ -619,6 +619,14 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 891	7	438	0	6	192	3	\N	\N	\N	-1
 967	243	774	0	19	0	\N	\N	\N	\N	-1
 968	4	1035	0	1	61	\N	\N	\N	\N	0
+973	104	1381	2	0	192	\N	\N	\N	\N	-1
+971	240	329	0	0	192	\N	\N	\N	\N	-1
+972	230	329	0	0	192	\N	\N	\N	\N	-1
+974	104	1382	2	0	193	\N	\N	\N	\N	-1
+975	104	1383	2	0	194	\N	\N	\N	\N	-1
+976	104	1385	2	0	195	\N	\N	\N	\N	-1
+977	104	1386	2	0	196	\N	\N	\N	\N	-1
+978	104	1387	2	0	197	\N	\N	\N	\N	-1
 \.
 
 
@@ -626,7 +634,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 -- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib2_id_seq', 968, true);
+SELECT pg_catalog.setval('public.param_grib2_id_seq', 978, true);
 
 
 --

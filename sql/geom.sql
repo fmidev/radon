@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.1
--- Dumped by pg_dump version 12.2
+-- Dumped by pg_dump version 12.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -28,16 +28,9 @@ CREATE TABLE public.geom (
     id integer NOT NULL,
     name character varying(50) NOT NULL,
     projection_id integer NOT NULL,
-    ni integer,
-    nj integer,
-    first_point public.geometry(Point),
-    di numeric,
-    dj numeric,
-    scanning_mode text,
     description text,
     last_updater text,
-    last_updated timestamp with time zone,
-    CONSTRAINT geom_scanning_mode_chk CHECK ((scanning_mode = ANY (ARRAY['+x+y'::text, '+x-y'::text, '-x+y'::text, '-x-y'::text])))
+    last_updated timestamp with time zone
 );
 
 

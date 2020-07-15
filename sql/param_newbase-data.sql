@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.1
--- Dumped by pg_dump version 12.2
+-- Dumped by pg_dump version 12.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -627,10 +627,10 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 656	106	217	266	1	0	\N	\N
 657	116	217	266	1	0	\N	\N
 658	117	217	266	1	0	\N	\N
+4222	250	329	4775	1	0	\N	\N
 660	210	217	266	1	0	\N	\N
 2468	230	998	1235	1	0	\N	\N
 662	230	217	266	1	0	\N	\N
-663	240	217	266	1	0	\N	\N
 664	1	617	267	1	0	\N	\N
 2042	206	355	1117	1	0	\N	\N
 2043	206	356	1118	1	0	\N	\N
@@ -1974,7 +1974,9 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2363	250	900	4618	0.01	0	\N	\N
 2364	250	968	4670	0.01	0	\N	\N
 2365	250	969	4671	0.01	0	\N	\N
+4214	242	1283	1421	100	0	\N	\N
 2366	250	905	4623	0.01	0	postgres	2016-12-19 12:34:55.155027+00
+4215	242	1284	1422	100	0	\N	\N
 2383	4	559	59	1	0	\N	\N
 2384	4	461	262	1	0	\N	\N
 2385	260	774	1232	1	0	\N	\N
@@ -2021,6 +2023,8 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2423	47	217	51	1	0	\N	\N
 2424	47	654	276	1	0	\N	\N
 2425	210	219	46	1	0	\N	\N
+4216	242	1285	1423	100	0	\N	\N
+663	240	217	51	100	0	wetodb	2020-06-01 07:41:20.81934+00
 2428	210	774	1232	1	0	\N	\N
 2429	210	975	1207	1	0	\N	\N
 2430	230	975	1207	1	0	\N	\N
@@ -2039,6 +2043,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2599	240	1030	1239	1	0	\N	\N
 2600	230	774	1232	1	0	\N	\N
 2601	240	774	1232	1	0	\N	\N
+4224	2156	1380	159	1	0	wetodb	2020-06-24 17:48:34.606921+00
 2606	230	1034	1233	1	0	\N	\N
 2607	240	1034	1233	1	0	\N	\N
 2608	260	1034	1233	1	0	\N	\N
@@ -2129,6 +2134,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2874	240	976	1226	1	0	\N	\N
 3975	260	265	1101	100	0	\N	\N
 2877	151	269	62	1	0	\N	\N
+4225	2167	1380	159	1	0	wetodb	2020-06-24 17:49:15.627218+00
 2878	150	269	62	1	0	\N	\N
 2879	150	432	61	1	0	\N	\N
 2880	150	303	1146	1	0	\N	\N
@@ -2268,6 +2274,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2788	260	200	200	1	0	\N	\N
 2789	260	201	201	1	0	\N	\N
 2790	260	510	265	1	0	\N	\N
+4223	2155	1380	159	1	0	wetodb	2020-06-24 17:48:08.434568+00
 2792	260	223	268	1	0	\N	\N
 2793	260	224	269	1	0	\N	\N
 2794	260	554	270	1	0	\N	\N
@@ -3148,7 +3155,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 -- Name: param_newbase_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_id_seq', 4213, true);
+SELECT pg_catalog.setval('public.param_newbase_id_seq', 4225, true);
 
 
 --

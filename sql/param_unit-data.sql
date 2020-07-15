@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.1
--- Dumped by pg_dump version 12.2
+-- Dumped by pg_dump version 12.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -96,6 +96,8 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 91	m3 m-3	Cubic meters per cubic meters	wetodb	2018-11-12 05:46:45
 92	t m-2	Tonnes per square meter	\N	\N
 93	m2 m-2	square meters per square meters	\N	\N
+94	y	Years	\N	\N
+95	dm	Desimeters	\N	\N
 \.
 
 
@@ -103,7 +105,7 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 -- Name: param_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_unit_id_seq', 92, true);
+SELECT pg_catalog.setval('public.param_unit_id_seq', 95, true);
 
 
 --

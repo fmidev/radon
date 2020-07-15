@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.1
--- Dumped by pg_dump version 12.2
+-- Dumped by pg_dump version 12.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -21,6 +21,7 @@ SET row_security = off;
 --
 
 COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timerange_indicator, level_id, level_value, last_updater, last_updated) FROM stdin;
+3981	131	215	128	122	2	\N	\N	\N	\N
 3209	206	166	207	2	0	\N	\N	\N	\N
 3	1	221	1	79	4	\N	\N	\N	\N
 2354	240	750	203	92	0	\N	\N	\N	\N
@@ -84,9 +85,11 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 3765	230	701	203	140	0	\N	\N	\N	\N
 78	1	56	1	134	0	\N	\N	\N	\N
 2335	242	363	207	185	0	\N	\N	\N	\N
+3982	131	214	128	121	2	\N	\N	\N	\N
 118	1	214	1	15	0	\N	\N	postgres	2017-01-08 18:40:21.251019+00
 83	1	559	1	225	0	\N	\N	\N	\N
 2336	242	363	207	185	10	\N	\N	\N	\N
+3983	250	329	203	129	0	\N	\N	\N	\N
 2187	250	509	203	110	4	\N	\N	wetodb	2018-01-25 12:23:41.611899+00
 88	1	148	1	91	0	\N	\N	\N	\N
 2337	242	362	207	186	0	\N	\N	\N	\N
@@ -215,6 +218,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 2366	242	343	207	191	10	\N	\N	\N	\N
 148	1	660	1	124	4	\N	\N	postgres	2015-05-11 12:58:37.271618+00
 258	1	171	1	33	0	\N	\N	\N	\N
+3984	250	162	203	10	0	\N	\N	\N	\N
 263	1	608	1	194	0	\N	\N	\N	\N
 268	1	35	1	193	0	\N	\N	\N	\N
 3739	250	357	203	205	0	\N	\N	\N	\N
@@ -934,7 +938,6 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 3559	4	195	253	7	0	\N	\N	\N	\N
 3603	131	1035	128	33	0	\N	\N	\N	\N
 3604	131	146	128	244	0	\N	\N	\N	\N
-3597	131	426	128	92	0	\N	\N	wetodb	2017-08-01 04:52:08.904357+00
 1069	230	194	203	74	0	\N	\N	\N	\N
 1070	210	194	203	74	0	\N	\N	\N	\N
 1071	240	194	203	74	0	\N	\N	\N	\N
@@ -2250,7 +2253,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 -- Name: param_grib1_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib1_id_seq', 3980, true);
+SELECT pg_catalog.setval('public.param_grib1_id_seq', 3984, true);
 
 
 --
