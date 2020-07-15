@@ -19,7 +19,6 @@ echo "CREATE SCHEMA data AUTHORIZATION radon_admin" | psql $PSQL_ARGS
 # extensions
 
 echo "CREATE EXTENSION postgis" | psql $PSQL_ARGS
-echo "CREATE EXTENSION intarray" | psql $PSQL_ARGS
 echo "CREATE EXTENSION hstore" | psql $PSQL_ARGS
 
 # users
