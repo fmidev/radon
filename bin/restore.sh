@@ -94,7 +94,7 @@ for f in producer_class producer_class-data \
 	geom_lambert_equal_area \
 	geom_reduced_gaussian geom_reduced_gaussian-data \
 	geom_transverse_mercator \
-	geotiff_metadata \
+	geotiff_metadata geotiff_metadata-data \
 	level level-data \
 	level_grib1 level_grib1-data \
 	level_grib2 level_grib2-data \
@@ -107,7 +107,7 @@ for f in producer_class producer_class-data \
 	param_newbase param_newbase-data \
 	param_newbase_name param_newbase_name-data \
 	param_netcdf param_netcdf-data \
-	param_geotiff \
+	param_geotiff param_geotiff-data \
 	param_level_transform param_level_transform-data \
 	param_precision param_precision-data \
 	as_grid \
