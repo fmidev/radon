@@ -920,6 +920,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 1034	210	443	203	60	0	\N	\N	\N	\N
 1035	240	443	203	60	0	\N	\N	\N	\N
 3596	260	407	203	163	0	\N	\N	\N	\N
+3985	134	314	128	176	0	\N	\N	wetodb	2020-07-22 08:42:01.687909+00
 3556	4	328	253	201	0	\N	\N	wetodb	2017-08-09 08:22:30.165705+00
 3611	4	324	253	181	0	\N	\N	wetodb	2017-08-09 08:23:02.774036+00
 3610	4	52	253	58	0	\N	\N	wetodb	2017-08-09 08:24:29.669985+00
@@ -935,6 +936,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 1055	240	554	203	70	0	\N	\N	\N	\N
 3598	131	703	128	93	0	\N	\N	\N	\N
 3557	4	1049	253	132	4	6	\N	\N	\N
+3986	134	316	128	177	0	\N	\N	wetodb	2020-07-22 08:42:01.687909+00
 3559	4	195	253	7	0	\N	\N	\N	\N
 3603	131	1035	128	33	0	\N	\N	\N	\N
 3604	131	146	128	244	0	\N	\N	\N	\N
@@ -2253,7 +2255,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 -- Name: param_grib1_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib1_id_seq', 3984, true);
+SELECT pg_catalog.setval('public.param_grib1_id_seq', 3986, true);
 
 
 --

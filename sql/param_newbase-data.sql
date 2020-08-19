@@ -2834,6 +2834,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 3699	270	169	20	1	0	\N	\N
 3700	270	441	353	1	0	\N	\N
 3701	270	411	417	1	0	\N	\N
+4226	243	1388	257	1	0	\N	\N
 3704	270	774	1232	1	0	\N	\N
 3705	270	590	1168	1	0	\N	\N
 3706	270	326	1170	1	0	\N	\N
@@ -3155,7 +3156,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 -- Name: param_newbase_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_id_seq', 4225, true);
+SELECT pg_catalog.setval('public.param_newbase_id_seq', 4226, true);
 
 
 --

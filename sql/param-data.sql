@@ -674,7 +674,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 655	MIXHGT-M	1	2	1	Mixed layer height in m	\N	\N
 656	SDC-M	1	2	1	Convective snowfall in m	\N	\N
 657	SDL-M	1	2	1	Large scale snowfall in m	\N	\N
-658	EVAP-KGM2	1	61	1	Evaporation in mm	\N	\N
 659	VFLMOM-NM2	1	78	1	V-component of momentum flux in N m-2	\N	\N
 660	UFLMOM-NM2	1	78	1	U-component of momentum flux in N m-2	\N	\N
 661	PRCWAT-KGM2	1	18	1	Precipitable water in mm	\N	\N
@@ -1085,6 +1084,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1380	WATLEV-N2000-CM	1	63	1	N2000 Water level in centimeters	\N	\N
 1381	FORESTAGE-Y	1	94	1	Forest age in years	\N	\N
 1382	FORESTLOCATION-N	1	30	1	Forest location 1-8	\N	\N
+658	EVAP-KGM2	1	61	1	Accumulated evaporation in mm	wetodb	2020-07-28 07:32:36
 1385	FORESTLENGTH-DM	1	95	1	Forest (tree) average length in dm	\N	\N
 1386	FORESTCANOPY-PRCNT	1	6	1	Forest canopy opacity in percents	\N	\N
 1148	PROB-CBTCU-1	1	6	1	Probability of CB-clouds	\N	\N
@@ -1276,6 +1276,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1146	PROB-CEIL-5	1	6	1	Probability of cloud ceiling being lower than some threshold value	wetodb	2020-05-07 05:41:01
 1147	PROB-CEIL-6	1	6	1	Probability of cloud ceiling being lower than some threshold value	wetodb	2020-05-07 05:41:01
 1383	FORESTDIAMETER-CM	1	63	1	Forest (tree) average diameter in cm	radon_admin	2020-06-15 12:57:11
+1388	EVARATE-KGM2S	1	19	1	Evaporation rate in mm/s	wetodb	2020-07-28 07:41:47
 \.
 
 
@@ -1283,7 +1284,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1387, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1388, true);
 
 
 --

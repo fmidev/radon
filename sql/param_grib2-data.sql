@@ -634,7 +634,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 -- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib2_id_seq', 978, true);
+SELECT pg_catalog.setval('public.param_grib2_id_seq', 979, true);
 
 
 --
