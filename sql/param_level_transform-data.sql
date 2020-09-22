@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.1
--- Dumped by pg_dump version 12.3
+-- Dumped from database version 12.4
+-- Dumped by pg_dump version 12.4
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -139,6 +139,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 150	131	1357	1	\N	6	\N	\N	\N
 151	131	1035	1	\N	6	\N	\N	\N
 152	243	1281	6	0	1	0	\N	\N
+159	10	139	7	\N	4	\N	\N	\N
 156	131	314	1	\N	6	\N	\N	\N
 157	134	314	1	\N	6	\N	\N	\N
 158	134	316	1	\N	6	\N	\N	\N
@@ -150,7 +151,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 -- Name: param_level_transform_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_level_transform_id_seq', 158, true);
+SELECT pg_catalog.setval('public.param_level_transform_id_seq', 159, true);
 
 
 --

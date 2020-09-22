@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.1
--- Dumped by pg_dump version 12.3
+-- Dumped from database version 12.4
+-- Dumped by pg_dump version 12.4
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -674,6 +674,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 655	MIXHGT-M	1	2	1	Mixed layer height in m	\N	\N
 656	SDC-M	1	2	1	Convective snowfall in m	\N	\N
 657	SDL-M	1	2	1	Large scale snowfall in m	\N	\N
+1389	T-BIASC-K	1	3	1	Bias-corrected temperature in Kelvins	\N	\N
 659	VFLMOM-NM2	1	78	1	V-component of momentum flux in N m-2	\N	\N
 660	UFLMOM-NM2	1	78	1	U-component of momentum flux in N m-2	\N	\N
 661	PRCWAT-KGM2	1	18	1	Precipitable water in mm	\N	\N
@@ -1277,6 +1278,8 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1147	PROB-CEIL-6	1	6	1	Probability of cloud ceiling being lower than some threshold value	wetodb	2020-05-07 05:41:01
 1383	FORESTDIAMETER-CM	1	63	1	Forest (tree) average diameter in cm	radon_admin	2020-06-15 12:57:11
 1388	EVARATE-KGM2S	1	19	1	Evaporation rate in mm/s	wetodb	2020-07-28 07:41:47
+1390	RH-BIASC-0TO1	1	62	1	Bias-corrected relative humidity, 0 to 1	\N	\N
+1391	FF-BIASC-MS	1	15	1	Bias-corrected wind speed in m/s	\N	\N
 \.
 
 
@@ -1284,7 +1287,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1388, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1391, true);
 
 
 --
