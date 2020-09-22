@@ -28,6 +28,18 @@ docker run -d -p 5432:5432 \
 	-t radon
 ```
 
+# Taking a dump
+
+```
+export PGDATABASE=radon
+export PGHOST=...
+export PGUSER=radon_admin
+export PGPASSWORD=...
+cd sql
+../bin/dump.sh
+```
+
+
 # TODO
 
 Schema documentation.
