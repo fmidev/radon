@@ -1,0 +1,11 @@
+CREATE OR REPLACE FUNCTION public.radon_version_f()
+ RETURNS TEXT
+ LANGUAGE plpgsql
+ STABLE STRICT SECURITY DEFINER
+AS $function$
+BEGIN
+  RETURN '2021-03-29';
+END;
+$function$
+
+

@@ -15,6 +15,20 @@ The passwords for these accounts need to be given as docker run environment vari
 
 Note! Radon requires that each grib or netcdf message is in its own file, but for now only the metadata part is released.
 
+# Versioning
+
+Radon schema version can be queried with
+
+```
+radon=> select radon_version_f();
+ radon_version_f 
+-----------------
+ 2021-03-29
+(1 row)
+```
+
+Version number is updated after structural changes to radon (ie. changed table definitions etc).
+
 # Usage
 
 ```
