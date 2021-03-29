@@ -31,9 +31,13 @@ CREATE VIEW public.geom_stereographic_v AS
     gs.dj,
     gs.scanning_mode,
     gs.orientation,
-    gs.description
+    gs.description,
+    e.a AS earth_semi_major,
+    e.b AS earth_semi_minor,
+    '+proj=stere +lat_0=90 +lat_ts=60 +lon_0='||orientation||coalesce(' +a='||e.a, '')||coalesce(' +b='||e.b, '')||' +no_defs' AS proj4
    FROM public.geom g,
     public.geom_stereographic gs
+  LEFT OUTER JOIN earth_shape e ON (gs.earth_shape_id = e.id)
   WHERE ((g.id = gs.id) AND (g.projection_id = 2));
 
 

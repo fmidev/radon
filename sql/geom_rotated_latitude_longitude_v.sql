@@ -32,9 +32,13 @@ CREATE VIEW public.geom_rotated_latitude_longitude_v AS
     grll.scanning_mode,
     public.st_x(grll.south_pole) AS south_pole_lon,
     public.st_y(grll.south_pole) AS south_pole_lat,
-    grll.description
+    grll.description,
+    e.a AS earth_semi_major,
+    e.b AS earth_semi_minor,
+    '+proj=ob_tran +o_proj=longlat +lon_0='||public.st_x(grll.south_pole)||' +o_lon_p=0 +o_lat_p='||(-1*public.st_y(grll.south_pole))||coalesce(' +a='||e.a, '')||coalesce(' +b='||e.b, '')||' +to_meter=0.0174532925199 +no_defs' AS proj4
    FROM public.geom g,
     public.geom_rotated_latitude_longitude grll
+  LEFT OUTER JOIN earth_shape e ON (grll.earth_shape_id = e.id)
   WHERE ((g.id = grll.id) AND (g.projection_id = 4));
 
 

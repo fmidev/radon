@@ -30,9 +30,13 @@ CREATE VIEW public.geom_latitude_longitude_v AS
     gll.di,
     gll.dj,
     gll.scanning_mode,
-    gll.description
+    gll.description,
+    e.a AS earth_semi_major,
+    e.b AS earth_semi_minor,
+    '+proj=latlong'||coalesce(' +a='||e.a, '')||coalesce(' +b='||e.b, '')||' +no_defs' AS proj4
    FROM public.geom g,
     public.geom_latitude_longitude gll
+  LEFT OUTER JOIN earth_shape e ON (gll.earth_shape_id = e.id)
   WHERE ((g.id = gll.id) AND (g.projection_id = 1));
 
 

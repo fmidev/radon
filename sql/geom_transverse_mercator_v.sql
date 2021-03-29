@@ -33,9 +33,13 @@ CREATE VIEW public.geom_transverse_mercator_v AS
     gs.orientation,
     gs.latin,
     gs.scale,
-    gs.description
+    gs.description,
+    e.a AS earth_semi_major,
+    e.b AS earth_semi_minor,
+    '+proj=tmerc +lat_0='||latin||' +lon_0='||orientation||' +k='||scale||coalesce(' +a='||e.a, '')||coalesce(' +b='||e.b, '')||' +units=m +no_defs' AS proj4
    FROM public.geom g,
     public.geom_transverse_mercator gs
+  LEFT OUTER JOIN earth_shape e ON (gs.earth_shape_id = e.id)
   WHERE ((g.id = gs.id) AND (g.projection_id = 8));
 
 
