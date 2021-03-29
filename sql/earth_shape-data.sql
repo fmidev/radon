@@ -23,7 +23,10 @@ SET row_security = off;
 COPY public.earth_shape (id, a, b, description, last_updater, last_updated) FROM stdin;
 1	6371220	6371220	Newbase value	postgres	2018-07-30 11:22:22.483987+00
 2	6378160	6356775	Earth assumed oblate spheroid with size as determined by IAU in 1965	postgres	2018-07-30 11:24:30.534346+00
-3	6367470	6367470	GRIB 1 default value	postgres	2018-07-30 11:24:51.845212+00
+3	6367470 6367470 GRIB 1 default value	postgres	2018-07-30 11:24:51.845212+00
+4	6378137	6356752.31424783	WGS84 ellipsoid	\N	\N
+5	6378137	6356752.31414028	GRS80 ellipsoid	\N	\N
+6	6378388	6356911.946	Hayford ellipsoid	\N	\N
 \.
 
 
@@ -31,7 +34,7 @@ COPY public.earth_shape (id, a, b, description, last_updater, last_updated) FROM
 -- Name: earth_shape_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.earth_shape_id_seq', 3, true);
+SELECT pg_catalog.setval('public.earth_shape_id_seq', 6, true);
 
 
 --
