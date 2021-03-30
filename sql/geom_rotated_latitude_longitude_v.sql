@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -35,10 +35,10 @@ CREATE VIEW public.geom_rotated_latitude_longitude_v AS
     grll.description,
     e.a AS earth_semi_major,
     e.b AS earth_semi_minor,
-    '+proj=ob_tran +o_proj=longlat +lon_0='||public.st_x(grll.south_pole)||' +o_lon_p=0 +o_lat_p='||(-1*public.st_y(grll.south_pole))||coalesce(' +a='||e.a, '')||coalesce(' +b='||e.b, '')||' +to_meter=0.0174532925199 +no_defs' AS proj4
+    (((((('+proj=ob_tran +o_proj=longlat +lon_0='::text || public.st_x(grll.south_pole)) || ' +o_lon_p=0 +o_lat_p='::text) || (('-1'::integer)::double precision * public.st_y(grll.south_pole))) || COALESCE((' +a='::text || e.a), ''::text)) || COALESCE((' +b='::text || e.b), ''::text)) || ' +to_meter=0.0174532925199 +no_defs'::text) AS proj4
    FROM public.geom g,
-    public.geom_rotated_latitude_longitude grll
-  LEFT OUTER JOIN earth_shape e ON (grll.earth_shape_id = e.id)
+    (public.geom_rotated_latitude_longitude grll
+     LEFT JOIN public.earth_shape e ON ((grll.earth_shape_id = e.id)))
   WHERE ((g.id = grll.id) AND (g.projection_id = 4));
 
 

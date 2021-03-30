@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -33,10 +33,10 @@ CREATE VIEW public.geom_latitude_longitude_v AS
     gll.description,
     e.a AS earth_semi_major,
     e.b AS earth_semi_minor,
-    '+proj=latlong'||coalesce(' +a='||e.a, '')||coalesce(' +b='||e.b, '')||' +no_defs' AS proj4
+    ((('+proj=latlong'::text || COALESCE((' +a='::text || e.a), ''::text)) || COALESCE((' +b='::text || e.b), ''::text)) || ' +no_defs'::text) AS proj4
    FROM public.geom g,
-    public.geom_latitude_longitude gll
-  LEFT OUTER JOIN earth_shape e ON (gll.earth_shape_id = e.id)
+    (public.geom_latitude_longitude gll
+     LEFT JOIN public.earth_shape e ON ((gll.earth_shape_id = e.id)))
   WHERE ((g.id = gll.id) AND (g.projection_id = 1));
 
 

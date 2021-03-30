@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -193,7 +193,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 964	11	1062	0	19	198	\N	\N	\N	\N	-1
 175	47	268	0	6	2	\N	\N	\N	\N	-1
 965	11	1063	0	19	199	\N	\N	\N	\N	-1
-966	11	1201	3	6	2	\N	\N	\N	\N	1
 180	47	187	0	6	7	\N	\N	\N	\N	-1
 182	47	209	0	6	13	\N	\N	\N	\N	-1
 183	47	583	0	6	17	\N	\N	\N	\N	-1
@@ -572,7 +571,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 721	4	974	0	6	196	\N	\N	wetodb	2019-05-06 06:37:15.955413+00	-1
 761	4	617	0	1	75	8	\N	\N	\N	-1
 762	4	406	0	1	194	\N	\N	\N	\N	-1
-763	4	1201	3	6	2	\N	\N	\N	\N	1
 764	4	655	0	19	3	\N	\N	\N	\N	-1
 765	4	1049	0	1	193	\N	\N	\N	\N	1
 766	4	438	0	6	192	6	0	\N	\N	-1
@@ -586,7 +584,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 857	7	40	0	4	9	5	0	\N	\N	-1
 858	7	973	0	6	195	\N	\N	\N	\N	-1
 859	7	1049	0	1	193	\N	\N	\N	\N	1
-860	7	1201	3	6	2	\N	\N	\N	\N	1
 861	7	316	0	5	5	6	0	\N	\N	1
 862	7	406	0	1	194	\N	\N	\N	\N	-1
 863	7	320	0	5	5	5	0	\N	\N	1
@@ -594,6 +591,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 865	7	767	0	1	86	2	\N	\N	\N	-1
 866	7	979	0	4	7	6	0	\N	\N	1
 867	7	617	0	1	75	8	\N	\N	\N	-1
+860	7	1201	3	6	3	\N	\N	radon_admin	2021-03-23 11:13:17.851343+00	1
 868	7	767	0	1	86	3	\N	\N	\N	-1
 869	7	972	0	6	194	\N	\N	\N	\N	-1
 870	7	692	0	1	85	2	\N	\N	\N	-1
@@ -629,9 +627,33 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 978	104	1387	2	0	197	\N	\N	\N	\N	-1
 986	10	769	0	1	192	\N	\N	\N	\N	-1
 987	240	1228	0	192	3	\N	\N	\N	\N	-1
+988	281	998	0	1	210	\N	\N	\N	\N	-1
 983	270	1389	0	0	193	\N	\N	\N	\N	-1
 984	270	1390	0	1	193	\N	\N	\N	\N	-1
 985	270	1391	0	2	194	\N	\N	\N	\N	-1
+989	281	976	0	1	211	\N	\N	\N	\N	-1
+990	281	1033	192	201	55	\N	\N	\N	\N	-1
+991	260	975	0	3	192	\N	\N	\N	\N	-1
+992	270	975	0	3	192	\N	\N	\N	\N	-1
+1003	281	322	0	1	19	\N	\N	\N	\N	-1
+994	270	590	0	1	194	\N	\N	\N	\N	-1
+993	260	590	0	1	194	\N	\N	wetodb	2020-11-09 07:49:10.638787+00	-1
+995	281	442	0	2	192	\N	\N	\N	\N	-1
+996	281	972	0	6	194	\N	\N	\N	\N	-1
+997	281	973	0	6	195	\N	\N	\N	\N	-1
+998	281	974	0	6	196	\N	\N	\N	\N	-1
+1000	281	1181	0	19	193	\N	\N	\N	\N	-1
+1001	281	1182	0	19	192	\N	\N	\N	\N	-1
+1002	281	11	0	1	192	\N	\N	\N	\N	-1
+999	281	20	0	6	192	\N	\N	wetodb	2020-11-12 12:57:13.361078+00	-1
+1004	280	442	0	2	192	\N	\N	\N	\N	-1
+1005	260	1389	0	0	193	\N	\N	\N	\N	-1
+1006	260	1390	0	1	193	\N	\N	\N	\N	-1
+1007	260	1391	0	2	194	\N	\N	\N	\N	-1
+763	4	1201	3	6	3	\N	\N	radon_admin	2021-03-23 08:58:53.990996+00	1
+1008	243	181	0	1	202	\N	\N	wetodb	2021-01-20 07:50:17.062162+00	1
+966	11	1201	3	6	3	\N	\N	radon_admin	2021-03-23 08:58:53.990996+00	1
+1009	243	1025	0	1	211	\N	\N	wetodb	2021-01-20 08:25:44.922966+00	1
 \.
 
 
@@ -639,7 +661,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 -- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib2_id_seq', 987, true);
+SELECT pg_catalog.setval('public.param_grib2_id_seq', 1009, true);
 
 
 --

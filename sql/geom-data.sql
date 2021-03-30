@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -181,6 +181,11 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 1101	NEMO801738	1	\N	wetodb	2020-04-09 08:42:15.11928+00
 173	RCR068	4	RCR Hirlam 0,068 deg resolution	radon_admin	2020-05-12 15:08:11.571471+00
 1107	LUKE0021	1	\N	\N	\N
+1108	ECMOSEUR0200	1	\N	\N	\N
+1109	ECMOSEUR0250	1	\N	\N	\N
+1110	SMARTMET2500	2	\N	\N	\N
+1111	DIWEUROPE	7	\N	radon_admin	2021-03-22 11:22:13.733772+00
+1112	MEPS1000D	5	\N	\N	\N
 \.
 
 
@@ -188,7 +193,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1107, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1112, true);
 
 
 --

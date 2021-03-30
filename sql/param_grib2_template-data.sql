@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -661,10 +661,12 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1369	202	0	81	-1	\N	-1
 1370	202	0	82	-1	\N	-1
 982	0	0	0	\N	\N	6
+769	0	1	192	\N	\N	-1
 980	0	0	0	0	\N	0
 1374	0	6	13	\N	\N	-1
 1363	1	0	210	wetodb	2020-07-13 10:50:21.532454+00	1
 1388	0	1	79	\N	\N	-1
+181	0	1	210	1	\N	1
 \.
 
 

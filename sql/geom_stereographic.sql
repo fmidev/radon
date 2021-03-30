@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -37,6 +37,7 @@ CREATE TABLE public.geom_stereographic (
     description text NOT NULL,
     last_updater text,
     last_updated timestamp with time zone,
+    earth_shape_id integer,
     CONSTRAINT geom_stereographic_scanning_mode_chk CHECK ((scanning_mode = ANY (ARRAY['+x+y'::text, '+x-y'::text])))
 );
 
@@ -85,6 +86,14 @@ CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.geom_stereographic FOR E
 --
 
 CREATE TRIGGER geom_stereographic_store_last_updated_trg AFTER UPDATE ON public.geom_stereographic FOR EACH ROW EXECUTE FUNCTION public.store_last_updated_f();
+
+
+--
+-- Name: geom_stereographic geom_stereographic_earth_shape_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
+--
+
+ALTER TABLE ONLY public.geom_stereographic
+    ADD CONSTRAINT geom_stereographic_earth_shape_id_fkey FOREIGN KEY (earth_shape_id) REFERENCES public.earth_shape(id);
 
 
 --

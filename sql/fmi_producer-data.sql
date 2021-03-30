@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -61,6 +61,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 49	EGRR_SEAS	UKMO global seasonal model	1	postgres	2016-05-26 08:42:00	1
 50	EGRR	Bracknell global model	1	postgres	2016-05-26 08:42:00	1
 51	EDZW	Offenbach global model	1	postgres	2016-05-26 08:42:00	1
+149	MYOCEAN	Copernicus NEMO Ocean model	1	wetodb	2020-10-06 05:58:13	1
 53	KWBG	Washington global model GFS	1	postgres	2016-05-26 08:42:00	1
 102	TIESAA	FMI road condition model	1	postgres	2016-05-26 08:42:00	1
 250	GFSMTA	Postprocessed fields for GFS	1	postgres	2016-05-26 08:42:00	1
@@ -100,7 +101,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 281	SMARTMETNWC	SmartMet producer with nowcasting applied	1	wetodb	2018-10-29 07:18:17	1
 182	BLENDW	FMI blend of models weight (MAE) fields	1	wetodb	2018-11-07 13:39:43	3
 2166	WETECKALMAN	Wetehinen EC forecast with Kalman filter	3	postgres	2016-05-26 08:42:00	1
-149	MYOCEAN	-	1	postgres	2016-05-26 08:42:00	1
+115	DIW	De-Icing Weather Index	1	\N	\N	1
 170	ICON_GLO	DWD Global Model ICON	1	postgres	2016-05-26 08:42:00	1
 148	COPERNICUS	-	1	postgres	2016-05-26 08:42:00	1
 2028	ECMOS2	MOS from ECMWF model, 2nd version	3	postgres	2016-05-26 08:42:00	1

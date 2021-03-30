@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -108,11 +108,18 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 107	147	279	vice	\N	\N	\N	\N
 106	147	278	uice	\N	\N	\N	\N
 105	147	716	icethic	\N	\N	\N	\N
-104	147	24	icefrac	\N	\N	\N	\N
+113	147	305	wos	\N	\N	wetodb	2020-10-12 04:58:24.238279+00
 109	147	304	SSV	\N	\N	wetodb	2020-04-06 06:41:36.508412+00
 103	147	269	SSS	\N	\N	\N	\N
+99	147	269	salinity	\N	\N	\N	\N
 101	147	717	SSH_inst	\N	\N	\N	\N
 102	147	432	SST	\N	\N	wetodb	2020-09-18 10:22:20.635585+00
+100	147	1397	temperature	\N	\N	\N	\N
+104	147	1084	icefrac	\N	\N	wetodb	2020-10-01 13:17:32.638217+00
+110	147	653	TKE	\N	\N	\N	\N
+111	147	303	uos	\N	\N	\N	\N
+112	147	304	vos	\N	\N	\N	\N
+114	147	1398	dTKE	\N	\N	\N	\N
 \.
 
 
@@ -120,7 +127,7 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 -- Name: param_netcdf_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_netcdf_id_seq', 98, true);
+SELECT pg_catalog.setval('public.param_netcdf_id_seq', 117, true);
 
 
 --

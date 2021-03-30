@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -34,10 +34,10 @@ CREATE VIEW public.geom_reduced_gaussian_v AS
     grg.description,
     e.a AS earth_semi_major,
     e.b AS earth_semi_minor,
-    '+proj=latlong'||coalesce(' +a='||e.a, '')||coalesce(' +b='||e.b, '')||' +no_defs' AS proj4
-    FROM public.geom g,
-    public.geom_reduced_gaussian grg
-  LEFT OUTER JOIN earth_shape e ON (grg.earth_shape_id = e.id)
+    ((('+proj=latlong'::text || COALESCE((' +a='::text || e.a), ''::text)) || COALESCE((' +b='::text || e.b), ''::text)) || ' +no_defs'::text) AS proj4
+   FROM public.geom g,
+    (public.geom_reduced_gaussian grg
+     LEFT JOIN public.earth_shape e ON ((grg.earth_shape_id = e.id)))
   WHERE ((g.id = grg.id) AND (g.projection_id = 6));
 
 

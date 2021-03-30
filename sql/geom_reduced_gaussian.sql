@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -36,6 +36,7 @@ CREATE TABLE public.geom_reduced_gaussian (
     description text NOT NULL,
     last_updater text,
     last_updated timestamp with time zone,
+    earth_shape_id integer,
     CONSTRAINT geom_reduced_gaussian_scanning_mode_chk CHECK ((scanning_mode = ANY (ARRAY['+x-y'::text, '+x+y'::text])))
 );
 
@@ -84,6 +85,14 @@ CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.geom_reduced_gaussian FO
 --
 
 CREATE TRIGGER geom_reduced_gaussian_store_last_updated_trg AFTER UPDATE ON public.geom_reduced_gaussian FOR EACH ROW EXECUTE FUNCTION public.store_last_updated_f();
+
+
+--
+-- Name: geom_reduced_gaussian geom_reduced_gaussian_earth_shape_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
+--
+
+ALTER TABLE ONLY public.geom_reduced_gaussian
+    ADD CONSTRAINT geom_reduced_gaussian_earth_shape_id_fkey FOREIGN KEY (earth_shape_id) REFERENCES public.earth_shape(id);
 
 
 --

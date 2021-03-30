@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1132,6 +1132,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 174	V-MS	1	15	2	V wind in m/s	wetodb	2018-11-26 06:20:37
 164	CLDSYM-N	1	30	2	Cloud Symbol	wetodb	2018-11-26 06:22:54
 1387	FORESTTYPE-N	1	30	1	Main forest type of growth area (1-3)	\N	\N
+1392	PROB-DIW0	1	6	1	Probability of aviation icing category 0	\N	\N
 206	WW-N	1	30	2	Present Weather	wetodb	2018-11-26 06:22:54
 207	W1-N	1	30	2	Past Weather 1	wetodb	2018-11-26 06:22:54
 208	W2-N	1	30	2	Past Weather 2	wetodb	2018-11-26 06:22:54
@@ -1280,6 +1281,34 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1388	EVARATE-KGM2S	1	19	1	Evaporation rate in mm/s	wetodb	2020-07-28 07:41:47
 1390	RH-BIASC-0TO1	1	62	1	Bias-corrected relative humidity, 0 to 1	\N	\N
 1391	FF-BIASC-MS	1	15	1	Bias-corrected wind speed in m/s	\N	\N
+1393	PROB-DIW1	1	6	1	Probability of aviation icing category 1	\N	\N
+1394	PROB-DIW2	1	6	1	Probability of aviation icing category 2	\N	\N
+1395	PROB-DIW3	1	6	1	Probability of aviation icing category 3	\N	\N
+1396	PROB-DIW4	1	6	1	Probability of aviation icing category 4	\N	\N
+1397	TP-C	1	58	1	Potential temperature in C	\N	\N
+1398	TKEND-JKG	1	77	1	Dissipation of kinetic energy of turbulence in J kg-1	\N	\N
+1399	F100-WATLEV-N2000-CM	1	63	1	100th fractal N2000 sea level height in EPS	\N	\N
+1415	TMAX3H-K	1	3	1	Maximum temperature from the preceeding 3 hours in Kelvin	\N	\N
+1401	F95-WATLEV-N2000-CM	1	63	1	95th fractal N2000 sea level height in EPS	\N	\N
+1402	F90-WATLEV-N2000-CM	1	63	1	90th fractal N2000 sea level height in EPS	\N	\N
+1403	F75-WATLEV-N2000-CM	1	63	1	75th fractal N2000 sea level height in EPS	\N	\N
+1404	F50-WATLEV-N2000-CM	1	63	1	50th fractal N2000 sea level height in EPS	\N	\N
+1405	F25-WATLEV-N2000-CM	1	63	1	25th fractal N2000 sea level height in EPS	\N	\N
+1406	F10-WATLEV-N2000-CM	1	63	1	10th fractal N2000 sea level height in EPS	\N	\N
+1407	F5-WATLEV-N2000-CM	1	63	1	5th fractal N2000 sea level height in EPS	\N	\N
+1408	F0-WATLEV-N2000-CM	1	63	1	0th fractal N2000 sea level height in EPS	\N	\N
+1416	TMAX6H-K	1	3	1	Maximum temperature from the preceeding 6 hours in Kelvin	\N	\N
+1417	TMIN3H-K	1	3	1	Minimum temperature from the preceeding 3 hours in Kelvin	\N	\N
+1411	PROB-WATLEV-N2000-LOW-1	1	6	1	Probability of N2000 water level being lower than given threshold	\N	\N
+1412	PROB-WATLEV-N2000-HIGH-1	1	6	1	Probability of N2000 water level being higher than given threshold	\N	\N
+1413	PROB-WATLEV-N2000-HIGH-2	1	6	1	Probability of N2000 water level being higher than given threshold	\N	\N
+1414	PROB-WATLEV-N2000-HIGH-3	1	6	1	Probability of N2000 water level being higher than given threshold	\N	\N
+1418	TMIN6H-K	1	3	1	Minimum temperature from the preceeding 6 hours in Kelvin	\N	\N
+1419	BIAS-T-K	1	3	1	Bias value for T-K	\N	\N
+1409	WATLEV-STDDEV-N2000	1	63	1	Standard deviation of N2000 sea level height	wetodb	2020-10-05 14:55:51
+1410	WATLEV-MEAN-N2000	1	63	1	Mean N2000 sea level height	wetodb	2020-10-05 14:55:58
+1420	MAE-T-K	1	3	1	Mean absolute error for T-K	\N	\N
+1421	LC-N	1	64	2	Land cover from ESA Globcover2009 project	\N	\N
 \.
 
 
@@ -1287,7 +1316,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1391, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1421, true);
 
 
 --

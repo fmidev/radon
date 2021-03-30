@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -38,10 +38,10 @@ CREATE VIEW public.geom_lambert_conformal_v AS
     gs.description,
     e.a AS earth_semi_major,
     e.b AS earth_semi_minor,
-    '+proj=lcc +lat_0='||latin1||' +lon_0='||orientation||' +lat_1='||latin1||' +lat_2='||coalesce(latin2, latin1)||coalesce(' +a='||e.a, '')||coalesce(' +b='||e.b, '')||' +units=m +no_defs' AS proj4
+    (((((((((('+proj=lcc +lat_0='::text || gs.latin1) || ' +lon_0='::text) || gs.orientation) || ' +lat_1='::text) || gs.latin1) || ' +lat_2='::text) || COALESCE(gs.latin2, gs.latin1)) || COALESCE((' +a='::text || e.a), ''::text)) || COALESCE((' +b='::text || e.b), ''::text)) || ' +units=m +no_defs'::text) AS proj4
    FROM public.geom g,
-    public.geom_lambert_conformal gs
-  LEFT OUTER JOIN earth_shape e ON (gs.earth_shape_id = e.id)
+    (public.geom_lambert_conformal gs
+     LEFT JOIN public.earth_shape e ON ((gs.earth_shape_id = e.id)))
   WHERE ((g.id = gs.id) AND (g.projection_id = 5));
 
 
@@ -52,7 +52,6 @@ ALTER TABLE public.geom_lambert_conformal_v OWNER TO radon_admin;
 --
 
 GRANT SELECT ON TABLE public.geom_lambert_conformal_v TO radon_ro;
-GRANT SELECT ON TABLE public.geom_lambert_conformal_v TO PUBLIC;
 
 
 --

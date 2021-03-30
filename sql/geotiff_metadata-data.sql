@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -25,6 +25,9 @@ COPY public.geotiff_metadata (id, producer_id, attribute, key, mask) FROM stdin;
 2	110	missing_value	GDAL_METADATA	<Item name="Nodata">([0-9]*)</Item>
 3	110	valid_time	GDAL_METADATA	<Item name="Observation time" format="YYYYMMDDhhmm">([0-9]*)</Item>
 4	110	time_mask	GDAL_METADATA	<Item name="Observation time" format="([A-Za-z ]*)">
+5	115	param_name		<Item name="Quantity" unit="%">([A-Za-z0-9 ]*)</Item>
+7	115	valid_time		><Item name="Forecast start time" format="YYYYmmddHHMM">([0-9]*)</Item>
+6	115	missing_value		<Item name="Nodata">([0-9]*)</Item>
 \.
 
 
@@ -32,7 +35,7 @@ COPY public.geotiff_metadata (id, producer_id, attribute, key, mask) FROM stdin;
 -- Name: geotiff_metadata_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geotiff_metadata_id_seq', 4, true);
+SELECT pg_catalog.setval('public.geotiff_metadata_id_seq', 7, true);
 
 
 --

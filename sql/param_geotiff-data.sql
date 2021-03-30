@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,6 +23,7 @@ SET row_security = off;
 COPY public.param_geotiff (id, producer_id, param_id, geotiff_name, last_updater, last_updated) FROM stdin;
 1	510	490	Corrected reflectivity	\N	\N
 2	110	441	Precipitation accumulation	\N	\N
+3	115	1393	ProbabilityOfDIW0	\N	\N
 \.
 
 
@@ -30,7 +31,7 @@ COPY public.param_geotiff (id, producer_id, param_id, geotiff_name, last_updater
 -- Name: param_geotiff_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_geotiff_id_seq', 2, true);
+SELECT pg_catalog.setval('public.param_geotiff_id_seq', 3, true);
 
 
 --

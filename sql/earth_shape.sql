@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -29,8 +29,8 @@ CREATE TABLE public.earth_shape (
     a numeric NOT NULL,
     b numeric NOT NULL,
     description text,
-    last_updater text DEFAULT "session_user"() NOT NULL,
-    last_updated timestamp with time zone DEFAULT now() NOT NULL
+    last_updater text DEFAULT "session_user"(),
+    last_updated timestamp with time zone DEFAULT now()
 );
 
 
