@@ -35,7 +35,8 @@ CREATE VIEW public.geom_lambert_equal_area_v AS
     gs.description,
     e.a AS earth_semi_major,
     e.b AS earth_semi_minor,
-    (((((('+proj=laea +lat_0='::text || gs.latin) || ' +lon_0='::text) || gs.orientation) || COALESCE((' +a='::text || e.a), ''::text)) || COALESCE((' +b='::text || e.b), ''::text)) || ' +units=m +no_defs'::text) AS proj4
+    '+proj=laea +lat_0='::text || gs.latin || ' +lon_0='::text || gs.orientation || CASE WHEN e.name = 'WGS84' THEN ' +ellps=WGS84' WHEN e.name = 'GRS80' THEN ' +ellps=GRS80' ELSE COALESCE((' +a='::text || e.a), ''::text) || COALESCE((' +b='::text || e.b), ''::text) END || ' +units=m +no_defs'::text AS proj4,
+    e.name AS earth_ellipsoid_name
    FROM public.geom g,
     (public.geom_lambert_equal_area gs
      LEFT JOIN public.earth_shape e ON ((gs.earth_shape_id = e.id)))

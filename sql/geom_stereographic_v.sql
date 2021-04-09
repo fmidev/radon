@@ -34,7 +34,8 @@ CREATE VIEW public.geom_stereographic_v AS
     gs.description,
     e.a AS earth_semi_major,
     e.b AS earth_semi_minor,
-    (((('+proj=stere +lat_0=90 +lat_ts=60 +lon_0='::text || gs.orientation) || COALESCE((' +a='::text || e.a), ''::text)) || COALESCE((' +b='::text || e.b), ''::text)) || ' +no_defs'::text) AS proj4
+    '+proj=stere +lat_0=90 +lat_ts=60 +lon_0='::text || gs.orientation || CASE WHEN e.name = 'WGS84' THEN ' +ellps=WGS84' WHEN e.name = 'GRS80' THEN ' +ellps=GRS80' ELSE COALESCE((' +a='::text || e.a), ''::text) || COALESCE((' +b='::text || e.b), ''::text) END || ' +no_defs'::text AS proj4,
+    e.name AS earth_ellipsoid_name
    FROM public.geom g,
     (public.geom_stereographic gs
      LEFT JOIN public.earth_shape e ON ((gs.earth_shape_id = e.id)))

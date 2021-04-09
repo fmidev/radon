@@ -28,6 +28,7 @@ CREATE VIEW public.earth_shape_v AS
             WHEN (earth_shape.a = earth_shape.b) THEN NULL::numeric
             ELSE (((1)::numeric / ((earth_shape.a - earth_shape.b) / earth_shape.a)))::numeric(6,3)
         END AS inverse_flattening,
+    earth_shape.name,
     earth_shape.description,
     earth_shape.last_updated,
     earth_shape.last_updater

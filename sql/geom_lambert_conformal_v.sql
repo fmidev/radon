@@ -38,7 +38,8 @@ CREATE VIEW public.geom_lambert_conformal_v AS
     gs.description,
     e.a AS earth_semi_major,
     e.b AS earth_semi_minor,
-    (((((((((('+proj=lcc +lat_0='::text || gs.latin1) || ' +lon_0='::text) || gs.orientation) || ' +lat_1='::text) || gs.latin1) || ' +lat_2='::text) || COALESCE(gs.latin2, gs.latin1)) || COALESCE((' +a='::text || e.a), ''::text)) || COALESCE((' +b='::text || e.b), ''::text)) || ' +units=m +no_defs'::text) AS proj4
+    '+proj=lcc +lat_0='::text || gs.latin1 || ' +lon_0='::text || gs.orientation || ' +lat_1='::text || gs.latin1 || ' +lat_2='::text || COALESCE(gs.latin2, gs.latin1) || CASE WHEN e.name = 'WGS84' THEN ' +ellps=WGS84' WHEN e.name = 'GRS80' THEN ' +ellps=GRS80' ELSE COALESCE((' +a='::text || e.a), ''::text) || COALESCE((' +b='::text || e.b), ''::text) END || ' +units=m +no_defs'::text AS proj4,
+    e.name AS earth_ellipsoid_name
    FROM public.geom g,
     (public.geom_lambert_conformal gs
      LEFT JOIN public.earth_shape e ON ((gs.earth_shape_id = e.id)))

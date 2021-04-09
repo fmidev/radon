@@ -33,7 +33,8 @@ CREATE VIEW public.geom_latitude_longitude_v AS
     gll.description,
     e.a AS earth_semi_major,
     e.b AS earth_semi_minor,
-    ((('+proj=latlong'::text || COALESCE((' +a='::text || e.a), ''::text)) || COALESCE((' +b='::text || e.b), ''::text)) || ' +no_defs'::text) AS proj4
+    '+proj=latlong'::text || CASE WHEN e.name = 'WGS84' THEN ' +ellps=WGS84' WHEN e.name = 'GRS80' THEN ' +ellps=GRS80' ELSE COALESCE((' +a='::text || e.a), ''::text) || COALESCE((' +b='::text || e.b), ''::text) END || ' +no_defs'::text AS proj4,
+    e.name AS earth_ellipsoid_name
    FROM public.geom g,
     (public.geom_latitude_longitude gll
      LEFT JOIN public.earth_shape e ON ((gll.earth_shape_id = e.id)))
