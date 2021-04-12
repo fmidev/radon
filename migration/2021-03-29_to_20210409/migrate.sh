@@ -3,7 +3,6 @@ set -ue
 SQLHOME=../../sql
 
 psql -1 << EOSQL
-ALTER TABLE geom_latitude_longitude DISABLE TRIGGER ALL;
 DROP TABLE earth_shape CASCADE;
 \i $SQLHOME/earth_shape.sql
 \i $SQLHOME/earth_shape-data.sql
