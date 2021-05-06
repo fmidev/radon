@@ -68,6 +68,10 @@ psql $PSQL_ARGS -f logged_actions.sql
 
 # functions
 
+# this one is incorrectly named
+echo "file: if_modified_func.sql"
+psql $PSQL_ARGS -f if_modified_func.sql
+
 for f in *_f.sql ; do
   echo "file: $f"
   psql $PSQL_ARGS -f $f
