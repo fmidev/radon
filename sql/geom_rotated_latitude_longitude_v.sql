@@ -35,7 +35,12 @@ CREATE VIEW public.geom_rotated_latitude_longitude_v AS
     grll.description,
     e.a AS earth_semi_major,
     e.b AS earth_semi_minor,
-    '+proj=ob_tran +o_proj=longlat +lon_0='::text || public.st_x(grll.south_pole) || ' +o_lon_p=0 +o_lat_p='::text || (('-1'::integer)::double precision * public.st_y(grll.south_pole)) || CASE WHEN e.name = 'WGS84' THEN ' +ellps=WGS84' WHEN e.name = 'GRS80' THEN ' +ellps=GRS80' ELSE COALESCE((' +a='::text || e.a), ''::text) || COALESCE((' +b='::text || e.b), ''::text) END || ' +to_meter=0.0174532925199 +no_defs'::text AS proj4,
+    ((((('+proj=ob_tran +o_proj=longlat +lon_0='::text || public.st_x(grll.south_pole)) || ' +o_lon_p=0 +o_lat_p='::text) || (('-1'::integer)::double precision * public.st_y(grll.south_pole))) ||
+        CASE
+            WHEN ((e.name)::text = 'WGS84'::text) THEN ' +ellps=WGS84'::text
+            WHEN ((e.name)::text = 'GRS80'::text) THEN ' +ellps=GRS80'::text
+            ELSE (COALESCE((' +a='::text || e.a), ''::text) || COALESCE((' +b='::text || e.b), ''::text))
+        END) || ' +to_meter=0.0174532925199 +no_defs'::text) AS proj4,
     e.name AS earth_ellipsoid_name
    FROM public.geom g,
     (public.geom_rotated_latitude_longitude grll

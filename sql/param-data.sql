@@ -1007,7 +1007,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1045	F0-WATLEV-CM	1	63	1	0th fractal sea level height in EPS	\N	\N
 1046	WATLEV-MEAN-CM	1	63	1	Mean sea level height	\N	\N
 1047	WATLEV-STDDEV-CM	1	63	1	Standard deviation of sea level height	\N	\N
-1048	CLDTYPE-N	1	28	2	Cloud type in synop font code	\N	\N
+1429	RADGLOCA-JM2	1	83	1	Global radiation clear-sky accumulation	\N	\N
 1054	CBTCU-FL	1	29	1	Estimated (max) TOP [FL] for CB/TCU clouds in the model	\N	\N
 739	TMIN12H-K	1	3	1	Minimum temperature from the preceeding 12 hours in Kelvin	\N	\N
 738	TMAX12H-K	1	3	1	Maximum temperature from the preceeding 12 hours in Kelvin	wetodb	2017-05-31 18:12:17
@@ -1309,6 +1309,15 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1410	WATLEV-MEAN-N2000	1	63	1	Mean N2000 sea level height	wetodb	2020-10-05 14:55:58
 1420	MAE-T-K	1	3	1	Mean absolute error for T-K	\N	\N
 1421	LC-N	1	64	2	Land cover from ESA Globcover2009 project	\N	\N
+1422	NWCSAF_CLDTYPE-N	1	69	2	Cloud type in NWCSAF products	\N	\N
+1423	NWCSAF_CLDTYPE_QC-N	1	69	2	Cloud type quality controlg flag in NWCSAF products	\N	\N
+1424	NWCSAF_CLDMASK-0OR1	1	28	2	Cloud mask in NWCSAF products	\N	\N
+1425	NWCSAF_CLDMASK_QC-N	1	69	2	Cloud mask quality control flag in NWCSAF products	\N	\N
+1426	CLDTOP-PA	1	89	1	Cloud top pressure	\N	\N
+1427	NWCSAF_EFFCLD-0TO1	1	28	1	NWCSAF effective cloudiness	\N	\N
+1428	NWCSAF_CTTH_QC-N	1	69	1	cloud top (CTTH) quality control flag in NWCSAF products	\N	\N
+1048	CLDTYPE-N	1	28	2	Cloud type	wetodb	2021-05-03 06:30:35
+1430	RADGLOC-WM2	1	12	1	Global radiation clear-sky	\N	\N
 \.
 
 
@@ -1316,7 +1325,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1421, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1430, true);
 
 
 --

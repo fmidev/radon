@@ -117,6 +117,8 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 510	OPERA	Opera radar network	1	\N	\N	2
 110	PPN	FMI Probabilistic Precipitation Nowcasting	1	\N	\N	1
 104	LUKE	Luonnonvarakeskus	1	wetodb	2020-06-16 07:32:36	2
+502	NWCSAF	NWCSAF satellite products	1	\N	\N	2
+503	NWCSAFMTA	NWCSAF post processed products	1	\N	\N	2
 152	HELMI	Helmi jäämalli	1	wetodb	2020-05-06 06:48:51	2
 \.
 

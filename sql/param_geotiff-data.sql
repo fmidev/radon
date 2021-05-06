@@ -24,6 +24,15 @@ COPY public.param_geotiff (id, producer_id, param_id, geotiff_name, last_updater
 1	510	490	Corrected reflectivity	\N	\N
 2	110	441	Precipitation accumulation	\N	\N
 3	115	1393	ProbabilityOfDIW0	\N	\N
+4	502	1422	ct	\N	\N
+5	502	1423	ct_quality	\N	\N
+7	502	1424	cma	\N	\N
+8	502	1425	cma_quality	\N	\N
+9	502	272	ctth_tempe	\N	\N
+10	502	220	ctth_alti	\N	\N
+11	502	1426	ctth_pres	\N	\N
+12	502	1427	ctth_effectiv	\N	\N
+13	502	1428	ctth_quality	\N	\N
 \.
 
 
@@ -31,7 +40,7 @@ COPY public.param_geotiff (id, producer_id, param_id, geotiff_name, last_updater
 -- Name: param_geotiff_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_geotiff_id_seq', 3, true);
+SELECT pg_catalog.setval('public.param_geotiff_id_seq', 13, true);
 
 
 --

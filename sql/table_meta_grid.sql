@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -127,7 +127,6 @@ ALTER TABLE ONLY public.table_meta_grid
 --
 
 GRANT SELECT ON TABLE public.table_meta_grid TO radon_ro;
-GRANT INSERT,DELETE,UPDATE ON TABLE public.table_meta_grid TO radon_rw;
 
 
 --

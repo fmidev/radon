@@ -28,7 +28,7 @@ CREATE TABLE public.earth_shape (
     id integer NOT NULL,
     a numeric NOT NULL,
     b numeric NOT NULL,
-    name varchar(50),
+    name character varying(50),
     description text,
     last_updater text DEFAULT "session_user"(),
     last_updated timestamp with time zone DEFAULT now()

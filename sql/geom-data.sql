@@ -184,6 +184,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 1108	ECMOSEUR0200	1	\N	\N	\N
 1109	ECMOSEUR0250	1	\N	\N	\N
 1110	SMARTMET2500	2	\N	\N	\N
+1113	NWCSAFSCAND	5	\N	\N	\N
 1111	DIWEUROPE	7	\N	radon_admin	2021-03-22 11:22:13.733772+00
 1112	MEPS1000D	5	\N	\N	\N
 \.
@@ -193,7 +194,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1112, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1113, true);
 
 
 --

@@ -764,6 +764,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 3537	230	976	203	139	0	\N	\N	\N	\N
 3538	240	976	203	139	0	\N	\N	\N	\N
 3539	199	1035	1	191	0	\N	\N	\N	\N
+3994	131	1429	228	129	0	\N	\N	\N	\N
 3541	210	1034	203	214	0	\N	\N	\N	\N
 3542	230	1034	203	214	0	\N	\N	\N	\N
 3561	1	316	1	112	4	\N	\N	\N	\N
@@ -2260,7 +2261,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 -- Name: param_grib1_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib1_id_seq', 3992, true);
+SELECT pg_catalog.setval('public.param_grib1_id_seq', 3994, true);
 
 
 --
