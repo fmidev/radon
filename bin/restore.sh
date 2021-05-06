@@ -68,7 +68,7 @@ psql $PSQL_ARGS -f logged_actions.sql
 
 # functions
 
-for f *_f.sql ; do
+for f in *_f.sql ; do
   echo "file: $f.sql"
   psql $PSQL_ARGS -f $f.sql
 done
