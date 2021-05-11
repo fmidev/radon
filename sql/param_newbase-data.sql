@@ -2896,7 +2896,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 3761	270	200	200	1	0	\N	\N
 3762	270	201	201	1	0	\N	\N
 3763	270	510	265	1	0	\N	\N
-4303	502	1048	9999	1	0	\N	\N
 3765	270	223	268	1	0	\N	\N
 3766	270	224	269	1	0	\N	\N
 3767	270	554	270	1	0	\N	\N
@@ -3212,12 +3211,13 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4294	502	220	1174	1	0	\N	\N
 4295	502	1424	1456	1	0	\N	\N
 4293	502	272	364	1	-273.15	wetodb	2021-05-05 09:28:17.819953+00
+4304	503	1048	9999	1	0	\N	\N
+4305	503	1427	1462	100	0	\N	\N
 4296	502	1425	1457	1	0	radon_admin	2021-04-22 09:27:26.604977+00
 4298	502	1422	1458	1	0	\N	\N
 4299	502	1423	1459	1	0	\N	\N
 4301	502	1428	1461	1	0	\N	\N
 4300	502	1426	1460	0.01	0	radon_admin	2021-04-22 09:30:19.151052+00
-4302	502	1427	1462	100	0	radon_admin	2021-04-22 09:57:57.810476+00
 4197	110	441	353	1	0	wetodb	2021-04-22 10:03:51.35677+00
 \.
 
@@ -3226,7 +3226,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 -- Name: param_newbase_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_id_seq', 4303, true);
+SELECT pg_catalog.setval('public.param_newbase_id_seq', 4305, true);
 
 
 --
