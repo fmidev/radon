@@ -33,7 +33,8 @@ CREATE TABLE public.ss_state (
     forecast_period interval NOT NULL,
     table_name text NOT NULL,
     last_updater text DEFAULT "session_user"() NOT NULL,
-    last_updated timestamp with time zone DEFAULT now() NOT NULL
+    last_updated timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT ss_state_check_forecast_type_value CHECK ((forecast_type_value >= ('-1'::integer)::numeric))
 );
 
 
