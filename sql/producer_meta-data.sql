@@ -45,8 +45,6 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 206	ensemble size	52	\N	\N
 5	ensemble size	52	\N	\N
 6	ensemble size	52	\N	\N
-134	last hybrid level number	91	\N	\N
-134	first hybrid level number	31	\N	\N
 180	ensemble size	5	\N	\N
 184	ensemble size	5	\N	\N
 183	ensemble size	5	\N	\N
@@ -57,8 +55,6 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 7	last hybrid level number	65	\N	\N
 10	ensemble size	1	\N	\N
 261	ensemble size	1	\N	\N
-243	last hybrid level number	91	\N	\N
-243	first hybrid level number	31	\N	\N
 10	first hybrid level number	1	\N	\N
 270	ensemble size	1	\N	\N
 10	last hybrid level number	65	\N	\N
@@ -73,6 +69,10 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 265	last hybrid level number	65	\N	\N
 4	ensemble size	15	\N	\N
 260	ensemble size	15	\N	\N
+134	last hybrid level number	137	\N	\N
+243	last hybrid level number	137	\N	\N
+134	first hybrid level number	48	\N	\N
+243	first hybrid level number	48	\N	\N
 \.
 
 
