@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 12.6
+-- Dumped from database version 13.0 (Debian 13.0-1.pgdg100+1)
+-- Dumped by pg_dump version 13.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -37,6 +37,8 @@ CREATE TABLE public.geom_reduced_gaussian (
     last_updater text,
     last_updated timestamp with time zone,
     earth_shape_id integer,
+    datum_id integer,
+    CONSTRAINT geom_reduced_gaussian_datum_chk CHECK (((datum_id IS NULL) OR ((datum_id IS NOT NULL) AND (earth_shape_id IS NULL)))),
     CONSTRAINT geom_reduced_gaussian_scanning_mode_chk CHECK ((scanning_mode = ANY (ARRAY['+x-y'::text, '+x+y'::text])))
 );
 
@@ -85,6 +87,14 @@ CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.geom_reduced_gaussian FO
 --
 
 CREATE TRIGGER geom_reduced_gaussian_store_last_updated_trg AFTER UPDATE ON public.geom_reduced_gaussian FOR EACH ROW EXECUTE FUNCTION public.store_last_updated_f();
+
+
+--
+-- Name: geom_reduced_gaussian geom_reduced_gaussian_datum_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
+--
+
+ALTER TABLE ONLY public.geom_reduced_gaussian
+    ADD CONSTRAINT geom_reduced_gaussian_datum_id_fkey FOREIGN KEY (datum_id) REFERENCES public.datum(id);
 
 
 --

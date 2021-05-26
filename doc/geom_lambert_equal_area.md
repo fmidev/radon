@@ -17,3 +17,5 @@ Definition includes both area/projection information and grid information.
 | description | text | | description of the ellipsoid | |
 | last_updater | text | | username of the last modifier | |
 | last_updated | timestamptz | | time of last modification | |
+| earth_shape_id | integer | | reference to used ellipsoid (only if datum is null) | earth_shape(id) |
+| datum_id | integer | | reference to used datum | datum(id) |

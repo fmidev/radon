@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 12.6
+-- Dumped from database version 13.0 (Debian 13.0-1.pgdg100+1)
+-- Dumped by pg_dump version 13.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -35,16 +35,13 @@ CREATE VIEW public.geom_lambert_equal_area_v AS
     gs.description,
     e.a AS earth_semi_major,
     e.b AS earth_semi_minor,
-    ((((('+proj=laea +lat_0='::text || gs.latin) || ' +lon_0='::text) || gs.orientation) ||
-        CASE
-            WHEN ((e.name)::text = 'WGS84'::text) THEN ' +ellps=WGS84'::text
-            WHEN ((e.name)::text = 'GRS80'::text) THEN ' +ellps=GRS80'::text
-            ELSE (COALESCE((' +a='::text || e.a), ''::text) || COALESCE((' +b='::text || e.b), ''::text))
-        END) || ' +units=m +no_defs'::text) AS proj4,
-    e.name AS earth_ellipsoid_name
+    e.name AS earth_ellipsoid_name,
+    d.name AS datum_name,
+    (((((('+proj=laea +lat_0='::text || gs.latin) || ' +lon_0='::text) || gs.orientation) || ' '::text) || public.datum_text_f(e.name, e.a, e.b, d.name)) || ' +units=m +no_defs'::text) AS proj4
    FROM public.geom g,
-    (public.geom_lambert_equal_area gs
+    ((public.geom_lambert_equal_area gs
      LEFT JOIN public.earth_shape e ON ((gs.earth_shape_id = e.id)))
+     LEFT JOIN public.datum d ON ((gs.datum_id = d.id)))
   WHERE ((g.id = gs.id) AND (g.projection_id = 7));
 
 
