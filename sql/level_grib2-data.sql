@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.6
+-- Dumped by pg_dump version 13.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -148,6 +148,7 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 244	1	1	\N	\N
 243	12	246	\N	\N
 104	1	1	\N	\N
+271	6	103	\N	\N
 \.
 
 

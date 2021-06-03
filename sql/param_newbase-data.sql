@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.6
+-- Dumped by pg_dump version 13.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -2896,6 +2896,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 3761	270	200	200	1	0	\N	\N
 3762	270	201	201	1	0	\N	\N
 3763	270	510	265	1	0	\N	\N
+4306	240	1430	12888	1	0	\N	\N
 3765	270	223	268	1	0	\N	\N
 3766	270	224	269	1	0	\N	\N
 3767	270	554	270	1	0	\N	\N
@@ -3226,7 +3227,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 -- Name: param_newbase_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_id_seq', 4305, true);
+SELECT pg_catalog.setval('public.param_newbase_id_seq', 4306, true);
 
 
 --

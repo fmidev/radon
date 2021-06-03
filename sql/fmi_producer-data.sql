@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.6
+-- Dumped by pg_dump version 13.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -120,6 +120,8 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 502	NWCSAF	NWCSAF satellite products	1	\N	\N	2
 503	NWCSAFMTA	NWCSAF post processed products	1	\N	\N	2
 152	HELMI	Helmi jäämalli	1	wetodb	2020-05-06 06:48:51	2
+271	MNWCMTADEV	MEPS Nowcasting post processed fields development version	1	\N	\N	1
+282	SMARTMETNWCDEV	SmartMet producer with nowcasting applied development version	1	\N	\N	1
 \.
 
 

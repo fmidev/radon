@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 12.6
+-- Dumped by pg_dump version 13.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -92,6 +92,8 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 80	134	152	98	radon_admin	2021-05-11 08:47:40.056464+00
 28	132	215	98	wetodb	2019-06-11 09:08:14.635523+00
 83	4	0	251	wetodb	2020-02-04 09:33:05.510264+00
+120	271	208	86	\N	\N
+121	282	203	86	\N	\N
 \.
 
 
@@ -99,7 +101,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.producer_grib_id_seq', 119, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 121, true);
 
 
 --
