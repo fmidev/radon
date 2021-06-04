@@ -87,6 +87,7 @@ for f in producer_class producer_class-data \
 	projection projection-data \
 	forecast_type forecast_type-data \
 	earth_shape earth_shape-data \
+	datum datum-data \
 	geom geom-data \
 	geom_latitude_longitude geom_latitude_longitude-data \
 	geom_rotated_latitude_longitude geom_rotated_latitude_longitude-data \
