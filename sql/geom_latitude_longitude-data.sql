@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -72,6 +72,7 @@ COPY public.geom_latitude_longitude (id, name, ni, nj, first_point, di, dj, scan
 1101	NEMO801738	801	738	0101000020E610000069FE98D6A6F11F404ED1915CFECF4A40	0.027778	0.016666	+x+y	FMI NEMO Model	\N	\N	\N	\N
 1106	ECMOSEUR0100	651	466	0101000020E610000000000000000039C00000000000005240	0.1	0.1	+x-y	MOS ECMWF Europe archive data in 0.1 deg resolution	\N	\N	\N	\N
 1105	ECMOSEUR0125	520	372	0101000020E610000000000000000039C00000000000005240	0.125	0.125	+x-y	MOS ECMWF Europe archive data in 0.125 deg resolution	\N	\N	\N	\N
+1114	GEM0150	2400	1201	0101000020E6100000000000000080664000000000008056C0	0.15	0.15	+x+y	Canadian global 0.15 degree resolution forecas	\N	\N	\N	\N
 \.
 
 

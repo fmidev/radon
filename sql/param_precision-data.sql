@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -278,6 +278,8 @@ COPY public.param_precision (id, param_id, "precision", last_updater, last_updat
 368	1212	3	\N	\N
 369	1213	3	\N	\N
 370	1214	3	\N	\N
+371	750	1	\N	\N
+372	1435	4	\N	\N
 \.
 
 
@@ -285,7 +287,7 @@ COPY public.param_precision (id, param_id, "precision", last_updater, last_updat
 -- Name: param_precision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_precision_id_seq', 370, true);
+SELECT pg_catalog.setval('public.param_precision_id_seq', 372, true);
 
 
 --

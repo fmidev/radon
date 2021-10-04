@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1318,6 +1318,11 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1428	NWCSAF_CTTH_QC-N	1	69	1	cloud top (CTTH) quality control flag in NWCSAF products	\N	\N
 1048	CLDTYPE-N	1	28	2	Cloud type	wetodb	2021-05-03 06:30:35
 1430	RADGLOC-WM2	1	12	1	Global radiation clear-sky	\N	\N
+1431	RAIL-N	1	30	2	Rail traffic condition	\N	\N
+1432	RADLWCA-JM2	1	83	1	Surface thermal radiation downward clear-sky	\N	\N
+1433	RADLWC-WM2	1	83	1	Surface thermal radiation downward clear-sky	\N	\N
+1434	RAIL-MEAN-N	1	30	2	Rail traffic condition probability	\N	\N
+1435	POP-0TO1	1	62	1	Probability of precipitation	\N	\N
 \.
 
 
@@ -1325,7 +1330,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1430, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1435, true);
 
 
 --

@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -672,6 +672,9 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 1026	282	1182	0	19	192	\N	\N	\N	\N	-1
 1027	282	439	0	19	195	\N	\N	\N	\N	-1
 1028	281	439	0	19	195	\N	\N	\N	\N	-1
+1029	240	1431	0	192	4	\N	\N	\N	\N	-1
+1030	260	1431	0	192	4	\N	\N	\N	\N	-1
+1031	243	1431	0	192	4	\N	\N	\N	\N	-1
 \.
 
 
@@ -679,7 +682,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 -- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib2_id_seq', 1028, true);
+SELECT pg_catalog.setval('public.param_grib2_id_seq', 1031, true);
 
 
 --

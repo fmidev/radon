@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped by pg_dump version 12.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -921,7 +921,9 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 1034	210	443	203	60	0	\N	\N	\N	\N
 1035	240	443	203	60	0	\N	\N	\N	\N
 3596	260	407	203	163	0	\N	\N	\N	\N
+3996	131	1432	228	130	0	\N	\N	\N	\N
 3985	134	314	128	176	0	\N	\N	wetodb	2020-07-22 08:42:01.687909+00
+3997	240	1433	203	6	0	\N	\N	\N	\N
 3556	4	328	253	201	0	\N	\N	wetodb	2017-08-09 08:22:30.165705+00
 3611	4	324	253	181	0	\N	\N	wetodb	2017-08-09 08:23:02.774036+00
 3610	4	52	253	58	0	\N	\N	wetodb	2017-08-09 08:24:29.669985+00
@@ -2146,6 +2148,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 3443	199	692	253	181	0	3	\N	\N	\N
 3444	210	219	203	46	0	\N	\N	\N	\N
 3733	131	1415	228	26	2	\N	\N	wetodb	2020-10-14 09:35:10.651099+00
+3998	242	1434	207	244	0	\N	\N	\N	\N
 3447	210	719	203	137	0	\N	\N	\N	\N
 3449	210	975	203	162	0	\N	\N	\N	\N
 3450	230	975	203	162	0	\N	\N	\N	\N
@@ -2211,7 +2214,6 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 3880	122	738	128	201	2	\N	\N	wetodb	2019-09-03 11:06:25.044726+00
 3881	122	739	128	202	2	\N	\N	wetodb	2019-09-03 11:06:25.044726+00
 3933	134	1286	128	172	1	1	0	\N	\N
-3934	134	411	228	29	1	1	0	\N	\N
 3938	134	318	128	169	10	\N	\N	\N	\N
 3947	134	974	128	188	0	\N	\N	\N	\N
 3940	242	1288	207	237	0	\N	\N	\N	\N
@@ -2255,6 +2257,8 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 2243	240	1374	203	127	0	\N	\N	wetodb	2020-05-07 06:19:07.619053+00
 3671	230	1379	203	234	0	\N	\N	wetodb	2020-05-07 06:19:07.619053+00
 3672	240	1379	203	234	0	\N	\N	wetodb	2020-05-07 06:19:07.619053+00
+3999	134	1417	228	27	2	\N	\N	wetodb	2021-09-30 07:21:22.902643+00
+4000	134	1418	128	122	2	\N	\N	wetodb	2021-09-30 07:21:22.902643+00
 \.
 
 
@@ -2262,7 +2266,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 -- Name: param_grib1_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib1_id_seq', 3995, true);
+SELECT pg_catalog.setval('public.param_grib1_id_seq', 4000, true);
 
 
 --
