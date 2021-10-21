@@ -39,6 +39,8 @@ CREATE TABLE public.geom_stereographic (
     last_updated timestamp with time zone,
     earth_shape_id integer,
     datum_id integer,
+    latin numeric NOT NULL DEFAULT 90,
+    lat_ts numeric,
     CONSTRAINT geom_stereographic_datum_chk CHECK (((datum_id IS NULL) OR ((datum_id IS NOT NULL) AND (earth_shape_id IS NULL)))),
     CONSTRAINT geom_stereographic_scanning_mode_chk CHECK ((scanning_mode = ANY (ARRAY['+x+y'::text, '+x-y'::text])))
 );
