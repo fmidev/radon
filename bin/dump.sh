@@ -55,7 +55,7 @@ done
 
 # functions
 
-for f in if_modified_func store_last_updated_f param_grib1_duplicate_check_f param_grib2_duplicate_check_f table_meta_producer_class_id_f; do
+for f in if_modified_func store_last_updated_f param_grib1_duplicate_check_f param_grib2_duplicate_check_f ss_forecast_status_duplicate_check_f table_meta_producer_class_id_f; do
   echo "function: $f"
   sql="SELECT pg_get_functiondef(f.oid) FROM pg_catalog.pg_proc f INNER JOIN pg_catalog.pg_namespace n ON (f.pronamespace = n.oid) WHERE n.nspname IN ('public','audit') AND proname IN ('$f')"
   echo $sql | psql $PSQL_ARGS > $f.sql
