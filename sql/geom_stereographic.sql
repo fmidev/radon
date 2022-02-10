@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -39,7 +39,7 @@ CREATE TABLE public.geom_stereographic (
     last_updated timestamp with time zone,
     earth_shape_id integer,
     datum_id integer,
-    latin numeric NOT NULL DEFAULT 90,
+    latin numeric DEFAULT 90 NOT NULL,
     lat_ts numeric,
     CONSTRAINT geom_stereographic_datum_chk CHECK (((datum_id IS NULL) OR ((datum_id IS NOT NULL) AND (earth_shape_id IS NULL)))),
     CONSTRAINT geom_stereographic_scanning_mode_chk CHECK ((scanning_mode = ANY (ARRAY['+x+y'::text, '+x-y'::text])))
@@ -128,7 +128,6 @@ ALTER TABLE ONLY public.geom_stereographic
 -- Name: TABLE geom_stereographic; Type: ACL; Schema: public; Owner: radon_admin
 --
 
-GRANT INSERT,DELETE,UPDATE ON TABLE public.geom_stereographic TO radon_rw;
 GRANT SELECT ON TABLE public.geom_stereographic TO radon_ro;
 
 

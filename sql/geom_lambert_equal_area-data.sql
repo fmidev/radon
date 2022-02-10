@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -22,7 +22,7 @@ SET row_security = off;
 
 COPY public.geom_lambert_equal_area (id, name, ni, nj, first_point, di, dj, scanning_mode, orientation, latin, description, last_updater, last_updated, earth_shape_id, datum_id) FROM stdin;
 1103	OPERAEUROPE	1900	2200	0101000020E6100000D6E253008C9F43C00D71AC8BDBC85040	2000.1432	2000.1356	+x-y	10	52	Europe area for OPERA radar network	\N	\N	\N	\N
-1111	DIWEUROPE	4102	2721	0101000020E61000001100B950FBF452C08B04094092F84840	2019.755468	2019.755468	+x-y	10	52	Europe area for DIW	\N	\N	5	\N
+1111	DIWEUROPE	2000	1250	0101000020E61000008BC54EFC413747C015081246F9DF4E40	2428.255908	3373.962919	+x-y	10	52	Europe area for DIW	\N	\N	5	\N
 \.
 
 

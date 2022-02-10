@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -54,7 +54,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 53	1	1	\N	\N
 118	1	1	\N	\N
 109	1	1	\N	\N
-103	1	1	\N	\N
 50	1	1	\N	\N
 51	1	1	\N	\N
 107	5	8	\N	\N
@@ -62,7 +61,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 53	5	8	\N	\N
 118	5	8	\N	\N
 109	5	8	\N	\N
-103	5	8	\N	\N
 50	5	8	\N	\N
 51	5	8	\N	\N
 107	6	105	\N	\N
@@ -70,7 +68,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 53	6	105	\N	\N
 118	6	105	\N	\N
 109	6	105	\N	\N
-103	6	105	\N	\N
 50	6	105	\N	\N
 51	6	105	\N	\N
 107	4	103	\N	\N
@@ -78,7 +75,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 53	4	103	\N	\N
 118	4	103	\N	\N
 109	4	103	\N	\N
-103	4	103	\N	\N
 50	4	103	\N	\N
 51	4	103	\N	\N
 107	7	102	\N	\N
@@ -86,7 +82,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 53	7	102	\N	\N
 118	7	102	\N	\N
 109	7	102	\N	\N
-103	7	102	\N	\N
 50	7	102	\N	\N
 51	7	102	\N	\N
 107	2	100	\N	\N
@@ -94,7 +89,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 53	2	100	\N	\N
 118	2	100	\N	\N
 109	2	100	\N	\N
-103	2	100	\N	\N
 50	2	100	\N	\N
 51	2	100	\N	\N
 131	2	100	\N	\N
@@ -287,6 +281,7 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 199	2	100	\N	\N
 49	6	105	\N	\N
 134	1	1	wetodb	2016-05-19 11:35:26.54645+00
+134	9	112	\N	\N
 \.
 
 

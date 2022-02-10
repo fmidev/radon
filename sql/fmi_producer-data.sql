@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -51,7 +51,6 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 136	ECGERA5	ECMWF global ERA 5 reanalysis	1	wetodb	2018-02-28 14:55:23	1
 270	MNWCMTA	MEPS Nowcasting post processed fields	1	\N	\N	1
 109	LAPSSCAN	LAPS analysis for Scandinavian area	1	wetodb	2018-02-19 08:45:42	2
-103	LAPS	Finnish LAPS analysis	1	postgres	2016-05-26 08:49:27	2
 105	MTLICE	Jääeditori	1	postgres	2017-05-02 05:34:04	1
 101	MESAN	FMI Meso Analysis project products	1	wetodb	2017-12-05 10:42:25	1
 131	ECG	ECMWF global deterministic weather model	1	postgres	2016-10-25 11:44:23	1
@@ -122,6 +121,9 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 152	HELMI	Helmi jäämalli	1	wetodb	2020-05-06 06:48:51	2
 271	MNWCMTADEV	MEPS Nowcasting post processed fields development version	1	\N	\N	1
 282	SMARTMETNWCDEV	SmartMet producer with nowcasting applied development version	1	\N	\N	1
+290	CLOUDCAST	Cloudcast NWC model	1	\N	\N	1
+504	NWCSAF_POLAR	NWCSAF polar orbiting satellite products	1	\N	\N	2
+505	NWCSAFMTA_POLAR	NWCSAF polar orbiting satellite post processed products	1	\N	\N	2
 \.
 
 

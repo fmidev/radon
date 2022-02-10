@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -33,7 +33,6 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 97	243	243	86	\N	\N
 12	101	101	86	\N	\N
 13	102	102	86	\N	\N
-14	103	103	86	\N	\N
 40	250	250	86	\N	\N
 16	105	11	86	\N	\N
 17	106	106	86	\N	\N
@@ -87,13 +86,14 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 117	265	211	86	\N	\N
 114	281	202	86	\N	\N
 113	189	189	88	wetodb	2018-09-20 10:00:52.201369+00
-29	133	117	98	radon_admin	2021-05-11 08:47:40.056464+00
-27	131	152	98	radon_admin	2021-05-11 08:47:40.056464+00
-80	134	152	98	radon_admin	2021-05-11 08:47:40.056464+00
 28	132	215	98	wetodb	2019-06-11 09:08:14.635523+00
 83	4	0	251	wetodb	2020-02-04 09:33:05.510264+00
 120	271	208	86	\N	\N
 121	282	203	86	\N	\N
+29	133	118	98	postgres	2021-10-12 09:50:08.923276+00
+27	131	153	98	postgres	2021-10-12 09:50:08.923276+00
+80	134	153	98	postgres	2021-10-12 09:50:08.923276+00
+122	290	251	86	radon_admin	2021-12-10 05:59:35.157977+00
 \.
 
 
@@ -101,7 +101,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.producer_grib_id_seq', 121, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 122, true);
 
 
 --

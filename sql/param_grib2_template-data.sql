@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 12.6
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -607,7 +607,6 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1260	0	202	45	\N	\N	-1
 1261	0	202	46	\N	\N	-1
 1270	0	202	50	\N	\N	-1
-1073	10	3	0	\N	\N	-1
 1296	0	202	61	\N	\N	-1
 1271	0	202	51	\N	\N	-1
 1272	0	202	52	\N	\N	-1
@@ -670,6 +669,9 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 181	0	1	210	1	\N	1
 1434	0	202	83	\N	\N	-1
 1435	1	1	192	\N	\N	-1
+370	0	1	18	\N	\N	-1
+314	0	4	9	\N	\N	-1
+431	10	3	0	\N	\N	-1
 \.
 
 

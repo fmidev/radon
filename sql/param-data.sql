@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 12.6
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -221,7 +221,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 204	FRNTSYM-N	1	30	1	Front Symbol	\N	\N
 1170	PM25-UGM3	1	65	1	PM25 concentration	\N	\N
 1230	SOT-WG-N	1	69	2	Shift Of Tails for wind gusts	\N	\N
-973	NM-0TO1	1	28	1	Middle Cloud Amount	wetodb	2019-03-26 06:06:51
 209	H-M	1	2	1	Cloud Height in  Meters	\N	\N
 210	CL-N	1	30	1	Low Cloud Type	\N	\N
 211	CM-N	1	30	1	Medium Cloud Type	\N	\N
@@ -437,7 +436,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 424	SO2-UGM3	1	65	1	Contents of Sulphur Dioxide	\N	\N
 425	AQI-N	1	30	1	FMI Air Quality Index	\N	\N
 426	VV-M	1	2	1	Visibility in Meters	\N	\N
-782	PROB-RAIN	1	28	1	Probability of precipitation form rain	\N	\N
+1084	ICNCT-0TO1	1	62	1	Ice concentration (proportion)	radon_admin	2022-02-10 05:51:38
 428	SUN-N	1	28	1	Sun on/off	\N	\N
 1031	FF-MEAN-MS	1	15	1	Mean wind speed	\N	\N
 1032	PROB-TW-4	1	6	1	Probability of reaching temperature 35 C in EPS	\N	\N
@@ -461,10 +460,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 761	F75-CAPE-JKG	1	77	1	75th fractal CAPE in EPS	\N	\N
 762	F90-CAPE-JKG	1	77	1	90th fractal CAPE in EPS	\N	\N
 763	F100-CAPE-JKG	1	77	1	100th fractal (ie. maximum) CAPE in EPS	\N	\N
-783	PROB-SNOW	1	28	1	Probability of precipitation form snow	\N	\N
-784	PROB-SLEET	1	28	1	Probability of precipitation form sleet	\N	\N
-785	PROB-DRIZZLE	1	28	1	Probability of precipitation form drizzle	\N	\N
-786	PROB-FRDRZZL	1	28	1	Probability of precipitation form freezing drizzle	\N	\N
 971	P-N	1	69	2	Pressure code	\N	\N
 999	ENSMEMB-N	1	69	2	Available ensemble member count	\N	\N
 449	DW-D	1	5	1	Mean wave direction at spectral peak in degrees	\N	\N
@@ -534,7 +529,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 513	PROJID-N	1	30	1	Projection type information	\N	\N
 514	GRORIENT-D	1	5	1	Grid orientation	\N	\N
 379	CAPE1040-JKG	1	77	1	Convective available potential energy, value of parameter when -40C < T < -10C	postgres	2016-09-22 15:53:04
-787	PROB-FRRAIN	1	28	1	Probability of precipitation form freezing rain	\N	\N
 788	F99-T-K	1	3	1	99th fractal temperature in EPS	\N	\N
 518	TSOIL-C	1	58	1	Soil temperature in Celcius	\N	\N
 519	TSOILD-C	1	58	1	Deep soil temperature in Celcius	\N	\N
@@ -587,10 +581,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 567	CLN2-N	1	64	1	Cloud Cover in 1/8ths of the second layer	\N	\N
 568	CLN3-N	1	64	1	Cloud Cover in 1/8ths of the third layer	\N	\N
 569	CLN4-N	1	64	1	Cloud Cover in 1/8ths of the fourth layer	\N	\N
-570	CLDTYP1-N	1	28	1	Cloud type for the lowest layer	\N	\N
-571	CLDTYP2-N	1	28	1	Cloud type for the second layer	\N	\N
-572	CLDTYP3-N	1	28	1	Cloud type for the third layer	\N	\N
-573	CLDTYP4-N	1	28	1	Cloud type for the fourth layer	\N	\N
 574	AVIVIS-M	1	2	1	Metar visibility in m	\N	\N
 575	VVERT-FT	1	82	1	Vertical visibility in feet	\N	\N
 576	CL1-FT	1	82	1	Height of the lowest cloud layer in feet	\N	\N
@@ -751,7 +741,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 792	F12.5-T-K	1	3	1	12.5th fractal temperature in EPS	\N	\N
 793	F5-T-K	1	3	1	5th fractal temperature in EPS	\N	\N
 794	F2.5-T-K	1	3	1	2.5th fractal temperature in EPS	\N	\N
-972	NL-0TO1	1	28	1	Low Cloud Amount	\N	\N
 796	F99-N-0TO1	1	62	1	99th fractal cloudiness in EPS	\N	\N
 797	F97.5-N-0TO1	1	62	1	97.5th fractal cloudiness in EPS	\N	\N
 798	F95-N-0TO1	1	62	1	95th fractal cloudiness in EPS	\N	\N
@@ -1011,7 +1000,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1054	CBTCU-FL	1	29	1	Estimated (max) TOP [FL] for CB/TCU clouds in the model	\N	\N
 739	TMIN12H-K	1	3	1	Minimum temperature from the preceeding 12 hours in Kelvin	\N	\N
 738	TMAX12H-K	1	3	1	Maximum temperature from the preceeding 12 hours in Kelvin	wetodb	2017-05-31 18:12:17
-1084	ICEC-0TO1	1	62	1	Ice proportion	\N	\N
 1085	UGWD-NM2S	1	78	1	Gravity wave stress U-component	\N	\N
 1086	VGWD-NM2S	1	78	1	Gravity wave stress V-component	\N	\N
 255	PROB-RR-5	1	6	1	Probability of reaching some precipitation threshold value	wetodb	2017-09-27 05:50:47
@@ -1090,7 +1078,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1386	FORESTCANOPY-PRCNT	1	6	1	Forest canopy opacity in percents	\N	\N
 1148	PROB-CBTCU-1	1	6	1	Probability of CB-clouds	\N	\N
 1198	PRECFORM4-N	1	69	2	Precipitation form, fourth version	\N	\N
-1162	PROB-FRPREC	1	28	1	Probability of freezing precitipation (rain or drizzle)	wetodb	2017-10-05 09:54:03
 1151	PROB-SN3-1	1	6	1	Probability of snowfall reaching some threshold value	\N	\N
 1152	PROB-SN3-2	1	6	1	Probability of snowfall reaching some threshold value	\N	\N
 1153	PROB-SN3-3	1	6	1	Probability of snowfall reaching some threshold value	\N	\N
@@ -1162,7 +1149,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1260	F90-RR-24-MM	1	18	1	90th fractal precipitation in EPS	\N	\N
 1261	F100-RR-24-MM	1	18	1	100th fractal precipitation in EPS	\N	\N
 1073	WTMP-K	1	3	1	Water temperature	wetodb	2019-03-04 06:53:57
-974	NH-0TO1	1	28	1	High Cloud Amount	wetodb	2019-03-26 06:06:51
 1264	LFC-LAST-HPA	1	21	1	Height of last LFC in hPa	\N	\N
 1265	PROB-FOG-1	1	6	1	Probability of fog	\N	\N
 1282	PROB-FLASH-AGG-1	1	6	1	Probability of flash (lightning), aggregated over area and/or time	\N	\N
@@ -1249,8 +1235,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1355	F90-RR-120-MM	1	10	1	90th fractal 120h total precipitation in EPS	\N	\N
 1356	F100-RR-120-MM	1	10	1	100th fractal 120h total precipitation in EPS	\N	\N
 1357	SD-TM2	1	91	1	Water equivalent of snow cover in m	\N	\N
-1358	PROB-FROST-1	1	28	1	Probability of frost	\N	\N
-1359	PROB-FROST-2	1	28	1	Probability of severe frost	\N	\N
 1360	PROB-POT-1	1	6	1	Probability of reaching POT of 1	\N	\N
 1361	PROB-POT-2	1	6	1	Probability of reaching POT of 30	\N	\N
 1362	PROB-POT-3	1	6	1	Probability of reaching POT of 60	\N	\N
@@ -1314,15 +1298,33 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1424	NWCSAF_CLDMASK-0OR1	1	28	2	Cloud mask in NWCSAF products	\N	\N
 1425	NWCSAF_CLDMASK_QC-N	1	69	2	Cloud mask quality control flag in NWCSAF products	\N	\N
 1426	CLDTOP-PA	1	89	1	Cloud top pressure	\N	\N
-1427	NWCSAF_EFFCLD-0TO1	1	28	1	NWCSAF effective cloudiness	\N	\N
 1428	NWCSAF_CTTH_QC-N	1	69	1	cloud top (CTTH) quality control flag in NWCSAF products	\N	\N
-1048	CLDTYPE-N	1	28	2	Cloud type	wetodb	2021-05-03 06:30:35
 1430	RADGLOC-WM2	1	12	1	Global radiation clear-sky	\N	\N
 1431	RAIL-N	1	30	2	Rail traffic condition	\N	\N
 1432	RADLWCA-JM2	1	83	1	Surface thermal radiation downward clear-sky	\N	\N
 1433	RADLWC-WM2	1	83	1	Surface thermal radiation downward clear-sky	\N	\N
 1434	RAIL-MEAN-N	1	30	2	Rail traffic condition probability	\N	\N
 1435	POP-0TO1	1	62	1	Probability of precipitation	\N	\N
+1436	CAT-M23S	1	96	1	Clear air turbulence	\N	\N
+1437	N2-0TO1	1	62	1	Cloudiness, alternative parameter	\N	\N
+1359	PROB-FROST-2	1	62	1	Probability of severe frost	radon_admin	2021-12-10 05:43:17
+1427	NWCSAF_EFFCLD-0TO1	1	62	1	NWCSAF effective cloudiness	radon_admin	2021-12-10 05:43:17
+1162	PROB-FRPREC	1	62	1	Probability of freezing precitipation (rain or drizzle)	radon_admin	2021-12-10 05:43:44
+973	NM-0TO1	1	62	1	Middle Cloud Amount	radon_admin	2021-12-10 05:43:17
+782	PROB-RAIN	1	62	1	Probability of precipitation form rain	radon_admin	2021-12-10 05:43:17
+783	PROB-SNOW	1	62	1	Probability of precipitation form snow	radon_admin	2021-12-10 05:43:17
+784	PROB-SLEET	1	62	1	Probability of precipitation form sleet	radon_admin	2021-12-10 05:43:17
+785	PROB-DRIZZLE	1	62	1	Probability of precipitation form drizzle	radon_admin	2021-12-10 05:43:17
+786	PROB-FRDRZZL	1	62	1	Probability of precipitation form freezing drizzle	radon_admin	2021-12-10 05:43:17
+787	PROB-FRRAIN	1	62	1	Probability of precipitation form freezing rain	radon_admin	2021-12-10 05:43:17
+972	NL-0TO1	1	62	1	Low Cloud Amount	radon_admin	2021-12-10 05:43:17
+974	NH-0TO1	1	62	1	High Cloud Amount	radon_admin	2021-12-10 05:43:17
+1358	PROB-FROST-1	1	62	1	Probability of frost	radon_admin	2021-12-10 05:43:17
+570	CLDTYP1-N	1	30	1	Cloud type for the lowest layer	radon_admin	2021-12-10 05:45:09
+571	CLDTYP2-N	1	30	1	Cloud type for the second layer	radon_admin	2021-12-10 05:45:09
+572	CLDTYP3-N	1	30	1	Cloud type for the third layer	radon_admin	2021-12-10 05:45:09
+573	CLDTYP4-N	1	30	1	Cloud type for the fourth layer	radon_admin	2021-12-10 05:45:09
+1048	CLDTYPE-N	1	30	2	Cloud type	radon_admin	2021-12-10 05:45:09
 \.
 
 
@@ -1330,7 +1332,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1435, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1437, true);
 
 
 --

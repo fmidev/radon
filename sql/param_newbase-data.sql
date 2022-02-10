@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 12.6
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -34,7 +34,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 123	53	162	10	1	0	postgres	2016-06-14 18:36:27.159057+00
 3267	240	330	4751	1	0	\N	\N
 16	102	139	1	1	0	\N	\N
-17	103	412	1	0.01	0	\N	\N
 1846	131	703	20417	1	0	\N	\N
 20	106	139	1	1	0	\N	\N
 2452	260	980	682	1	-273.15	postgres	2017-01-25 06:35:22.214769+00
@@ -57,7 +56,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 39	51	158	2	1	0	\N	\N
 1989	241	337	874	1	-273.15	\N	\N
 41	53	158	2	1	0	\N	\N
-42	103	158	2	1	0	\N	\N
 44	107	158	2	1	0	\N	\N
 3280	2027	154	4	1	0	wetodb	2018-02-22 08:20:57.364139+00
 3052	230	372	4730	1	0	\N	\N
@@ -71,7 +69,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 54	51	421	3	1	0	\N	\N
 1929	250	506	354	1	0	\N	\N
 3269	240	332	4754	1	0	\N	\N
-57	103	421	3	1	0	\N	\N
 58	107	421	3	1	0	\N	\N
 2613	210	501	316	1	0	\N	\N
 3208	181	153	4	1	-273.15	\N	\N
@@ -90,7 +87,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1931	53	214	5	1	-273.15	\N	\N
 75	101	153	4	1	-273.15	\N	\N
 76	102	153	4	1	-273.15	\N	\N
-77	103	154	4	1	-273.15	\N	\N
 2615	199	314	1162	1	0	\N	\N
 79	106	153	4	1	-273.15	\N	\N
 2455	151	432	61	1	0	\N	\N
@@ -137,7 +133,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1935	53	198	275	1	0	\N	\N
 3279	240	1199	634	1	0	wetodb	2018-01-08 12:38:17.39751+00
 125	102	161	10	1	-273.15	\N	\N
-126	103	161	10	1	0	\N	\N
 1840	240	701	12100	1	0	wetodb	2015-05-27 11:35:27.087763+00
 128	106	161	10	1	-273.15	\N	\N
 2465	113	471	187	1	0	\N	\N
@@ -156,7 +151,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 144	51	138	12	1	0	\N	\N
 1936	53	411	417	1	0	postgres	2016-06-15 17:26:32.396971+00
 146	53	138	12	1	0	\N	\N
-147	103	138	12	1	0	\N	\N
 1845	131	702	1210	1	0	\N	\N
 149	107	138	12	1	0	\N	\N
 1850	149	432	61	1	0	\N	\N
@@ -184,7 +178,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 165	53	163	13	1	0	\N	\N
 166	101	163	13	100	0	\N	\N
 167	102	163	13	100	0	\N	\N
-168	103	163	13	1	0	\N	\N
 1860	240	719	1225	1	0	\N	\N
 170	106	163	13	100	0	\N	\N
 171	107	163	13	1	0	\N	\N
@@ -224,7 +217,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 205	51	171	23	1	0	\N	\N
 3970	101	215	6	1	-273.15	\N	\N
 207	53	171	23	1	0	\N	\N
-208	103	171	23	1	0	\N	\N
 1852	149	278	1149	1	0	\N	\N
 210	107	171	23	1	0	\N	\N
 211	109	171	23	1	0	\N	\N
@@ -243,7 +235,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 225	51	174	24	1	0	\N	\N
 1203	101	1183	428	1	-273.15	wetodb	2017-12-27 09:49:49.904441+00
 227	53	174	24	1	0	\N	\N
-228	103	174	24	1	0	\N	\N
 1853	149	279	1150	1	0	\N	\N
 230	107	174	24	1	0	\N	\N
 231	109	174	24	1	0	\N	\N
@@ -272,7 +263,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 257	51	203	31	1	0	\N	\N
 1960	242	348	881	1	0	\N	\N
 259	53	203	31	1	0	\N	\N
-260	103	203	31	1	0	\N	\N
 261	107	203	31	1	0	\N	\N
 262	109	203	31	1	0	\N	\N
 3061	230	386	4734	1	0	\N	\N
@@ -283,7 +273,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 269	51	177	39	1	0	\N	\N
 1962	242	350	883	1	0	\N	\N
 271	53	177	39	1	0	\N	\N
-272	103	177	39	1	0	\N	\N
 1847	240	714	1216	1	0	\N	\N
 274	107	177	39	1	0	\N	\N
 275	109	177	39	1	0	\N	\N
@@ -297,7 +286,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 283	51	523	43	1000	0	\N	\N
 1963	242	351	884	1	0	\N	\N
 1964	242	352	885	1	0	\N	\N
-286	103	523	43	1000	0	\N	\N
 287	107	523	43	1000	0	\N	\N
 288	109	523	43	1000	0	\N	\N
 290	199	523	43	1000	0	\N	\N
@@ -316,7 +304,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 309	51	186	48	1	0	\N	\N
 1966	242	354	887	1	0	\N	\N
 311	53	186	48	1	0	\N	\N
-312	103	186	48	1	0	\N	\N
 314	107	186	48	1	0	\N	\N
 315	109	186	48	1	0	\N	\N
 3063	230	63	4735	1	0	\N	\N
@@ -372,7 +359,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1968	242	342	892	1	0	\N	\N
 372	101	2	57	1	0	\N	\N
 373	102	2	57	1	0	\N	\N
-374	103	2	57	1	0	\N	\N
 1857	149	718	51	1	0	\N	\N
 376	106	2	57	1	0	\N	\N
 377	107	2	57	1	0	\N	\N
@@ -393,7 +379,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 393	51	559	59	1	0	\N	\N
 1949	250	337	874	1	-273.15	\N	\N
 395	53	559	59	1	0	\N	\N
-396	103	559	59	1	0	\N	\N
 1858	149	304	1147	1	0	\N	\N
 398	107	559	59	1	0	\N	\N
 399	109	559	59	1	0	\N	\N
@@ -412,7 +397,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 413	51	63	66	1	0	\N	\N
 1951	250	339	872	1	-273.15	\N	\N
 415	53	63	66	1	0	\N	\N
-416	103	63	66	1	0	\N	\N
 418	107	63	66	1	0	\N	\N
 419	109	63	66	1	0	\N	\N
 3066	230	376	4727	1	0	\N	\N
@@ -420,7 +404,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 422	51	592	67	1	0	\N	\N
 1952	250	340	871	1	-273.15	\N	\N
 1969	242	343	893	1	0	\N	\N
-425	103	592	67	1	0	\N	\N
 426	107	592	67	1	0	\N	\N
 427	109	592	67	1	0	\N	\N
 3067	230	376	4737	1	0	\N	\N
@@ -444,7 +427,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 448	51	187	79	100	0	\N	\N
 2021	206	334	877	1	0	\N	\N
 450	53	187	79	100	0	\N	\N
-451	103	187	79	100	0	\N	\N
 453	107	187	79	100	0	\N	\N
 454	109	187	79	100	0	\N	\N
 457	160	438	79	100	0	\N	\N
@@ -478,7 +460,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 487	51	490	126	1	0	\N	\N
 1974	242	362	1110	1	0	\N	\N
 489	53	490	126	1	0	\N	\N
-490	103	490	126	1	0	\N	\N
 492	107	490	126	1	0	\N	\N
 493	109	490	126	1	0	\N	\N
 3070	230	379	4729	1	0	\N	\N
@@ -599,7 +580,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 626	51	509	264	1000	0	\N	\N
 2036	206	349	882	1	0	\N	\N
 2037	206	350	883	1	0	\N	\N
-629	103	509	264	1000	0	\N	\N
 1864	148	716	385	1	0	\N	\N
 631	107	509	264	1000	0	\N	\N
 632	109	509	264	1000	0	\N	\N
@@ -672,7 +652,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 708	51	654	276	1	0	\N	\N
 2052	206	365	1113	1	0	\N	\N
 710	53	654	276	1	0	\N	\N
-711	103	654	276	1	0	\N	\N
 1900	170	153	4	1	-273.15	\N	\N
 713	107	654	276	1	0	\N	\N
 714	109	654	276	1	0	\N	\N
@@ -718,7 +697,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 761	50	143	281	1	0	\N	\N
 762	51	143	281	1	0	\N	\N
 764	53	143	281	1	0	\N	\N
-765	103	143	281	1	0	\N	\N
 767	107	143	281	1	0	\N	\N
 768	109	143	281	1	0	\N	\N
 701	131	974	275	100	0	wetodb	2017-12-07 12:33:07.531094+00
@@ -802,7 +780,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2494	230	1026	1236	1	0	\N	\N
 858	101	499	312	1	0	\N	\N
 859	102	499	312	1	0	\N	\N
-860	103	499	312	1	0	\N	\N
 2663	2168	1041	1312	1	0	\N	\N
 862	106	499	312	1	0	\N	\N
 863	107	499	312	1	0	\N	\N
@@ -834,7 +811,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 895	53	500	315	1	0	\N	\N
 896	101	500	315	1	0	\N	\N
 897	102	500	315	1	0	\N	\N
-898	103	500	315	1	0	\N	\N
 1919	242	335	876	1	-273.15	\N	\N
 900	106	500	315	1	0	\N	\N
 901	107	500	315	1	0	\N	\N
@@ -852,7 +828,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 916	51	502	317	1	0	\N	\N
 919	101	502	317	1	0	\N	\N
 920	102	502	317	1	0	\N	\N
-921	103	502	317	1	0	\N	\N
 1918	242	334	877	1	-273.15	wetodb	2016-06-09 08:27:14.473644+00
 923	106	502	317	1	0	\N	\N
 924	107	502	317	1	0	\N	\N
@@ -875,7 +850,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 939	51	135	318	1	0	\N	\N
 2175	241	816	4521	1	0	\N	\N
 2176	241	817	4522	1	0	\N	\N
-942	103	135	318	1	0	\N	\N
 1908	170	196	273	1	0	\N	\N
 944	107	135	318	1	0	\N	\N
 945	109	135	318	1	0	\N	\N
@@ -954,7 +928,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1022	51	504	353	1	0	\N	\N
 2105	260	352	885	1	0	\N	\N
 2106	260	353	886	1	0	\N	\N
-1025	103	504	353	1	0	\N	\N
 1026	107	504	353	1	0	\N	\N
 3085	260	63	4735	1	0	\N	\N
 1029	160	504	353	1	0	\N	\N
@@ -969,7 +942,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1038	53	506	354	1	0	\N	\N
 1039	101	506	354	1	0	\N	\N
 1040	102	506	354	1	0	\N	\N
-1041	103	506	354	1	0	\N	\N
 1042	106	506	354	1	0	\N	\N
 1043	107	506	354	1	0	\N	\N
 1044	109	506	354	1	0	\N	\N
@@ -1080,7 +1052,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1158	51	426	407	1	0	\N	\N
 2129	135	781	781	1.0	0.0	\N	\N
 2179	241	365	1113	1	0	\N	\N
-1161	103	426	407	1	0	\N	\N
 2515	119	337	874	1	0	\N	\N
 1163	107	426	407	1	0	\N	\N
 1164	109	426	407	1	0	\N	\N
@@ -1091,7 +1062,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1169	51	209	414	1	0	\N	\N
 2516	119	344	894	1	0	\N	\N
 2517	111	447	165	1	0	\N	\N
-1172	103	209	414	1	0	\N	\N
 1173	107	209	414	1	0	\N	\N
 1174	109	209	414	1	0	\N	\N
 3089	260	376	4737	1	0	\N	\N
@@ -1158,7 +1128,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2136	241	340	871	1	-273.15	\N	\N
 2137	241	788	4500	1	-273.15	postgres	2016-12-05 14:13:57.801045+00
 2138	241	789	4501	1	-273.15	\N	\N
-1246	103	642	480	1	0	\N	\N
 1247	107	642	480	1	0	\N	\N
 1248	109	642	480	1	0	\N	\N
 3090	260	377	4728	1	0	\N	\N
@@ -2178,7 +2147,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 3222	181	195	2	1	0	\N	\N
 3223	181	1033	327	1	0	\N	\N
 3224	181	701	260	1	0	\N	\N
-3225	181	750	259	1	0	\N	\N
+4344	115	1392	1211	1	0	\N	\N
 3226	181	976	1226	1	0	\N	\N
 3878	240	327	47500	1	0	\N	\N
 3879	240	330	47510	1	0	\N	\N
@@ -2462,8 +2431,8 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 3234	280	20	271	1	0	\N	\N
 3235	181	188	80	1	0	\N	\N
 3236	181	442	22	1	0	\N	\N
-3237	181	502	317	1	0	\N	\N
-3238	181	500	315	1	0	\N	\N
+4345	115	1393	1212	1	0	\N	\N
+4346	115	1394	1213	1	0	\N	\N
 3239	181	441	353	1	0	\N	\N
 3240	242	950	4536	1	-273.15	\N	\N
 3241	242	951	4537	1	-273.15	\N	\N
@@ -3252,7 +3221,24 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4336	282	439	336	1	0	\N	\N
 4337	282	189	338	1	0	\N	\N
 4338	240	1433	319	1	0	\N	\N
-4339	242	1434	2924	1	0	\N	\N
+4347	115	1395	1214	1	0	\N	\N
+4340	280	1435	259	100	0	\N	\N
+4341	281	1435	259	100	0	\N	\N
+4342	280	500	315	1	0	\N	\N
+4343	280	502	317	1	0	\N	\N
+4339	242	1434	4924	1	0	radon_admin	2021-10-25 11:46:49.543113+00
+4348	131	1436	70	1	0	\N	\N
+4349	260	1434	4924	1	0	\N	\N
+4350	290	438	50000	100	0	\N	\N
+4351	290	1437	50001	100	0	\N	\N
+4352	504	220	1174	1	0	\N	\N
+4353	504	1424	1456	1	0	\N	\N
+4354	504	272	364	1	-273.15	\N	\N
+4355	504	1425	1457	1	0	\N	\N
+4356	504	1422	1458	1	0	\N	\N
+4357	504	1423	1459	1	0	\N	\N
+4358	504	1428	1461	1	0	\N	\N
+4359	504	1426	1460	0.01	0	\N	\N
 \.
 
 
@@ -3260,7 +3246,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 -- Name: param_newbase_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_id_seq', 4339, true);
+SELECT pg_catalog.setval('public.param_newbase_id_seq', 4359, true);
 
 
 --
