@@ -460,6 +460,10 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 761	F75-CAPE-JKG	1	77	1	75th fractal CAPE in EPS	\N	\N
 762	F90-CAPE-JKG	1	77	1	90th fractal CAPE in EPS	\N	\N
 763	F100-CAPE-JKG	1	77	1	100th fractal (ie. maximum) CAPE in EPS	\N	\N
+1438	SFINDEX-0TO1	1	62	1	Soaring flight index	\N	\N
+1439	TBINDEX-0TO1	1	62	1	Therma bird migration index	\N	\N
+1440	HWS1-M	1	2	1	Significant wave height of first swell in m	\N	\N
+1441	HWS2-M	1	2	1	Significant wave height of second swell in m	\N	\N
 971	P-N	1	69	2	Pressure code	\N	\N
 999	ENSMEMB-N	1	69	2	Available ensemble member count	\N	\N
 449	DW-D	1	5	1	Mean wave direction at spectral peak in degrees	\N	\N
@@ -529,6 +533,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 513	PROJID-N	1	30	1	Projection type information	\N	\N
 514	GRORIENT-D	1	5	1	Grid orientation	\N	\N
 379	CAPE1040-JKG	1	77	1	Convective available potential energy, value of parameter when -40C < T < -10C	postgres	2016-09-22 15:53:04
+1442	HWS3-M	1	2	1	Significant wave height of third swell in m	\N	\N
 788	F99-T-K	1	3	1	99th fractal temperature in EPS	\N	\N
 518	TSOIL-C	1	58	1	Soil temperature in Celcius	\N	\N
 519	TSOILD-C	1	58	1	Deep soil temperature in Celcius	\N	\N
@@ -581,6 +586,9 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 567	CLN2-N	1	64	1	Cloud Cover in 1/8ths of the second layer	\N	\N
 568	CLN3-N	1	64	1	Cloud Cover in 1/8ths of the third layer	\N	\N
 569	CLN4-N	1	64	1	Cloud Cover in 1/8ths of the fourth layer	\N	\N
+1443	DW1-D	1	5	1	Mean wave direction of first swell in degrees	\N	\N
+1444	DW2-D	1	5	1	Mean wave direction of second swell in degrees	\N	\N
+1445	DW3-D	1	5	1	Mean wave direction of third swell in degrees	\N	\N
 574	AVIVIS-M	1	2	1	Metar visibility in m	\N	\N
 575	VVERT-FT	1	82	1	Vertical visibility in feet	\N	\N
 576	CL1-FT	1	82	1	Height of the lowest cloud layer in feet	\N	\N
@@ -1078,6 +1086,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1386	FORESTCANOPY-PRCNT	1	6	1	Forest canopy opacity in percents	\N	\N
 1148	PROB-CBTCU-1	1	6	1	Probability of CB-clouds	\N	\N
 1198	PRECFORM4-N	1	69	2	Precipitation form, fourth version	\N	\N
+1446	POTMAX24H-PRCNT	1	6	1	Maximum probability of thunder in 24 hours	\N	\N
 1151	PROB-SN3-1	1	6	1	Probability of snowfall reaching some threshold value	\N	\N
 1152	PROB-SN3-2	1	6	1	Probability of snowfall reaching some threshold value	\N	\N
 1153	PROB-SN3-3	1	6	1	Probability of snowfall reaching some threshold value	\N	\N
@@ -1149,6 +1158,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1260	F90-RR-24-MM	1	18	1	90th fractal precipitation in EPS	\N	\N
 1261	F100-RR-24-MM	1	18	1	100th fractal precipitation in EPS	\N	\N
 1073	WTMP-K	1	3	1	Water temperature	wetodb	2019-03-04 06:53:57
+1447	FFG24H-MS	1	15	1	Wind gust speed in m/s, 24h period	\N	\N
 1264	LFC-LAST-HPA	1	21	1	Height of last LFC in hPa	\N	\N
 1265	PROB-FOG-1	1	6	1	Probability of fog	\N	\N
 1282	PROB-FLASH-AGG-1	1	6	1	Probability of flash (lightning), aggregated over area and/or time	\N	\N
@@ -1235,6 +1245,8 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1355	F90-RR-120-MM	1	10	1	90th fractal 120h total precipitation in EPS	\N	\N
 1356	F100-RR-120-MM	1	10	1	100th fractal 120h total precipitation in EPS	\N	\N
 1357	SD-TM2	1	91	1	Water equivalent of snow cover in m	\N	\N
+1448	FFG-DUR24H-H	1	59	1	Wind gust duration of gust over 16 m/s, 24h period	\N	\N
+1449	RAJUILMA-N	1	69	1	Severe thunderstorm potential	\N	\N
 1360	PROB-POT-1	1	6	1	Probability of reaching POT of 1	\N	\N
 1361	PROB-POT-2	1	6	1	Probability of reaching POT of 30	\N	\N
 1362	PROB-POT-3	1	6	1	Probability of reaching POT of 60	\N	\N
@@ -1292,7 +1304,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1409	WATLEV-STDDEV-N2000	1	63	1	Standard deviation of N2000 sea level height	wetodb	2020-10-05 14:55:51
 1410	WATLEV-MEAN-N2000	1	63	1	Mean N2000 sea level height	wetodb	2020-10-05 14:55:58
 1420	MAE-T-K	1	3	1	Mean absolute error for T-K	\N	\N
-1421	LC-N	1	64	2	Land cover from ESA Globcover2009 project	\N	\N
 1422	NWCSAF_CLDTYPE-N	1	69	2	Cloud type in NWCSAF products	\N	\N
 1423	NWCSAF_CLDTYPE_QC-N	1	69	2	Cloud type quality controlg flag in NWCSAF products	\N	\N
 1424	NWCSAF_CLDMASK-0OR1	1	28	2	Cloud mask in NWCSAF products	\N	\N
@@ -1307,6 +1318,9 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1435	POP-0TO1	1	62	1	Probability of precipitation	\N	\N
 1436	CAT-M23S	1	96	1	Clear air turbulence	\N	\N
 1437	N2-0TO1	1	62	1	Cloudiness, alternative parameter	\N	\N
+1421	LC-N	1	64	2	Land cover information using a code table for values	radon_admin	2022-03-11 06:52:59
+1450	H0C-LAST-M	1	2	1	Height of last 0 C level in meters	\N	\N
+1451	HM20C-LAST-M	1	2	1	Height of last -20 C level in meters	radon_admin	2022-05-20 05:19:46
 1359	PROB-FROST-2	1	62	1	Probability of severe frost	radon_admin	2021-12-10 05:43:17
 1427	NWCSAF_EFFCLD-0TO1	1	62	1	NWCSAF effective cloudiness	radon_admin	2021-12-10 05:43:17
 1162	PROB-FRPREC	1	62	1	Probability of freezing precitipation (rain or drizzle)	radon_admin	2021-12-10 05:43:44
@@ -1332,7 +1346,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1437, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1451, true);
 
 
 --

@@ -124,6 +124,8 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 290	CLOUDCAST	Cloudcast NWC model	1	\N	\N	1
 504	NWCSAF_POLAR	NWCSAF polar orbiting satellite products	1	\N	\N	2
 505	NWCSAFMTA_POLAR	NWCSAF polar orbiting satellite post processed products	1	\N	\N	2
+520	VIEWFINDER	Viewfinder digital elevation map	1	\N	\N	2
+521	GLOBCOVER	Global land cover map	1	\N	\N	2
 \.
 
 

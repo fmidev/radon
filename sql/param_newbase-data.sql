@@ -34,6 +34,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 123	53	162	10	1	0	postgres	2016-06-14 18:36:27.159057+00
 3267	240	330	4751	1	0	\N	\N
 16	102	139	1	1	0	\N	\N
+4360	260	1438	1177	1	0	\N	\N
 1846	131	703	20417	1	0	\N	\N
 20	106	139	1	1	0	\N	\N
 2452	260	980	682	1	-273.15	postgres	2017-01-25 06:35:22.214769+00
@@ -56,6 +57,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 39	51	158	2	1	0	\N	\N
 1989	241	337	874	1	-273.15	\N	\N
 41	53	158	2	1	0	\N	\N
+4361	260	1439	1178	1	0	\N	\N
 44	107	158	2	1	0	\N	\N
 3280	2027	154	4	1	0	wetodb	2018-02-22 08:20:57.364139+00
 3052	230	372	4730	1	0	\N	\N
@@ -3246,7 +3248,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 -- Name: param_newbase_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_id_seq', 4359, true);
+SELECT pg_catalog.setval('public.param_newbase_id_seq', 4361, true);
 
 
 --

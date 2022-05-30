@@ -45,6 +45,9 @@ COPY public.param_geotiff (id, producer_id, param_id, geotiff_name, last_updater
 23	504	1426	ctth_pres	\N	\N
 24	504	1427	ctth_effectiv	\N	\N
 25	504	1428	ctth_quality	\N	\N
+26	520	158	Z-M2S2	\N	\N
+27	521	1421	LC-N	\N	\N
+28	110	324	Precipitation intensity	\N	\N
 \.
 
 
@@ -52,7 +55,7 @@ COPY public.param_geotiff (id, producer_id, param_id, geotiff_name, last_updater
 -- Name: param_geotiff_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_geotiff_id_seq', 25, true);
+SELECT pg_catalog.setval('public.param_geotiff_id_seq', 28, true);
 
 
 --

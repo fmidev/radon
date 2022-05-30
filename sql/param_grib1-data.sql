@@ -374,6 +374,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 463	53	214	2	15	0	\N	\N	\N	\N
 3995	240	1430	203	5	0	\N	\N	\N	\N
 3498	206	980	207	103	0	\N	\N	\N	\N
+4009	133	1440	140	122	10	\N	\N	\N	\N
 467	50	214	2	15	0	\N	\N	\N	\N
 468	51	214	2	15	0	\N	\N	\N	\N
 3499	206	984	207	104	0	\N	\N	\N	\N
@@ -381,6 +382,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 471	53	506	2	61	0	\N	\N	\N	\N
 423	1	972	1	73	0	\N	\N	wetodb	2017-12-04 19:05:49.119777+00
 3500	134	186	128	143	0	1	\N	\N	\N
+4010	133	1441	140	125	10	\N	\N	\N	\N
 475	50	506	2	61	0	\N	\N	\N	\N
 476	51	506	2	61	0	\N	\N	\N	\N
 3501	242	1012	207	110	0	\N	\N	\N	\N
@@ -388,6 +390,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 479	53	412	2	2	0	7	0	\N	\N
 433	1	973	1	74	0	\N	\N	wetodb	2017-12-04 19:08:31.588232+00
 3502	242	1013	207	111	0	\N	\N	\N	\N
+4011	133	1442	140	128	10	\N	\N	\N	\N
 483	50	412	2	2	0	7	0	\N	\N
 484	51	412	2	2	0	7	0	\N	\N
 485	107	592	2	190	0	\N	\N	\N	\N
@@ -402,6 +405,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 495	53	138	2	51	0	\N	\N	\N	\N
 3741	250	355	203	207	0	\N	\N	\N	\N
 3742	250	361	203	201	10	\N	\N	\N	\N
+4012	133	1443	140	121	10	\N	\N	\N	\N
 499	50	138	2	51	0	\N	\N	\N	\N
 500	51	138	2	51	0	\N	\N	\N	\N
 501	107	421	2	8	0	\N	\N	\N	\N
@@ -409,6 +413,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 503	53	421	2	8	0	\N	\N	\N	\N
 3743	250	360	203	202	10	\N	\N	\N	\N
 505	109	421	2	8	0	\N	\N	\N	\N
+4013	133	1444	140	124	10	\N	\N	\N	\N
 507	50	421	2	8	0	\N	\N	\N	\N
 508	51	421	2	8	0	\N	\N	\N	\N
 509	107	559	2	157	0	\N	\N	\N	\N
@@ -416,17 +421,20 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 511	53	559	2	157	0	\N	\N	\N	\N
 3744	250	359	203	203	10	\N	\N	\N	\N
 513	109	559	2	157	0	\N	\N	\N	\N
+4014	133	1445	140	127	10	\N	\N	\N	\N
 515	50	559	2	157	0	\N	\N	\N	\N
 516	51	559	2	157	0	\N	\N	\N	\N
 3745	250	358	203	204	10	\N	\N	\N	\N
 2405	242	351	207	211	0	\N	\N	\N	\N
 519	53	502	2	117	0	\N	\N	\N	\N
 3746	250	357	203	205	10	\N	\N	\N	\N
+864	133	471	140	238	10	\N	\N	radon_admin	2022-04-20 08:12:57.410409+00
 523	50	502	2	117	0	\N	\N	\N	\N
 524	51	502	2	117	0	\N	\N	\N	\N
 525	107	163	2	52	0	\N	\N	\N	\N
 527	53	163	2	52	0	\N	\N	\N	\N
 529	109	163	2	52	0	\N	\N	\N	\N
+4017	242	1449	207	245	10	\N	\N	\N	\N
 531	50	163	2	52	0	\N	\N	\N	\N
 532	51	163	2	52	0	\N	\N	\N	\N
 477	107	139	2	2	0	7	0	postgres	2017-01-07 07:08:25.300066+00
@@ -434,6 +442,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 481	109	139	2	2	0	7	0	postgres	2017-01-07 07:08:25.300066+00
 3747	250	356	203	206	10	\N	\N	\N	\N
 3504	242	1015	207	113	0	\N	\N	\N	\N
+4018	242	1446	207	246	10	\N	\N	\N	\N
 539	50	186	2	63	0	\N	\N	\N	\N
 540	51	186	2	63	0	\N	\N	\N	\N
 541	107	135	2	118	0	\N	\N	\N	\N
@@ -441,6 +450,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 543	53	135	2	118	0	\N	\N	\N	\N
 3748	250	355	203	207	10	\N	\N	\N	\N
 545	109	135	2	118	0	\N	\N	\N	\N
+4019	240	1448	203	194	10	\N	\N	\N	\N
 547	50	135	2	118	0	\N	\N	\N	\N
 548	51	135	2	118	0	\N	\N	\N	\N
 3505	242	1016	207	114	0	\N	\N	\N	\N
@@ -448,6 +458,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 551	53	177	2	39	0	\N	\N	\N	\N
 3749	250	36	207	11	0	\N	\N	\N	\N
 3506	242	1017	207	115	0	\N	\N	\N	\N
+4016	240	1446	203	7	2	\N	\N	radon_admin	2022-04-27 12:33:03.667073+00
 555	50	177	2	39	0	\N	\N	\N	\N
 556	51	177	2	39	0	\N	\N	\N	\N
 3507	210	1027	203	11	0	\N	\N	\N	\N
@@ -455,6 +466,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 559	53	509	2	144	0	\N	\N	\N	\N
 3750	250	37	207	12	0	\N	\N	\N	\N
 3508	230	1027	203	11	0	\N	\N	\N	\N
+4020	240	1447	203	195	10	\N	\N	\N	\N
 563	50	509	2	144	0	\N	\N	\N	\N
 564	51	509	2	144	0	\N	\N	\N	\N
 565	107	171	2	33	0	\N	\N	\N	\N
@@ -720,7 +732,6 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 861	160	411	129	32	0	\N	\N	\N	\N
 862	160	438	129	71	0	\N	\N	\N	\N
 856	160	215	129	16	0	\N	\N	postgres	2017-01-10 18:52:59.296592+00
-864	133	471	140	238	0	\N	\N	\N	\N
 3536	210	976	203	139	0	\N	\N	\N	\N
 866	133	470	140	239	0	\N	\N	\N	\N
 3537	230	976	203	139	0	\N	\N	\N	\N
@@ -2231,7 +2242,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 -- Name: param_grib1_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib1_id_seq', 4008, true);
+SELECT pg_catalog.setval('public.param_grib1_id_seq', 4020, true);
 
 
 --

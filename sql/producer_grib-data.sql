@@ -33,6 +33,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 97	243	243	86	\N	\N
 12	101	101	86	\N	\N
 13	102	102	86	\N	\N
+102	10	1	251	radon_admin	2022-05-20 05:12:41.687007+00
 40	250	250	86	\N	\N
 16	105	11	86	\N	\N
 17	106	106	86	\N	\N
@@ -47,7 +48,6 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 26	119	119	86	\N	\N
 41	149	149	88	\N	\N
 96	121	121	86	wetodb	2017-05-29 11:04:22.044312+00
-102	10	2	251	wetodb	2019-09-30 06:36:20.269808+00
 30	150	150	86	\N	\N
 31	151	151	86	\N	\N
 32	152	152	86	\N	\N

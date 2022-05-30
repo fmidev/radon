@@ -672,6 +672,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 370	0	1	18	\N	\N	-1
 314	0	4	9	\N	\N	-1
 431	10	3	0	\N	\N	-1
+324	0	1	65	\N	\N	-1
 \.
 
 

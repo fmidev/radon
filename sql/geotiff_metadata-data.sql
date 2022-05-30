@@ -21,7 +21,6 @@ SET row_security = off;
 --
 
 COPY public.geotiff_metadata (id, producer_id, attribute, key, mask) FROM stdin;
-1	110	param_name	GDAL_METADATA	<Item name="Quantity" unit="mm">([A-Za-z ]*)</Item>
 2	110	missing_value	GDAL_METADATA	<Item name="Nodata">([0-9]*)</Item>
 3	110	valid_time	GDAL_METADATA	<Item name="Observation time" format="YYYYMMDDhhmm">([0-9]*)</Item>
 4	110	time_mask	GDAL_METADATA	<Item name="Observation time" format="([A-Za-z ]*)">
@@ -31,6 +30,7 @@ COPY public.geotiff_metadata (id, producer_id, attribute, key, mask) FROM stdin;
 6	115	missing_value		<Item name="Nodata">([0-9]*)</Item>
 7	115	valid_time		<Item name="Forecast start time" format="YYYYmmddHHMM">([0-9]*)</Item>
 11	115	time_mask		<Item name="Forecast start time" format="([A-Za-z]*)">
+1	110	param_name	GDAL_METADATA	<Item name="Quantity" unit="(?:mm|mm/h)">([A-Za-z ]*)</Item>
 \.
 
 
