@@ -134,7 +134,8 @@ for f in producer_class producer_class-data \
 	file_format-data \
 	file_protocol \
 	file_protocol-data \
-	grid_data_template previ_data_template; do
+	grid_data_template previ_data_template \
+	ss_forecast_status; do
 
   echo "file: $f.sql"
   psql $PSQL_ARGS -f $f.sql > /dev/null
