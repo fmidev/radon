@@ -1,6 +1,11 @@
 #!/bin/sh
 # function to dump database contents to files
 
+if [ -z "$PGPASSWORD" ] ; then
+  echo '$PGPASSWORD unset'
+  echo 'Set env variables $PGHOST $PGPORT $PGDATABASE $PGUSER $PGPASSWORD to direct dump to correct location'
+fi
+
 set -ue
 
 PSQL_ARGS="-v ON_ERROR_STOP=1 -Aqt"
