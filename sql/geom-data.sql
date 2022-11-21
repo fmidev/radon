@@ -190,6 +190,8 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 1112	MEPS1000D	5	\N	\N	\N
 1114	GEM0150	1	Canadian global 0.15 degree resolution forecast	\N	\N
 1116	DEMSCANDINAVIA00027	1	\N	\N	\N
+1117	WAMHKI	1	\N	\N	\N
+1119	WAM_BALMFC_ARCH	1	WAM BALMFC archipelago 0.5nm	\N	\N
 \.
 
 
@@ -197,7 +199,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1116, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1119, true);
 
 
 --

@@ -1008,6 +1008,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1054	CBTCU-FL	1	29	1	Estimated (max) TOP [FL] for CB/TCU clouds in the model	\N	\N
 739	TMIN12H-K	1	3	1	Minimum temperature from the preceeding 12 hours in Kelvin	\N	\N
 738	TMAX12H-K	1	3	1	Maximum temperature from the preceeding 12 hours in Kelvin	wetodb	2017-05-31 18:12:17
+1452	BC-UGM3	1	65	1	Black carbon concentration	\N	\N
 1085	UGWD-NM2S	1	78	1	Gravity wave stress U-component	\N	\N
 1086	VGWD-NM2S	1	78	1	Gravity wave stress V-component	\N	\N
 255	PROB-RR-5	1	6	1	Probability of reaching some precipitation threshold value	wetodb	2017-09-27 05:50:47
@@ -1319,8 +1320,17 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1436	CAT-M23S	1	96	1	Clear air turbulence	\N	\N
 1437	N2-0TO1	1	62	1	Cloudiness, alternative parameter	\N	\N
 1421	LC-N	1	64	2	Land cover information using a code table for values	radon_admin	2022-03-11 06:52:59
+1453	LDSA-UM2CM3	1	97	1	Lung deposited surface area (of particles)	\N	\N
+1454	POT-BIASC-PRCNT	1	6	1	Bias-corrected Probability of thunderstorms in prcnt	\N	\N
 1450	H0C-LAST-M	1	2	1	Height of last 0 C level in meters	\N	\N
+1455	TD-MEAN-K	1	3	1	Mean dewpoint temperature in Kelvins	\N	\N
 1451	HM20C-LAST-M	1	2	1	Height of last -20 C level in meters	radon_admin	2022-05-20 05:19:46
+1456	RNETSWA-MEAN-JM2	1	83	1	Mean net short wave radiation accumulation	\N	\N
+1457	F100-RNETSWA-JM2	1	83	1	100th fractal net short wave radiation accumulation	\N	\N
+1458	TD-STDDEV-K	1	3	1	Standard deviation of dewpoint temperature	\N	\N
+1459	RNETSWA-STDDEV-JM2	1	83	1	Standard deviation of net short wave radiation accumulation	\N	\N
+1460	ATMICEG-MS	1	15	1	Atmospheric ice growth	\N	\N
+1461	LLF-TOP-FL	1	29	1	Low level forecast cloud top height	\N	\N
 1359	PROB-FROST-2	1	62	1	Probability of severe frost	radon_admin	2021-12-10 05:43:17
 1427	NWCSAF_EFFCLD-0TO1	1	62	1	NWCSAF effective cloudiness	radon_admin	2021-12-10 05:43:17
 1162	PROB-FRPREC	1	62	1	Probability of freezing precitipation (rain or drizzle)	radon_admin	2021-12-10 05:43:44
@@ -1346,7 +1356,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1451, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1461, true);
 
 
 --

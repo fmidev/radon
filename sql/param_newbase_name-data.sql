@@ -118,6 +118,7 @@ COPY public.param_newbase_name (id, univ_id, name, last_updater, last_updated) F
 109	20	Wind Direction	\N	\N
 110	1177	Soaring Flight Index	\N	\N
 111	1178	Thermal Bird Migration Index	\N	\N
+112	1464	LLF Top hft-FL	\N	\N
 \.
 
 
@@ -125,7 +126,7 @@ COPY public.param_newbase_name (id, univ_id, name, last_updater, last_updated) F
 -- Name: param_newbase_name_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_name_id_seq', 111, true);
+SELECT pg_catalog.setval('public.param_newbase_name_id_seq', 112, true);
 
 
 --

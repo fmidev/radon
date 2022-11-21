@@ -280,6 +280,13 @@ COPY public.param_precision (id, param_id, "precision", last_updater, last_updat
 370	1214	3	\N	\N
 371	750	1	\N	\N
 372	1435	4	\N	\N
+373	1455	1	\N	\N
+374	1458	1	\N	\N
+376	1029	1	\N	\N
+377	1028	1	\N	\N
+378	139	0	\N	\N
+380	981	0	\N	\N
+379	983	1	\N	\N
 \.
 
 
@@ -287,7 +294,7 @@ COPY public.param_precision (id, param_id, "precision", last_updater, last_updat
 -- Name: param_precision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_precision_id_seq', 372, true);
+SELECT pg_catalog.setval('public.param_precision_id_seq', 380, true);
 
 
 --

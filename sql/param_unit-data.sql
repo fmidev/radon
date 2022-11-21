@@ -99,6 +99,7 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 95	dm	Desimeters	\N	\N
 96	m2/3 s-1	Qube root of eddy dissipation rate	\N	\N
 28	0or1	Binary 0 or 1	radon_admin	2021-12-10 05:42:04
+97	um2 cm-3	Square micrometers in cubic centimeter	\N	\N
 \.
 
 
@@ -106,7 +107,7 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 -- Name: param_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_unit_id_seq', 95, true);
+SELECT pg_catalog.setval('public.param_unit_id_seq', 96, true);
 
 
 --

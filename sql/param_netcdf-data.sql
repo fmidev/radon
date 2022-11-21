@@ -120,6 +120,20 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 111	147	303	uos	\N	\N	\N	\N
 112	147	304	vos	\N	\N	\N	\N
 114	147	1398	dTKE	\N	\N	\N	\N
+118	52	1452	cnc_BC	\N	\N	\N	\N
+119	52	1453	LDSA	\N	\N	\N	\N
+120	153	447	VHM0	\N	\N	\N	\N
+121	153	453	VTPK	\N	\N	\N	\N
+122	153	996	VPED	\N	\N	\N	\N
+123	153	469	VHM0_SW1	\N	\N	\N	\N
+124	153	470	VTM01_SW1	\N	\N	\N	\N
+125	153	471	VMDR_SW1	\N	\N	\N	\N
+126	154	447	VHM0	\N	\N	\N	\N
+127	154	453	VTPK	\N	\N	\N	\N
+128	154	996	VPED	\N	\N	\N	\N
+129	154	469	VHM0_SW1	\N	\N	\N	\N
+130	154	470	VTM01_SW1	\N	\N	\N	\N
+131	154	471	VMDR_SW1	\N	\N	\N	\N
 \.
 
 
@@ -127,7 +141,7 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 -- Name: param_netcdf_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_netcdf_id_seq', 117, true);
+SELECT pg_catalog.setval('public.param_netcdf_id_seq', 131, true);
 
 
 --
