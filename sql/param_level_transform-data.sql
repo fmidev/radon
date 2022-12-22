@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 14.0
--- Dumped by pg_dump version 14.1
+-- Dumped by pg_dump version 14.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -30,9 +30,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 111	181	139	7	\N	4	\N	\N	\N
 8	131	654	8	\N	6	\N	\N	\N
 9	131	187	1	\N	6	\N	\N	\N
-10	131	1	1	\N	6	\N	\N	\N
 11	131	153	1	0	6	2	wetodb	2018-09-07 09:13:11.514023+00
-12	131	689	1	\N	6	\N	\N	\N
 13	131	184	1	\N	6	\N	\N	\N
 14	131	186	1	\N	6	\N	\N	\N
 92	131	171	1	100	6	100	wetodb	2017-12-19 10:25:18.550634+00
@@ -102,11 +100,9 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 42	134	182	6	\N	1	\N	\N	\N
 43	134	182	1	\N	6	\N	\N	\N
 30	53	187	8	\N	6	\N	wetodb	2018-01-24 06:04:13.923746+00
-94	53	1	1	\N	6	\N	\N	\N
 96	53	139	1	\N	6	\N	\N	\N
 97	131	214	1	\N	6	\N	\N	\N
 98	131	215	1	\N	6	\N	\N	\N
-99	131	1	1	\N	6	\N	\N	\N
 100	131	139	1	\N	6	\N	\N	\N
 102	180	139	6	\N	4	\N	\N	\N
 117	53	196	8	\N	6	0	\N	\N

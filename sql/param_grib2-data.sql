@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 14.0
--- Dumped by pg_dump version 14.1
+-- Dumped by pg_dump version 14.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -41,13 +41,10 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 905	241	1307	0	202	23	\N	\N	\N	\N	-1
 20	53	510	0	1	12	\N	\N	\N	\N	-1
 565	280	1181	0	19	193	\N	\N	\N	\N	-1
-23	53	654	0	1	22	\N	\N	\N	\N	-1
-24	53	52	0	1	23	\N	\N	\N	\N	-1
 25	53	509	0	1	29	\N	\N	\N	\N	-1
 26	53	201	0	1	37	\N	\N	\N	\N	-1
 906	241	1309	0	202	26	\N	\N	\N	\N	-1
 28	53	49	0	1	64	\N	\N	\N	\N	-1
-29	53	654	0	1	83	\N	\N	\N	\N	-1
 381	119	38	0	2	232	\N	\N	\N	\N	-1
 31	53	201	0	1	196	\N	\N	\N	\N	-1
 907	241	1311	0	202	28	\N	\N	\N	\N	-1
@@ -69,10 +66,8 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 928	243	20	0	6	192	\N	\N	\N	\N	-1
 49	53	158	0	3	5	\N	\N	\N	\N	-1
 929	11	40	0	4	9	5	0	\N	\N	-1
-930	11	52	0	1	84	2	\N	\N	\N	-1
 52	53	498	0	4	0	\N	\N	\N	\N	-1
 53	53	40	0	4	1	\N	\N	\N	\N	-1
-931	11	52	0	1	84	3	\N	\N	\N	-1
 667	109	1225	0	192	0	\N	\N	\N	\N	-1
 56	53	498	0	4	9	\N	\N	\N	\N	-1
 57	53	612	0	4	51	\N	\N	\N	\N	-1
@@ -94,10 +89,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 73	53	187	0	6	7	\N	\N	\N	\N	-1
 937	11	324	0	1	65	6	0	\N	\N	-1
 75	53	209	0	6	13	\N	\N	\N	\N	-1
-76	53	583	0	6	17	\N	\N	\N	\N	-1
-77	53	654	0	6	18	\N	\N	\N	\N	-1
-78	53	52	0	6	19	\N	\N	\N	\N	-1
-79	53	583	0	6	20	\N	\N	\N	\N	-1
 80	53	187	0	6	22	\N	\N	\N	\N	-1
 81	53	187	0	6	32	\N	\N	\N	\N	-1
 938	11	325	0	1	200	\N	\N	\N	\N	1
@@ -119,8 +110,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 98	53	147	2	0	192	\N	\N	\N	\N	-1
 944	11	461	0	17	192	\N	\N	\N	\N	-1
 945	11	617	0	1	75	8	\N	\N	\N	-1
-946	11	654	0	1	83	2	\N	\N	\N	-1
-947	11	654	0	1	83	3	\N	\N	\N	-1
 383	119	226	0	2	234	\N	\N	\N	\N	-1
 441	121	681	0	1	230	\N	\N	\N	\N	-1
 442	121	682	0	1	231	\N	\N	\N	\N	-1
@@ -151,13 +140,10 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 131	47	184	0	1	9	\N	\N	\N	\N	-1
 923	241	1323	0	202	56	\N	\N	\N	\N	-1
 134	47	510	0	1	12	\N	\N	\N	\N	-1
-137	47	654	0	1	22	\N	\N	\N	\N	-1
-138	47	52	0	1	23	\N	\N	\N	\N	-1
 139	47	509	0	1	29	\N	\N	\N	\N	-1
 140	47	201	0	1	37	\N	\N	\N	\N	-1
 924	241	1321	0	202	54	\N	\N	\N	\N	-1
 142	47	49	0	1	64	\N	\N	\N	\N	-1
-143	47	654	0	1	83	\N	\N	\N	\N	-1
 925	241	1319	0	202	52	\N	\N	\N	\N	-1
 926	241	1318	0	202	51	\N	\N	\N	\N	-1
 927	241	1317	0	202	50	\N	\N	\N	\N	-1
@@ -194,10 +180,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 1010	281	189	0	19	194	\N	\N	\N	\N	-1
 180	47	187	0	6	7	\N	\N	\N	\N	-1
 182	47	209	0	6	13	\N	\N	\N	\N	-1
-183	47	583	0	6	17	\N	\N	\N	\N	-1
-184	47	654	0	6	18	\N	\N	\N	\N	-1
-185	47	52	0	6	19	\N	\N	\N	\N	-1
-186	47	583	0	6	20	\N	\N	\N	\N	-1
 187	47	187	0	6	22	\N	\N	\N	\N	-1
 188	47	187	0	6	32	\N	\N	\N	\N	-1
 496	260	1091	0	7	204	\N	\N	\N	\N	-1
@@ -208,11 +190,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 197	47	643	0	19	9	\N	\N	\N	\N	-1
 198	47	641	0	19	10	\N	\N	\N	\N	-1
 200	47	158	0	3	5	\N	\N	\N	\N	-1
-201	131	654	0	1	83	\N	\N	\N	\N	-1
 499	260	1033	192	201	55	\N	\N	\N	\N	-1
-203	131	52	0	1	84	\N	\N	\N	\N	-1
-204	131	654	0	1	22	\N	\N	\N	\N	-1
-205	131	52	0	1	23	\N	\N	\N	\N	-1
 206	131	201	0	1	37	\N	\N	\N	\N	-1
 652	10	979	0	4	7	\N	\N	wetodb	2019-03-26 06:30:06.980264+00	1
 209	131	268	0	6	2	\N	\N	\N	\N	-1
@@ -243,14 +221,10 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 268	131	187	0	6	7	\N	\N	\N	\N	-1
 969	243	1281	0	7	210	\N	\N	\N	\N	-1
 271	131	583	0	6	17	\N	\N	\N	\N	-1
-272	131	654	0	6	18	\N	\N	\N	\N	-1
-273	131	52	0	6	19	\N	\N	\N	\N	-1
-274	131	583	0	6	20	\N	\N	\N	\N	-1
 275	131	187	0	6	22	\N	\N	\N	\N	-1
 500	240	699	0	19	192	\N	\N	\N	\N	-1
 697	260	719	0	19	197	\N	\N	\N	\N	1
 280	131	544	0	14	0	\N	\N	\N	\N	-1
-504	230	375	0	7	194	\N	\N	\N	\N	-1
 283	131	644	0	19	8	\N	\N	\N	\N	-1
 284	131	643	0	19	9	\N	\N	\N	\N	-1
 285	131	641	0	19	10	\N	\N	\N	\N	-1
@@ -264,8 +238,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 339	170	216	2	3	18	\N	\N	postgres	2016-02-12 06:14:22.468939+00	-1
 654	10	317	0	5	4	\N	\N	wetodb	2019-03-26 06:30:06.980264+00	1
 676	260	1227	0	192	2	\N	\N	\N	\N	-1
-505	230	707	0	7	195	\N	\N	\N	\N	-1
-506	230	373	0	7	196	\N	\N	\N	\N	-1
 397	119	260	0	0	213	\N	\N	\N	\N	-1
 677	260	1225	0	192	0	\N	\N	\N	\N	-1
 672	107	1225	0	192	0	\N	\N	\N	\N	-1
@@ -274,7 +246,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 674	107	1226	0	192	1	\N	\N	\N	\N	-1
 675	107	1227	0	192	2	\N	\N	\N	\N	-1
 679	260	1228	0	192	3	\N	\N	\N	\N	-1
-364	53	199	0	19	1	\N	\N	\N	\N	-1
 327	170	179	0	1	52	\N	\N	wetodb	2019-06-17 13:43:34.46174+00	1
 893	220	441	0	1	52	\N	\N	\N	\N	2
 895	101	214	0	0	4	\N	\N	\N	\N	2
@@ -287,7 +258,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 403	119	980	0	0	221	\N	\N	\N	\N	-1
 404	119	982	0	0	222	\N	\N	\N	\N	-1
 405	210	774	0	19	0	\N	\N	\N	\N	-1
-406	230	774	0	19	0	\N	\N	\N	\N	-1
 407	240	774	0	19	0	\N	\N	\N	\N	-1
 408	260	774	0	19	0	\N	\N	\N	\N	-1
 384	119	1028	0	2	244	\N	\N	wetodb	2017-04-18 07:06:48.101389+00	-1
@@ -367,19 +337,9 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 487	260	386	0	7	202	\N	\N	\N	\N	-1
 488	240	412	0	3	0	\N	\N	\N	\N	-1
 634	260	1207	0	200	145	\N	\N	\N	\N	-1
-503	230	372	0	7	193	\N	\N	\N	\N	-1
-507	230	376	0	7	197	\N	\N	\N	\N	-1
 490	260	1030	0	2	192	\N	\N	wetodb	2017-08-19 10:19:50.183777+00	-1
 636	260	11	0	1	192	\N	\N	\N	\N	-1
 492	243	412	0	3	0	\N	\N	\N	\N	-1
-508	230	711	0	7	198	\N	\N	\N	\N	-1
-509	230	374	0	7	199	\N	\N	\N	\N	-1
-510	230	377	0	7	200	\N	\N	\N	\N	-1
-511	230	1089	0	7	205	\N	\N	\N	\N	-1
-512	230	1090	0	7	203	\N	\N	\N	\N	-1
-513	230	1091	0	7	204	\N	\N	\N	\N	-1
-514	230	379	0	7	201	\N	\N	\N	\N	-1
-515	230	386	0	7	202	\N	\N	\N	\N	-1
 516	240	175	0	2	192	\N	\N	\N	\N	-1
 477	260	372	0	7	235	\N	\N	wetodb	2017-09-26 08:07:17.56056+00	-1
 462	260	695	0	1	229	\N	\N	wetodb	2017-09-26 08:18:06.533177+00	-1
@@ -462,7 +422,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 632	270	1182	0	19	194	\N	\N	\N	\N	-1
 476	260	704	0	7	209	\N	\N	wetodb	2018-05-18 14:27:37.668544+00	-1
 608	270	704	0	7	209	\N	\N	wetodb	2018-05-18 14:27:37.668544+00	-1
-502	230	704	0	7	209	\N	\N	wetodb	2018-05-18 16:52:15.86482+00	-1
 681	260	164	0	6	199	\N	\N	\N	\N	-1
 749	260	1282	0	200	147	\N	\N	\N	\N	-1
 641	10	692	0	1	85	2	\N	wetodb	2019-05-06 06:23:14.205571+00	-1
@@ -487,7 +446,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 734	243	707	0	7	195	\N	\N	\N	\N	-1
 735	243	1090	0	7	203	\N	\N	\N	\N	-1
 736	243	1091	0	7	204	\N	\N	\N	\N	-1
-692	230	181	0	1	202	\N	\N	\N	\N	1
 693	240	181	0	1	202	\N	\N	\N	\N	1
 694	260	181	0	1	202	\N	\N	\N	\N	1
 737	243	1089	0	7	205	\N	\N	\N	\N	-1
@@ -510,7 +468,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 69	53	197	0	6	4	\N	\N	wetodb	2018-10-09 12:15:49.678093+00	0
 771	243	322	0	1	19	\N	\N	\N	\N	-1
 501	240	700	0	19	193	\N	\N	wetodb	2019-01-16 13:45:03.19835+00	-1
-688	230	700	0	19	193	\N	\N	wetodb	2019-01-16 13:45:03.19835+00	-1
 649	10	319	0	4	9	8	0	wetodb	2019-03-26 06:30:06.980264+00	1
 738	243	711	0	7	198	\N	\N	\N	\N	-1
 691	261	700	0	19	193	\N	\N	wetodb	2019-01-16 13:45:03.19835+00	-1
@@ -520,7 +477,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 726	4	767	0	1	86	3	\N	wetodb	2019-05-06 06:19:52.745358+00	-1
 750	4	767	0	1	86	2	\N	\N	\N	-1
 682	4	692	0	1	85	2	\N	wetodb	2019-05-06 06:23:14.205571+00	-1
-705	230	322	0	1	197	\N	\N	\N	\N	-1
 706	240	322	0	1	197	\N	\N	\N	\N	-1
 740	243	377	0	7	200	\N	\N	\N	\N	-1
 741	243	379	0	7	201	\N	\N	\N	\N	-1
@@ -540,13 +496,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 709	270	322	0	1	19	\N	\N	wetodb	2019-01-18 04:51:12.156458+00	-1
 708	261	322	0	1	19	\N	\N	wetodb	2019-01-18 04:51:12.156458+00	-1
 718	4	40	0	4	9	5	0	wetodb	2019-04-30 06:00:44.130123+00	-1
-751	4	654	0	1	83	2	\N	\N	\N	-1
-752	4	654	0	1	83	3	\N	\N	\N	-1
-753	10	654	0	1	83	2	\N	\N	\N	-1
-754	10	654	0	1	83	3	\N	\N	\N	-1
-755	4	52	0	1	84	2	\N	\N	\N	-1
-756	4	52	0	1	84	3	\N	\N	\N	-1
-757	10	52	0	1	84	2	\N	\N	\N	-1
 725	4	693	0	1	75	3	\N	\N	\N	-1
 702	4	314	0	4	9	6	0	wetodb	2019-04-30 06:00:44.130123+00	1
 700	4	319	0	4	9	5	0	wetodb	2019-04-30 06:00:44.130123+00	1
@@ -555,7 +504,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 714	4	979	0	4	7	5	0	wetodb	2019-04-30 06:00:44.130123+00	1
 715	4	979	0	4	7	6	0	wetodb	2019-04-30 06:00:44.130123+00	1
 723	4	317	0	5	4	\N	\N	wetodb	2019-04-30 06:00:44.130123+00	1
-758	10	52	0	1	84	3	\N	\N	\N	-1
 720	4	973	0	6	195	\N	\N	wetodb	2019-04-30 06:00:44.130123+00	-1
 719	4	972	0	6	194	\N	\N	wetodb	2019-04-30 06:00:44.130123+00	-1
 685	4	769	0	1	192	\N	\N	wetodb	2019-04-30 06:00:44.130123+00	-1
@@ -577,7 +525,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 768	4	438	0	6	192	3	\N	\N	\N	-1
 852	7	438	0	6	192	6	0	\N	\N	-1
 853	7	501	0	4	7	\N	\N	\N	\N	-1
-854	7	52	0	1	84	3	\N	\N	\N	-1
 855	7	328	0	1	32	2	\N	\N	\N	-1
 856	7	324	0	1	65	6	0	\N	\N	-1
 857	7	40	0	4	9	5	0	\N	\N	-1
@@ -586,7 +533,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 861	7	316	0	5	5	6	0	\N	\N	1
 862	7	406	0	1	194	\N	\N	\N	\N	-1
 863	7	320	0	5	5	5	0	\N	\N	1
-864	7	654	0	1	83	2	\N	\N	\N	-1
 865	7	767	0	1	86	2	\N	\N	\N	-1
 866	7	979	0	4	7	6	0	\N	\N	1
 867	7	617	0	1	75	8	\N	\N	\N	-1
@@ -606,19 +552,16 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 880	7	500	0	5	4	\N	\N	\N	\N	-1
 881	7	314	0	4	9	6	0	\N	\N	1
 882	7	769	0	1	192	\N	\N	\N	\N	-1
-884	7	52	0	1	84	2	\N	\N	\N	-1
 885	7	693	0	1	32	3	\N	\N	\N	-1
 886	7	1062	0	19	198	\N	\N	\N	\N	-1
 887	7	974	0	6	196	\N	\N	\N	\N	-1
 888	7	325	0	1	200	\N	\N	\N	\N	1
-889	7	654	0	1	83	3	\N	\N	\N	-1
 890	7	1063	0	19	199	\N	\N	\N	\N	-1
 891	7	438	0	6	192	3	\N	\N	\N	-1
 967	243	774	0	19	0	\N	\N	\N	\N	-1
 968	4	1035	0	1	61	\N	\N	\N	\N	0
 973	104	1381	2	0	192	\N	\N	\N	\N	-1
 971	240	329	0	0	192	\N	\N	\N	\N	-1
-972	230	329	0	0	192	\N	\N	\N	\N	-1
 974	104	1382	2	0	193	\N	\N	\N	\N	-1
 975	104	1383	2	0	194	\N	\N	\N	\N	-1
 976	104	1385	2	0	195	\N	\N	\N	\N	-1
@@ -723,8 +666,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 1082	120	1200	0	19	198	\N	\N	\N	\N	-1
 1083	120	971	0	3	193	\N	\N	\N	\N	-1
 1086	4	1460	0	1	205	3	\N	\N	\N	-1
-1088	8	52	0	1	84	2	\N	\N	\N	-1
-1089	8	52	0	1	84	3	\N	\N	\N	-1
 1090	8	314	0	4	9	6	0	\N	\N	1
 1091	8	316	0	5	5	6	0	\N	\N	1
 1092	8	317	0	5	4	\N	\N	\N	\N	1
@@ -741,8 +682,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 1103	8	500	0	5	4	\N	\N	\N	\N	-1
 1104	8	501	0	4	7	\N	\N	\N	\N	-1
 1105	8	617	0	1	75	8	\N	\N	\N	-1
-1106	8	654	0	1	83	2	\N	\N	\N	-1
-1107	8	654	0	1	83	3	\N	\N	\N	-1
 1108	8	655	0	19	3	\N	\N	\N	\N	-1
 1109	8	659	0	2	199	\N	\N	\N	\N	1
 1110	8	660	0	2	198	\N	\N	\N	\N	1
@@ -919,6 +858,23 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 1292	240	1161	0	6	196	\N	\N	\N	\N	-1
 1293	240	127	0	6	197	\N	\N	\N	\N	-1
 1294	240	1461	0	6	198	\N	\N	\N	\N	-1
+1295	240	1447	0	2	194	\N	\N	\N	\N	2
+1296	240	1448	0	2	195	\N	\N	\N	\N	2
+1297	240	1199	0	0	193	\N	\N	\N	\N	-1
+1298	240	1203	0	0	194	\N	\N	\N	\N	-1
+1299	240	1198	0	1	193	\N	\N	\N	\N	-1
+1300	240	20	0	6	199	\N	\N	\N	\N	-1
+1301	240	975	0	3	194	\N	\N	\N	\N	-1
+1303	240	404	0	19	202	\N	\N	\N	\N	-1
+1304	240	164	0	6	200	\N	\N	\N	\N	-1
+1305	240	39	0	5	1	\N	\N	\N	\N	-1
+1306	240	976	0	1	211	\N	\N	\N	\N	-1
+1308	240	503	192	201	56	\N	\N	\N	\N	-1
+1309	240	1433	0	5	192	\N	\N	\N	\N	-1
+1310	240	1430	0	4	192	\N	\N	\N	\N	-1
+1307	240	200	0	1	194	\N	\N	radon_admin	2022-11-21 12:08:39.855885+00	-1
+1311	240	1030	0	2	196	\N	\N	\N	\N	-1
+1312	240	330	0	7	213	\N	\N	\N	\N	-1
 \.
 
 
@@ -926,7 +882,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 -- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib2_id_seq', 1294, true);
+SELECT pg_catalog.setval('public.param_grib2_id_seq', 1312, true);
 
 
 --

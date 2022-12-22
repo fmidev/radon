@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 14.0
--- Dumped by pg_dump version 14.1
+-- Dumped by pg_dump version 14.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -146,8 +146,6 @@ COPY public.param_precision (id, param_id, "precision", last_updater, last_updat
 60	200	3	\N	\N
 61	326	3	\N	\N
 80	509	3	\N	\N
-81	224	3	\N	\N
-82	223	3	\N	\N
 318	1181	0	\N	\N
 319	1182	0	\N	\N
 320	980	1	\N	\N

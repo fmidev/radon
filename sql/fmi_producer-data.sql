@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 14.0
--- Dumped by pg_dump version 14.1
+-- Dumped by pg_dump version 14.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -55,7 +55,6 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 105	MTLICE	Jääeditori	1	postgres	2017-05-02 05:34:04	1
 101	MESAN	FMI Meso Analysis project products	1	wetodb	2017-12-05 10:42:25	1
 131	ECG	ECMWF global deterministic weather model	1	postgres	2016-10-25 11:44:23	1
-1	HL2	Hirlam RCR-malli, alkuperäiset kentät	1	postgres	2016-05-26 08:42:00	1
 107	LAPSFIN	Finnish LAPS analysis, large area	1	wetodb	2018-02-19 08:52:58	2
 47	GEM	GEM GDPS global forecast from Canada	1	postgres	2016-05-26 08:42:00	1
 49	EGRR_SEAS	UKMO global seasonal model	1	postgres	2016-05-26 08:42:00	1
@@ -66,7 +65,6 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 102	TIESAA	FMI road condition model	1	postgres	2016-05-26 08:42:00	1
 250	GFSMTA	Postprocessed fields for GFS	1	postgres	2016-05-26 08:42:00	1
 106	TIENHOITO	FMI road maintenance model	1	postgres	2016-05-26 08:42:00	1
-111	WAM_MBE	MTL MBE-pohjainen aaltomalli	1	postgres	2016-05-26 08:42:00	1
 112	WAM_EC	MTL EC-pohjainen aaltomalli	1	postgres	2016-05-26 08:42:00	1
 114	OAAS_MBE	MTL MBE-pohjainen OAAS-malli	1	postgres	2016-05-26 08:42:00	1
 116	WALK_NOIC	Jalankulkumalli, ei j??varastoa	1	postgres	2016-05-26 08:42:00	1
@@ -76,11 +74,9 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 132	ECGSEF	ECMWF fine mesh marine model	1	postgres	2016-05-26 08:42:00	1
 133	ECGSEA	ECMWF global sea model	1	postgres	2016-05-26 08:42:00	1
 150	HBM_EC	HIROMB BOOS (HBM) circulation model for Baltic Sea (ECMWF)	1	postgres	2016-05-26 08:42:00	1
-151	HBM_HIR	HIROMB BOOS (HBM) circulation model for Baltic Sea (HIRLAM)	1	postgres	2016-05-26 08:42:00	1
 160	SMHIMESAN	Meso analysis from SMHI	1	postgres	2016-05-26 08:42:00	1
 199	AROME	Finnish Arome	1	postgres	2016-05-26 08:42:00	1
 210	AROMTA	Arome postprocessed fields	1	postgres	2016-05-26 08:42:00	1
-230	HL2MTA	Hirlam RCR-malli, lasketut kentät	1	postgres	2016-05-26 08:42:00	1
 240	ECGMTA	ECMWF-malli, lasketut kentät	1	postgres	2016-05-26 08:42:00	1
 242	ECM_PROB	Probabilities from ECMWF EPS	1	postgres	2016-05-26 08:42:00	1
 2026	ECMOS	MOS from ECMWF model	3	postgres	2016-05-26 08:42:00	1
@@ -129,8 +125,10 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 153	WAM_HKI	WAM aaltomalli Helsinki	1	\N	\N	1
 154	WAM_BALMFC_ARCH	FMI Balmfc_wam aaltomalli saaristomerelle	1	\N	\N	1
 113	WAM_BALMFC	FMI BALMFC Wam aaltomalli itämerelle	1	radon_admin	2022-08-09 11:41:06	1
+283	HRNWC	High Resolution Nowcast	1	\N	\N	1
 272	MNWC_PREOPMTA	MEPS Nowcasting preop post processed fields	1	\N	\N	1
 271	MNWCMTADEV	MEPS Nowcasting post processed fields development version	1	radon_admin	2022-11-07 06:01:27	1
+284	HRNWC_PREOP	High Resolution Nowcast Preoperational	1	\N	\N	1
 \.
 
 

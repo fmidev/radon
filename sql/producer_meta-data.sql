@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 14.0
--- Dumped by pg_dump version 14.1
+-- Dumped by pg_dump version 14.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -21,16 +21,12 @@ SET row_security = off;
 --
 
 COPY public.producer_meta (producer_id, attribute, value, last_updater, last_updated) FROM stdin;
-1	last hybrid level number	65	\N	\N
 199	last hybrid level number	65	\N	\N
 210	last hybrid level number	65	\N	\N
-230	last hybrid level number	65	\N	\N
 131	last hybrid level number	137	\N	\N
 240	last hybrid level number	137	\N	\N
-1	first hybrid level number	1	\N	\N
 199	first hybrid level number	1	\N	\N
 210	first hybrid level number	1	\N	\N
-230	first hybrid level number	1	\N	\N
 131	first hybrid level number	24	\N	\N
 240	first hybrid level number	24	\N	\N
 135	ensemble size	50	\N	\N

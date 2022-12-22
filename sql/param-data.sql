@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 14.0
--- Dumped by pg_dump version 14.1
+-- Dumped by pg_dump version 14.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -21,20 +21,15 @@ SET row_security = off;
 --
 
 COPY public.param (id, name, version, unit_id, interpolation_id, description, last_updater, last_updated) FROM stdin;
-1	MINT2M-C	1	58	1	Minimum temperature at 2m since previous post-processing	\N	\N
 1026	RHICE-PRCNT	1	6	1	Humidity relative to ice	\N	\N
 3	TROAD-C	1	58	1	Road temperature in C	\N	\N
 4	CONDROAD-N	1	69	1	Road condition	\N	\N
-5	PROBDRY	1	6	1	Probability of dry road	\N	\N
-6	PROBWET	1	6	1	Probability of wet road	\N	\N
-7	PROBMST	1	6	1	Probability of moist road	\N	\N
 8	PROBSNY	1	6	1	Probability of snowy road	\N	\N
 9	PROBFRY	1	6	1	Probability of frosty road	\N	\N
 10	PROBICY	1	6	1	Probability of icy road	\N	\N
 992	PROB-HWS-1	1	6	1	Probability of significant wave height of at least 2m	\N	\N
 12	RR-5D-MM	1	60	1	Precipitation over 5 days in mm	\N	\N
 13	GROWDEV-D	1	80	1	Growth period deviation from normal in days	\N	\N
-14	LSSN-M100	1	63	1	Loose snow depth in cm	\N	\N
 15	GROWDEV-PCT	1	6	1	Growth period deviation from normal in percent	\N	\N
 16	GPPREC-KGM2	1	18	1	Growth period precipitation in kgm-2	\N	\N
 17	EFFTS-C	1	58	1	Effective temperature sum	\N	\N
@@ -51,8 +46,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 137	ALBEDO-0TO1	1	62	1	ALBEDO 0 to 1	postgres	2017-01-08 18:20:36
 29	DRAG-N	1	69	1	Coefficient of drag	\N	\N
 30	H0C-HPA	1	21	1	Height of 0 C level in hPa	\N	\N
-31	RADTSTLW	1	12	1	Testiparametri LW	\N	\N
-32	RADTSTSW	1	12	1	Testiparametri SW	\N	\N
 33	QOL-KGKG	1	17	1	Specific Humidity over land in kg/kg	\N	\N
 34	TOL-K	1	3	1	Temperature over land in Kelvins	\N	\N
 35	GRFROST-M3M3	1	62	1	Ground frost in volumetric proportion	\N	\N
@@ -70,75 +63,37 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 47	PREC30-KGM2	1	18	1	Thirty days precipitation in kgm-2	\N	\N
 48	PGR-PA	1	7	1	Pressure on ground	\N	\N
 49	TOTCWV-KGM2	1	18	1	Total column water vapour	\N	\N
-50	MAXT-K	1	3	1	Maximum temperature on ambiguous level	\N	\N
-51	MINT-K	1	3	1	Minimum temperature on ambiguous level	\N	\N
-52	CLDICE-KGKG	1	17	1	Cloud ice	\N	\N
-53	TCLDTOP-K	1	3	1	Cloud top temperature	\N	\N
+53	CLDTOP-K	1	3	1	Cloud top temperature	radon_admin	2022-12-17 13:16:48
+1473	ALBEDOBGRND-PRCNT	1	6	1	Albedo of bare ground	\N	\N
 54	TWVRAD-K	1	3	1	Water vapour radiation temperature	\N	\N
 55	TWVRCL-K	1	3	1	Water vapour radiation temperature including clouds	\N	\N
 56	REFLTY-N	1	62	1	Reflectivity (pseudo visible)	\N	\N
-57	MAXWS-MS	1	2	1	Maximum wind speed	\N	\N
-58	MINWS-MS	1	2	1	Minimum wind speed	\N	\N
 59	RHAVE-PRCNT	1	6	1	Relative humidity, land fraction average	\N	\N
 60	TDAVE-K	1	3	1	Dew point temperature, land fraction average	\N	\N
 993	PROB-HWS-2	1	6	1	Probability of significant wave height of at least 4m	\N	\N
 754	CFRZR-0OR1	1	28	2	Precipitation type categorical freezing rain, 0 or 1	\N	\N
 68	NH-STDDEV-PRCNT	1	6	1	Standard Deviation of high cloud cover	postgres	2017-01-03 08:49:33
-66	TDPS	1	12	1	tendance barometrique	\N	\N
 67	T-NH-K	1	3	1	Temperature of high cloud cover	\N	\N
 69	T-NLM-K	1	6	1	Temperature of low and middle cloud cover	\N	\N
-70	TMAX	1	3	1	temperature maximale	\N	\N
-71	TMIN	1	3	1	temperature minimale	\N	\N
 72	NLMDEV-PRCNT	1	6	1	Standard Deviation of low and middle cloud cover	\N	\N
 73	FOG-PRCNT	1	6	1	Percentage of fog in a grid cell	\N	\N
 74	FL-PRCNT	1	6	1	Percentage of land in a grid cell	\N	\N
 75	FSEA-PRCNT	1	6	1	Percentage of land in a grid cell	\N	\N
 76	FSNO-PRCNT	1	6	1	Percentage of snow in a grid cell	\N	\N
 77	FSG-PRCNT	1	6	1	Percentage of sun glint in a grid cell	\N	\N
-78	T-H1-C	1	58	1	 Temperature in Celsius, height 1	\N	\N
-79	T-H2-C	1	58	1	 Temperature in Celsius, height 2	\N	\N
-80	T-H3-C	1	58	1	 Temperature in Celsius, height 3	\N	\N
-81	T-H4-C	1	58	1	 Temperature in Celsius, height 4	\N	\N
-82	T-H5-C	1	58	1	 Temperature in Celsius, height 5	\N	\N
-83	T-H6-C	1	58	1	 Temperature in Celsius, height 6	\N	\N
-84	T-H7-C	1	58	1	 Temperature in Celsius, height 7	\N	\N
-85	T-H8-C	1	58	1	 Temperature in Celsius, height 8	\N	\N
-86	RH-H2-PRCNT	1	6	1	 Relative Humidity in percents, height 2	\N	\N
-87	RH-H3-PRCNT	1	6	1	 Relative Humidity in percents height 3	\N	\N
+1474	ALBEDOSNOW-PRCNT	1	6	1	Snow albedo	\N	\N
 88	FLLAT-JM2	1	20	1	Latent heat flux	\N	\N
 89	FLSEN-JM2	1	20	1	Sensible heat flux	\N	\N
-90	RH-H4-PRCNT	1	6	1	 Relative Humidity in percents, height 4	\N	\N
-91	FF-H1-MS	1	15	1	 Wind speed in m/s, height 1	\N	\N
 28	IRIDGE-PRCNT	1	6	1	Ice degree of ridging	postgres	2017-01-07 10:49:55
-92	FF-H2-MS	1	15	1	 Wind speed in m/s, height 2	\N	\N
-93	FF-H3-MS	1	15	1	 Wind speed in m/s, height 3	\N	\N
-94	FF-H4-MS	1	15	1	 Wind speed in m/s, height 4	\N	\N
-95	DD-H1-D	1	5	1	 Wind Direction in Degrees, height 1	\N	\N
-96	DD-H2-D	1	5	1	 Wind Direction in Degrees, height 2	\N	\N
-97	DD-H3-D	1	5	1	 Wind Direction in Degrees, height 3	\N	\N
-98	DD-H4-D	1	5	1	 Wind Direction in Degrees, height 4	\N	\N
-99	FX-H1-MS	1	15	1	 Maximum Wind Speed in m/s, height 1	\N	\N
-100	FX-H2-MS	1	15	1	 Maximum Wind Speed in m/s, height 2	\N	\N
-101	FX-H3-MS	1	15	1	 Maximum Wind Speed in m/s, height 3	\N	\N
+1470	T2-K	1	3	1	Temperature, second parameter	\N	\N
+1471	RH2-PRCNT	1	6	1	Relative Humidity, second parameter	\N	\N
+1472	FF2-MS	1	15	1	Wind Speed, second parameter	\N	\N
 341	F100-RR-6-MM	1	18	1	100th fractal precipitation in EPS	postgres	2016-08-31 06:01:08
-103	FX-H4-MS	1	15	1	 Maximum Wind Speed in m/s, height 4	\N	\N
-104	P-H1-HPA	1	21	1	Pressure in hPa , height 1	\N	\N
-105	RH-H1-PRCNT	1	6	1	 Relative Humidity in percents, height 1	\N	\N
-106	WW1METAR-N	1	30	1	 for metars	\N	\N
-107	WW2METAR-N	1	30	1	 for metars	\N	\N
-108	WW3METAR-N	1	30	1	 for metars	\N	\N
-109	ISCB1-N	1	28	1	 for metars	\N	\N
-110	ISCB2-N	1	28	1	 for metars	\N	\N
-111	ISCB3-N	1	28	1	 for metars	\N	\N
-112	ISCB4-N	1	28	1	 for metars	\N	\N
 113	VVERT-M	1	2	1	 for metars	\N	\N
 114	FL-LEN-M	1	2	1	Length of flash ellipse axle	\N	\N
 115	FL-WID-M	1	2	1	Width of flash ellipse axle	\N	\N
 116	FL-DIR-D	1	5	1	Direction of flash ellipse	\N	\N
 117	FL-DUR-MS	1	81	1	Flash duration in milliseconds	\N	\N
-119	CONCENTAIR	1	26	1	concentration dans l'air de polluant 	\N	\N
-120	RAIN12	1	18	1	Total Precipitation over the last 12 hours	\N	\N
-121	RAIN_6	1	18	1	Total Precipitation over the last 6 hours	\N	\N
 122	TMAX-C	1	58	1	Maximum Temperature in Celsius	\N	\N
 123	TMIN-C	1	58	1	Minimum Temperature in Celsius	\N	\N
 124	TG-C	1	58	1	Ground Temperature in Celcius	\N	\N
@@ -169,7 +124,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 149	FC-0TO1	1	62	1	Forest Cover, 1=Forest, 0=No Forest	\N	\N
 343	F75-RR-6-MM	1	18	1	75th fractal precipitation in EPS	postgres	2016-08-31 06:01:08
 756	CSNOW-0OR1	1	28	2	Precipitation type categorical snow, 0 or 1	\N	\N
-152	VS_MS	1	15	1	Speed of the Ship in Meters per Second	\N	\N
 153	T-K	1	3	1	Temperature in Kelvins	\N	\N
 154	T-C	1	58	1	Temperature in Celsius	\N	\N
 1030	FFG2-MS	1	15	1	Instantaneous Wind Speed in m/s, himan version	\N	\N
@@ -177,7 +131,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 344	F50-RR-6-MM	1	18	1	50th fractal precipitation in EPS	postgres	2016-08-31 06:01:08
 158	Z-M2S2	1	13	1	Geopotential	\N	\N
 159	TPW-K	1	3	1	Pseudoadiabatic potential temperature in K	\N	\N
-160	TD-C10	1	51	1	Dew point Temperature in 10ths of C	\N	\N
 161	TD-C	1	58	1	Dew point Temperature in C	\N	\N
 162	TD-K	1	3	1	Dew point Temperature in K	\N	\N
 163	RH-PRCNT	1	6	1	Relative Humidity in percents	\N	\N
@@ -189,16 +142,11 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 169	DD-D	1	5	1	Wind Direction in Degrees	\N	\N
 1229	SOT-RR-N	1	69	2	Shift Of Tails for precipitation	\N	\N
 175	VV-MMS	1	53	1	Vertical Velocity in mm/s	\N	\N
-176	VV-CBS	1	56	1	Vertical Velocity in cb/s	\N	\N
 177	VV-PAS	1	27	1	Vertical Velocity in pa/s	\N	\N
-178	RR-MM10	1	60	1	Total precipitation	\N	\N
 179	RR-KGM2	1	18	1	Total precipitation in kg/m2	\N	\N
-180	RRSYM2-N	1	30	1	Rain Symbol 2	\N	\N
 181	RR-6-MM	1	60	1	Rain over the last 6 hours in mm	\N	\N
 182	RR-12-MM	1	60	1	Rain over the last 12 hours in mm	\N	\N
-183	RRL-MM10	1	54	1	Large Scale precipitation in 10ths of mm	\N	\N
 184	RRL-KGM2	1	18	1	Large Scale precipitation in kg/m2	\N	\N
-185	RRC-MM10	1	54	1	Convective precipitation in 10ths of mm	\N	\N
 186	RRC-KGM2	1	18	1	Convective precipitation in kg/m2	\N	\N
 187	N-PRCNT	1	6	1	Total Cloud Cover in %	\N	\N
 188	KINDEX-N	1	30	1	Stability index (-50 -> 50)	\N	\N
@@ -216,16 +164,13 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 199	ALBEDO-PRCNT	1	6	1	ALBEDO in %	\N	\N
 200	RRRL-KGM2	1	32	1	Large Scale Precipitation rate in kg m-2	\N	\N
 201	RRRC-KGM2	1	32	1	Convective Precipitation rate in kg m-2	\N	\N
-202	ABSVO-HZ-5	1	57	1	Absolute Vorticity in HZ/10000	\N	\N
 203	ABSVO-HZ	1	11	1	Absolute Vorticity in HZ	\N	\N
 204	FRNTSYM-N	1	30	1	Front Symbol	\N	\N
-1170	PM25-UGM3	1	65	1	PM25 concentration	\N	\N
 1230	SOT-WG-N	1	69	2	Shift Of Tails for wind gusts	\N	\N
 209	H-M	1	2	1	Cloud Height in  Meters	\N	\N
 210	CL-N	1	30	1	Low Cloud Type	\N	\N
 211	CM-N	1	30	1	Medium Cloud Type	\N	\N
 212	CH-N	1	30	1	High Cloud Type	\N	\N
-213	RRT-S	1	4	1	Period of Rain Amount in Seconds	\N	\N
 214	TMAX-K	1	3	1	Maximum Temperature in Kelvins	\N	\N
 215	TMIN-K	1	3	1	Maximum Temperature in Kelvins	\N	\N
 216	TG-K	1	3	1	Ground Temperature in Kelvins	\N	\N
@@ -235,8 +180,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 220	CLDTOP-M	1	2	1	Height of cloud top	\N	\N
 221	SNL-KGM2	1	18	1	Large scale snow accumulation in kg/m2	\N	\N
 222	SNC-KGM2	1	18	1	Convective snow accumulation in kg/m2	\N	\N
-223	SNRL-KGM2	1	19	1	Large scale snowfall rate in mm/h	\N	\N
-224	SNRC-KGM2	1	19	1	Convective snowfall rate in mm/h	\N	\N
 225	PROB-WG-4	1	6	1	Probability of reaching wind gust speed of 30 m/s in EPS	\N	\N
 226	PROB-WG-5	1	6	1	Probability of reaching wind gust speed of 35 m/s in EPS	\N	\N
 227	PROB-W-3	1	6	1	Probability of reaching wind speed of 17 m/s in EPS	\N	\N
@@ -274,7 +217,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 259	PROB-TC-3	1	6	1	Probability of reaching -25 C in EPS	\N	\N
 260	PROB-TC-4	1	6	1	Probability of reaching -30 C in EPS	\N	\N
 261	RR-AVE6-MM	1	60	1	Average precipitation 6 hours in EPS	\N	\N
-262	SN-AVE6-MM	1	60	1	Average snow fall 6 hours in EPS	\N	\N
 263	PROB-RR24-6	1	6	1	Probability of reaching precipitation 1 mm in 24 h in EPS	\N	\N
 264	PROB-RR24-7	1	6	1	Probability of reaching precipitation 5 mm in 24 h in EPS	\N	\N
 265	PROB-RR12-1	1	6	1	Probability of reaching precipitation 0.3 mm in 12 h in EPS	\N	\N
@@ -282,8 +224,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 267	PROB-RR12-3	1	6	1	Probability of reaching precipitation 12 mm in 12 h in EPS	\N	\N
 268	NC-PRCNT	1	6	1	Convective Cloud Amount	\N	\N
 269	SAL-PSU	1	86	1	Sea water salinity in psu	\N	\N
-270	SDEP-M	1	2	1	Snow depth in m for Hirlam Models	\N	\N
-271	SDEPOP-M	1	2	1	Snow depth in m on open land	\N	\N
 272	CTBT-K	1	3	1	Cloud top brightness temperature (IR)	\N	\N
 273	WVBT-K	1	3	1	Water vapour brightness temperature	\N	\N
 274	WVBTCC-K	1	3	1	Water vapour brightness temperature including cloud correction	\N	\N
@@ -292,8 +232,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 278	IVELU-MS	1	15	1	Sea ice velocity (U) in m/s	\N	\N
 279	IVELV-MS	1	15	1	Sea ice velocity (V) in m/s	\N	\N
 280	IRAFTTHK-CM	1	63	1	Rafted sea ice mean thickness	\N	\N
-281	T1DER-C	1	58	1	Road Temperature Derivative Sensor 1	\N	\N
-282	T2DER-C	1	58	1	Road Temperature Derivative Sensor 2	\N	\N
 283	FRPT1-C	1	58	1	Freezing Point Sensor 1	\N	\N
 284	FRPT2-C	1	58	1	Freezing Point Sensor 2	\N	\N
 285	ROADWARN1-N	1	30	1	Road Warning 1	\N	\N
@@ -303,10 +241,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 289	CONDTY1-V	1	40	1	Conductivity Sensor 1	\N	\N
 290	CONDTY2-V	1	40	1	Conductivity Sensor 2	\N	\N
 291	SENSFT-N	1	30	1	Sensor Fault	\N	\N
-292	SALT1-GM2	1	84	1	Salt Content grams per m2 Sensor 1	\N	\N
-293	SALT2-GM2	1	84	1	Salt Content grams per m2 Sensor 2	\N	\N
-294	SALT1-GL	1	85	1	Salt Concentration grams per litre Sensor 1	\N	\N
-295	SALT2-GL	1	85	1	Salt Concentration grams per litre Sensor 2	\N	\N
 296	ROADST3-N	1	30	1	Road Status 3	\N	\N
 297	FRICTION-N	1	30	1	Friction Coefficient	\N	\N
 298	WATERLR-MM	1	60	1	Water Content in mm	\N	\N
@@ -418,15 +352,12 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1235	F0-SNOWLOAD-KGM2	1	18	1	0th fractal snowload in EPS	\N	\N
 407	MOL-M	1	2	1	Inverse of Monin-Obukhov length, i.e. 1/L in m-1	\N	\N
 408	FX-MS	1	15	1	Maximum Wind Speed in m/s	\N	\N
-409	RRT-H	1	59	1	Period of Rain Amount in Hours	\N	\N
 410	DS-D	1	5	1	Direction of the Ship in Degrees	\N	\N
 411	FFG-MS	1	15	1	Instantaneous Wind Speed in m/s	\N	\N
 412	P-HPA	1	21	1	Pressure in hPa	\N	\N
 1236	F10-SNOWLOAD-KGM2	1	18	1	10th fractal snowload in EPS	\N	\N
-414	TD2M-C	1	58	1	Dew Point Temperature at 2m in Celsius	\N	\N
 415	RRON-N	1	30	1	Rain On or Off	\N	\N
 416	SSON-N	1	30	1	SunShine On or Off	\N	\N
-417	RRL-MM	1	60	1	Precipitation Large Scale in mm	\N	\N
 418	RAD-WM2	1	12	1	Radiation amount on Watts per Square Meter	\N	\N
 419	N-N	1	64	1	Total Cloud Cover in 1/8ths	\N	\N
 420	NH-N	1	64	1	Amount of The Lowest Clouds in 1/8ths	\N	\N
@@ -452,7 +383,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 441	RRR-KGM2	1	32	1	Total Precipitation rate in kg m-2	\N	\N
 442	DF-MS	1	15	1	Wind Vector in m/s	\N	\N
 443	SMOGI-N	1	30	1	Calculated smog appearance	\N	\N
-444	BATT-V	1	40	1	Battery Voltage (at automatic stations)	\N	\N
 445	FCUR-MS	1	15	1	Current speed in m/s	\N	\N
 446	DCUR-D	1	5	1	Current direction in degrees	\N	\N
 447	HWS-M	1	2	1	Significant wave height in m	\N	\N
@@ -500,17 +430,11 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 480	METCODE-N	1	69	1	Code number of the forecaster	\N	\N
 481	MINELEV-D	1	5	1	Layer between two elevation angles	\N	\N
 482	ACCTIM-H	1	59	1	Accumulation time in hours	\N	\N
-483	MINDBZ	1	70	1	Threshold dBZ-value	\N	\N
-484	MINRNG-KM	1	68	1	Minimum range	\N	\N
-485	MAXRNG-KM	1	68	1	Maximum range	\N	\N
 486	COLNUM-N	1	69	1	Number of columns	\N	\N
 487	ROWNUM-N	1	69	1	Number of rows	\N	\N
 488	HORRESOL-M	1	2	1	Horizontal resolution	\N	\N
-489	ZRESOL	1	2	1	Vertical resolution	\N	\N
 490	REFLTY-DBZ	1	70	1	Clutter corrected ceflectivity	\N	\N
 491	TOPS-KM	1	68	1	Echo top	\N	\N
-492	LIQUID-MM	1	60	1	Rainfall depth	\N	\N
-493	RAW	1	69	1	Raw radar data	\N	\N
 494	RADWIND-MS	1	15	1	Wind in the direction of the radar beam	\N	\N
 495	MINHGT-KM	1	68	1	Minimum height of a layer	\N	\N
 496	MAXELEV-D	1	5	1	Layer between two elevation angles	\N	\N
@@ -528,8 +452,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 508	TMIN-24-C	1	58	1	Min temperature in Celsius on the preceding 24 hours period of the date-value	\N	\N
 509	SNR-KGM2	1	32	1	Snowfall rate in mm/s or mm/h	\N	\N
 510	SNACC-KGM2	1	18	1	Snowfall accumulation  in mm	\N	\N
-511	URLAT-D	1	5	1	Additional latitude information	\N	\N
-512	URLON-D	1	5	1	Additional longitude information	\N	\N
 513	PROJID-N	1	30	1	Projection type information	\N	\N
 514	GRORIENT-D	1	5	1	Grid orientation	\N	\N
 379	CAPE1040-JKG	1	77	1	Convective available potential energy, value of parameter when -40C < T < -10C	postgres	2016-09-22 15:53:04
@@ -544,14 +466,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 471	SW0WDIR-D	1	5	1	Direction of Waves of Swell 0 in degrees	postgres	2017-04-18 08:12:24
 525	MODLEV-N	1	69	1	Model level number	\N	\N
 526	STGR-N	1	69	1	State of ground, code number	\N	\N
-528	SD06-CM	1	63	1	Snow depth at 06 UTC in cm	\N	\N
-529	SD18-CM	1	63	1	Snow depth at 06 UTC in cm	\N	\N
-530	DT-C	1	58	1	Daily mean temperature in Celcius	\N	\N
-531	TMIN06-C	1	58	1	Minimum temperature at 06 UTC in celcius	\N	\N
-532	TMAX06-C	1	58	1	Maximum temperature at 06 UTC in celcius	\N	\N
-533	TGMIN06-C	1	58	1	Minimum temperature at ground at 06 UTC in celcius	\N	\N
-534	TMIN18-C	1	58	1	Minimum temperature at 18 UTC in celcius	\N	\N
-535	TMAX18-C	1	58	1	Maximum temperature at 18 UTC in celcius	\N	\N
 536	MT-C	1	58	1	Monthly mean temperature in Celcius	\N	\N
 537	MRR-KGM2	1	18	1	Monthly precipitation in mm	\N	\N
 538	DSUN-H	1	59	1	Daily sunshine hours	\N	\N
@@ -565,16 +479,10 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 546	DUVMAX-MEDH	1	74	1	Maximum intensity of UV irradiance	\N	\N
 547	DUVMAX-HM	1	75	1	Hour and minute of Maximum intensity of UV	\N	\N
 548	HSUN-N	1	69	1	Sunshine during an hour in 6 min units	\N	\N
-549	HRADG-KJM2	1	71	1	Hourly global radiation in kJ m-2	\N	\N
-550	HRADD-KJM2	1	71	1	Hourly diffuse radiation in kJ m-2	\N	\N
-551	HRADR-KJM2	1	71	1	Hourly reflected radiation in kJ m-2	\N	\N
-552	HRADN-KJM2	1	71	1	Hourly net radiation in kJ m-2	\N	\N
-553	RR3160-KGM2	1	18	1	Monthly mean precipitation for period 1931-60	\N	\N
 554	H0C-M	1	2	1	Height of 0 C level in meters	\N	\N
 555	FLMOM-PA	1	7	1	Scalar momentum flux in Pa	\N	\N
 556	ICEIND-N	1	64	1	Indicator of icing risk for ships	\N	\N
 1237	F25-SNOWLOAD-KGM2	1	18	1	25th fractal snowload in EPS	\N	\N
-558	SIGNIFICANCE	1	30	1	Vertical Sounding Significance.	\N	\N
 559	CAPE-JKG	1	77	1	Convective available potential energy	\N	\N
 560	WSTOR-MM	1	60	1	Thickness of water layer on road	\N	\N
 561	SRMOM-M	1	2	1	Surface Roughness (momentum) in meters	\N	\N
@@ -582,10 +490,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 563	PROB-W	1	6	1	Probability of wind speed (universal)	\N	\N
 564	PROB-RR	1	6	1	Probability of precipitation (universal)	\N	\N
 565	PROBSN-0TO1	1	62	1	Probability of snow	\N	\N
-566	CLN1-N	1	64	1	Cloud Cover in 1/8ths of the lowest layer	\N	\N
-567	CLN2-N	1	64	1	Cloud Cover in 1/8ths of the second layer	\N	\N
-568	CLN3-N	1	64	1	Cloud Cover in 1/8ths of the third layer	\N	\N
-569	CLN4-N	1	64	1	Cloud Cover in 1/8ths of the fourth layer	\N	\N
 1443	DW1-D	1	5	1	Mean wave direction of first swell in degrees	\N	\N
 1444	DW2-D	1	5	1	Mean wave direction of second swell in degrees	\N	\N
 1445	DW3-D	1	5	1	Mean wave direction of third swell in degrees	\N	\N
@@ -601,12 +505,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 583	CLDCND-KGKG	1	17	1	Cloud condensate	\N	\N
 584	GRPRDEV-PCT	1	6	1	Growth period precipitation deviation from normal in percent	\N	\N
 585	HUMFO2-0TO1	1	62	1	Forest ground humidity kg in kg	\N	\N
-586	EFI-T	1	6	1	Extreme forecast index for temperature	\N	\N
-587	EFI-WS	1	6	1	Extreme forecast index for wind speed	\N	\N
-588	EFI-WG	1	6	1	Extreme forecast index for wind gusts	\N	\N
-589	EFI-RR	1	6	1	Extreme forecast index for precipitation	\N	\N
 590	GRR-MMH	1	32	1	Graupel rate in mm/h	\N	\N
-591	RRR-MMH	1	32	1	Rain rate in mm/h	\N	\N
 592	HLCY-M2S2	1	13	1	Storm relative helicity	\N	\N
 593	REFO-DBZ	1	70	1	Observed radar reflectivity	\N	\N
 594	WSH-KT	1	31	1	Wind shear in knots	\N	\N
@@ -615,12 +514,8 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 597	PARS-WM2	1	12	1	Photosyntetically active radiation at the surface	\N	\N
 171	U-MS	1	15	2	U wind in m/s	wetodb	2018-11-26 06:20:37
 599	PSTL-HPA	1	21	1	Pressure on station level	\N	\N
-600	RMM-N	1	76	1	Rain minutes of hour	\N	\N
 601	UVMAXT-H	1	59	1	Hour of UV maximum	\N	\N
 602	MSUN-S	1	4	1	Seconds of sun duration in Minute	\N	\N
-603	T-X1-C	1	58	1	Second temperature sensor	\N	\N
-604	DD-X1-D	1	5	1	Second wind direction sensor	\N	\N
-605	FF-X1-MS	1	15	1	Second wind speed sensor	\N	\N
 606	HM20C-M	1	2	1	Height of -20 C level in meters	\N	\N
 607	CANW-KGM2	1	18	1	Canopy water	\N	\N
 608	STFR-0TO1	1	62	1	Surface type fraction	\N	\N
@@ -633,27 +528,9 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 994	PROB-HWS-3	1	6	1	Probability of significant wave height of at least 6m	\N	\N
 617	GR-KGM2	1	18	1	Graupel precipitation in kg/m2	\N	\N
 618	CRNK-N	1	30	1	Charnock	\N	\N
-619	T3160-C	1	58	1	Monthly mean temperature for period 1931-60	\N	\N
-620	N3160-PRCNT	1	6	1	Monthly mean cloudiness for period 1931-60	\N	\N
-621	SD3160-CM	1	63	1	Mean snow depth on the 15. of the month for period 1931-60	\N	\N
-622	RR6190-KGM2	1	18	1	Monthly mean precipitation for period 1961-90	\N	\N
-623	T6190-C	1	58	1	Monthly mean temperature for period 1961-90	\N	\N
-624	N6190-PRCNT	1	6	1	Monthly mean cloudiness for period 1961-90	\N	\N
-625	SD6190-CM	1	63	1	Mean snow depth on the 15. of the month for period 1931-60	\N	\N
-626	HP-HPA	1	21	1	Hourly mean pressure	\N	\N
-627	HT-C	1	58	1	Hourly mean temperature	\N	\N
-628	HTMIN-C	1	58	1	Hourly minimum temperature	\N	\N
-629	HTMAX-C	1	58	1	Hourly maximum temperature	\N	\N
-630	HRH-PRCNT	1	6	1	Hourly mean relative humidity	\N	\N
-631	HFF-MS	1	15	1	Hourly mean wind speed	\N	\N
-632	HFFMIN-MS	1	15	1	Hourly minimum wind speed	\N	\N
-633	HFFMAX-MS	1	15	1	Hourly maximum wind speed	\N	\N
-634	HFFG-MS	1	15	1	Hourly maximum wind gust	\N	\N
-635	HDD-D	1	5	1	Hourly mean wind direction	\N	\N
 636	HRRR-KGM2	1	18	1	Hourly maximum precipitation rate	\N	\N
 1035	SND-KGM3	1	18	1	Snow density in kg/m3	\N	\N
 638	HTSEA-C	1	58	1	Hourly mean sea temperature	\N	\N
-639	HRRDUR-MIN	1	76	1	The duration of the rain during 1 hour	\N	\N
 640	RADPRO-N	1	69	1	Radar producer	\N	\N
 641	TURB-N	1	64	1	Turbulence, code 11031 in BUFR	\N	\N
 1012	PROB-RR3-1	1	6	1	Probability of Precipitation #1 in 3h	\N	\N
@@ -668,7 +545,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 651	SHDIR-D	1	5	1	Direction of motion of ship or other observing platform	\N	\N
 652	SHSPEED-MS	1	15	1	Speed of motion of ship or other observing platform	\N	\N
 653	TKEN-JKG	1	77	1	Kinetic energy of turbulence in J kg-1	\N	\N
-654	CLDWAT-KGKG	1	17	1	Cloud water	\N	\N
 655	MIXHGT-M	1	2	1	Mixed layer height in m	\N	\N
 656	SDC-M	1	2	1	Convective snowfall in m	\N	\N
 657	SDL-M	1	2	1	Large scale snowfall in m	\N	\N
@@ -703,7 +579,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 686	PROB-W-2	1	6	1	Probability of reaching wind speed of 15 m/s in EPS	\N	\N
 687	HUMFOR-0TO1	1	62	1	Forest ground humidity kg in kg	\N	\N
 688	HUMFIE-0TO1	1	62	1	Field ground humidity kg in kg	\N	\N
-689	MAXT2M-C	1	58	1	Maximum temperature at 2m since previous post-processing	\N	\N
 690	CLOUDWATERMR-KGKG	1	17	1	Cloud water mixing ratio	\N	\N
 691	CLOUDICEMR-KGKG	1	17	1	Cloud ice mixing ratio	\N	\N
 692	RAINMR-KGKG	1	17	1	Rain mixing ratio	\N	\N
@@ -729,7 +604,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 707	LFC-K	1	3	1	Temperature of LFC in K	\N	\N
 1064	BRVAIFREQ-HZ	1	11	1	Brunt-Vaisala frequency	\N	\N
 1181	SMARTSYMBOL-N	1	69	2	Smart weather symbol	\N	\N
-1065	ALBEDOSURFNOSNOW-0TO1	1	62	1	Surface albedo for non snow covered areas	\N	\N
 1062	ALBEDOBGRND-0TO1	1	62	1	Albedo of bare ground	wetodb	2017-08-04 07:50:50
 1063	ALBEDOVEG-0TO1	1	62	1	Albedo of vegetation	wetodb	2017-08-04 07:50:50
 1066	ALBEDOSNOW-0TO1	1	62	1	Snow albedo	\N	\N
@@ -737,7 +611,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1068	BLDIS-WM2	1	12	1	Boundary layer dissipation	\N	\N
 1069	BLI-K	1	3	1	Best lifted index (to 500 hPa)	\N	\N
 1070	BRTMP-K	1	3	1	Brightness temperature	\N	\N
-1071	ALBDO-PRCNT	1	6	1	Albedo	\N	\N
 711	EL-K	1	3	1	Temperature of EL in K	\N	\N
 1182	WEATHERNUMBER-N	1	69	2	Weather number describing the state of weather, precursor to Smart weather symbol	\N	\N
 1262	LFC-LAST-M	1	2	1	Height of last LFC in meters	\N	\N
@@ -809,8 +682,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 854	F95-SD-M	1	2	1	95th fractal snow depth in EPS	\N	\N
 855	F87.5-SD-M	1	2	1	87.5th fractal snow depth in EPS	\N	\N
 1078	ICINGTOP-M	1	2	1	Top level of icing	\N	\N
-1079	ICAHT	1	2	1	ICAO Standard Atmosphere reference height	\N	\N
-1080	HSTDV	1	2	1	Standard deviation of height	\N	\N
 1072	CDCON-0TO1	1	62	1	Convective cloud cover	wetodb	2017-08-10 07:47:03
 1093	EHI-N	1	69	1	Energy-Helicity Index	\N	\N
 1094	BRN-N	1	69	1	Bulk-Richardson Number	\N	\N
@@ -943,10 +814,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 982	T-STDDEV-K	1	3	1	Standard deviation of temperature	\N	\N
 983	P-STDDEV-PA	1	7	1	Standard deviation of pressure	\N	\N
 984	FF-STDDEV-MS	1	15	1	Standard deviation of wind speed	\N	\N
-677	ANOM-8-T-K	1	6	1	Probability of big negative temperature anomaly (-8 K) in EPS	postgres	2017-01-05 06:09:09
-678	ANOM-4-T-K	1	6	1	Probability of moderate negative temperature anomaly (-4 K) in EPS	postgres	2017-01-05 06:09:40
-679	ANOM+4-T-K	1	6	1	Probability of moderate positive temperature anomaly (+4 K) in EPS	postgres	2017-01-05 06:09:51
-680	ANOM+8-T-K	1	6	1	Probability of big positive temperature anomaly (+8 K) in EPS	postgres	2017-01-05 06:09:56
 985	PM10-UGM3	1	65	1	PM10 consentration	\N	\N
 986	NO-UGM3	1	65	1	Contents of Nitrogen Monoxide	\N	\N
 987	CO-UGM3	1	65	1	Contents of Carbon Monoxide	\N	\N
@@ -981,7 +848,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1083	ICEG-MS	1	15	1	Ice growth rate	\N	\N
 440	HSADE2-N	1	30	2	Precalculated weather symbol	postgres	2017-02-09 06:47:41
 503	FOGSYM-N	1	30	2	Fog symbol	postgres	2017-02-09 06:47:41
-527	RRCODE-N	1	69	2	Code number of precipitation, ask Pauli	postgres	2017-02-09 06:47:41
 609	SOILTY-N	1	30	2	Soil type	postgres	2017-02-09 06:47:41
 610	VEGET-N	1	30	2	Vegetation type	postgres	2017-02-09 06:47:41
 614	ROADNOTIF-N	1	69	2	Notification to road users	postgres	2017-02-09 06:47:41
@@ -1130,13 +996,9 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 164	CLDSYM-N	1	30	2	Cloud Symbol	wetodb	2018-11-26 06:22:54
 1387	FORESTTYPE-N	1	30	1	Main forest type of growth area (1-3)	\N	\N
 1392	PROB-DIW0	1	6	1	Probability of aviation icing category 0	\N	\N
-206	WW-N	1	30	2	Present Weather	wetodb	2018-11-26 06:22:54
-207	W1-N	1	30	2	Past Weather 1	wetodb	2018-11-26 06:22:54
-208	W2-N	1	30	2	Past Weather 2	wetodb	2018-11-26 06:22:54
 404	ILSAA1-N	1	69	2	FMIWEATHERSYMBOL1	wetodb	2018-11-26 06:22:54
 406	ICINGWARN-N	1	64	2	Icing warning index, values between 0 ... 4	wetodb	2018-11-26 06:22:54
 557	GROWPER-N	1	69	2	Growth period on/off	wetodb	2018-11-26 06:22:54
-997	PPRET-N	1	69	2	Potential precipitation type	wetodb	2018-11-26 06:22:54
 1238	F50-SNOWLOAD-KGM2	1	18	1	50th fractal snowload in EPS	\N	\N
 1239	F75-SNOWLOAD-KGM2	1	18	1	75th fractal snowload in EPS	\N	\N
 1240	F90-SNOWLOAD-KGM2	1	18	1	90th fractal snowload in EPS	\N	\N
@@ -1331,6 +1193,16 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1459	RNETSWA-STDDEV-JM2	1	83	1	Standard deviation of net short wave radiation accumulation	\N	\N
 1460	ATMICEG-MS	1	15	1	Atmospheric ice growth	\N	\N
 1461	LLF-TOP-FL	1	29	1	Low level forecast cloud top height	\N	\N
+1462	PROB-POTRAIN	1	62	1	Probability of potential precipitation form rain	\N	\N
+1463	PROB-POTSNOW	1	62	1	Probability of potential precipitation form snow	\N	\N
+1464	PROB-POTSLEET	1	62	1	Probability of potential precipitation form sleet	\N	\N
+1465	PROB-POTDRIZZLE	1	62	1	Probability of potential precipitation form drizzle	\N	\N
+1466	PROB-POTFRDRZZL	1	62	1	Probability of potential precipitation form freezing drizzle	\N	\N
+1467	PROB-POTFRRAIN	1	62	1	Probability of potential precipitation form freezing rain	\N	\N
+654	CLDWAT-KGKG	1	17	1	Specific cloud liquid water content	radon_admin	2022-12-14 05:48:45
+52	CLDICE-KGKG	1	17	1	Specific cloud ice water content	radon_admin	2022-12-14 05:48:45
+1468	CLDWAT-KGM2	1	31	1	Cloud water	\N	\N
+1469	CLOUDMR-KGKG	1	17	1	Cloud mixing ratio	\N	\N
 1359	PROB-FROST-2	1	62	1	Probability of severe frost	radon_admin	2021-12-10 05:43:17
 1427	NWCSAF_EFFCLD-0TO1	1	62	1	NWCSAF effective cloudiness	radon_admin	2021-12-10 05:43:17
 1162	PROB-FRPREC	1	62	1	Probability of freezing precitipation (rain or drizzle)	radon_admin	2021-12-10 05:43:44
@@ -1356,7 +1228,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1461, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1474, true);
 
 
 --
