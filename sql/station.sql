@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -109,7 +109,6 @@ CREATE TRIGGER station_store_last_updated_trg BEFORE UPDATE ON public.station FO
 --
 
 GRANT SELECT ON TABLE public.station TO radon_ro;
-GRANT INSERT,DELETE,UPDATE ON TABLE public.station TO radon_rw;
 
 
 --

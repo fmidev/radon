@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -32,7 +32,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 260	MEPSMTA	Postprocessed fields for MEPS	1	postgres	2016-11-04 12:10:37	3
 500	OSISAF	OSI SAF satellite products	1	\N	\N	1
 301	SILAM_AQ	FMI Silam airquality model	1	\N	\N	1
-113	WAM_BALMFC	Copernicus (BALMFC) aaltomalli	1	\N	\N	1
+8	MNWC_PREOP	MEPS Nowcasting Preop	1	\N	\N	1
 2167	HANSENS	Water level forecast Hansen in ensemble mode, ECMWF source data	3	\N	\N	3
 2168	HANSMTA	Water level forecast Hansens post processed data	3	\N	\N	1
 121	PEPSSCAN	Kauhasen PEPS-yhdistelmä	1	\N	\N	1
@@ -51,11 +51,10 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 136	ECGERA5	ECMWF global ERA 5 reanalysis	1	wetodb	2018-02-28 14:55:23	1
 270	MNWCMTA	MEPS Nowcasting post processed fields	1	\N	\N	1
 109	LAPSSCAN	LAPS analysis for Scandinavian area	1	wetodb	2018-02-19 08:45:42	2
-103	LAPS	Finnish LAPS analysis	1	postgres	2016-05-26 08:49:27	2
+55	KWBG_UV	Global UV model NOAA	1	\N	\N	1
 105	MTLICE	Jääeditori	1	postgres	2017-05-02 05:34:04	1
 101	MESAN	FMI Meso Analysis project products	1	wetodb	2017-12-05 10:42:25	1
 131	ECG	ECMWF global deterministic weather model	1	postgres	2016-10-25 11:44:23	1
-1	HL2	Hirlam RCR-malli, alkuperäiset kentät	1	postgres	2016-05-26 08:42:00	1
 107	LAPSFIN	Finnish LAPS analysis, large area	1	wetodb	2018-02-19 08:52:58	2
 47	GEM	GEM GDPS global forecast from Canada	1	postgres	2016-05-26 08:42:00	1
 49	EGRR_SEAS	UKMO global seasonal model	1	postgres	2016-05-26 08:42:00	1
@@ -66,7 +65,6 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 102	TIESAA	FMI road condition model	1	postgres	2016-05-26 08:42:00	1
 250	GFSMTA	Postprocessed fields for GFS	1	postgres	2016-05-26 08:42:00	1
 106	TIENHOITO	FMI road maintenance model	1	postgres	2016-05-26 08:42:00	1
-111	WAM_MBE	MTL MBE-pohjainen aaltomalli	1	postgres	2016-05-26 08:42:00	1
 112	WAM_EC	MTL EC-pohjainen aaltomalli	1	postgres	2016-05-26 08:42:00	1
 114	OAAS_MBE	MTL MBE-pohjainen OAAS-malli	1	postgres	2016-05-26 08:42:00	1
 116	WALK_NOIC	Jalankulkumalli, ei j??varastoa	1	postgres	2016-05-26 08:42:00	1
@@ -76,11 +74,9 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 132	ECGSEF	ECMWF fine mesh marine model	1	postgres	2016-05-26 08:42:00	1
 133	ECGSEA	ECMWF global sea model	1	postgres	2016-05-26 08:42:00	1
 150	HBM_EC	HIROMB BOOS (HBM) circulation model for Baltic Sea (ECMWF)	1	postgres	2016-05-26 08:42:00	1
-151	HBM_HIR	HIROMB BOOS (HBM) circulation model for Baltic Sea (HIRLAM)	1	postgres	2016-05-26 08:42:00	1
 160	SMHIMESAN	Meso analysis from SMHI	1	postgres	2016-05-26 08:42:00	1
 199	AROME	Finnish Arome	1	postgres	2016-05-26 08:42:00	1
 210	AROMTA	Arome postprocessed fields	1	postgres	2016-05-26 08:42:00	1
-230	HL2MTA	Hirlam RCR-malli, lasketut kentät	1	postgres	2016-05-26 08:42:00	1
 240	ECGMTA	ECMWF-malli, lasketut kentät	1	postgres	2016-05-26 08:42:00	1
 242	ECM_PROB	Probabilities from ECMWF EPS	1	postgres	2016-05-26 08:42:00	1
 2026	ECMOS	MOS from ECMWF model	3	postgres	2016-05-26 08:42:00	1
@@ -120,8 +116,19 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 502	NWCSAF	NWCSAF satellite products	1	\N	\N	2
 503	NWCSAFMTA	NWCSAF post processed products	1	\N	\N	2
 152	HELMI	Helmi jäämalli	1	wetodb	2020-05-06 06:48:51	2
-271	MNWCMTADEV	MEPS Nowcasting post processed fields development version	1	\N	\N	1
 282	SMARTMETNWCDEV	SmartMet producer with nowcasting applied development version	1	\N	\N	1
+290	CLOUDCAST	Cloudcast NWC model	1	\N	\N	1
+504	NWCSAF_POLAR	NWCSAF polar orbiting satellite products	1	\N	\N	2
+505	NWCSAFMTA_POLAR	NWCSAF polar orbiting satellite post processed products	1	\N	\N	2
+520	VIEWFINDER	Viewfinder digital elevation map	1	\N	\N	2
+521	GLOBCOVER	Global land cover map	1	\N	\N	2
+153	WAM_HKI	WAM aaltomalli Helsinki	1	\N	\N	1
+154	WAM_BALMFC_ARCH	FMI Balmfc_wam aaltomalli saaristomerelle	1	\N	\N	1
+113	WAM_BALMFC	FMI BALMFC Wam aaltomalli itämerelle	1	radon_admin	2022-08-09 11:41:06	1
+283	HRNWC	High Resolution Nowcast	1	\N	\N	1
+272	MNWC_PREOPMTA	MEPS Nowcasting preop post processed fields	1	\N	\N	1
+271	MNWCMTADEV	MEPS Nowcasting post processed fields development version	1	radon_admin	2022-11-07 06:01:27	1
+284	HRNWC_PREOP	High Resolution Nowcast Preoperational	1	\N	\N	1
 \.
 
 

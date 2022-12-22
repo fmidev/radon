@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -73,21 +73,14 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 64	301	990	cnc_PM2_5	\N	\N	\N	\N
 65	301	424	cnc_SO2_gas	\N	\N	\N	\N
 66	150	304	vvel	\N	\N	\N	\N
-67	151	304	vvel	\N	\N	\N	\N
 68	150	303	uvel	\N	\N	\N	\N
-69	151	303	uvel	\N	\N	\N	\N
 81	113	447	VHM0	\N	\N	\N	\N
 82	113	453	VTPK	\N	\N	\N	\N
 70	150	432	temp	\N	\N	postgres	2017-01-12 11:43:14.270089+00
-71	151	432	temp	\N	\N	postgres	2017-01-12 11:43:14.270089+00
-72	151	269	salt	\N	\N	\N	\N
 73	150	269	salt	\N	\N	\N	\N
 74	150	24	ice_cov	\N	\N	\N	\N
-75	151	24	ice_cov	\N	\N	\N	\N
-76	151	648	elev	\N	\N	\N	\N
 77	150	648	elev	\N	\N	\N	\N
 78	150	991	ice_thk	\N	\N	\N	\N
-79	151	991	ice_thk	\N	\N	\N	\N
 83	113	996	VPED	\N	\N	\N	\N
 84	113	469	VHM0_SW1	\N	\N	\N	\N
 85	113	470	VTM01_SW1	\N	\N	\N	\N
@@ -120,6 +113,20 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 111	147	303	uos	\N	\N	\N	\N
 112	147	304	vos	\N	\N	\N	\N
 114	147	1398	dTKE	\N	\N	\N	\N
+118	52	1452	cnc_BC	\N	\N	\N	\N
+119	52	1453	LDSA	\N	\N	\N	\N
+120	153	447	VHM0	\N	\N	\N	\N
+121	153	453	VTPK	\N	\N	\N	\N
+122	153	996	VPED	\N	\N	\N	\N
+123	153	469	VHM0_SW1	\N	\N	\N	\N
+124	153	470	VTM01_SW1	\N	\N	\N	\N
+125	153	471	VMDR_SW1	\N	\N	\N	\N
+126	154	447	VHM0	\N	\N	\N	\N
+127	154	453	VTPK	\N	\N	\N	\N
+128	154	996	VPED	\N	\N	\N	\N
+129	154	469	VHM0_SW1	\N	\N	\N	\N
+130	154	470	VTM01_SW1	\N	\N	\N	\N
+131	154	471	VMDR_SW1	\N	\N	\N	\N
 \.
 
 
@@ -127,7 +134,7 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 -- Name: param_netcdf_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_netcdf_id_seq', 117, true);
+SELECT pg_catalog.setval('public.param_netcdf_id_seq', 131, true);
 
 
 --

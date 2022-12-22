@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -32,13 +32,13 @@ CREATE VIEW public.geom_stereographic_v AS
     gs.scanning_mode,
     gs.orientation,
     gs.latin,
-    coalesce(gs.lat_ts, gs.latin) AS lat_ts,
+    COALESCE(gs.lat_ts, gs.latin) AS lat_ts,
     gs.description,
     e.a AS earth_semi_major,
     e.b AS earth_semi_minor,
     e.name AS earth_ellipsoid_name,
     d.name AS datum_name,
-    format('+proj=stere +lat_0=%s +lat_ts=%s +lon_0=%s %s +no_defs', gs.latin, coalesce(gs.lat_ts, gs.latin), gs.orientation, public.datum_text_f(e.name, e.a, e.b, d.name)) AS proj4
+    format('+proj=stere +lat_0=%s +lat_ts=%s +lon_0=%s %s +no_defs'::text, gs.latin, COALESCE(gs.lat_ts, gs.latin), gs.orientation, public.datum_text_f(e.name, e.a, e.b, d.name)) AS proj4
    FROM public.geom g,
     ((public.geom_stereographic gs
      LEFT JOIN public.earth_shape e ON ((gs.earth_shape_id = e.id)))

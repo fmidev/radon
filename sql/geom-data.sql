@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 12.6
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -127,6 +127,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 165	MBE203153160	4	MBE Hirlam 203 x 153 1.60 deg	\N	\N
 169	MBE241180136	4	MBE 241 x 180 0.136 deg	\N	\N
 162	MBE406306080	4	MBE Hirlam 406 x 306 0.08 deg	\N	\N
+1115	NEMO801738_UV	1	\N	\N	\N
 166	MBE482360068	4	MBE Hirlam 482 x 360 0.068 deg	\N	\N
 163	MBU406306080	4	MBE Hirlam u-winds 406 x 306 0.08 deg	\N	\N
 167	MBU482360068	4	MBE Hirlam u-winds 482 x 360 0.068 deg	\N	\N
@@ -188,6 +189,9 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 1111	DIWEUROPE	7	\N	radon_admin	2021-03-22 11:22:13.733772+00
 1112	MEPS1000D	5	\N	\N	\N
 1114	GEM0150	1	Canadian global 0.15 degree resolution forecast	\N	\N
+1116	DEMSCANDINAVIA00027	1	\N	\N	\N
+1117	WAMHKI	1	\N	\N	\N
+1119	WAM_BALMFC_ARCH	1	WAM BALMFC archipelago 0.5nm	\N	\N
 \.
 
 
@@ -195,7 +199,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1114, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1119, true);
 
 
 --

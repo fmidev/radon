@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -70,6 +70,8 @@ ALTER TABLE ONLY public.himan_run_statistics ALTER COLUMN id SET DEFAULT nextval
 
 ALTER TABLE ONLY public.himan_run_statistics
     ADD CONSTRAINT himan_run_statistics_pkey PRIMARY KEY (id);
+
+ALTER TABLE public.himan_run_statistics CLUSTER ON himan_run_statistics_pkey;
 
 
 --

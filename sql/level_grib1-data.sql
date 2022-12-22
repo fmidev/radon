@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,38 +23,30 @@ SET row_security = off;
 COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updated) FROM stdin;
 250	1	1	\N	\N
 130	3	109	\N	\N
-1	2	100	\N	\N
 242	1	1	\N	\N
 250	6	105	\N	\N
 6	7	103	\N	\N
-1	6	1	\N	\N
 4	7	102	\N	\N
 250	2	100	\N	\N
 130	14	112	wetodb	2016-11-17 09:25:24.197174+00
-1	3	109	\N	\N
 4	6	105	\N	\N
 149	6	105	\N	\N
 4	7	103	\N	\N
-1	5	8	\N	\N
 5	2	100	\N	\N
 131	9	112	\N	\N
 4	8	200	\N	\N
-1	4	103	\N	\N
 5	7	103	\N	\N
 148	6	105	\N	\N
 130	2	100	\N	\N
-1	6	105	\N	\N
 5	6	105	\N	\N
 130	1	1	\N	\N
 4	15	20	\N	\N
-1	7	102	\N	\N
 240	13	106	\N	\N
 107	1	1	\N	\N
 240	12	246	\N	\N
 53	1	1	\N	\N
 118	1	1	\N	\N
 109	1	1	\N	\N
-103	1	1	\N	\N
 50	1	1	\N	\N
 51	1	1	\N	\N
 107	5	8	\N	\N
@@ -62,7 +54,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 53	5	8	\N	\N
 118	5	8	\N	\N
 109	5	8	\N	\N
-103	5	8	\N	\N
 50	5	8	\N	\N
 51	5	8	\N	\N
 107	6	105	\N	\N
@@ -70,7 +61,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 53	6	105	\N	\N
 118	6	105	\N	\N
 109	6	105	\N	\N
-103	6	105	\N	\N
 50	6	105	\N	\N
 51	6	105	\N	\N
 107	4	103	\N	\N
@@ -78,7 +68,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 53	4	103	\N	\N
 118	4	103	\N	\N
 109	4	103	\N	\N
-103	4	103	\N	\N
 50	4	103	\N	\N
 51	4	103	\N	\N
 107	7	102	\N	\N
@@ -86,7 +75,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 53	7	102	\N	\N
 118	7	102	\N	\N
 109	7	102	\N	\N
-103	7	102	\N	\N
 50	7	102	\N	\N
 51	7	102	\N	\N
 107	2	100	\N	\N
@@ -94,7 +82,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 53	2	100	\N	\N
 118	2	100	\N	\N
 109	2	100	\N	\N
-103	2	100	\N	\N
 50	2	100	\N	\N
 51	2	100	\N	\N
 131	2	100	\N	\N
@@ -108,49 +95,36 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 133	7	102	\N	\N
 132	6	105	\N	\N
 133	6	105	\N	\N
-230	3	109	\N	\N
 210	3	109	\N	\N
 240	3	109	\N	\N
 4	2	100	\N	\N
-230	1	1	\N	\N
 210	1	1	\N	\N
 240	1	1	\N	\N
-1	8	200	\N	\N
-230	6	105	\N	\N
 210	6	105	\N	\N
 240	6	105	\N	\N
 4	5	8	\N	\N
-230	7	102	\N	\N
 210	7	102	\N	\N
 240	7	102	\N	\N
 113	6	105	\N	\N
-230	2	100	\N	\N
 210	2	100	\N	\N
 240	2	100	\N	\N
 122	6	105	\N	\N
-230	5	8	\N	\N
 210	5	8	\N	\N
 240	5	8	\N	\N
 260	12	246	\N	\N
-230	4	103	\N	\N
 210	4	103	\N	\N
 240	4	103	\N	\N
 52	6	105	\N	\N
-230	6	163	\N	\N
 210	6	163	\N	\N
 240	6	163	\N	\N
-230	13	106	\N	\N
 199	8	200	\N	\N
 2026	2	100	\N	\N
 301	6	105	\N	\N
 105	6	105	\N	\N
 150	2	100	\N	\N
-151	2	100	\N	\N
 2160	2	100	\N	\N
 2161	2	100	\N	\N
-230	12	246	\N	\N
 10	7	103	\N	\N
-111	2	100	\N	\N
 7	2	100	\N	\N
 500	1	1	\N	\N
 206	6	105	\N	\N
@@ -175,10 +149,8 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 1016	2	100	\N	\N
 2026	3	109	\N	\N
 150	3	109	\N	\N
-151	3	109	\N	\N
 2160	3	109	\N	\N
 2161	3	109	\N	\N
-111	3	109	\N	\N
 2155	3	109	\N	\N
 2156	3	109	\N	\N
 2157	3	109	\N	\N
@@ -191,10 +163,8 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 1016	3	109	\N	\N
 2026	1	1	\N	\N
 150	1	1	\N	\N
-151	1	1	\N	\N
 2160	1	1	\N	\N
 2161	1	1	\N	\N
-111	1	1	\N	\N
 2155	1	1	\N	\N
 2156	1	1	\N	\N
 2157	1	1	\N	\N
@@ -206,10 +176,8 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 1016	1	1	\N	\N
 2026	6	105	\N	\N
 150	6	105	\N	\N
-151	6	105	\N	\N
 2160	6	105	\N	\N
 2161	6	105	\N	\N
-111	6	105	\N	\N
 2155	6	105	\N	\N
 2156	6	105	\N	\N
 2157	6	105	\N	\N
@@ -221,10 +189,8 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 1016	6	105	\N	\N
 2026	7	102	\N	\N
 150	7	102	\N	\N
-151	7	102	\N	\N
 2160	7	102	\N	\N
 2161	7	102	\N	\N
-111	7	102	\N	\N
 2155	7	102	\N	\N
 2156	7	102	\N	\N
 2157	7	102	\N	\N
@@ -236,10 +202,8 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 1016	7	102	\N	\N
 2026	4	103	\N	\N
 150	4	103	\N	\N
-151	4	103	\N	\N
 2160	4	103	\N	\N
 2161	4	103	\N	\N
-111	4	103	\N	\N
 2155	4	103	\N	\N
 2156	4	103	\N	\N
 2157	4	103	\N	\N
@@ -253,10 +217,8 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 199	15	20	postgres	2017-01-10 19:51:17.063908+00
 120	6	105	postgres	2016-06-16 04:34:16.304016+00
 150	5	8	\N	\N
-151	5	8	\N	\N
 2160	5	8	\N	\N
 2161	5	8	\N	\N
-111	5	8	\N	\N
 2155	5	8	\N	\N
 2156	5	8	\N	\N
 2157	5	8	\N	\N
@@ -287,6 +249,7 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 199	2	100	\N	\N
 49	6	105	\N	\N
 134	1	1	wetodb	2016-05-19 11:35:26.54645+00
+134	9	112	\N	\N
 \.
 
 

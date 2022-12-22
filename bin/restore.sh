@@ -8,7 +8,14 @@ PSQL_ARGS="-v ON_ERROR_STOP=1 -Aqt"
 
 # database
 
-echo "CREATE USER radon_admin" | psql $PSQL_ARGS -d postgres
+echo "DO \$\$
+BEGIN
+  CREATE USER radon_admin;
+  EXCEPTION WHEN OTHERS THEN
+  RAISE NOTICE 'User radon_admin exists already';
+END
+\$\$" | psql $PSQL_ARGS -d postgres
+
 echo "CREATE DATABASE radon OWNER radon_admin" | psql $PSQL_ARGS -d postgres
 echo "ALTER DATABASE radon SET TIMEZONE TO 'UTC'" | psql $PSQL_ARGS -d postgres
 
@@ -127,7 +134,8 @@ for f in producer_class producer_class-data \
 	file_format-data \
 	file_protocol \
 	file_protocol-data \
-	grid_data_template previ_data_template; do
+	grid_data_template previ_data_template \
+	ss_forecast_status; do
 
   echo "file: $f.sql"
   psql $PSQL_ARGS -f $f.sql > /dev/null

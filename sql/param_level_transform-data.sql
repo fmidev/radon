@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4
--- Dumped by pg_dump version 12.6
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -30,9 +30,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 111	181	139	7	\N	4	\N	\N	\N
 8	131	654	8	\N	6	\N	\N	\N
 9	131	187	1	\N	6	\N	\N	\N
-10	131	1	1	\N	6	\N	\N	\N
 11	131	153	1	0	6	2	wetodb	2018-09-07 09:13:11.514023+00
-12	131	689	1	\N	6	\N	\N	\N
 13	131	184	1	\N	6	\N	\N	\N
 14	131	186	1	\N	6	\N	\N	\N
 92	131	171	1	100	6	100	wetodb	2017-12-19 10:25:18.550634+00
@@ -102,11 +100,9 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 42	134	182	6	\N	1	\N	\N	\N
 43	134	182	1	\N	6	\N	\N	\N
 30	53	187	8	\N	6	\N	wetodb	2018-01-24 06:04:13.923746+00
-94	53	1	1	\N	6	\N	\N	\N
 96	53	139	1	\N	6	\N	\N	\N
 97	131	214	1	\N	6	\N	\N	\N
 98	131	215	1	\N	6	\N	\N	\N
-99	131	1	1	\N	6	\N	\N	\N
 100	131	139	1	\N	6	\N	\N	\N
 102	180	139	6	\N	4	\N	\N	\N
 117	53	196	8	\N	6	0	\N	\N
@@ -118,15 +114,12 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 125	189	139	7	\N	4	\N	\N	\N
 126	281	139	7	\N	4	\N	\N	\N
 127	109	509	1	0	6	0	\N	\N
-128	120	154	6	0	6	2	\N	\N
 129	107	509	1	0	6	0	\N	\N
 130	107	143	1	0	6	0	\N	\N
 134	109	441	1	0	6	0	\N	\N
 132	131	598	9	0	1	0	\N	\N
 133	131	598	9	7	1	7	\N	\N
 135	131	980	1	0	6	2	\N	\N
-143	120	153	6	0	6	2	\N	\N
-144	120	162	6	0	6	2	\N	\N
 138	134	162	1	0	6	2	\N	\N
 139	137	598	14	0	1	0	wetodb	2019-06-12 06:53:59.819234+00
 145	134	318	1	\N	6	\N	\N	\N
@@ -151,6 +144,14 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 166	131	1432	1	\N	6	\N	\N	\N
 167	134	1417	1	0	6	2	\N	\N
 168	134	1418	1	0	6	2	\N	\N
+169	134	1416	1	0	6	2	\N	\N
+170	131	1416	1	0	6	2	\N	\N
+171	131	1418	1	0	6	2	\N	\N
+172	131	431	1	0	6	0	\N	\N
+173	131	559	1	0	6	0	\N	\N
+174	181	411	16	\N	1	\N	\N	\N
+175	134	426	1	0	6	0	\N	\N
+176	134	48	1	\N	6	\N	\N	\N
 \.
 
 
@@ -158,7 +159,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 -- Name: param_level_transform_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_level_transform_id_seq', 168, true);
+SELECT pg_catalog.setval('public.param_level_transform_id_seq', 176, true);
 
 
 --
