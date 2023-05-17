@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.1
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -37,6 +37,8 @@ COPY public.level (id, name, description, unit_id, last_updater, last_updated) F
 9	GROUND_DEPTH	Layer between two depths below land surface	63	wetodb	2017-08-18 07:01:00.767969+00
 15	ISOTHERMAL	Isothermal level, temperature in 1/100 K	\N	\N	\N
 16	MAXWIND	Maximum wind level	\N	wetodb	2019-04-24 05:57:57.715881+00
+17	HEIGHT_MSL	Specific altitude above mean sea level	\N	\N	\N
+18	GENERAL	Generalized vertical height coordinate	\N	\N	\N
 \.
 
 
@@ -44,7 +46,7 @@ COPY public.level (id, name, description, unit_id, last_updater, last_updated) F
 -- Name: level_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.level_id_seq', 16, true);
+SELECT pg_catalog.setval('public.level_id_seq', 18, true);
 
 
 --

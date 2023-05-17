@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.6 (Homebrew)
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -22,24 +22,16 @@ SET row_security = off;
 
 COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updated) FROM stdin;
 250	1	1	\N	\N
-130	3	109	\N	\N
 242	1	1	\N	\N
 250	6	105	\N	\N
-6	7	103	\N	\N
 4	7	102	\N	\N
 250	2	100	\N	\N
-130	14	112	wetodb	2016-11-17 09:25:24.197174+00
 4	6	105	\N	\N
 149	6	105	\N	\N
 4	7	103	\N	\N
-5	2	100	\N	\N
 131	9	112	\N	\N
 4	8	200	\N	\N
-5	7	103	\N	\N
 148	6	105	\N	\N
-130	2	100	\N	\N
-5	6	105	\N	\N
-130	1	1	\N	\N
 4	15	20	\N	\N
 240	13	106	\N	\N
 107	1	1	\N	\N
@@ -47,43 +39,30 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 53	1	1	\N	\N
 118	1	1	\N	\N
 109	1	1	\N	\N
-50	1	1	\N	\N
-51	1	1	\N	\N
 107	5	8	\N	\N
 4	3	109	\N	\N
 53	5	8	\N	\N
 118	5	8	\N	\N
 109	5	8	\N	\N
-50	5	8	\N	\N
-51	5	8	\N	\N
 107	6	105	\N	\N
 241	1	1	\N	\N
 53	6	105	\N	\N
 118	6	105	\N	\N
 109	6	105	\N	\N
-50	6	105	\N	\N
-51	6	105	\N	\N
 107	4	103	\N	\N
-6	6	105	\N	\N
 53	4	103	\N	\N
 118	4	103	\N	\N
 109	4	103	\N	\N
-50	4	103	\N	\N
-51	4	103	\N	\N
 107	7	102	\N	\N
 135	14	112	\N	\N
 53	7	102	\N	\N
 118	7	102	\N	\N
 109	7	102	\N	\N
-50	7	102	\N	\N
-51	7	102	\N	\N
 107	2	100	\N	\N
 135	1	1	\N	\N
 53	2	100	\N	\N
 118	2	100	\N	\N
 109	2	100	\N	\N
-50	2	100	\N	\N
-51	2	100	\N	\N
 131	2	100	\N	\N
 131	7	102	\N	\N
 131	3	109	\N	\N
@@ -121,18 +100,13 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 2026	2	100	\N	\N
 301	6	105	\N	\N
 105	6	105	\N	\N
-150	2	100	\N	\N
-2160	2	100	\N	\N
 2161	2	100	\N	\N
 10	7	103	\N	\N
 7	2	100	\N	\N
 500	1	1	\N	\N
-206	6	105	\N	\N
 10	6	105	\N	\N
 7	3	109	\N	\N
-2155	2	100	\N	\N
 2156	2	100	\N	\N
-2157	2	100	\N	\N
 2158	2	100	\N	\N
 137	14	112	\N	\N
 7	5	8	\N	\N
@@ -141,104 +115,55 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 7	7	102	\N	\N
 7	7	103	\N	\N
 7	8	200	\N	\N
-2125	2	100	\N	\N
 7	15	20	\N	\N
-2150	2	100	\N	\N
 189	6	105	\N	\N
-114	2	100	\N	\N
 1016	2	100	\N	\N
 2026	3	109	\N	\N
-150	3	109	\N	\N
-2160	3	109	\N	\N
 2161	3	109	\N	\N
-2155	3	109	\N	\N
 2156	3	109	\N	\N
-2157	3	109	\N	\N
 2158	3	109	\N	\N
 260	15	20	\N	\N
 112	3	109	\N	\N
-2125	3	109	\N	\N
-2150	3	109	\N	\N
-114	3	109	\N	\N
 1016	3	109	\N	\N
 2026	1	1	\N	\N
-150	1	1	\N	\N
-2160	1	1	\N	\N
 2161	1	1	\N	\N
-2155	1	1	\N	\N
 2156	1	1	\N	\N
-2157	1	1	\N	\N
 2158	1	1	\N	\N
 112	1	1	\N	\N
-2125	1	1	\N	\N
-2150	1	1	\N	\N
-114	1	1	\N	\N
 1016	1	1	\N	\N
 2026	6	105	\N	\N
-150	6	105	\N	\N
-2160	6	105	\N	\N
 2161	6	105	\N	\N
-2155	6	105	\N	\N
 2156	6	105	\N	\N
-2157	6	105	\N	\N
 2158	6	105	\N	\N
 112	6	105	\N	\N
-2125	6	105	\N	\N
-2150	6	105	\N	\N
-114	6	105	\N	\N
 1016	6	105	\N	\N
 2026	7	102	\N	\N
-150	7	102	\N	\N
-2160	7	102	\N	\N
 2161	7	102	\N	\N
-2155	7	102	\N	\N
 2156	7	102	\N	\N
-2157	7	102	\N	\N
 2158	7	102	\N	\N
 112	7	102	\N	\N
-2125	7	102	\N	\N
-2150	7	102	\N	\N
-114	7	102	\N	\N
 1016	7	102	\N	\N
 2026	4	103	\N	\N
-150	4	103	\N	\N
-2160	4	103	\N	\N
 2161	4	103	\N	\N
-2155	4	103	\N	\N
 2156	4	103	\N	\N
-2157	4	103	\N	\N
 2158	4	103	\N	\N
 112	4	103	\N	\N
-2125	4	103	\N	\N
-2150	4	103	\N	\N
-114	4	103	\N	\N
 1016	4	103	\N	\N
 2026	5	8	\N	\N
 199	15	20	postgres	2017-01-10 19:51:17.063908+00
 120	6	105	postgres	2016-06-16 04:34:16.304016+00
-150	5	8	\N	\N
-2160	5	8	\N	\N
 2161	5	8	\N	\N
-2155	5	8	\N	\N
 2156	5	8	\N	\N
-2157	5	8	\N	\N
 2158	5	8	\N	\N
 112	5	8	\N	\N
-2125	5	8	\N	\N
-2150	5	8	\N	\N
-114	5	8	\N	\N
 1016	5	8	\N	\N
 105	1	1	\N	\N
 152	1	1	\N	\N
 102	6	105	\N	\N
-116	6	105	\N	\N
 106	6	105	\N	\N
-117	6	105	\N	\N
 101	6	105	\N	\N
 102	7	102	\N	\N
-116	7	102	\N	\N
 106	7	102	\N	\N
-117	7	102	\N	\N
 101	7	102	\N	\N
 119	6	105	\N	\N
 242	6	105	\N	\N
@@ -247,7 +172,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 199	3	109	\N	\N
 199	4	103	\N	\N
 199	2	100	\N	\N
-49	6	105	\N	\N
 134	1	1	wetodb	2016-05-19 11:35:26.54645+00
 134	9	112	\N	\N
 \.

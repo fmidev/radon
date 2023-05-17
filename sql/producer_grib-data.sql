@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.6 (Homebrew)
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -24,9 +24,8 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 118	244	244	86	\N	\N
 119	104	104	255	\N	\N
 5	47	47	54	radon_admin	2022-07-01 04:52:41.899745+00
-6	49	49	74	\N	\N
-7	50	45	74	\N	\N
-8	51	160	78	\N	\N
+128	5	20	251	\N	\N
+129	291	252	86	\N	\N
 76	122	122	86	postgres	2016-06-16 04:25:41.350016+00
 10	53	96	7	\N	\N
 97	243	243	86	\N	\N
@@ -39,31 +38,23 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 18	107	107	86	\N	\N
 19	109	109	86	\N	\N
 21	112	112	86	\N	\N
-22	114	114	86	\N	\N
-23	116	116	86	\N	\N
-24	117	117	86	\N	\N
 25	118	118	86	\N	\N
 26	119	119	86	\N	\N
 41	149	149	88	\N	\N
 96	121	121	86	wetodb	2017-05-29 11:04:22.044312+00
 123	55	2	7	\N	\N
-30	150	150	86	\N	\N
 32	152	152	86	\N	\N
 33	160	160	82	\N	\N
 34	199	3	86	\N	\N
 35	210	210	86	\N	\N
 38	240	240	86	\N	\N
 39	242	242	86	\N	\N
-77	130	128	98	\N	\N
 95	500	1	88	\N	\N
 75	170	1	78	postgres	2016-02-23 11:55:47.253966+00
-84	5	2	88	\N	\N
 81	48	70	54	\N	\N
 82	54	107	7	\N	\N
-85	6	4	88	\N	\N
 86	241	241	86	\N	\N
 87	135	139	98	\N	\N
-88	206	206	86	\N	\N
 98	181	181	86	\N	\N
 90	260	204	86	\N	\N
 99	180	180	86	\N	\N
@@ -79,8 +70,6 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 125	272	209	86	\N	\N
 111	270	207	86	\N	\N
 112	135	147	98	\N	\N
-116	11	3	251	\N	\N
-117	265	211	86	\N	\N
 114	281	202	86	\N	\N
 113	189	189	88	wetodb	2018-09-20 10:00:52.201369+00
 28	132	215	98	wetodb	2019-06-11 09:08:14.635523+00
@@ -102,7 +91,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.producer_grib_id_seq', 127, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 129, true);
 
 
 --

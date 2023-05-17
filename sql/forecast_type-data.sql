@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.1
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -25,7 +25,7 @@ COPY public.forecast_type (id, name, description, last_updater, last_updated) FR
 2	ANALYSIS	Analysis	\N	\N
 3	EPS_PE	Ensemble forecast, perturbation	\N	\N
 4	EPS_CF	Ensemble forecast, control forecast	\N	\N
-5	STATISTICAL	Statistical post processing	\N	\N
+5	STATISTICAL	Statistical post processing using an ensemble	radon_admin	2023-03-20 06:49:51.975365+00
 \.
 
 

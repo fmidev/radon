@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.6 (Homebrew)
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -52,8 +52,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 36	PROB-WG-1	1	6	1	Probability of reaching wind gust speed of 15 m/s in EPS	\N	\N
 37	PROB-WG-2	1	6	1	Probability of reaching wind gust speed of 20 m/s in EPS	\N	\N
 38	PROB-WG-3	1	6	1	Probability of reaching wind gust speed of 25 m/s in EPS	\N	\N
-39	RTOPLW-WM2	1	12	1	Net long wave radiation, top of athmosphere	\N	\N
-40	RTOPSW-WM2	1	12	1	Net short wave radiation, top of athmosphere	\N	\N
+1484	MAXICING-N	1	69	2	Vertical maximum of icing index	\N	\N
 41	ROADMMT-S	1	4	1	Time to next Road Maintenance Measure	\N	\N
 42	ROADMM-N	1	69	1	Road Maintenance Measure Code	\N	\N
 43	FD-MM	1	60	1	Water equivalent of frost cover in mm	\N	\N
@@ -82,8 +81,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 76	FSNO-PRCNT	1	6	1	Percentage of snow in a grid cell	\N	\N
 77	FSG-PRCNT	1	6	1	Percentage of sun glint in a grid cell	\N	\N
 1474	ALBEDOSNOW-PRCNT	1	6	1	Snow albedo	\N	\N
-88	FLLAT-JM2	1	20	1	Latent heat flux	\N	\N
-89	FLSEN-JM2	1	20	1	Sensible heat flux	\N	\N
+1049	LHE-WM2	1	12	1	Latent heat through evaporation	radon_admin	2023-03-28 04:55:52
 28	IRIDGE-PRCNT	1	6	1	Ice degree of ridging	postgres	2017-01-07 10:49:55
 1470	T2-K	1	3	1	Temperature, second parameter	\N	\N
 1471	RH2-PRCNT	1	6	1	Relative Humidity, second parameter	\N	\N
@@ -111,6 +109,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 136	CB-M	1	2	1	CB Cloud Height in Meters	\N	\N
 1027	TF-C	1	58	1	Frost point temperature in celsius	\N	\N
 138	Q-KGKG	1	17	1	Specific Humidity in kg/kg	\N	\N
+1483	PARS-JM2	1	83	1	Photosynthetically active radiation flux at the surface	radon_admin	2023-03-28 04:57:21
 139	P-PA	1	7	1	Pressure in Pascals	\N	\N
 694	CL-FT	1	82	1	Height of cloud layer in feet	\N	\N
 695	PRI-KGM2	1	32	1	Instant precipitation in kg/m2	\N	\N
@@ -259,13 +258,12 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 311	SDD-D	1	15	1	Sea water Direction in Degrees	\N	\N
 312	IMEANTHK-CM	1	63	1	Ice mean thickness	\N	\N
 313	TP-K	1	3	1	Potential temperature	\N	\N
-314	RNETSWA-JM2	1	83	1	Net short wave radiation accumulation	\N	\N
-315	RDIFSWA-JM2	1	83	1	Diffuse shortwave radiation accumulation	\N	\N
-316	RNETLWA-JM2	1	83	1	Net long wave radiation accumulation	\N	\N
-317	RADLWA-JM2	1	83	1	Long wave radiation accumulation	\N	\N
-318	RADGLOA-JM2	1	83	1	Global radiation accumulation	\N	\N
-319	RTOPSWA-JM2	1	83	1	Net short wave radiation accumulation, top of atmosphere	\N	\N
-320	RTOPLWA-JM2	1	83	1	Net long wave radiation accumulation, top of atmosphere	\N	\N
+533	TGMIN06-C	1	58	1	Minimum temperature at ground at 06 UTC in celcius	\N	\N
+1485	RR-TM2	1	91	1	Total precipitation in m	\N	\N
+1486	RADSWDIR-JM2	1	83	1	Surface direct shortwave radiation	\N	\N
+1487	RADSWDIR-WM2	1	12	1	Surface direct shortwave radiation	\N	\N
+1488	RADSWDIRINST-WM2	1	12	1	Surface instant direct shortwave radiation	\N	\N
+1489	FFG-BIASC-MS	1	15	1	Bias-corrected wind gust speed	\N	\N
 321	RRH-KGM2	1	18	1	Total hail precipitation in kg/m2	\N	\N
 1232	EFI-WG--1TO1	1	90	2	Extreme Forecast Index for wind gusts	\N	\N
 323	SNRI-KGM2	1	32	1	Instant snowfall rate in mm/s or mm/h	\N	\N
@@ -326,17 +324,16 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 775	LSRH-N	1	30	1	Logarithm of Surface Roughness (heat)	\N	\N
 714	TOPL2-N	1	69	1	TopLink aviation weather index 2	\N	\N
 715	TOPL3-N	1	69	1	TopLink aviation weather index 3	\N	\N
-776	F20-FRST-CM	1	63	1	20th fractal frost top depth	\N	\N
-777	F80-FRST-CM	1	63	1	80th fractal frost top depth	\N	\N
+1475	PROB-ATMICEG-1	1	6	1	Probability of atmospheric ice growth	\N	\N
+1476	PROB-ATMICEG-2	1	6	1	Probability of atmospheric ice growth	\N	\N
 716	HICE-M	1	2	1	Sea-ice thickness	\N	\N
 717	SSH-M	1	2	1	Sea surface elevation	\N	\N
-778	F20-FRSB-CM	1	63	1	20th fractal frost bottom depth	\N	\N
-779	F80-FRSB-CM	1	63	1	80th fractal frost bottom depth	\N	\N
-780	MEAN-FRST-CM	1	63	1	Mean frost top depth	\N	\N
+1477	PROB-ATMICEG-3	1	6	1	Probability of atmospheric ice growth	\N	\N
+1478	PROB-ATMICEG-4	1	6	1	Probability of atmospheric ice growth	\N	\N
+1479	2DFD-M2SRAD	1	98	1	Spectral density of ocean waves in two dimensions	\N	\N
 1029	FFG-STDDEV-MS	1	15	1	Standard deviation of wind gust	\N	\N
 718	HSNOW-M	1	2	1	Surface snow thickness	\N	\N
 1058	TMIN12H-C	1	58	1	Minimum temperature from the preceeding 12 hours in Celsius	\N	\N
-781	MEAN-FRSB-CM	1	63	1	Mean frost bottom depth	\N	\N
 719	BLTURB-N	1	64	2	Boundary layer turbulence, values ranging from 0 to 5	postgres	2015-11-20 09:23:09
 750	POP-PRCNT	1	6	1	Probability of precipitation	\N	\N
 749	ICETYPE-N	1	69	1	Ice type	\N	\N
@@ -418,7 +415,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 468	CAPPIHGT-M	1	2	1	Height of CAPPI level	\N	\N
 469	SW0WH-M	1	2	1	Significant Wave Height of Swell 0 in Meters	\N	\N
 470	SW0WPER-S	1	4	1	Significant Wave Period of Swell 0 in seconds	\N	\N
-1049	LHE-WM2	1	12	1	Latent heat flux through evaporation	\N	\N
 472	SW1WH-M	1	2	1	Significant Wave Height of Swell 1 in Meters	\N	\N
 473	SW1WPER-S	1	4	1	Significant Wave Period of Swell 1 in seconds	\N	\N
 1050	PROB-WATLEV-LOW-1	1	6	1	Probability of water level being lower than given threshold	\N	\N
@@ -807,7 +803,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1015	PROB-RR3-4	1	6	1	Probability of Precipitation #4 in 3h	\N	\N
 977	EFI-T-K--1TO1	1	90	2	Extreme Forecast Index for T-K	\N	\N
 978	EFI-FF-MS--1TO1	1	90	2	Extreme Forecast Index for FF-MS	\N	\N
-979	RADSWA-JM2	1	83	1	Short wave radiation accumulation	\N	\N
 980	T-MEAN-K	1	3	1	Mean temperature in Kelvins	\N	\N
 981	P-MEAN-PA	1	7	1	Mean pressure in Pascals	\N	\N
 65	N-STDDEV-PRCNT	1	6	1	Standard Deviation of total cloudiness	postgres	2017-01-03 08:49:21
@@ -830,7 +825,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1021	PROB-CONV-RR3-4	1	6	1	Probability of Convective Precipitation #4 in 3h	\N	\N
 1022	PROB-CONV-RR3-5	1	6	1	Probability of Convective Precipitation #5 in 3h	\N	\N
 1023	PROB-CONV-RR3-6	1	6	1	Probability of Convective Precipitation #6 in 3h	\N	\N
-1036	CL-DEV-FT	1	82	1	Height of cloud layer in feet DEVELOPMENT PARAMETER REMOVE LATER	\N	\N
 1051	PROB-WATLEV-HIGH-1	1	6	1	Probability of water level being higher than given threshold	\N	\N
 1052	PROB-WATLEV-HIGH-2	1	6	1	Probability of water level being higher than given threshold	\N	\N
 1053	PROB-WATLEV-HIGH-3	1	6	1	Probability of water level being higher than given threshold	\N	\N
@@ -870,7 +864,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1045	F0-WATLEV-CM	1	63	1	0th fractal sea level height in EPS	\N	\N
 1046	WATLEV-MEAN-CM	1	63	1	Mean sea level height	\N	\N
 1047	WATLEV-STDDEV-CM	1	63	1	Standard deviation of sea level height	\N	\N
-1429	RADGLOCA-JM2	1	83	1	Global radiation clear-sky accumulation	\N	\N
 1054	CBTCU-FL	1	29	1	Estimated (max) TOP [FL] for CB/TCU clouds in the model	\N	\N
 739	TMIN12H-K	1	3	1	Minimum temperature from the preceeding 12 hours in Kelvin	\N	\N
 738	TMAX12H-K	1	3	1	Maximum temperature from the preceeding 12 hours in Kelvin	wetodb	2017-05-31 18:12:17
@@ -914,7 +907,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1197	F100-TD2M-C	1	3	1	100th fractal dewpoint temperature in EPS	\N	\N
 1199	FROSTSUM-C	1	58	1	Cumulative frost sum over some period of time	\N	\N
 1200	TROPO-FL	1	29	1	Estimated height [FL] of the tropopause	\N	\N
-1201	SDNIRR-JM2	1	83	1	Surface direct normal irradiation	\N	\N
 1202	RACC-KGM2	1	18	1	Rain accumulation in mm	\N	\N
 1203	GDD-C	1	58	1	Growing degree days	\N	\N
 1286	LSM-0TO1	1	62	1	Land-Sea mask	\N	\N
@@ -1038,6 +1030,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1277	F50-RR-120-KGM2	1	18	1	50th fractal 120h total precipitation in EPS	\N	\N
 1278	F75-RR-120-KGM2	1	18	1	75th fractal 120h total precipitation in EPS	\N	\N
 1279	F90-RR-120-KGM2	1	18	1	90th fractal 120h total precipitation in EPS	\N	\N
+1369	F90-RRS-24-MM	1	18	1	90th fractal 24h RRS in EPS	\N	\N
 1280	F100-RR-120-KGM2	1	18	1	100th fractal 120h total precipitation in EPS	\N	\N
 1281	CSI-N	1	30	1	Convective severity index	\N	\N
 1283	PROB-CSI-1	1	6	1	Probability of reaching some CSI threshold value	\N	\N
@@ -1119,11 +1112,9 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1366	F25-RRS-24-MM	1	18	1	25th fractal RRS in EPS	\N	\N
 1367	F50-RRS-24-MM	1	18	1	50th fractal 24h RRS in EPS	\N	\N
 1368	F75-RRS-24-MM	1	18	1	75th fractal 24h RRS in EPS	\N	\N
-1369	F90-RRS-24-MM	1	18	1	90th fractal 24h RRS in EPS	\N	\N
 1370	F100-RRS-24-MM	1	18	1	100th fractal 24h RRS in EPS	\N	\N
 1371	IEWSS-NM2S	1	78	1	Eastward surface stress due to turbulent processes, instantaneous	\N	\N
 1372	INSSS-NM2S	1	78	1	Northward surface stress due to turbulent processes, instantaneous	\N	\N
-1373	BLDIS-JM2	1	83	1	Boundary layer dissipation, accumulated	\N	\N
 1374	CEIL-M	1	2	1	Cloud ceiling height in meters. The height above the Earths surface of the base of the lowest layer of cloud with a covering of more than 50% of the model grid box. Cloud ceiling is a measurement used in the aviation industry to indicate airport landing conditions.	\N	\N
 1375	CVH-N	1	62	1	High vegetation cover	\N	\N
 1376	CVL-N	1	62	1	Low vegetation cover	\N	\N
@@ -1175,7 +1166,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1428	NWCSAF_CTTH_QC-N	1	69	1	cloud top (CTTH) quality control flag in NWCSAF products	\N	\N
 1430	RADGLOC-WM2	1	12	1	Global radiation clear-sky	\N	\N
 1431	RAIL-N	1	30	2	Rail traffic condition	\N	\N
-1432	RADLWCA-JM2	1	83	1	Surface thermal radiation downward clear-sky	\N	\N
 1433	RADLWC-WM2	1	83	1	Surface thermal radiation downward clear-sky	\N	\N
 1434	RAIL-MEAN-N	1	30	2	Rail traffic condition probability	\N	\N
 1435	POP-0TO1	1	62	1	Probability of precipitation	\N	\N
@@ -1187,10 +1177,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1450	H0C-LAST-M	1	2	1	Height of last 0 C level in meters	\N	\N
 1455	TD-MEAN-K	1	3	1	Mean dewpoint temperature in Kelvins	\N	\N
 1451	HM20C-LAST-M	1	2	1	Height of last -20 C level in meters	radon_admin	2022-05-20 05:19:46
-1456	RNETSWA-MEAN-JM2	1	83	1	Mean net short wave radiation accumulation	\N	\N
-1457	F100-RNETSWA-JM2	1	83	1	100th fractal net short wave radiation accumulation	\N	\N
 1458	TD-STDDEV-K	1	3	1	Standard deviation of dewpoint temperature	\N	\N
-1459	RNETSWA-STDDEV-JM2	1	83	1	Standard deviation of net short wave radiation accumulation	\N	\N
 1460	ATMICEG-MS	1	15	1	Atmospheric ice growth	\N	\N
 1461	LLF-TOP-FL	1	29	1	Low level forecast cloud top height	\N	\N
 1462	PROB-POTRAIN	1	62	1	Probability of potential precipitation form rain	\N	\N
@@ -1221,6 +1208,27 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 572	CLDTYP3-N	1	30	1	Cloud type for the third layer	radon_admin	2021-12-10 05:45:09
 573	CLDTYP4-N	1	30	1	Cloud type for the fourth layer	radon_admin	2021-12-10 05:45:09
 1048	CLDTYPE-N	1	30	2	Cloud type	radon_admin	2021-12-10 05:45:09
+88	FLLAT-JM2	1	20	1	Latent heat flux	radon_admin	2023-03-27 04:18:41
+89	FLSEN-JM2	1	20	1	Sensible heat flux	radon_admin	2023-03-27 04:18:41
+314	RNETSWA-JM2	1	83	1	Net short wave radiation flux	radon_admin	2023-03-27 04:18:41
+315	RDIFSWA-JM2	1	83	1	Diffuse shortwave radiation flux	radon_admin	2023-03-27 04:18:41
+316	RNETLWA-JM2	1	83	1	Net long wave radiation flux	radon_admin	2023-03-27 04:18:41
+317	RADLWA-JM2	1	83	1	Long wave radiation flux	radon_admin	2023-03-27 04:18:41
+318	RADGLOA-JM2	1	83	1	Global radiation flux	radon_admin	2023-03-27 04:18:41
+319	RTOPSWA-JM2	1	83	1	Net short wave radiation flux, top of atmosphere	radon_admin	2023-03-27 04:18:41
+320	RTOPLWA-JM2	1	83	1	Net long wave radiation flux, top of atmosphere	radon_admin	2023-03-27 04:18:41
+979	RADSWA-JM2	1	83	1	Short wave radiation flux	radon_admin	2023-03-27 04:18:41
+1429	RADGLOCA-JM2	1	83	1	Global radiation clear-sky flux	radon_admin	2023-03-27 04:18:41
+1201	SDNIRR-JM2	1	83	1	Surface direct normal irradiation	radon_admin	2023-03-27 04:18:41
+1432	RADLWCA-JM2	1	83	1	Surface thermal radiation downward clear-sky	radon_admin	2023-03-27 04:18:41
+1456	RNETSWA-MEAN-JM2	1	83	1	Mean net short wave radiation flux	radon_admin	2023-03-27 04:18:41
+1457	F100-RNETSWA-JM2	1	83	1	100th fractal net short wave radiation flux	radon_admin	2023-03-27 04:18:41
+1459	RNETSWA-STDDEV-JM2	1	83	1	Standard deviation of net short wave radiation flux	radon_admin	2023-03-27 04:18:41
+1482	LHE-JM2	1	83	1	Latent heat flux through evaporation	radon_admin	2023-03-27 04:18:41
+1481	LHS-JM2	1	20	1	Latent heat sublimation	radon_admin	2023-03-27 04:18:41
+1373	BLDIS-JM2	1	83	1	Boundary layer dissipation flux	radon_admin	2023-03-27 04:19:38
+39	RTOPLW-WM2	1	12	1	Net long wave radiation, top of atmosphere	radon_admin	2023-03-27 04:20:33
+40	RTOPSW-WM2	1	12	1	Net short wave radiation, top of atmosphere	radon_admin	2023-03-27 04:20:33
 \.
 
 
@@ -1228,7 +1236,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1474, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1489, true);
 
 
 --

@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.6 (Homebrew)
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -77,6 +77,7 @@ COPY public.geom_latitude_longitude (id, name, ni, nj, first_point, di, dj, scan
 1119	WAM_BALMFC_ARCH	289	289	0101000020E610000074E70D20111134406826F7BFCCCC4D40	0.008333331905	0.004166669212	+x+y	WAM BALMFC Archipelago 0.5nm	\N	\N	\N	\N
 1082	ICONEUR00625	1377	657	0101000020E610000000000000000875400000000000803D40	0.0625	0.0625	+x+y	DWD ICON GDS europe nesting	\N	\N	\N	\N
 1117	WAMHKI	57	49	0101000020E610000070371480777738401B9207E0EEEE4D40	0.01666699164	0.008332967758	+x+y	WAM Helsinki area 0.5 nautical mile resolution	\N	\N	\N	\N
+1120	DEMEUROPE00027	40536	20196	0101000020E610000000000000000044C06666666666465440	0.002777777778	0.002777777778	+x-y	DEM geometry for Europe	\N	\N	\N	1
 \.
 
 

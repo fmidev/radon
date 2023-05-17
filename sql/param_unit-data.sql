@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.1
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -100,6 +100,7 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 96	m2/3 s-1	Qube root of eddy dissipation rate	\N	\N
 28	0or1	Binary 0 or 1	radon_admin	2021-12-10 05:42:04
 97	um2 cm-3	Square micrometers in cubic centimeter	\N	\N
+98	m2s radian-1	Spectral density in two dimensions	\N	\N
 \.
 
 
@@ -107,7 +108,7 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 -- Name: param_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_unit_id_seq', 96, true);
+SELECT pg_catalog.setval('public.param_unit_id_seq', 98, true);
 
 
 --

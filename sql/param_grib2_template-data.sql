@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.6 (Homebrew)
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -105,7 +105,6 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 461	0	17	0	\N	\N	-1
 313	0	0	2	\N	\N	-1
 1235	0	202	22	\N	\N	-1
-411	0	2	21	\N	\N	-1
 750	1	1	2	\N	\N	-1
 500	0	5	3	\N	\N	-1
 1048	0	6	8	\N	\N	-1
@@ -165,7 +164,6 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1012	0	200	67	\N	\N	-1
 1013	0	200	68	\N	\N	-1
 1237	0	202	24	\N	\N	-1
-1049	0	1	41	\N	\N	1
 89	0	0	11	\N	\N	1
 1014	0	200	69	\N	\N	-1
 1379	0	6	204	\N	\N	-1
@@ -458,10 +456,10 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 882	0	201	178	\N	\N	-1
 883	0	201	179	\N	\N	-1
 1057	0	201	180	\N	\N	-1
-776	0	201	181	\N	\N	-1
-777	0	201	182	\N	\N	-1
-778	0	201	183	\N	\N	-1
-779	0	201	184	\N	\N	-1
+1475	0	202	76	\N	\N	-1
+1476	0	202	77	\N	\N	-1
+1477	0	202	78	\N	\N	-1
+1478	0	202	79	\N	\N	-1
 840	0	201	185	\N	\N	-1
 841	0	201	186	\N	\N	-1
 842	0	201	187	\N	\N	-1
@@ -686,6 +684,20 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 52	0	1	84	\N	\N	-1
 1468	0	6	6	\N	\N	-1
 1469	0	1	22	\N	\N	-1
+502	0	4	3	\N	\N	0
+314	0	4	9	\N	\N	0
+1430	0	4	196	\N	\N	0
+500	0	5	3	\N	\N	0
+499	0	5	5	\N	\N	0
+501	0	4	7	\N	\N	0
+701	0	19	2	\N	\N	0
+1205	0	200	165	\N	\N	-1
+1206	0	200	166	\N	\N	-1
+1207	0	200	167	\N	\N	-1
+1282	0	200	168	\N	\N	-1
+49	0	1	64	\N	\N	-1
+1484	0	19	7	\N	\N	2
+411	0	2	22	\N	\N	2
 \.
 
 

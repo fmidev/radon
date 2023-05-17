@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.1
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -119,6 +119,7 @@ COPY public.param_newbase_name (id, univ_id, name, last_updater, last_updated) F
 110	1177	Soaring Flight Index	\N	\N
 111	1178	Thermal Bird Migration Index	\N	\N
 112	1464	LLF Top hft-FL	\N	\N
+113	3	Geometric Height	\N	\N
 \.
 
 
@@ -126,7 +127,7 @@ COPY public.param_newbase_name (id, univ_id, name, last_updater, last_updated) F
 -- Name: param_newbase_name_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_name_id_seq', 112, true);
+SELECT pg_catalog.setval('public.param_newbase_name_id_seq', 113, true);
 
 
 --

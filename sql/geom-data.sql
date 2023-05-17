@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.1
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -192,6 +192,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 1116	DEMSCANDINAVIA00027	1	\N	\N	\N
 1117	WAMHKI	1	\N	\N	\N
 1119	WAM_BALMFC_ARCH	1	WAM BALMFC archipelago 0.5nm	\N	\N
+1120	DEMEUROPE00027	1	\N	\N	\N
 \.
 
 
@@ -199,7 +200,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1119, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1120, true);
 
 
 --

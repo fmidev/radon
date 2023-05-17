@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.6 (Homebrew)
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -72,15 +72,8 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 63	301	989	cnc_O3_gas	\N	\N	\N	\N
 64	301	990	cnc_PM2_5	\N	\N	\N	\N
 65	301	424	cnc_SO2_gas	\N	\N	\N	\N
-66	150	304	vvel	\N	\N	\N	\N
-68	150	303	uvel	\N	\N	\N	\N
 81	113	447	VHM0	\N	\N	\N	\N
 82	113	453	VTPK	\N	\N	\N	\N
-70	150	432	temp	\N	\N	postgres	2017-01-12 11:43:14.270089+00
-73	150	269	salt	\N	\N	\N	\N
-74	150	24	ice_cov	\N	\N	\N	\N
-77	150	648	elev	\N	\N	\N	\N
-78	150	991	ice_thk	\N	\N	\N	\N
 83	113	996	VPED	\N	\N	\N	\N
 84	113	469	VHM0_SW1	\N	\N	\N	\N
 85	113	470	VTM01_SW1	\N	\N	\N	\N

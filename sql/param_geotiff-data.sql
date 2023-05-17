@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.1
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -48,6 +48,7 @@ COPY public.param_geotiff (id, producer_id, param_id, geotiff_name, last_updater
 26	520	158	Z-M2S2	\N	\N
 27	521	1421	LC-N	\N	\N
 28	110	324	Precipitation intensity	\N	\N
+29	506	502	MDSSFTD	\N	\N
 \.
 
 
@@ -55,7 +56,7 @@ COPY public.param_geotiff (id, producer_id, param_id, geotiff_name, last_updater
 -- Name: param_geotiff_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_geotiff_id_seq', 28, true);
+SELECT pg_catalog.setval('public.param_geotiff_id_seq', 29, true);
 
 
 --

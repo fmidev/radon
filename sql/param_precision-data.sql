@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.0
--- Dumped by pg_dump version 14.6 (Homebrew)
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -285,6 +285,8 @@ COPY public.param_precision (id, param_id, "precision", last_updater, last_updat
 378	139	0	\N	\N
 380	981	0	\N	\N
 379	983	1	\N	\N
+381	329	1	\N	\N
+383	158	2	\N	\N
 \.
 
 
@@ -292,7 +294,7 @@ COPY public.param_precision (id, param_id, "precision", last_updater, last_updat
 -- Name: param_precision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_precision_id_seq', 380, true);
+SELECT pg_catalog.setval('public.param_precision_id_seq', 383, true);
 
 
 --
