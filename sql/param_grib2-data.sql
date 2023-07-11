@@ -96,6 +96,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 566	280	1182	0	19	192	\N	\N	\N	\N	-1
 1325	170	186	0	1	76	\N	\N	radon_admin	2023-04-28 05:08:16.610223+00	1
 86	53	544	0	14	0	\N	\N	\N	\N	-1
+1335	270	411	0	2	21	\N	\N	\N	\N	2
 495	260	1090	0	7	203	\N	\N	\N	\N	-1
 89	53	644	0	19	8	\N	\N	\N	\N	-1
 90	53	643	0	19	9	\N	\N	\N	\N	-1
@@ -146,7 +147,11 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 926	241	1318	0	202	51	\N	\N	\N	\N	-1
 927	241	1317	0	202	50	\N	\N	\N	\N	-1
 1324	5	411	0	2	22	\N	\N	\N	\N	2
+1336	260	411	0	2	21	\N	\N	\N	\N	2
+1338	131	1492	0	17	192	\N	\N	\N	\N	0
 150	47	203	0	2	10	\N	\N	\N	\N	-1
+1339	131	1493	0	17	193	\N	\N	\N	\N	0
+1337	170	554	0	3	6	6	\N	radon_admin	2023-06-14 05:45:02.156521+00	-1
 153	47	408	0	2	21	\N	\N	\N	\N	-1
 155	47	595	0	2	23	\N	\N	\N	\N	-1
 156	47	596	0	2	24	\N	\N	\N	\N	-1
@@ -859,7 +864,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 -- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib2_id_seq', 1334, true);
+SELECT pg_catalog.setval('public.param_grib2_id_seq', 1339, true);
 
 
 --

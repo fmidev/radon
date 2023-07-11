@@ -86,6 +86,7 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 101	6	103	\N	\N
 5	6	103	\N	\N
 291	6	103	\N	\N
+282	16	6	\N	\N
 260	15	20	\N	\N
 260	7	101	\N	\N
 260	2	100	\N	\N
@@ -126,6 +127,12 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 242	1	1	\N	\N
 242	3	105	\N	\N
 242	6	103	\N	\N
+125	2	100	\N	\N
+125	6	103	\N	\N
+170	6	4	radon_admin	2023-06-13 12:46:20.739033+00
+125	7	101	\N	\N
+281	16	6	\N	\N
+170	18	150	radon_admin	2023-07-10 05:53:43.154+00
 241	6	103	\N	\N
 244	3	105	\N	\N
 244	6	103	\N	\N
@@ -147,7 +154,6 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 8	15	20	\N	\N
 8	1	1	\N	\N
 8	8	10	\N	\N
-170	3	150	\N	\N
 272	6	103	\N	\N
 272	1	1	\N	\N
 272	3	105	\N	\N

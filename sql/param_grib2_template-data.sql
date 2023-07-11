@@ -102,7 +102,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1085	0	3	16	\N	\N	-1
 1086	0	3	17	\N	\N	-1
 502	0	4	3	\N	\N	-1
-461	0	17	0	\N	\N	-1
+1495	0	2	197	\N	\N	-1
 313	0	0	2	\N	\N	-1
 1235	0	202	22	\N	\N	-1
 750	1	1	2	\N	\N	-1
@@ -164,6 +164,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1012	0	200	67	\N	\N	-1
 1013	0	200	68	\N	\N	-1
 1237	0	202	24	\N	\N	-1
+1494	0	17	4	\N	\N	-1
 89	0	0	11	\N	\N	1
 1014	0	200	69	\N	\N	-1
 1379	0	6	204	\N	\N	-1

@@ -193,6 +193,8 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 1117	WAMHKI	1	\N	\N	\N
 1119	WAM_BALMFC_ARCH	1	WAM BALMFC archipelago 0.5nm	\N	\N
 1120	DEMEUROPE00027	1	\N	\N	\N
+1121	SILAMAQFF	1	SILAM forest fires	\N	\N
+1122	GLOBAL025	1	\N	\N	\N
 \.
 
 
@@ -200,7 +202,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1120, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1122, true);
 
 
 --

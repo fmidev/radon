@@ -72,6 +72,8 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 63	301	989	cnc_O3_gas	\N	\N	\N	\N
 64	301	990	cnc_PM2_5	\N	\N	\N	\N
 65	301	424	cnc_SO2_gas	\N	\N	\N	\N
+132	301	1490	cnc_PM_FRP	\N	\N	\N	\N
+133	301	1491	ocd_PM_FRP	\N	\N	\N	\N
 81	113	447	VHM0	\N	\N	\N	\N
 82	113	453	VTPK	\N	\N	\N	\N
 83	113	996	VPED	\N	\N	\N	\N
@@ -127,7 +129,7 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 -- Name: param_netcdf_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_netcdf_id_seq', 131, true);
+SELECT pg_catalog.setval('public.param_netcdf_id_seq', 133, true);
 
 
 --

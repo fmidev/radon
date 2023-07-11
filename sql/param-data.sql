@@ -264,6 +264,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1487	RADSWDIR-WM2	1	12	1	Surface direct shortwave radiation	\N	\N
 1488	RADSWDIRINST-WM2	1	12	1	Surface instant direct shortwave radiation	\N	\N
 1489	FFG-BIASC-MS	1	15	1	Bias-corrected wind gust speed	\N	\N
+1490	FF-PM2_5-UGM	1	65	1	Forest fire PM2_5 concentration	\N	\N
 321	RRH-KGM2	1	18	1	Total hail precipitation in kg/m2	\N	\N
 1232	EFI-WG--1TO1	1	90	2	Extreme Forecast Index for wind gusts	\N	\N
 323	SNRI-KGM2	1	32	1	Instant snowfall rate in mm/s or mm/h	\N	\N
@@ -285,6 +286,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 339	F90-T-K	1	3	1	90th fractal temperature in EPS	\N	\N
 340	F100-T-K	1	3	1	100th fractal (ie. maximum) temperature in EPS	\N	\N
 764	SN-6-MM	1	60	2	Snow fall over the last 6 hours water equivalent	\N	\N
+1491	FF-PM2_5-N	1	69	1	Forest fire PM2_5 optical column thickness	\N	\N
 765	SN-12-MM	1	60	2	Snow fall over the last 12 hours water equivalent	\N	\N
 766	SN-24-MM	1	60	2	Snow fall over the last 24 hours water equivalent	\N	\N
 772	FRSB-CM	1	63	1	Frost soil bottom in centimeters	\N	\N
@@ -415,6 +417,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 468	CAPPIHGT-M	1	2	1	Height of CAPPI level	\N	\N
 469	SW0WH-M	1	2	1	Significant Wave Height of Swell 0 in Meters	\N	\N
 470	SW0WPER-S	1	4	1	Significant Wave Period of Swell 0 in seconds	\N	\N
+1495	UHEL-M2S2	1	13	1	Updraft helicity	\N	\N
 472	SW1WH-M	1	2	1	Significant Wave Height of Swell 1 in Meters	\N	\N
 473	SW1WPER-S	1	4	1	Significant Wave Period of Swell 1 in seconds	\N	\N
 1050	PROB-WATLEV-LOW-1	1	6	1	Probability of water level being lower than given threshold	\N	\N
@@ -803,6 +806,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1015	PROB-RR3-4	1	6	1	Probability of Precipitation #4 in 3h	\N	\N
 977	EFI-T-K--1TO1	1	90	2	Extreme Forecast Index for T-K	\N	\N
 978	EFI-FF-MS--1TO1	1	90	2	Extreme Forecast Index for FF-MS	\N	\N
+1492	FL-MPLTY-3-N	1	69	1	Lightning strike multiplicity past 3 hours, strikes / time unit / area	\N	\N
 980	T-MEAN-K	1	3	1	Mean temperature in Kelvins	\N	\N
 981	P-MEAN-PA	1	7	1	Mean pressure in Pascals	\N	\N
 65	N-STDDEV-PRCNT	1	6	1	Standard Deviation of total cloudiness	postgres	2017-01-03 08:49:21
@@ -864,6 +868,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1045	F0-WATLEV-CM	1	63	1	0th fractal sea level height in EPS	\N	\N
 1046	WATLEV-MEAN-CM	1	63	1	Mean sea level height	\N	\N
 1047	WATLEV-STDDEV-CM	1	63	1	Standard deviation of sea level height	\N	\N
+1493	FL-MPLTY-6-N	1	69	1	Lightning strike multiplicity past 6 hours, strikes / time unit / area	\N	\N
 1054	CBTCU-FL	1	29	1	Estimated (max) TOP [FL] for CB/TCU clouds in the model	\N	\N
 739	TMIN12H-K	1	3	1	Minimum temperature from the preceeding 12 hours in Kelvin	\N	\N
 738	TMAX12H-K	1	3	1	Maximum temperature from the preceeding 12 hours in Kelvin	wetodb	2017-05-31 18:12:17
@@ -1115,6 +1120,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1370	F100-RRS-24-MM	1	18	1	100th fractal 24h RRS in EPS	\N	\N
 1371	IEWSS-NM2S	1	78	1	Eastward surface stress due to turbulent processes, instantaneous	\N	\N
 1372	INSSS-NM2S	1	78	1	Northward surface stress due to turbulent processes, instantaneous	\N	\N
+1494	FL-MPLTYI-N	1	69	1	Lightning strike multiplicity (instant), strikes / area	\N	\N
 1374	CEIL-M	1	2	1	Cloud ceiling height in meters. The height above the Earths surface of the base of the lowest layer of cloud with a covering of more than 50% of the model grid box. Cloud ceiling is a measurement used in the aviation industry to indicate airport landing conditions.	\N	\N
 1375	CVH-N	1	62	1	High vegetation cover	\N	\N
 1376	CVL-N	1	62	1	Low vegetation cover	\N	\N
@@ -1236,7 +1242,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1489, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1495, true);
 
 
 --

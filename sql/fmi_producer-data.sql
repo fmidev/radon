@@ -88,6 +88,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 281	SMARTMETNWC	SmartMet Nowcasting	1	radon_admin	2023-05-08 04:41:07	1
 291	CLOUDCAST_PREOP	Cloudcast NWC Preop	1	radon_admin	2023-05-08 04:42:05	1
 2028	ECMOS2	MOS Preop from ECMWF model	3	radon_admin	2023-05-08 04:43:20	1
+125	PANGUWEATHER	PanguWeather global AI model	1	\N	\N	1
 189	METAN	METNO Scandinavia analysis	1	wetodb	2018-09-19 09:23:51	2
 52	ENFUSER	FMI Air Quality fusion model	1	wetodb	2018-10-05 04:52:34	1
 137	ECGSEASMEAN	ECMWF seasonal forecast mean values	1	\N	\N	1

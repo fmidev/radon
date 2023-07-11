@@ -153,7 +153,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 -- Name: param_level_transform_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_level_transform_id_seq', 178, true);
+SELECT pg_catalog.setval('public.param_level_transform_id_seq', 179, true);
 
 
 --
