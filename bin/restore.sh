@@ -1,8 +1,13 @@
 #!/bin/sh
 
+if [ -z "$RADON_INITIALIZE_EXISTING_DATABASE" ]; then
+  RADON_INITIALIZE_EXISTING_DATABASE=0
+fi
+
 set -ue
 
 cd sql
+
 
 PSQL_ARGS="-v ON_ERROR_STOP=1 -Aqt"
 
@@ -16,12 +21,29 @@ BEGIN
 END
 \$\$" | psql $PSQL_ARGS -d postgres
 
-echo "CREATE DATABASE radon OWNER radon_admin" | psql $PSQL_ARGS -d postgres
+exists=$(echo "SELECT datname FROM pg_database WHERE datname = 'radon'" | psql -Aqt -d postgres)
+
+if [ -n "$exists" ]; then
+  if [ $RADON_INITIALIZE_EXISTING_DATABASE -ne 1 ]; then
+    echo "radon database exists already"
+    echo "to bypass this check, set env variable: export RADON_INITIALIZE_EXISTING_DATABASE=1"
+    exit 1
+  fi
+else
+  echo "CREATE DATABASE radon OWNER radon_admin" | psql $PSQL_ARGS -d postgres
+fi
+
 echo "ALTER DATABASE radon SET TIMEZONE TO 'UTC'" | psql $PSQL_ARGS -d postgres
 
 export PGDATABASE=radon
 
 echo "CREATE SCHEMA audit" | psql $PSQL_ARGS
+
+# %%% RDS %%%
+echo "GRANT radon_admin TO postgres" | psql $PSQL_ARGS
+echo "ALTER SCHEMA public OWNER TO radon_admin" | psql $PSQL_ARGS
+# %%% RDS %%%
+
 echo "CREATE SCHEMA data AUTHORIZATION radon_admin" | psql $PSQL_ARGS
 
 # extensions
