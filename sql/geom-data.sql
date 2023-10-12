@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.4 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -195,6 +195,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 1120	DEMEUROPE00027	1	\N	\N	\N
 1121	SILAMAQFF	1	SILAM forest fires	\N	\N
 1122	GLOBAL025	1	\N	\N	\N
+1123	WAMEC	1	\N	\N	\N
 \.
 
 
@@ -202,7 +203,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1122, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1123, true);
 
 
 --

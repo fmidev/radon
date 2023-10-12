@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.4 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -39,6 +39,8 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 2167	ensemble size	51	\N	\N
 243	ensemble size	51	\N	\N
 5	ensemble size	30	\N	\N
+170	first hybrid level number	1	\N	\N
+170	last hybrid level number	74	\N	\N
 180	ensemble size	5	\N	\N
 184	ensemble size	5	\N	\N
 183	ensemble size	5	\N	\N
@@ -55,6 +57,12 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 261	last hybrid level number	65	\N	\N
 261	first hybrid level number	1	\N	\N
 244	ensemble size	51	\N	\N
+170	hybrid level type	general	\N	\N
+220	first hybrid level number	1	\N	\N
+220	last hybrid level number	74	\N	\N
+220	hybrid level type	general	\N	\N
+4	hybrid level type	hybrid	\N	\N
+260	hybrid level type	hybrid	\N	\N
 4	ensemble size	15	\N	\N
 260	ensemble size	15	\N	\N
 134	last hybrid level number	137	\N	\N
@@ -67,6 +75,12 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 271	first hybrid level number	1	\N	\N
 272	last hybrid level number	65	\N	\N
 272	first hybrid level number	1	\N	\N
+131	hybrid level type	hybrid	\N	\N
+240	hybrid level type	hybrid	\N	\N
+243	hybrid level type	hybrid	\N	\N
+134	hybrid level type	hybrid	\N	\N
+7	hybrid level type	hybrid	\N	\N
+270	hybrid level type	hybrid	\N	\N
 \.
 
 

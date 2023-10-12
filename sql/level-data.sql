@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.4 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -39,6 +39,7 @@ COPY public.level (id, name, description, unit_id, last_updater, last_updated) F
 16	MAXWIND	Maximum wind level	\N	wetodb	2019-04-24 05:57:57.715881+00
 17	HEIGHT_MSL	Specific altitude above mean sea level	\N	\N	\N
 18	GENERAL	Generalized vertical height coordinate	\N	\N	\N
+19	MIXING_LAYER	Mixing layer	\N	radon_admin	2023-07-20 04:14:03.856005+00
 \.
 
 

@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.4 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -62,9 +62,11 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 2142	199	2	253	144	0	\N	\N	postgres	2017-01-08 18:31:45.991879+00
 4045	101	533	206	130	0	\N	\N	\N	\N
 3670	250	441	203	71	4	\N	\N	\N	\N
+4046	131	1504	128	203	0	\N	\N	\N	\N
 3991	134	316	128	177	10	\N	\N	\N	\N
 3983	250	329	203	129	0	\N	\N	\N	\N
 2187	250	509	203	110	4	\N	\N	wetodb	2018-01-25 12:23:41.611899+00
+4047	131	1485	254	228	0	\N	\N	radon_admin	2023-08-16 04:50:01.035656+00
 796	131	316	128	177	0	\N	\N	postgres	2017-01-08 18:51:45.695905+00
 3674	240	971	203	187	0	\N	\N	\N	\N
 2319	250	335	207	174	0	\N	\N	postgres	2016-06-13 07:59:41.740254+00
@@ -941,7 +943,6 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 3937	134	318	128	169	0	\N	\N	\N	\N
 3880	122	738	128	201	2	\N	\N	wetodb	2019-09-03 11:06:25.044726+00
 3881	122	739	128	202	2	\N	\N	wetodb	2019-09-03 11:06:25.044726+00
-3933	134	1286	128	172	1	1	0	\N	\N
 4001	134	1416	128	121	2	\N	\N	\N	\N
 3938	134	318	128	169	10	\N	\N	\N	\N
 3947	134	974	128	188	0	\N	\N	\N	\N
@@ -985,7 +986,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 -- Name: param_grib1_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib1_id_seq', 4045, true);
+SELECT pg_catalog.setval('public.param_grib1_id_seq', 4047, true);
 
 
 --

@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.4 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -26,6 +26,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 5	47	47	54	radon_admin	2022-07-01 04:52:41.899745+00
 128	5	20	251	\N	\N
 129	291	252	86	\N	\N
+131	220	220	86	\N	\N
 76	122	122	86	postgres	2016-06-16 04:25:41.350016+00
 10	53	96	7	\N	\N
 97	243	243	86	\N	\N
@@ -92,7 +93,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.producer_grib_id_seq', 130, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 131, true);
 
 
 --

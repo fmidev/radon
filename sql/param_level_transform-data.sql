@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.4 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -42,11 +42,17 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 122	10	139	7	\N	4	\N	\N	\N
 123	501	153	1	0	6	2	\N	\N
 124	7	139	7	\N	4	\N	\N	\N
+180	170	498	1	\N	6	\N	\N	\N
 68	47	179	1	\N	6	\N	postgres	2017-01-15 09:32:26.893884+00
 49	135	143	1	\N	6	\N	\N	\N
+181	170	499	1	\N	6	\N	\N	\N
 177	170	184	1	\N	6	\N	radon_admin	2023-04-28 07:52:22.07667+00
 178	170	186	1	\N	6	\N	radon_admin	2023-04-28 07:52:22.07667+00
+182	170	179	1	\N	6	\N	\N	\N
+183	170	421	1	\N	6	\N	\N	\N
+184	170	135	1	\N	6	\N	\N	\N
 69	47	510	1	\N	6	\N	\N	\N
+185	170	1496	1	\N	6	\N	\N	\N
 71	134	186	1	\N	6	\N	\N	\N
 59	134	139	1	\N	6	\N	\N	\N
 16	131	139	1	\N	4	\N	wetodb	2017-06-13 19:25:36.563136+00
@@ -146,6 +152,21 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 174	181	411	16	\N	1	\N	\N	\N
 175	134	426	1	0	6	0	\N	\N
 176	134	48	1	\N	6	\N	\N	\N
+186	170	217	1	\N	6	\N	\N	\N
+187	170	153	1	0	6	0	\N	\N
+188	170	143	1	0	6	0	\N	\N
+189	170	139	1	0	6	0	\N	\N
+190	170	187	1	\N	6	\N	\N	\N
+191	170	196	1	\N	6	\N	\N	\N
+192	170	197	1	\N	6	\N	\N	\N
+193	170	198	1	\N	6	\N	\N	\N
+194	170	1487	1	\N	6	\N	\N	\N
+195	170	1497	1	\N	6	\N	\N	\N
+196	170	1498	1	\N	6	\N	\N	\N
+197	170	221	1	\N	6	\N	\N	\N
+199	170	222	1	\N	6	\N	\N	\N
+200	170	1507	1	\N	6	\N	\N	\N
+201	170	1508	1	\N	6	\N	\N	\N
 \.
 
 
@@ -153,7 +174,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 -- Name: param_level_transform_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_level_transform_id_seq', 179, true);
+SELECT pg_catalog.setval('public.param_level_transform_id_seq', 201, true);
 
 
 --

@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.4 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -78,7 +78,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 182	BLENDW	FMI blend of models weight (MAE) fields	1	wetodb	2018-11-07 13:39:43	3
 261	MEPS_PREOPMTA	MEPS Preop postprocessed fields	1	radon_admin	2023-05-08 04:38:09	3
 115	DIW	De-Icing Weather Index	1	\N	\N	1
-170	ICON_GLO	DWD Global Model ICON	1	postgres	2016-05-26 08:42:00	1
+170	ICON_GLO	DWD ICON (Icosahedral Nonhydrostatic) Model	1	radon_admin	2023-07-20 17:56:44	1
 134	ECGEPS	ECMWF Ensemble Forecast System	1	postgres	2016-05-26 08:47:01	3
 1016	WATLEV	Water level data from FIMR	3	postgres	2016-05-26 08:59:14	6
 105	MTLICE	Baltic Ice Chart	1	radon_admin	2023-02-01 13:42:34	1

@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.4 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -143,8 +143,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 175	VV-MMS	1	53	1	Vertical Velocity in mm/s	\N	\N
 177	VV-PAS	1	27	1	Vertical Velocity in pa/s	\N	\N
 179	RR-KGM2	1	18	1	Total precipitation in kg/m2	\N	\N
-181	RR-6-MM	1	60	1	Rain over the last 6 hours in mm	\N	\N
-182	RR-12-MM	1	60	1	Rain over the last 12 hours in mm	\N	\N
 184	RRL-KGM2	1	18	1	Large Scale precipitation in kg/m2	\N	\N
 186	RRC-KGM2	1	18	1	Convective precipitation in kg/m2	\N	\N
 187	N-PRCNT	1	6	1	Total Cloud Cover in %	\N	\N
@@ -152,8 +150,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 118	FFWARN-N	1	30	2	Forest fire warning: 0-no, 1-grass, 2-forest1	wetodb	2018-11-26 06:22:54
 1028	FFG-MEAN-MS	1	15	1	Mean wind gust	\N	\N
 346	F10-RR-6-MM	1	18	1	10th fractal precipitation in EPS	postgres	2016-08-31 06:01:08
-191	RRL-M	1	2	1	Precipitation Large Scale in m	\N	\N
-192	RRC-M	1	2	1	Precipitation Convective in m	\N	\N
+1506	PROB-RR1-1	1	6	1	Probability of 1h precipitation rreaching some threshold value	\N	\N
 193	RRS-M	1	2	1	Precipitation Snow in meters	\N	\N
 194	LNSP-N	1	30	1	Log Surface Pressure	\N	\N
 195	ZH-GPM	1	8	1	Geopotential Height	\N	\N
@@ -259,7 +256,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 312	IMEANTHK-CM	1	63	1	Ice mean thickness	\N	\N
 313	TP-K	1	3	1	Potential temperature	\N	\N
 533	TGMIN06-C	1	58	1	Minimum temperature at ground at 06 UTC in celcius	\N	\N
-1485	RR-TM2	1	91	1	Total precipitation in m	\N	\N
 1486	RADSWDIR-JM2	1	83	1	Surface direct shortwave radiation	\N	\N
 1487	RADSWDIR-WM2	1	12	1	Surface direct shortwave radiation	\N	\N
 1488	RADSWDIRINST-WM2	1	12	1	Surface instant direct shortwave radiation	\N	\N
@@ -376,7 +372,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 434	PD-HPA	1	21	1	Pressure Delta in hPa	\N	\N
 759	F25-CAPE-JKG	1	77	1	25th fractal CAPE in EPS	\N	\N
 760	F50-CAPE-JKG	1	77	1	50th fractal CAPE in EPS	\N	\N
-437	RR-24-MM	1	60	1	Rain over the last 24 hours in mm	\N	\N
 438	N-0TO1	1	62	1	Cloudiness 0...1	\N	\N
 1176	F10-TD-K	1	3	1	10th fractal dewpoint temperature in EPS	\N	\N
 441	RRR-KGM2	1	32	1	Total Precipitation rate in kg m-2	\N	\N
@@ -438,15 +433,10 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 495	MINHGT-KM	1	68	1	Minimum height of a layer	\N	\N
 496	MAXELEV-D	1	5	1	Layer between two elevation angles	\N	\N
 497	AZANG-D	1	5	1	Cross section direction	\N	\N
-498	RNETSW-WM2	1	12	1	Net short wave radiation	\N	\N
 499	RNETLW-WM2	1	12	1	Net long wave radiation	\N	\N
 500	RADLW-WM2	1	12	1	Long wave radiation	\N	\N
 501	RADSW-WM2	1	12	1	Short wave radiation	\N	\N
-502	RADGLO-WM2	1	12	1	Global radiation	\N	\N
 1033	FOGINT-N	1	30	2	Fog intensity from 0..2	\N	\N
-504	RR-1-MM	1	60	1	Rain over the last 1 hour in mm	\N	\N
-505	RR-2-MM	1	60	1	Rain over the last 2 hours in mm	\N	\N
-506	RR-3-MM	1	60	1	Rain over the last 3 hours in mm	\N	\N
 507	TMAX-24-C	1	58	1	Max temperature in Celsius on the preceding 24 hours period of the date-value	\N	\N
 508	TMIN-24-C	1	58	1	Min temperature in Celsius on the preceding 24 hours period of the date-value	\N	\N
 509	SNR-KGM2	1	32	1	Snowfall rate in mm/s or mm/h	\N	\N
@@ -464,6 +454,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 523	VV-MS	1	15	1	Vertical Velocity in m/s	\N	\N
 471	SW0WDIR-D	1	5	1	Direction of Waves of Swell 0 in degrees	postgres	2017-04-18 08:12:24
 525	MODLEV-N	1	69	1	Model level number	\N	\N
+437	RR-24-MM	1	60	1	Precipitation over the last 24 hours in mm	radon_admin	2023-10-11 04:25:29
 526	STGR-N	1	69	1	State of ground, code number	\N	\N
 536	MT-C	1	58	1	Monthly mean temperature in Celcius	\N	\N
 537	MRR-KGM2	1	18	1	Monthly precipitation in mm	\N	\N
@@ -579,7 +570,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 687	HUMFOR-0TO1	1	62	1	Forest ground humidity kg in kg	\N	\N
 688	HUMFIE-0TO1	1	62	1	Field ground humidity kg in kg	\N	\N
 690	CLOUDWATERMR-KGKG	1	17	1	Cloud water mixing ratio	\N	\N
-691	CLOUDICEMR-KGKG	1	17	1	Cloud ice mixing ratio	\N	\N
 692	RAINMR-KGKG	1	17	1	Rain mixing ratio	\N	\N
 789	F97.5-T-K	1	3	1	97.5th fractal temperature in EPS	\N	\N
 701	POT-PRCNT	1	6	1	Probability of thunderstorms	\N	\N
@@ -850,13 +840,12 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 610	VEGET-N	1	30	2	Vegetation type	postgres	2017-02-09 06:47:41
 614	ROADNOTIF-N	1	69	2	Notification to road users	postgres	2017-02-09 06:47:41
 615	ROADWARN-N	1	69	2	Warning to road users	postgres	2017-02-09 06:47:41
-637	HWWRRR-N	1	69	2	Weather code of Hourly maximum precipitation rate	postgres	2017-02-09 06:47:41
+1504	O3-KGKG	1	17	1	Ozone mass mixing ratio	\N	\N
 642	ICING-N	1	64	2	Icing, code 20041 in BUFR	postgres	2017-02-09 06:47:41
 645	PHFLIG-N	1	64	2	Phase of flight, code 8004 of BUFR	postgres	2017-02-09 06:47:41
 11	PRECTYPE-N	1	69	2	Precipitation type, large scale or convective	postgres	2017-02-09 06:47:41
 976	POTPRECF-N	1	69	2	Potential precipitation form, calculated for all grid points	postgres	2017-02-09 06:47:41
 1024	PROB-TC-5	1	6	1	Probability of cold #5	\N	\N
-1025	RRC-3-MM	1	60	1	Convective rain over the last 3 hours in mm	\N	\N
 1037	F100-WATLEV-CM	1	63	1	100th fractal sea level height in EPS	\N	\N
 1038	F95-WATLEV-CM	1	63	1	95th fractal sea level height in EPS	\N	\N
 1039	F90-WATLEV-CM	1	63	1	90th fractal sea level height in EPS	\N	\N
@@ -912,9 +901,9 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1197	F100-TD2M-C	1	3	1	100th fractal dewpoint temperature in EPS	\N	\N
 1199	FROSTSUM-C	1	58	1	Cumulative frost sum over some period of time	\N	\N
 1200	TROPO-FL	1	29	1	Estimated height [FL] of the tropopause	\N	\N
+1501	PROB-UHEL-2	1	6	1	Probability of Updraft Helicity > 25 m2/s2 in EPS	\N	\N
 1202	RACC-KGM2	1	18	1	Rain accumulation in mm	\N	\N
 1203	GDD-C	1	58	1	Growing degree days	\N	\N
-1286	LSM-0TO1	1	62	1	Land-Sea mask	\N	\N
 1205	PROB-WG-AGG-1	1	6	1	Probability of reaching wind gust speed more than given value threshold, aggregated over area and/or time	\N	\N
 1206	PROB-HAIL-AGG-1	1	6	1	Probability of hail, aggregated over area and/or time	\N	\N
 1207	PROB-RR-AGG-1	1	6	1	Probability of reaching some precipitation threshold value, aggregated over area and/or time	\N	\N
@@ -1172,6 +1161,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1428	NWCSAF_CTTH_QC-N	1	69	1	cloud top (CTTH) quality control flag in NWCSAF products	\N	\N
 1430	RADGLOC-WM2	1	12	1	Global radiation clear-sky	\N	\N
 1431	RAIL-N	1	30	2	Rail traffic condition	\N	\N
+637	WW-N	1	69	2	WMO Present Weather (WW) code	radon_admin	2023-07-19 04:30:09
 1433	RADLWC-WM2	1	83	1	Surface thermal radiation downward clear-sky	\N	\N
 1434	RAIL-MEAN-N	1	30	2	Rail traffic condition probability	\N	\N
 1435	POP-0TO1	1	62	1	Probability of precipitation	\N	\N
@@ -1183,7 +1173,10 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1450	H0C-LAST-M	1	2	1	Height of last 0 C level in meters	\N	\N
 1455	TD-MEAN-K	1	3	1	Mean dewpoint temperature in Kelvins	\N	\N
 1451	HM20C-LAST-M	1	2	1	Height of last -20 C level in meters	radon_admin	2022-05-20 05:19:46
+1496	TSNOW-K	1	3	1	Snow temperature	\N	\N
+1497	SNRC-KGM2	1	32	1	Convective snowfall rate	\N	\N
 1458	TD-STDDEV-K	1	3	1	Standard deviation of dewpoint temperature	\N	\N
+1498	SNRL-KGM2	1	32	1	Large scale snowfall rate	\N	\N
 1460	ATMICEG-MS	1	15	1	Atmospheric ice growth	\N	\N
 1461	LLF-TOP-FL	1	29	1	Low level forecast cloud top height	\N	\N
 1462	PROB-POTRAIN	1	62	1	Probability of potential precipitation form rain	\N	\N
@@ -1192,10 +1185,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1465	PROB-POTDRIZZLE	1	62	1	Probability of potential precipitation form drizzle	\N	\N
 1466	PROB-POTFRDRZZL	1	62	1	Probability of potential precipitation form freezing drizzle	\N	\N
 1467	PROB-POTFRRAIN	1	62	1	Probability of potential precipitation form freezing rain	\N	\N
-654	CLDWAT-KGKG	1	17	1	Specific cloud liquid water content	radon_admin	2022-12-14 05:48:45
-52	CLDICE-KGKG	1	17	1	Specific cloud ice water content	radon_admin	2022-12-14 05:48:45
 1468	CLDWAT-KGM2	1	31	1	Cloud water	\N	\N
-1469	CLOUDMR-KGKG	1	17	1	Cloud mixing ratio	\N	\N
 1359	PROB-FROST-2	1	62	1	Probability of severe frost	radon_admin	2021-12-10 05:43:17
 1427	NWCSAF_EFFCLD-0TO1	1	62	1	NWCSAF effective cloudiness	radon_admin	2021-12-10 05:43:17
 1162	PROB-FRPREC	1	62	1	Probability of freezing precitipation (rain or drizzle)	radon_admin	2021-12-10 05:43:44
@@ -1216,11 +1206,9 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1048	CLDTYPE-N	1	30	2	Cloud type	radon_admin	2021-12-10 05:45:09
 88	FLLAT-JM2	1	20	1	Latent heat flux	radon_admin	2023-03-27 04:18:41
 89	FLSEN-JM2	1	20	1	Sensible heat flux	radon_admin	2023-03-27 04:18:41
-314	RNETSWA-JM2	1	83	1	Net short wave radiation flux	radon_admin	2023-03-27 04:18:41
 315	RDIFSWA-JM2	1	83	1	Diffuse shortwave radiation flux	radon_admin	2023-03-27 04:18:41
 316	RNETLWA-JM2	1	83	1	Net long wave radiation flux	radon_admin	2023-03-27 04:18:41
 317	RADLWA-JM2	1	83	1	Long wave radiation flux	radon_admin	2023-03-27 04:18:41
-318	RADGLOA-JM2	1	83	1	Global radiation flux	radon_admin	2023-03-27 04:18:41
 319	RTOPSWA-JM2	1	83	1	Net short wave radiation flux, top of atmosphere	radon_admin	2023-03-27 04:18:41
 320	RTOPLWA-JM2	1	83	1	Net long wave radiation flux, top of atmosphere	radon_admin	2023-03-27 04:18:41
 979	RADSWA-JM2	1	83	1	Short wave radiation flux	radon_admin	2023-03-27 04:18:41
@@ -1233,6 +1221,35 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1482	LHE-JM2	1	83	1	Latent heat flux through evaporation	radon_admin	2023-03-27 04:18:41
 1481	LHS-JM2	1	20	1	Latent heat sublimation	radon_admin	2023-03-27 04:18:41
 1373	BLDIS-JM2	1	83	1	Boundary layer dissipation flux	radon_admin	2023-03-27 04:19:38
+1502	PROB-UHEL-3	1	6	1	Probability of Updraft Helicity > 75 m2/s2 in EPS	\N	\N
+1499	WATFR-0TO1	1	62	1	Water fraction	radon_admin	2023-07-19 16:31:20
+1500	PROB-UHEL-1	1	6	1	Probability of Updraft Helicity > 10 m2/s2 in EPS	radon_admin	2023-07-31 10:18:59
+191	RRL-M	1	2	1	Large scale precipitation in m	radon_admin	2023-08-16 04:38:22
+1485	RR-M	1	91	1	Total precipitation in m	radon_admin	2023-08-16 04:39:48
+192	RRC-M	1	2	1	Convective precipitation in m	radon_admin	2023-08-16 04:40:22
+654	CLDWAT-KGKG	1	17	1	Specific cloud liquid water content: mass of liquid water per total mass of moist air	radon_admin	2023-10-09 05:31:24
+1469	CLOUDMR-KGKG	1	17	1	Cloud mixing ratio: mass of liquid water per mass of dry air	radon_admin	2023-10-09 05:31:24
+691	CLOUDICEMR-KGKG	1	17	1	Cloud ice mixing ratio: mass of ice per mass of dry air	radon_admin	2023-10-09 05:33:33
+52	CLDICE-KGKG	1	17	1	Specific cloud ice water content: mass of ice per total mass of moist air	radon_admin	2023-10-09 05:34:57
+318	RADGLOA-JM2	1	83	1	Global (short-wave) radiation flux. Includes both direct and diffuse components	radon_admin	2023-10-09 06:51:18
+314	RNETSWA-JM2	1	83	1	Net short wave radiation flux: amount of solar radiation that reaches the surface of the Earth (both direct and diffuse) minus the amount reflected by the Earth's surface (which is governed by the albedo)	radon_admin	2023-10-09 06:58:29
+1025	RRC-3-MM	1	60	1	Convective precipitation over the last 3 hours in mm	radon_admin	2023-10-11 04:12:58
+181	RR-6-MM	1	60	1	Precipitation over the last 6 hours in mm	radon_admin	2023-10-11 04:25:29
+182	RR-12-MM	1	60	1	Precipitation over the last 12 hours in mm	radon_admin	2023-10-11 04:25:29
+504	RR-1-MM	1	60	1	Precipitation over the last 1 hour in mm	radon_admin	2023-10-11 04:25:29
+505	RR-2-MM	1	60	1	Precipitation over the last 2 hours in mm	radon_admin	2023-10-11 04:25:29
+506	RR-3-MM	1	60	1	Precipitation over the last 3 hours in mm	radon_admin	2023-10-11 04:25:29
+1507	RAINC-KGM2	1	18	1	Convective rain (liquid water) accumulation	\N	\N
+1508	RAINL-KGM2	1	18	1	Large scale rain (liquid water) accumulation	\N	\N
+1511	RAINL-1-MM	1	18	1	Large scale rain (liquid water) one-hour accumulation	\N	\N
+1512	RAINL-3-MM	1	18	1	Large scale rain (liquid water) three-hour accumulation	\N	\N
+1510	RAINRL-KGM2S	1	19	1	Large scale rain (liquid water) rate	radon_admin	2023-10-11 04:39:05
+1509	RAINRC-KGM2S	1	19	1	Convective rain (liquid water) rate	radon_admin	2023-10-11 04:39:05
+1513	RAINC-1-MM	1	18	1	Convective rain (liquid water) one-hour accumulation	\N	\N
+1514	RAINC-3-MM	1	18	1	Convective rain (liquid water) three-hour accumulation	\N	\N
+1503	FWF-0TO1	1	62	1	Fresh water fraction	\N	\N
+502	RADGLO-WM2	1	12	1	Global (short-wave) radiation. Includes both direct and diffuse components	radon_admin	2023-10-09 06:53:22
+498	RNETSW-WM2	1	12	1	Net short wave radiation: amount of solar radiation that reaches the surface of the Earth (both direct and diffuse) minus the amount reflected by the Earth's surface (which is governed by the albedo)	radon_admin	2023-10-09 06:58:29
 39	RTOPLW-WM2	1	12	1	Net long wave radiation, top of atmosphere	radon_admin	2023-03-27 04:20:33
 40	RTOPSW-WM2	1	12	1	Net short wave radiation, top of atmosphere	radon_admin	2023-03-27 04:20:33
 \.
@@ -1242,7 +1259,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1495, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1514, true);
 
 
 --
