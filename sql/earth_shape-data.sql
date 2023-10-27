@@ -35,7 +35,7 @@ COPY public.earth_shape (id, a, b, name, description, last_updater, last_updated
 -- Name: earth_shape_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.earth_shape_id_seq', 6, true);
+SELECT pg_catalog.setval('public.earth_shape_id_seq', 7, true);
 
 
 --
