@@ -27,7 +27,7 @@ COPY public.earth_shape (id, a, b, name, description, last_updater, last_updated
 4	6378137	6356752.31424783	WGS84	WGS84 ellipsoid	radon_admin	2021-03-29 07:05:40.466521+00
 5	6378137	6356752.31414028	GRS80	GRS80 ellipsoid	\N	\N
 6	6378388	6356911.946	Hayford	Hayford ellipsoid	\N	\N
-7	6371229 6371229	\N	Meps value	\N 	\N
+7	6371229	6371229	\N	Meps value	Andreas	\N
 \.
 
 
