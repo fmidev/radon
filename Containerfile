@@ -1,6 +1,6 @@
-FROM docker.io/postgres:15.4
+FROM docker.io/postgres:15
 
-RUN echo 'Acquire::http::Proxy "http://wwwproxy.fmi.fi:8080";' >> /etc/apt/apt.conf
+# RUN echo 'Acquire::http::Proxy "http://wwwproxy.fmi.fi:8080";' >> /etc/apt/apt.conf
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
