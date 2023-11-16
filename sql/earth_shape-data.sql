@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.5 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -27,7 +27,7 @@ COPY public.earth_shape (id, a, b, name, description, last_updater, last_updated
 4	6378137	6356752.31424783	WGS84	WGS84 ellipsoid	radon_admin	2021-03-29 07:05:40.466521+00
 5	6378137	6356752.31414028	GRS80	GRS80 ellipsoid	\N	\N
 6	6378388	6356911.946	Hayford	Hayford ellipsoid	\N	\N
-7	6371229	6371229	\N	Meps value	Andreas	\N
+7	6371229	6371229	\N	MEPS value	radon_admin	2023-11-16 07:47:59.192233+00
 \.
 
 

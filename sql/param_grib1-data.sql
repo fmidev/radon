@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.4 (Homebrew)
+-- Dumped by pg_dump version 15.5 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -64,6 +64,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 3670	250	441	203	71	4	\N	\N	\N	\N
 4046	131	1504	128	203	0	\N	\N	\N	\N
 3991	134	316	128	177	10	\N	\N	\N	\N
+4048	101	598	228	93	0	9	\N	\N	\N
 3983	250	329	203	129	0	\N	\N	\N	\N
 2187	250	509	203	110	4	\N	\N	wetodb	2018-01-25 12:23:41.611899+00
 4047	131	1485	254	228	0	\N	\N	radon_admin	2023-08-16 04:50:01.035656+00
@@ -375,7 +376,6 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 1002	210	439	203	52	0	\N	\N	\N	\N
 1003	240	439	203	52	0	\N	\N	\N	\N
 1010	210	181	203	54	4	\N	\N	wetodb	2017-05-17 05:58:50.249819+00
-1006	210	440	203	53	0	\N	\N	\N	\N
 1014	210	182	203	55	4	\N	\N	wetodb	2017-05-17 05:58:50.249819+00
 1062	210	201	203	72	4	\N	\N	wetodb	2017-05-17 05:58:50.249819+00
 3568	210	711	203	240	0	\N	\N	\N	\N
@@ -452,24 +452,12 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 3658	240	1089	203	245	0	\N	\N	\N	\N
 3659	240	1090	203	246	0	\N	\N	\N	\N
 3660	240	1091	203	247	0	\N	\N	\N	\N
-1158	210	665	203	111	0	\N	\N	\N	\N
 3897	131	980	128	171	0	\N	\N	\N	\N
-1162	210	666	203	112	0	\N	\N	\N	\N
 3898	240	1281	203	180	0	\N	\N	\N	\N
 3721	240	1094	203	148	0	\N	\N	wetodb	2017-10-05 07:21:47.827449+00
-1166	210	667	203	113	0	\N	\N	\N	\N
 3723	240	1093	203	149	0	\N	\N	\N	\N
-1170	210	668	203	114	0	\N	\N	\N	\N
-1174	210	669	203	115	0	\N	\N	\N	\N
-1178	210	670	203	116	0	\N	\N	\N	\N
 3901	137	598	171	39	10	\N	\N	wetodb	2019-06-07 11:34:03.11585+00
-1182	210	671	203	117	0	\N	\N	\N	\N
-1186	210	672	203	118	0	\N	\N	\N	\N
 3906	137	598	171	40	10	\N	\N	wetodb	2019-06-07 11:40:26.848768+00
-1190	210	673	203	119	0	\N	\N	\N	\N
-1194	210	674	203	120	0	\N	\N	\N	\N
-1198	210	675	203	121	0	\N	\N	\N	\N
-1202	210	676	203	122	0	\N	\N	\N	\N
 1206	210	39	203	126	0	\N	\N	\N	\N
 1207	240	39	203	126	0	\N	\N	\N	\N
 1210	210	498	203	128	0	\N	\N	\N	\N
@@ -637,13 +625,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 1837	101	1185	206	132	0	\N	\N	wetodb	2017-12-08 07:05:56.671081+00
 1790	106	499	206	112	0	\N	\N	\N	\N
 1792	101	499	206	112	0	\N	\N	\N	\N
-1793	102	301	206	97	0	\N	\N	\N	\N
-1795	106	301	206	97	0	\N	\N	\N	\N
-1797	101	301	206	97	0	\N	\N	\N	\N
 1832	101	1186	206	131	0	\N	\N	wetodb	2017-12-08 07:05:56.671081+00
-1808	102	300	206	96	0	\N	\N	\N	\N
-1810	106	300	206	96	0	\N	\N	\N	\N
-1812	101	300	206	96	0	\N	\N	\N	\N
 1818	102	297	206	93	0	\N	\N	\N	\N
 1820	106	297	206	93	0	\N	\N	\N	\N
 1822	101	297	206	93	0	\N	\N	\N	\N
@@ -678,23 +660,11 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 1893	102	44	206	236	0	\N	\N	\N	\N
 1895	106	44	206	236	0	\N	\N	\N	\N
 1897	101	44	206	236	0	\N	\N	\N	\N
-1898	102	4	206	141	0	\N	\N	\N	\N
-1900	106	4	206	141	0	\N	\N	\N	\N
-1902	101	4	206	141	0	\N	\N	\N	\N
 1997	101	1187	206	158	0	\N	\N	wetodb	2017-12-08 07:07:40.897766+00
 1905	106	47	206	197	0	\N	\N	\N	\N
 1907	101	47	206	197	0	\N	\N	\N	\N
 1920	106	437	206	198	0	\N	\N	\N	\N
 1922	101	437	206	198	0	\N	\N	\N	\N
-1930	106	8	206	145	0	\N	\N	\N	\N
-1932	101	8	206	145	0	\N	\N	\N	\N
-1935	106	9	206	146	0	\N	\N	\N	\N
-1937	101	9	206	146	0	\N	\N	\N	\N
-1940	106	10	206	147	0	\N	\N	\N	\N
-1942	101	10	206	147	0	\N	\N	\N	\N
-1943	102	3	206	148	0	\N	\N	\N	\N
-1945	106	3	206	148	0	\N	\N	\N	\N
-1947	101	3	206	148	0	\N	\N	\N	\N
 1950	106	13	206	149	0	\N	\N	\N	\N
 1952	101	13	206	149	0	\N	\N	\N	\N
 1955	106	15	206	150	0	\N	\N	\N	\N
@@ -710,9 +680,6 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 1977	101	584	206	154	0	\N	\N	\N	\N
 1980	106	557	206	156	0	\N	\N	\N	\N
 1982	101	557	206	156	0	\N	\N	\N	\N
-1983	102	21	206	157	0	\N	\N	\N	\N
-1985	106	21	206	157	0	\N	\N	\N	\N
-1987	101	21	206	157	0	\N	\N	\N	\N
 1990	106	585	206	240	0	\N	\N	\N	\N
 1992	101	585	206	240	0	\N	\N	\N	\N
 1995	106	507	206	158	0	\N	\N	\N	\N
@@ -986,7 +953,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 -- Name: param_grib1_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib1_id_seq', 4047, true);
+SELECT pg_catalog.setval('public.param_grib1_id_seq', 4048, true);
 
 
 --

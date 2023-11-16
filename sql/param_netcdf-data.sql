@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.4 (Homebrew)
+-- Dumped by pg_dump version 15.5 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -128,6 +128,10 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 130	154	470	VTM01_SW1	\N	\N	\N	\N
 131	154	471	VMDR_SW1	\N	\N	\N	\N
 139	112	471	VMDR_SW1	\N	\N	\N	\N
+140	112	462	VLPK	\N	\N	\N	\N
+141	190	1515	mm	\N	\N	\N	\N
+142	190	1516	dMdt	\N	\N	\N	\N
+143	113	462	VLPK	\N	\N	\N	\N
 \.
 
 
@@ -135,7 +139,7 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 -- Name: param_netcdf_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_netcdf_id_seq', 139, true);
+SELECT pg_catalog.setval('public.param_netcdf_id_seq', 143, true);
 
 
 --

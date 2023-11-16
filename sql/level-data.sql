@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.4 (Homebrew)
+-- Dumped by pg_dump version 15.5 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -33,12 +33,12 @@ COPY public.level (id, name, description, unit_id, last_updater, last_updated) F
 12	MAXTHETAE	Level where maximum equivalent potential temperature is found	\N	\N	\N
 11	PRESSURE_DELTA	Level at specified pressure difference from ground to level	89	postgres	2016-06-10 17:28:15.507903+00
 13	HEIGHT_LAYER	Layer between two metric heights above ground	2	\N	\N
-14	DEPTH_LAYER	Layer between two depths below land surface	63	\N	\N
 9	GROUND_DEPTH	Layer between two depths below land surface	63	wetodb	2017-08-18 07:01:00.767969+00
 15	ISOTHERMAL	Isothermal level, temperature in 1/100 K	\N	\N	\N
 16	MAXWIND	Maximum wind level	\N	wetodb	2019-04-24 05:57:57.715881+00
 17	HEIGHT_MSL	Specific altitude above mean sea level	\N	\N	\N
 18	GENERAL	Generalized vertical height coordinate	\N	\N	\N
+14	DEPTH_LAYER	DEPRECATED	63	radon_admin	2023-10-27 06:02:03.99035+00
 19	MIXING_LAYER	Mixing layer	\N	radon_admin	2023-07-20 04:14:03.856005+00
 \.
 

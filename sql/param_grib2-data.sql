@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.4 (Homebrew)
+-- Dumped by pg_dump version 15.5 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -62,7 +62,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 44	53	596	0	2	24	\N	\N	\N	\N	-1
 916	241	1254	0	202	39	\N	\N	\N	\N	-1
 918	241	1315	0	202	42	\N	\N	\N	\N	-1
-47	53	434	0	3	2	\N	\N	\N	\N	-1
 928	243	20	0	6	192	\N	\N	\N	\N	-1
 49	53	158	0	3	5	\N	\N	\N	\N	-1
 1315	120	39	0	5	1	\N	\N	\N	\N	0
@@ -92,6 +91,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 80	53	187	0	6	22	\N	\N	\N	\N	-1
 81	53	187	0	6	32	\N	\N	\N	\N	-1
 859	7	1482	0	1	193	\N	\N	radon_admin	2023-03-27 04:23:35.413197+00	1
+1414	260	1489	0	2	195	\N	\N	\N	\N	2
 566	280	1182	0	19	192	\N	\N	\N	\N	-1
 86	53	544	0	14	0	\N	\N	\N	\N	-1
 1335	270	411	0	2	21	\N	\N	\N	\N	2
@@ -156,7 +156,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 156	47	596	0	2	24	\N	\N	\N	\N	-1
 394	119	257	0	0	210	\N	\N	\N	\N	-1
 395	119	258	0	0	211	\N	\N	\N	\N	-1
-159	47	434	0	3	2	\N	\N	\N	\N	-1
 1341	170	498	0	4	9	\N	\N	\N	\N	0
 1342	170	135	0	4	199	\N	\N	\N	\N	0
 1343	170	1487	0	4	198	\N	\N	\N	\N	0
@@ -206,7 +205,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 245	131	596	0	2	24	\N	\N	\N	\N	-1
 246	131	412	0	3	0	\N	\N	\N	\N	-1
 330	170	153	0	0	0	\N	\N	wetodb	2020-01-16 13:02:52.983739+00	-1
-248	131	434	0	3	2	\N	\N	\N	\N	-1
 252	131	498	0	4	0	\N	\N	\N	\N	-1
 253	131	40	0	4	1	\N	\N	\N	\N	-1
 669	109	1227	0	192	2	\N	\N	\N	\N	-1
@@ -619,7 +617,6 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 1036	134	598	192	128	39	9	0	\N	\N	-1
 1037	134	598	192	128	40	9	7	\N	\N	-1
 1038	131	1436	0	19	29	\N	\N	\N	\N	-1
-1039	290	1437	192	128	192	\N	\N	\N	\N	-1
 1040	290	438	192	128	164	\N	\N	\N	\N	-1
 1042	260	1438	0	7	211	\N	\N	\N	\N	-1
 1043	260	1439	0	7	212	\N	\N	\N	\N	-1
@@ -928,7 +925,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 -- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib2_id_seq', 1413, true);
+SELECT pg_catalog.setval('public.param_grib2_id_seq', 1414, true);
 
 
 --

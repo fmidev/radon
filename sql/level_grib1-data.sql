@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.5 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -22,10 +22,13 @@ SET row_security = off;
 
 COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, last_updated) FROM stdin;
 250	1	1	\N	\N
+135	9	112	radon_admin	2023-10-27 06:01:17.050525+00
 242	1	1	\N	\N
 250	6	105	\N	\N
+137	9	112	radon_admin	2023-10-27 06:01:17.050525+00
 4	7	102	\N	\N
 250	2	100	\N	\N
+101	9	112	\N	\N
 4	6	105	\N	\N
 149	6	105	\N	\N
 4	7	103	\N	\N
@@ -54,7 +57,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 118	4	103	\N	\N
 109	4	103	\N	\N
 107	7	102	\N	\N
-135	14	112	\N	\N
 53	7	102	\N	\N
 118	7	102	\N	\N
 109	7	102	\N	\N
@@ -108,7 +110,6 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 7	3	109	\N	\N
 2156	2	100	\N	\N
 2158	2	100	\N	\N
-137	14	112	\N	\N
 7	5	8	\N	\N
 7	6	105	\N	\N
 112	2	100	\N	\N
