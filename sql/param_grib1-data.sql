@@ -69,6 +69,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 2187	250	509	203	110	4	\N	\N	wetodb	2018-01-25 12:23:41.611899+00
 4047	131	1485	254	228	0	\N	\N	radon_admin	2023-08-16 04:50:01.035656+00
 796	131	316	128	177	0	\N	\N	postgres	2017-01-08 18:51:45.695905+00
+4049	134	153	128	167	1	1	0	\N	\N
 3674	240	971	203	187	0	\N	\N	\N	\N
 2319	250	335	207	174	0	\N	\N	postgres	2016-06-13 07:59:41.740254+00
 798	131	314	128	176	0	\N	\N	postgres	2017-01-08 18:52:06.698164+00
@@ -953,7 +954,7 @@ COPY public.param_grib1 (id, producer_id, param_id, table_version, number, timer
 -- Name: param_grib1_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib1_id_seq', 4048, true);
+SELECT pg_catalog.setval('public.param_grib1_id_seq', 4049, true);
 
 
 --

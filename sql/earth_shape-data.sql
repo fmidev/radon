@@ -28,6 +28,7 @@ COPY public.earth_shape (id, a, b, name, description, last_updater, last_updated
 5	6378137	6356752.31414028	GRS80	GRS80 ellipsoid	\N	\N
 6	6378388	6356911.946	Hayford	Hayford ellipsoid	\N	\N
 7	6371229	6371229	\N	MEPS value	radon_admin	2023-11-16 07:47:59.192233+00
+8	6371200	6371200	\N	LAPS value	radon_admin	2023-12-15 05:17:05.698763+00
 \.
 
 
@@ -35,7 +36,7 @@ COPY public.earth_shape (id, a, b, name, description, last_updater, last_updated
 -- Name: earth_shape_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.earth_shape_id_seq', 7, true);
+SELECT pg_catalog.setval('public.earth_shape_id_seq', 8, true);
 
 
 --

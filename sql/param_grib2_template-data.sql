@@ -108,6 +108,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 500	0	5	3	\N	\N	-1
 1048	0	6	8	\N	\N	-1
 1236	0	202	23	\N	\N	-1
+316	0	5	5	\N	\N	1
 36	0	200	6	\N	\N	-1
 37	0	200	7	\N	\N	-1
 38	0	200	8	\N	\N	-1
@@ -173,6 +174,9 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1020	0	200	75	\N	\N	-1
 1021	0	200	76	\N	\N	-1
 1022	0	200	77	\N	\N	-1
+498	0	4	9	\N	\N	0
+1017	0	200	72	\N	\N	1
+1095	0	200	66	\N	\N	1
 1023	0	200	78	\N	\N	-1
 243	0	200	79	\N	\N	-1
 244	0	200	80	\N	\N	-1
@@ -658,7 +662,6 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1434	0	202	83	\N	\N	-1
 1435	1	1	192	\N	\N	-1
 370	0	1	18	\N	\N	-1
-314	0	4	9	\N	\N	-1
 431	10	3	0	\N	\N	-1
 324	0	1	65	\N	\N	-1
 1357	0	1	11	\N	\N	-1
@@ -682,7 +685,6 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1468	0	6	6	\N	\N	-1
 1469	0	1	22	\N	\N	-1
 502	0	4	3	\N	\N	0
-314	0	4	9	\N	\N	0
 1430	0	4	196	\N	\N	0
 500	0	5	3	\N	\N	0
 499	0	5	5	\N	\N	0
@@ -708,6 +710,44 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1506	0	200	169	\N	\N	-1
 1508	0	1	47	\N	\N	1
 1507	0	1	48	\N	\N	1
+314	0	4	9	\N	\N	1
+1506	0	200	169	\N	\N	1
+238	0	200	50	\N	\N	1
+239	0	200	51	\N	\N	1
+240	0	200	52	\N	\N	1
+241	0	200	52	\N	\N	1
+242	0	200	53	\N	\N	1
+263	0	200	54	\N	\N	1
+264	0	200	55	\N	\N	1
+265	0	200	56	\N	\N	1
+266	0	200	57	\N	\N	1
+267	0	200	58	\N	\N	1
+1092	0	200	59	\N	\N	1
+681	0	200	60	\N	\N	1
+682	0	200	61	\N	\N	1
+683	0	200	62	\N	\N	1
+684	0	200	63	\N	\N	1
+255	0	200	64	\N	\N	1
+256	0	200	65	\N	\N	1
+1012	0	200	67	\N	\N	1
+1013	0	200	68	\N	\N	1
+1014	0	200	69	\N	\N	1
+1015	0	200	70	\N	\N	1
+1016	0	200	71	\N	\N	1
+564	0	200	95	\N	\N	1
+1209	0	200	144	\N	\N	1
+1210	0	200	145	\N	\N	1
+1211	0	200	146	\N	\N	1
+1212	0	200	147	\N	\N	1
+1213	0	200	148	\N	\N	1
+1214	0	200	149	\N	\N	1
+1207	0	200	167	\N	\N	1
+36	0	200	6	\N	\N	2
+37	0	200	7	\N	\N	2
+38	0	200	8	\N	\N	2
+225	0	200	9	\N	\N	2
+226	0	200	10	\N	\N	2
+1205	0	200	165	\N	\N	2
 \.
 
 

@@ -40,6 +40,7 @@ COPY public.level (id, name, description, unit_id, last_updater, last_updated) F
 18	GENERAL	Generalized vertical height coordinate	\N	\N	\N
 14	DEPTH_LAYER	DEPRECATED	63	radon_admin	2023-10-27 06:02:03.99035+00
 19	MIXING_LAYER	Mixing layer	\N	radon_admin	2023-07-20 04:14:03.856005+00
+20	TROPOPAUSE	Tropopause	\N	\N	\N
 \.
 
 
