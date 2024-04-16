@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.4 (Homebrew)
+-- Dumped by pg_dump version 15.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -54,12 +54,16 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 35	210	210	86	\N	\N
 38	240	240	86	\N	\N
 39	242	242	86	\N	\N
+132	16	16	86	\N	\N
 95	500	1	88	\N	\N
 75	170	1	78	postgres	2016-02-23 11:55:47.253966+00
+133	502	150	86	\N	\N
 81	48	70	54	\N	\N
 82	54	107	7	\N	\N
+134	263	214	86	\N	\N
 86	241	241	86	\N	\N
 87	135	139	98	\N	\N
+135	264	215	86	\N	\N
 98	181	181	86	\N	\N
 90	260	204	86	\N	\N
 99	180	180	86	\N	\N
@@ -75,12 +79,17 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 125	272	209	86	\N	\N
 111	270	207	86	\N	\N
 112	135	147	98	\N	\N
+136	190	190	86	\N	\N
+137	285	216	86	\N	\N
 114	281	202	86	\N	\N
 113	189	189	88	wetodb	2018-09-20 10:00:52.201369+00
 28	132	215	98	wetodb	2019-06-11 09:08:14.635523+00
 83	4	0	251	wetodb	2020-02-04 09:33:05.510264+00
 120	271	208	86	\N	\N
 121	282	203	86	\N	\N
+138	286	217	86	\N	\N
+139	287	218	86	\N	\N
+140	288	219	86	\N	\N
 110	7	10	251	radon_admin	2022-09-04 17:22:45.245932+00
 122	290	251	86	radon_admin	2021-12-10 05:59:35.157977+00
 124	8	11	251	\N	\N
@@ -93,7 +102,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.producer_grib_id_seq', 131, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 141, true);
 
 
 --

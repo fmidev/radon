@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.5 (Homebrew)
+-- Dumped by pg_dump version 15.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -164,10 +164,15 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 195	170	1497	1	\N	6	\N	\N	\N
 196	170	1498	1	\N	6	\N	\N	\N
 197	170	221	1	\N	6	\N	\N	\N
+203	134	139	1	\N	7	\N	\N	\N
 199	170	222	1	\N	6	\N	\N	\N
 200	170	1507	1	\N	6	\N	\N	\N
 201	170	1508	1	\N	6	\N	\N	\N
 202	131	218	1	\N	6	\N	radon_admin	2023-11-16 15:02:55.568892+00
+204	285	139	7	\N	4	\N	\N	\N
+205	286	139	7	\N	4	\N	\N	\N
+206	287	139	7	\N	4	\N	\N	\N
+207	288	139	7	\N	4	\N	\N	\N
 \.
 
 
@@ -175,7 +180,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 -- Name: param_level_transform_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_level_transform_id_seq', 202, true);
+SELECT pg_catalog.setval('public.param_level_transform_id_seq', 207, true);
 
 
 --

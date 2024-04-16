@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.5 (Homebrew)
+-- Dumped by pg_dump version 15.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -143,6 +143,8 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 220	12	246	\N	\N
 4	20	7	\N	\N
 7	20	7	\N	\N
+283	6	103	\N	\N
+263	6	103	\N	\N
 244	1	1	\N	\N
 243	12	246	\N	\N
 104	1	1	\N	\N
@@ -161,6 +163,7 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 8	15	20	\N	\N
 8	1	1	\N	\N
 8	8	10	\N	\N
+264	6	103	\N	\N
 272	6	103	\N	\N
 272	1	1	\N	\N
 272	3	105	\N	\N
@@ -176,6 +179,15 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 240	15	20	\N	\N
 240	7	101	\N	\N
 240	2	100	\N	\N
+190	3	105	\N	\N
+285	6	103	\N	\N
+286	6	103	\N	\N
+287	6	103	\N	\N
+288	6	103	\N	\N
+285	7	101	\N	\N
+286	7	101	\N	\N
+287	7	101	\N	\N
+288	7	101	\N	\N
 \.
 
 

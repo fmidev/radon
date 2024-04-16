@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -81,16 +81,12 @@ CREATE INDEX geom_latitude_longitude_geom_fkey_idx ON public.geom_latitude_longi
 
 CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.geom_latitude_longitude FOR EACH ROW EXECUTE FUNCTION audit.if_modified_func('true');
 
-ALTER TABLE public.geom_latitude_longitude DISABLE TRIGGER audit_trigger_row;
-
 
 --
 -- Name: geom_latitude_longitude geom_latitude_longitude_store_last_updated_trg; Type: TRIGGER; Schema: public; Owner: radon_admin
 --
 
 CREATE TRIGGER geom_latitude_longitude_store_last_updated_trg AFTER UPDATE ON public.geom_latitude_longitude FOR EACH ROW EXECUTE FUNCTION public.store_last_updated_f();
-
-ALTER TABLE public.geom_latitude_longitude DISABLE TRIGGER geom_latitude_longitude_store_last_updated_trg;
 
 
 --

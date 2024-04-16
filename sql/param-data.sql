@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.5 (Homebrew)
+-- Dumped by pg_dump version 15.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -24,6 +24,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1026	RHICE-PRCNT	1	6	1	Humidity relative to ice	\N	\N
 1515	ATMICEG-MMH	1	99	1	Atmospheric ice growth mm per hour	radon_admin	2023-11-06 13:36:52
 1516	ATMICEG-GH	1	100	1	Atmospheric ice growth grams per hour	radon_admin	2023-11-06 13:37:17
+1519	WILDFIREINDEX-0TO6	1	101	1	Index for wildfire warnings	\N	\N
 992	PROB-HWS-1	1	6	1	Probability of significant wave height of at least 2m	\N	\N
 12	RR-5D-MM	1	60	1	Precipitation over 5 days in mm	\N	\N
 13	GROWDEV-D	1	80	1	Growth period deviation from normal in days	\N	\N
@@ -104,6 +105,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 69	NLM-K	1	6	1	Temperature of low and middle cloud cover	radon_admin	2023-10-24 04:46:33
 15	GROWDEV-PRCNT	1	6	1	Growth period deviation from normal in percent	radon_admin	2023-10-24 04:47:56
 139	P-PA	1	7	1	Pressure in Pascals	\N	\N
+1518	T-RAIL-K	1	3	1	Temperature of rail tracks	\N	\N
 695	PRI-KGM2	1	32	1	Instant precipitation in kg/m2	\N	\N
 342	F90-RR-6-MM	1	18	1	90th fractal precipitation in EPS	postgres	2016-08-31 06:01:08
 143	LC-0TO1	1	62	1	Land Cover, 1=land, 0=sea	\N	\N
@@ -1195,7 +1197,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1516, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1519, true);
 
 
 --
