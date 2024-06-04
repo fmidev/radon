@@ -22,6 +22,7 @@ SET row_security = off;
 
 COPY public.geom_transverse_mercator (id, name, ni, nj, first_point, di, dj, scanning_mode, orientation, latin, scale, description, last_updater, last_updated, earth_shape_id, datum_id) FROM stdin;
 1104	PPNFIN	850	1345	0101000020E6100000EAFEDA8F4E6E2440DD930BBEFE9F5140	1169.293057	1168.870164	+x-y	27	0	0.9996	PPN area over Finland	\N	\N	5	\N
+1127	PPNFIN2	1280	1536	0101000020E6100000990A758160381F400742B280C99A5140	1000	1000	+x-y	27	0	0.9996	PPN area over Finland and Northern Sweden	\N	\N	5	\N
 \.
 
 

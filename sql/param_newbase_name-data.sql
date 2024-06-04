@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.5 (Homebrew)
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -125,6 +125,8 @@ COPY public.param_newbase_name (id, univ_id, name, last_updater, last_updated) F
 116	5	Maximum Temperature	\N	\N
 117	6	Minimum Temperature	\N	\N
 119	1411	Convective Severity Index (FMI)	\N	\N
+120	23	U Component of Wind	\N	\N
+121	24	V Component of Wind	\N	\N
 \.
 
 
@@ -132,7 +134,7 @@ COPY public.param_newbase_name (id, univ_id, name, last_updater, last_updated) F
 -- Name: param_newbase_name_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_name_id_seq', 119, true);
+SELECT pg_catalog.setval('public.param_newbase_name_id_seq', 121, true);
 
 
 --

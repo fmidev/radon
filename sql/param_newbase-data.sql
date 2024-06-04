@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.6 (Homebrew)
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -223,7 +223,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1228	101	1185	432	1	-273.15	wetodb	2017-12-27 09:50:29.137576+00
 1854	149	716	385	1	0	\N	\N
 245	199	595	25	1	0	\N	\N
-3278	240	1198	1386	1	0	\N	\N
+4680	4	162	10	1	-273.15	\N	\N
 251	199	596	26	1	0	\N	\N
 252	210	606	28	1	0	\N	\N
 255	240	606	28	1	0	\N	\N
@@ -746,7 +746,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1001	210	439	336	1	0	\N	\N
 2499	242	980	682	1	-273.15	\N	\N
 1004	240	439	336	1	0	\N	\N
-4578	287	187	79	1	0	\N	\N
 3312	10	769	13	100	0	\N	\N
 4579	287	162	10	1	-273.15	\N	\N
 1009	210	189	338	1	0	\N	\N
@@ -980,17 +979,17 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4585	287	171	23	1	0	\N	\N
 4586	287	174	24	1	0	\N	\N
 2445	301	987	4900	1	0	wetodb	2017-01-23 11:40:30.913311+00
-4587	287	196	273	1	0	\N	\N
-4588	287	197	274	1	0	\N	\N
+4667	131	2	1386	1	0	radon_admin	2024-04-23 06:27:27.241594+00
+4676	287	1181	1383	1	0	\N	\N
 2444	301	986	4901	1	0	wetodb	2017-01-23 11:41:49.575017+00
-4589	287	198	275	1	0	\N	\N
+4677	287	1182	1382	1	0	\N	\N
 4590	287	188	80	1	0	\N	\N
 2446	301	989	4903	1	0	wetodb	2017-01-23 11:42:20.102151+00
 4591	287	442	22	1	0	\N	\N
 4592	287	441	353	1	0	\N	\N
 2443	301	985	4904	1	0	wetodb	2017-01-23 11:42:38.439712+00
 4593	287	139	1	0.01	0	\N	\N
-4594	287	411	417	1	0	\N	\N
+4682	287	189	338	1	0	\N	\N
 2447	301	990	4905	1	0	wetodb	2017-01-23 11:43:05.301188+00
 4595	288	153	4	1	-273.15	\N	\N
 4596	288	163	13	1	0	\N	\N
@@ -998,7 +997,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4597	288	166	21	1	0	\N	\N
 4598	288	169	20	1	0	\N	\N
 2522	112	448	166	1	0	\N	\N
-4599	288	187	79	1	0	\N	\N
+4678	288	1181	1383	1	0	\N	\N
 4600	288	162	10	1	-273.15	\N	\N
 4601	288	195	2	1	0	\N	\N
 4602	288	1033	327	1	0	\N	\N
@@ -1009,8 +1008,8 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4606	288	171	23	1	0	\N	\N
 2588	112	469	181	1	0	\N	\N
 4607	288	174	24	1	0	\N	\N
-4608	288	196	273	1	0	\N	\N
-4609	288	197	274	1	0	\N	\N
+4679	288	1182	1382	1	0	\N	\N
+4683	288	189	338	1	0	\N	\N
 2590	112	470	184	1	0	\N	\N
 2592	112	471	187	1	0	\N	\N
 1843	240	700	1209	10000000	0	postgres	2017-04-27 08:27:16.697022+00
@@ -1048,7 +1047,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1430	101	584	634	1	0	\N	\N
 1431	102	584	634	1	0	\N	\N
 1432	106	584	634	1	0	\N	\N
-4610	288	198	275	1	0	\N	\N
 4611	288	188	80	1	0	\N	\N
 1435	101	43	635	1	0	\N	\N
 1436	102	43	635	1	0	\N	\N
@@ -1059,7 +1057,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1441	102	44	636	1	0	\N	\N
 1442	106	44	636	1	0	\N	\N
 4614	288	139	1	0.01	0	\N	\N
-4615	288	411	417	1	0	\N	\N
 1445	101	42	637	1	0	\N	\N
 1446	102	42	637	1	0	\N	\N
 1447	106	42	637	1	0	\N	\N
@@ -1068,6 +1065,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1450	101	41	638	1	0	\N	\N
 1451	102	41	638	1	0	\N	\N
 1452	106	41	638	1	0	\N	\N
+4587	287	972	273	100	0	radon_admin	2024-04-18 11:50:59.272985+00
 4569	220	20	271	1	0	\N	\N
 4551	220	1461	1464	1	0	\N	\N
 1455	101	560	639	1	0	\N	\N
@@ -1114,7 +1112,6 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1511	102	16	651	1	0	\N	\N
 1512	106	16	651	1	0	\N	\N
 4638	285	139	1	0.01	0	\N	\N
-4639	285	411	417	1	0	\N	\N
 1515	101	17	652	1	0	\N	\N
 1516	102	17	652	1	0	\N	\N
 1517	106	17	652	1	0	\N	\N
@@ -1607,8 +1604,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4657	286	442	22	1	0	\N	\N
 4658	286	441	353	1	0	\N	\N
 4659	286	139	1	0.01	0	\N	\N
-4660	286	411	417	1	0	\N	\N
-4667	131	2	10001	1	0	\N	\N
+4578	287	438	79	100	0	radon_admin	2024-04-18 11:49:56.040571+00
 2360	250	895	4613	0.01	0	\N	\N
 2361	250	966	4668	0.01	0	\N	\N
 2362	250	967	4669	0.01	0	\N	\N
@@ -1629,6 +1625,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2391	260	719	1225	1	0	\N	\N
 3987	189	421	3	1	0	\N	\N
 2393	260	509	264	1	0	\N	\N
+4599	288	438	79	100	0	radon_admin	2024-04-18 11:49:56.040571+00
 1988	4	153	4	1	-273.15	postgres	2016-12-29 12:22:43.135955+00
 3402	7	510	265	1	0	\N	\N
 4073	260	1283	1421	100	0	\N	\N
@@ -1636,9 +1633,11 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2396	131	978	556	1	0	\N	\N
 2397	260	977	557	1	0	\N	\N
 2398	260	978	556	1	0	\N	\N
+4608	288	972	273	100	0	radon_admin	2024-04-18 11:50:59.272985+00
 2400	199	693	1202	1	0	\N	\N
 2401	242	983	705	1	0	\N	\N
 2402	260	983	705	1	0	\N	\N
+4588	287	973	274	100	0	radon_admin	2024-04-18 11:50:59.272985+00
 2404	250	983	705	1	0	\N	\N
 2405	250	984	676	1	0	\N	\N
 2406	260	984	676	1	0	\N	\N
@@ -1752,10 +1751,13 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4662	286	1435	259	100	0	\N	\N
 4663	287	1435	259	100	0	\N	\N
 4664	288	1435	259	100	0	\N	\N
+4609	288	973	274	100	0	radon_admin	2024-04-18 11:50:59.272985+00
 4109	260	1296	1425	1	0	\N	\N
 3406	7	659	325	1	0	\N	\N
+4589	287	974	275	100	0	radon_admin	2024-04-18 11:50:59.272985+00
 3407	7	276	500	1	0	\N	\N
 3408	7	406	1198	1	0	\N	\N
+4610	288	974	275	100	0	radon_admin	2024-04-18 11:50:59.272985+00
 3409	7	693	1202	1	0	\N	\N
 3976	260	266	1102	100	0	\N	\N
 3411	7	138	12	1	0	\N	\N
@@ -1866,6 +1868,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2788	260	200	200	1	0	\N	\N
 2789	260	201	201	1	0	\N	\N
 2790	260	510	265	1	0	\N	\N
+4668	260	187	1395	1	0	\N	\N
 2794	260	554	270	1	0	\N	\N
 2795	260	52	277	1	0	\N	\N
 2796	260	222	278	1	0	\N	\N
@@ -1891,6 +1894,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2816	260	204	333	1	0	\N	\N
 2817	260	503	334	1	0	\N	\N
 2818	260	439	336	1	0	\N	\N
+4669	270	187	1395	1	0	\N	\N
 2820	260	189	338	1	0	\N	\N
 2821	260	404	350	1	0	\N	\N
 2822	260	504	353	1	0	\N	\N
@@ -1951,6 +1955,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 3035	131	63	66	1	0	\N	\N
 3096	240	373	4721	1	0	\N	\N
 3038	131	218	235	1	0	\N	\N
+4670	287	20	271	1	0	\N	\N
 3040	131	1035	1227	1	0	\N	\N
 3041	131	1060	30417	1	0	\N	\N
 3042	131	276	10500	1	0	\N	\N
@@ -1975,6 +1980,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 3108	240	377	4738	1	0	\N	\N
 3109	240	379	4729	1	0	\N	\N
 3050	52	990	4905	1	0	wetodb	2017-10-17 10:05:00.791125+00
+4671	288	20	271	1	0	\N	\N
 3111	180	153	4	1	-273.15	\N	\N
 3112	180	163	13	1	0	\N	\N
 3113	180	166	21	1	0	\N	\N
@@ -2058,6 +2064,14 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1797	152	306	1151	100	0	wetodb	2017-12-20 07:31:00.824809+00
 1801	152	307	1153	100	0	wetodb	2017-12-20 07:31:00.824809+00
 15	101	412	1	1	0	wetodb	2017-12-20 09:27:52.517566+00
+4672	287	322	57	1	0	\N	\N
+4673	288	322	57	1	0	\N	\N
+4674	287	11	56	1	0	\N	\N
+4675	288	11	56	1	0	\N	\N
+4639	285	411	467	1	0	radon_admin	2024-05-13 07:06:53.043392+00
+4660	286	411	467	1	0	radon_admin	2024-05-13 07:06:53.043392+00
+4594	287	411	467	1	0	radon_admin	2024-05-13 07:06:53.043392+00
+4615	288	411	467	1	0	radon_admin	2024-05-13 07:06:53.043392+00
 2058	260	38	585	100	0	wetodb	2017-12-21 10:04:55.146168+00
 2059	260	225	586	100	0	wetodb	2017-12-21 10:04:55.146168+00
 2060	260	226	587	100	0	wetodb	2017-12-21 10:04:55.146168+00
@@ -2788,7 +2802,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 -- Name: param_newbase_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_id_seq', 4667, true);
+SELECT pg_catalog.setval('public.param_newbase_id_seq', 4683, true);
 
 
 --

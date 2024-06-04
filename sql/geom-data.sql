@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.6 (Homebrew)
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -30,6 +30,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 1126	ECEUR0100CAL	1	\N	\N	\N
 1005	ICON125	1	DWD ICON GDS global	wetodb	2016-01-29 09:22:06.177607+00
 1060	SILAMAQEUR	1	\N	\N	\N
+1127	PPNFIN2	8	\N	\N	\N
 1007	ECGLO0100	1	 ECMWF global 0.1 degrees	postgres	2016-03-23 18:20:11.449998+00
 1045	ECEUR0100G2	4	ECMWF Europe, rotated 0.1 degrees, GRIB2 version	\N	\N
 1102	ECEUR0200CAL	1	\N	\N	\N
@@ -133,7 +134,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1126, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1127, true);
 
 
 --

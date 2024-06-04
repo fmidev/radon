@@ -49,6 +49,8 @@ COPY public.param_geotiff (id, producer_id, param_id, geotiff_name, last_updater
 27	521	1421	LC-N	\N	\N
 28	110	324	Precipitation intensity	\N	\N
 29	506	502	MDSSFTD	\N	\N
+30	110	441	ACRR	\N	\N
+31	110	324	RATE	\N	\N
 \.
 
 
@@ -56,7 +58,7 @@ COPY public.param_geotiff (id, producer_id, param_id, geotiff_name, last_updater
 -- Name: param_geotiff_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_geotiff_id_seq', 29, true);
+SELECT pg_catalog.setval('public.param_geotiff_id_seq', 31, true);
 
 
 --

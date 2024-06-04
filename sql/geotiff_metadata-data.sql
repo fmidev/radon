@@ -32,6 +32,9 @@ COPY public.geotiff_metadata (id, producer_id, attribute, key, mask) FROM stdin;
 11	115	time_mask		<Item name="Forecast start time" format="([A-Za-z]*)">
 1	110	param_name	GDAL_METADATA	<Item name="Quantity" unit="(?:mm|mm/h)">([A-Za-z ]*)</Item>
 13	506	param_name	PRODUCT	\N
+14	110	analysis_time	Timestamp	[0-9]{12}
+15	110	param_name	TIFFTAG_IMAGEDESCRIPTION	COMP:COMP::([A-Z]{4})
+16	110	valid_time	ForecastTimestamp	[0-9]{14}
 \.
 
 
@@ -39,7 +42,7 @@ COPY public.geotiff_metadata (id, producer_id, attribute, key, mask) FROM stdin;
 -- Name: geotiff_metadata_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geotiff_metadata_id_seq', 13, true);
+SELECT pg_catalog.setval('public.geotiff_metadata_id_seq', 16, true);
 
 
 --

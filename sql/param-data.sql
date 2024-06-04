@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.6 (Homebrew)
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -28,11 +28,13 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 992	PROB-HWS-1	1	6	1	Probability of significant wave height of at least 2m	\N	\N
 12	RR-5D-MM	1	60	1	Precipitation over 5 days in mm	\N	\N
 13	GROWDEV-D	1	80	1	Growth period deviation from normal in days	\N	\N
+1520	F0-CEIL-2-M	1	2	1	0th fractal of ceiling 2 in EPS	\N	\N
 16	GPPREC-KGM2	1	18	1	Growth period precipitation in kgm-2	\N	\N
 17	EFFTS-C	1	58	1	Effective temperature sum	\N	\N
 18	TOZONE-KGM2	1	18	1	Total ozone in kg/m**2	\N	\N
 19	ROADIDX-N	1	69	1	Road Condition Index	\N	\N
 20	NLM-PRCNT	1	6	1	Low and middle cloud cover	\N	\N
+1521	F10-CEIL-2-M	1	2	1	10th fractal of ceiling 2 in EPS	\N	\N
 752	CRAIN-0OR1	1	28	2	Precipitation type categorical rain, 0 or 1	\N	\N
 753	CICEP-0OR1	1	28	2	Precipitation type categorical ice pellets, 0 or 1	\N	\N
 24	ICNCT-PRCNT	1	6	1	Ice concentration	\N	\N
@@ -69,6 +71,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 993	PROB-HWS-2	1	6	1	Probability of significant wave height of at least 4m	\N	\N
 754	CFRZR-0OR1	1	28	2	Precipitation type categorical freezing rain, 0 or 1	\N	\N
 68	NH-STDDEV-PRCNT	1	6	1	Standard Deviation of high cloud cover	postgres	2017-01-03 08:49:33
+1522	F25-CEIL-2-M	1	2	1	25th fractal of ceiling 2 in EPS	\N	\N
 72	NLMDEV-PRCNT	1	6	1	Standard Deviation of low and middle cloud cover	\N	\N
 73	FOG-PRCNT	1	6	1	Percentage of fog in a grid cell	\N	\N
 74	FL-PRCNT	1	6	1	Percentage of land in a grid cell	\N	\N
@@ -110,6 +113,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 342	F90-RR-6-MM	1	18	1	90th fractal precipitation in EPS	postgres	2016-08-31 06:01:08
 143	LC-0TO1	1	62	1	Land Cover, 1=land, 0=sea	\N	\N
 144	VV-HPAS	1	61	1	Vertical Velocity in hPa/s	\N	\N
+1523	F50-CEIL-2-M	1	2	1	50th fractal of ceiling 2 in EPS	\N	\N
 146	SR-M	1	2	1	Surface Roughness in Meters	\N	\N
 147	SM-KGM2	1	18	1	Soil Moisture Content in Kg per square meter	\N	\N
 148	IC-0TO1	1	62	1	Ice Cover, 1=ice, 0=no ice	\N	\N
@@ -119,6 +123,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 153	T-K	1	3	1	Temperature in Kelvins	\N	\N
 154	T-C	1	58	1	Temperature in Celsius	\N	\N
 1030	FFG2-MS	1	15	1	Instantaneous Wind Speed in m/s, himan version	\N	\N
+1524	F75-CEIL-2-M	1	2	1	75th fractal of ceiling 2 in EPS	\N	\N
 344	F50-RR-6-MM	1	18	1	50th fractal precipitation in EPS	postgres	2016-08-31 06:01:08
 158	Z-M2S2	1	13	1	Geopotential	\N	\N
 159	TPW-K	1	3	1	Pseudoadiabatic potential temperature in K	\N	\N
@@ -146,6 +151,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 346	F10-RR-6-MM	1	18	1	10th fractal precipitation in EPS	postgres	2016-08-31 06:01:08
 1506	PROB-RR1-1	1	6	1	Probability of 1h precipitation rreaching some threshold value	\N	\N
 211	NMT-N	1	30	1	Medium Cloud Type	radon_admin	2023-10-24 04:46:33
+1525	F90-CEIL-2-M	1	2	1	90th fractal of ceiling 2 in EPS	\N	\N
 194	LNSP-N	1	30	1	Log Surface Pressure	\N	\N
 195	ZH-GPM	1	8	1	Geopotential Height	\N	\N
 196	NL-PRCNT	1	6	1	Low Cloud Amount	\N	\N
@@ -158,6 +164,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 204	FRNTSYM-N	1	30	1	Front Symbol	\N	\N
 1230	SOT-WG-N	1	69	2	Shift Of Tails for wind gusts	\N	\N
 209	H-M	1	2	1	Cloud Height in  Meters	\N	\N
+1526	F100-CEIL-2-M	1	2	1	100th fractal of ceiling 2 in EPS	\N	\N
 214	TMAX-K	1	3	1	Maximum Temperature in Kelvins	\N	\N
 215	TMIN-K	1	3	1	Maximum Temperature in Kelvins	\N	\N
 216	TG-K	1	3	1	Ground Temperature in Kelvins	\N	\N
@@ -219,6 +226,11 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 278	IVELU-MS	1	15	1	Sea ice velocity (U) in m/s	\N	\N
 279	IVELV-MS	1	15	1	Sea ice velocity (V) in m/s	\N	\N
 280	IRAFTTHK-CM	1	63	1	Rafted sea ice mean thickness	\N	\N
+1527	TI2-BASE-FL	1	29	1	Base of TI2 in flight level	\N	\N
+1528	TI2-TOP-FL	1	29	1	Top of TI2 in flight level	\N	\N
+1529	TI2-MAX-S2	1	88	1	Max clear air turbulence in S-2	\N	\N
+1530	ATMICEG-MMH-3CM	1	99	1	Atmospheric ice growth mm per hour for 3cm cylinder	\N	\N
+1531	ATMICEG-GH-3CM	1	100	1	Atmospheric ice growth grams per hour for 3cm cylinder	\N	\N
 288	DPDEF-C	1	58	1	Dew Point Deficit	\N	\N
 297	FRICTION-N	1	30	1	Friction Coefficient	\N	\N
 298	WATERLR-MM	1	60	1	Water Content in mm	\N	\N
@@ -1197,7 +1209,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1519, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1531, true);
 
 
 --

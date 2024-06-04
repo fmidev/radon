@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.6 (Homebrew)
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -104,6 +104,7 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 98	m2s radian-1	Spectral density in two dimensions	\N	\N
 100	g h-1	Grams per hour	\N	\N
 101	0to6	proportion from 0 to 6	\N	\N
+102	K-2	One hundreth of a Kelvin	\N	\N
 \.
 
 
@@ -111,7 +112,7 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 -- Name: param_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_unit_id_seq', 101, true);
+SELECT pg_catalog.setval('public.param_unit_id_seq', 102, true);
 
 
 --
