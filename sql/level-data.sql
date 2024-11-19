@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,6 +23,7 @@ SET row_security = off;
 COPY public.level (id, name, description, unit_id, last_updater, last_updated) FROM stdin;
 1	GROUND	Ground or water surface	\N	\N	\N
 3	HYBRID	Hybrid level	\N	\N	\N
+21	MUDL	Maximum unstable parcel departure level	\N	\N	\N
 5	TOP	Top of atmosphere	\N	\N	\N
 7	MEANSEA	Mean sea level	\N	\N	\N
 8	ENTATM	Entire atmosphere	\N	\N	\N

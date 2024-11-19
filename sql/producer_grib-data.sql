@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,7 +23,6 @@ SET row_security = off;
 COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_updated) FROM stdin;
 118	244	244	86	\N	\N
 119	104	104	255	\N	\N
-5	47	47	54	radon_admin	2022-07-01 04:52:41.899745+00
 128	5	20	251	\N	\N
 129	291	252	86	\N	\N
 131	220	220	86	\N	\N
@@ -40,14 +39,11 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 19	109	109	86	\N	\N
 21	112	112	86	\N	\N
 130	125	125	86	radon_admin	2023-06-26 12:06:22.958144+00
-29	133	119	98	radon_admin	2023-06-27 08:17:08.317555+00
-27	131	154	98	radon_admin	2023-06-27 08:17:08.317555+00
 25	118	118	86	\N	\N
 26	119	119	86	\N	\N
 41	149	149	88	\N	\N
 96	121	121	86	wetodb	2017-05-29 11:04:22.044312+00
 123	55	2	7	\N	\N
-80	134	154	98	radon_admin	2023-06-27 08:17:08.317555+00
 32	152	152	86	\N	\N
 33	160	160	82	\N	\N
 34	199	3	86	\N	\N
@@ -95,6 +91,10 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 124	8	11	251	\N	\N
 126	283	212	86	\N	\N
 127	284	213	86	\N	\N
+5	47	47	54	radon_admin	2024-06-13 07:52:20.50328+00
+27	131	158	98	postgres	2024-11-12 11:35:44.872396+00
+80	134	158	98	postgres	2024-11-12 11:35:44.872396+00
+29	133	106	98	postgres	2024-11-12 11:35:44.872396+00
 \.
 
 

@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -731,6 +731,8 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1527	0	202	98	\N	\N	-1
 1528	0	202	99	\N	\N	-1
 1529	0	202	100	\N	\N	-1
+702	0	1	51	\N	\N	-1
+765	0	1	206	\N	\N	1
 238	0	200	50	\N	\N	1
 239	0	200	51	\N	\N	1
 240	0	200	52	\N	\N	1

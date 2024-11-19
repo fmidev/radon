@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -22,10 +22,12 @@ SET row_security = off;
 
 COPY public.param (id, name, version, unit_id, interpolation_id, description, last_updater, last_updated) FROM stdin;
 1026	RHICE-PRCNT	1	6	1	Humidity relative to ice	\N	\N
-1515	ATMICEG-MMH	1	99	1	Atmospheric ice growth mm per hour	radon_admin	2023-11-06 13:36:52
-1516	ATMICEG-GH	1	100	1	Atmospheric ice growth grams per hour	radon_admin	2023-11-06 13:37:17
+1551	TOWNC-0TO1	1	62	1	Town fraction	\N	\N
+1500	PROB-UHEL-1	1	6	1	Probability of Updraft Helicity being higher than given threshold	radon_admin	2024-10-04 10:17:37
+36	PROB-WG-1	1	6	1	Probability of wind gust reaching some threshold value	radon_admin	2024-10-04 10:22:47
+1516	ATMICEG-GH	1	100	1	Atmospheric ice growth grams per hour	radon_admin	2024-09-10 12:46:23
 1519	WILDFIREINDEX-0TO6	1	101	1	Index for wildfire warnings	\N	\N
-992	PROB-HWS-1	1	6	1	Probability of significant wave height of at least 2m	\N	\N
+1552	WATERC-0TO1	1	62	1	Water fraction	\N	\N
 12	RR-5D-MM	1	60	1	Precipitation over 5 days in mm	\N	\N
 13	GROWDEV-D	1	80	1	Growth period deviation from normal in days	\N	\N
 1520	F0-CEIL-2-M	1	2	1	0th fractal of ceiling 2 in EPS	\N	\N
@@ -47,9 +49,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 33	QOL-KGKG	1	17	1	Specific Humidity over land in kg/kg	\N	\N
 34	TOL-K	1	3	1	Temperature over land in Kelvins	\N	\N
 35	GRFROST-M3M3	1	62	1	Ground frost in volumetric proportion	\N	\N
-36	PROB-WG-1	1	6	1	Probability of reaching wind gust speed of 15 m/s in EPS	\N	\N
-37	PROB-WG-2	1	6	1	Probability of reaching wind gust speed of 20 m/s in EPS	\N	\N
-38	PROB-WG-3	1	6	1	Probability of reaching wind gust speed of 25 m/s in EPS	\N	\N
+1553	SEAC-0TO1	1	62	1	Sea fraction	\N	\N
 1484	MAXICING-N	1	69	2	Vertical maximum of icing index	\N	\N
 67	NH-K	1	3	1	Temperature of high cloud cover	radon_admin	2023-10-24 04:46:33
 41	ROADMMT-S	1	4	1	Time to next Road Maintenance Measure	\N	\N
@@ -68,10 +68,11 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 56	REFLTY-N	1	62	1	Reflectivity (pseudo visible)	\N	\N
 59	RHAVE-PRCNT	1	6	1	Relative humidity, land fraction average	\N	\N
 60	TDAVE-K	1	3	1	Dew point temperature, land fraction average	\N	\N
-993	PROB-HWS-2	1	6	1	Probability of significant wave height of at least 4m	\N	\N
+1554	NATUREC-0TO1	1	62	1	Nature fraction	\N	\N
 754	CFRZR-0OR1	1	28	2	Precipitation type categorical freezing rain, 0 or 1	\N	\N
 68	NH-STDDEV-PRCNT	1	6	1	Standard Deviation of high cloud cover	postgres	2017-01-03 08:49:33
 1522	F25-CEIL-2-M	1	2	1	25th fractal of ceiling 2 in EPS	\N	\N
+37	PROB-WG-2	1	6	1	Probability of wind gust reaching some threshold value	radon_admin	2024-10-04 10:22:47
 72	NLMDEV-PRCNT	1	6	1	Standard Deviation of low and middle cloud cover	\N	\N
 73	FOG-PRCNT	1	6	1	Percentage of fog in a grid cell	\N	\N
 74	FL-PRCNT	1	6	1	Percentage of land in a grid cell	\N	\N
@@ -165,6 +166,8 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1230	SOT-WG-N	1	69	2	Shift Of Tails for wind gusts	\N	\N
 209	H-M	1	2	1	Cloud Height in  Meters	\N	\N
 1526	F100-CEIL-2-M	1	2	1	100th fractal of ceiling 2 in EPS	\N	\N
+244	PROB-SN-2	1	6	1	Probability of snowfall reaching some threshold value	radon_admin	2024-10-04 10:21:33
+243	PROB-SN-1	1	6	1	Probability of snowfall reaching some threshold value	radon_admin	2024-10-04 10:21:33
 214	TMAX-K	1	3	1	Maximum Temperature in Kelvins	\N	\N
 215	TMIN-K	1	3	1	Maximum Temperature in Kelvins	\N	\N
 216	TG-K	1	3	1	Ground Temperature in Kelvins	\N	\N
@@ -174,48 +177,22 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 220	CLDTOP-M	1	2	1	Height of cloud top	\N	\N
 221	SNL-KGM2	1	18	1	Large scale snow accumulation in kg/m2	\N	\N
 222	SNC-KGM2	1	18	1	Convective snow accumulation in kg/m2	\N	\N
-225	PROB-WG-4	1	6	1	Probability of reaching wind gust speed of 30 m/s in EPS	\N	\N
-226	PROB-WG-5	1	6	1	Probability of reaching wind gust speed of 35 m/s in EPS	\N	\N
-227	PROB-W-3	1	6	1	Probability of reaching wind speed of 17 m/s in EPS	\N	\N
-228	PROB-W-4	1	6	1	Probability of reaching wind speed of 21 m/s in EPS	\N	\N
-229	PROB-W-5	1	6	1	Probability of reaching wind speed of 25 m/s in EPS	\N	\N
-230	PROB-W-6	1	6	1	Probability of reaching wind speed of 30 m/s in EPS	\N	\N
-231	PROB-TW-1	1	6	1	Probability of reaching temperature 25 C in EPS	\N	\N
-232	PROB-TW-2	1	6	1	Probability of reaching temperature 27 C in EPS	\N	\N
-233	PROB-TW-3	1	6	1	Probability of reaching temperature 30 C in EPS	\N	\N
-234	PROB-CAPE-1	1	6	1	Probability of reaching CAPE value 50 in EPS	\N	\N
-235	PROB-CAPE-2	1	6	1	Probability of reaching CAPE value 500 in EPS	\N	\N
-236	PROB-CAPE-3	1	6	1	Probability of reaching CAPE value 1000 in EPS	\N	\N
-237	PROB-CAPE-4	1	6	1	Probability of reaching CAPE value 1500 in EPS	\N	\N
-238	PROB-RR24-1	1	6	1	Probability of reaching precipitation 30 mm in 24 h in EPS	\N	\N
-239	PROB-RR24-2	1	6	1	Probability of reaching precipitation 60 mm in 24 h in EPS	\N	\N
-240	PROB-RR24-3	1	6	1	Probability of reaching precipitation 120 mm in 24 h in EPS	\N	\N
-241	PROB-RR24-4	1	6	1	Probability of reaching precipitation 70 mm in 24 h in EPS	\N	\N
-242	PROB-RR24-5	1	6	1	Probability of reaching precipitation 120 mm in 24 h in EPS	\N	\N
-243	PROB-SN-1	1	6	1	Probability of reaching snowfall 1 mm in 6 h in EPS	\N	\N
-244	PROB-SN-2	1	6	1	Probability of reaching snowfall 5 mm in 6 h in EPS	\N	\N
-245	PROB-SN-3	1	6	1	Probability of reaching snowfall 10 mm in 6 h in EPS	\N	\N
-246	PROB-SN-4	1	6	1	Probability of reaching snowfall 15 mm in 6 h in EPS	\N	\N
-247	PROB-SN-5	1	6	1	Probability of reaching snowfall 30 mm in 6 h in EPS	\N	\N
-248	PROB-SN-6	1	6	1	Probability of reaching snowfall 50 mm in 6 h in EPS	\N	\N
-249	PROB-SN24-1	1	6	1	Probability of reaching snowfall 1 mm in 24 h in EPS	\N	\N
-250	PROB-SN24-2	1	6	1	Probability of reaching snowfall 5 mm in 24 h in EPS	\N	\N
-251	PROB-SN24-3	1	6	1	Probability of reaching snowfall 10 mm in 24 h in EPS	\N	\N
-252	PROB-SN24-4	1	6	1	Probability of reaching snowfall 15 mm in 24 h in EPS	\N	\N
-253	PROB-SN24-5	1	6	1	Probability of reaching snowfall 30 mm in 24 h in EPS	\N	\N
-254	PROB-SN24-6	1	6	1	Probability of reaching snowfall 50 mm in 24 h in EPS	\N	\N
+1556	SDLAKE-M	1	2	1	Snow thickness over lakes in meters	\N	\N
+1560	PNC-NCM3	1	103	1	Particle number concentration in cubic centimeter	\N	\N
+1558	FSNO-0TO1	1	62	1	Fraction of snow in a grid cell	\N	\N
+225	PROB-WG-4	1	6	1	Probability of wind gust reaching some threshold value	radon_admin	2024-10-04 10:22:47
+226	PROB-WG-5	1	6	1	Probability of wind gust reaching some threshold value	radon_admin	2024-10-04 10:22:47
+227	PROB-W-3	1	6	1	Probability of wind speed reaching some threshold value	radon_admin	2024-10-04 10:23:14
+238	PROB-RR24-1	1	6	1	Probability of precipitation reaching some threshold value in 24h	radon_admin	2024-10-04 10:24:50
+239	PROB-RR24-2	1	6	1	Probability of precipitation reaching some threshold value in 24h	radon_admin	2024-10-04 10:24:50
+240	PROB-RR24-3	1	6	1	Probability of precipitation reaching some threshold value in 24h	radon_admin	2024-10-04 10:24:50
+234	PROB-CAPE-1	1	6	1	Probability of CAPE reaching some threshold value	radon_admin	2024-10-04 10:26:08
+235	PROB-CAPE-2	1	6	1	Probability of CAPE reaching some threshold value	radon_admin	2024-10-04 10:26:08
+236	PROB-CAPE-3	1	6	1	Probability of CAPE reaching some threshold value	radon_admin	2024-10-04 10:26:08
+237	PROB-CAPE-4	1	6	1	Probability of CAPE reaching some threshold value	radon_admin	2024-10-04 10:26:08
 1171	EHLCY-M2S2	1	13	1	Effective storm relative helicity	\N	\N
 1172	IRIDGE-CM	1	63	1	Ice ridge thickness	\N	\N
-257	PROB-TC-1	1	6	1	Probability of reaching -15 C in EPS	\N	\N
-258	PROB-TC-2	1	6	1	Probability of reaching -20 C in EPS	\N	\N
-259	PROB-TC-3	1	6	1	Probability of reaching -25 C in EPS	\N	\N
-260	PROB-TC-4	1	6	1	Probability of reaching -30 C in EPS	\N	\N
 261	RR-AVE6-MM	1	60	1	Average precipitation 6 hours in EPS	\N	\N
-263	PROB-RR24-6	1	6	1	Probability of reaching precipitation 1 mm in 24 h in EPS	\N	\N
-264	PROB-RR24-7	1	6	1	Probability of reaching precipitation 5 mm in 24 h in EPS	\N	\N
-265	PROB-RR12-1	1	6	1	Probability of reaching precipitation 0.3 mm in 12 h in EPS	\N	\N
-266	PROB-RR12-2	1	6	1	Probability of reaching precipitation 4.5 mm in 12 h in EPS	\N	\N
-267	PROB-RR12-3	1	6	1	Probability of reaching precipitation 12 mm in 12 h in EPS	\N	\N
 268	NC-PRCNT	1	6	1	Convective Cloud Amount	\N	\N
 269	SAL-PSU	1	86	1	Sea water salinity in psu	\N	\N
 272	CTBT-K	1	3	1	Cloud top brightness temperature (IR)	\N	\N
@@ -232,8 +209,15 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1530	ATMICEG-MMH-3CM	1	99	1	Atmospheric ice growth mm per hour for 3cm cylinder	\N	\N
 1531	ATMICEG-GH-3CM	1	100	1	Atmospheric ice growth grams per hour for 3cm cylinder	\N	\N
 288	DPDEF-C	1	58	1	Dew Point Deficit	\N	\N
+1501	PROB-UHEL-2	1	6	1	Probability of Updraft Helicity being higher than given threshold	radon_admin	2024-10-04 10:17:37
+1515	ATMICEG-MMH	1	99	1	Atmospheric ice growth mm per hour	radon_admin	2024-09-10 12:46:49
+1502	PROB-UHEL-3	1	6	1	Probability of Updraft Helicity being higher than given threshold	radon_admin	2024-10-04 10:17:37
+992	PROB-HWS-1	1	6	1	Probability of significant wave height being higher than given threshold	radon_admin	2024-10-04 10:18:55
 297	FRICTION-N	1	30	1	Friction Coefficient	\N	\N
 298	WATERLR-MM	1	60	1	Water Content in mm	\N	\N
+249	PROB-SN24-1	1	6	1	Probability of snowfall reaching some threshold value in 24h	radon_admin	2024-10-04 10:22:14
+250	PROB-SN24-2	1	6	1	Probability of snowfall reaching some threshold value in 24h	radon_admin	2024-10-04 10:22:14
+251	PROB-SN24-3	1	6	1	Probability of snowfall reaching some threshold value in 24h	radon_admin	2024-10-04 10:22:14
 302	PROB-TC-0	1	6	1	Probability of frost	\N	\N
 303	WVELU-MS	1	15	1	Sea water velocity (U) in m/s	\N	\N
 304	WVELV-MS	1	15	1	Sea water velocity (V) in m/s	\N	\N
@@ -242,9 +226,12 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 307	IRIDGC-PRCNT	1	6	1	Ice concentration of ridging	\N	\N
 308	IFF-MS	1	15	1	Ice speed in m/s	\N	\N
 309	IDD-D	1	15	1	Ice Direction in Degrees	\N	\N
+252	PROB-SN24-4	1	6	1	Probability of snowfall reaching some threshold value in 24h	radon_admin	2024-10-04 10:22:14
+253	PROB-SN24-5	1	6	1	Probability of snowfall reaching some threshold value in 24h	radon_admin	2024-10-04 10:22:14
 312	IMEANTHK-CM	1	63	1	Ice mean thickness	\N	\N
 313	TP-K	1	3	1	Potential temperature	\N	\N
 533	TGMIN06-C	1	58	1	Minimum temperature at ground at 06 UTC in celcius	\N	\N
+254	PROB-SN24-6	1	6	1	Probability of snowfall reaching some threshold value in 24h	radon_admin	2024-10-04 10:22:14
 1486	RADSWDIR-JM2	1	83	1	Surface direct shortwave radiation	\N	\N
 1487	RADSWDIR-WM2	1	12	1	Surface direct shortwave radiation	\N	\N
 1488	RADSWDIRINST-WM2	1	12	1	Surface instant direct shortwave radiation	\N	\N
@@ -272,6 +259,11 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 340	F100-T-K	1	3	1	100th fractal (ie. maximum) temperature in EPS	\N	\N
 764	SN-6-MM	1	60	2	Snow fall over the last 6 hours water equivalent	\N	\N
 1491	FF-PM2_5-N	1	69	1	Forest fire PM2_5 optical column thickness	\N	\N
+263	PROB-RR24-6	1	6	1	Probability of precipitation reaching some threshold value in 24h	radon_admin	2024-10-04 10:24:50
+264	PROB-RR24-7	1	6	1	Probability of precipitation reaching some threshold value in 24h	radon_admin	2024-10-04 10:25:11
+265	PROB-RR12-1	1	6	1	Probability of precipitation reaching some threshold value in 12h	radon_admin	2024-10-04 10:25:32
+266	PROB-RR12-2	1	6	1	Probability of precipitation reaching some threshold value in 12h	radon_admin	2024-10-04 10:25:32
+267	PROB-RR12-3	1	6	1	Probability of precipitation reaching some threshold value in 12h	radon_admin	2024-10-04 10:25:32
 765	SN-12-MM	1	60	2	Snow fall over the last 12 hours water equivalent	\N	\N
 766	SN-24-MM	1	60	2	Snow fall over the last 24 hours water equivalent	\N	\N
 772	FRSB-CM	1	63	1	Frost soil bottom in centimeters	\N	\N
@@ -321,6 +313,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1029	FFG-STDDEV-MS	1	15	1	Standard deviation of wind gust	\N	\N
 718	HSNOW-M	1	2	1	Surface snow thickness	\N	\N
 1058	TMIN12H-C	1	58	1	Minimum temperature from the preceeding 12 hours in Celsius	\N	\N
+411	FFG-MS	1	15	1	Wind Gust speed	radon_admin	2024-10-04 07:55:37
 719	BLTURB-N	1	64	2	Boundary layer turbulence, values ranging from 0 to 5	postgres	2015-11-20 09:23:09
 750	POP-PRCNT	1	6	1	Probability of precipitation	\N	\N
 749	ICETYPE-N	1	69	1	Ice type	\N	\N
@@ -336,7 +329,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1235	F0-SNOWLOAD-KGM2	1	18	1	0th fractal snowload in EPS	\N	\N
 407	MOL-M	1	2	1	Inverse of Monin-Obukhov length, i.e. 1/L in m-1	\N	\N
 408	FX-MS	1	15	1	Maximum Wind Speed in m/s	\N	\N
-411	FFG-MS	1	15	1	Instantaneous Wind Speed in m/s	\N	\N
+993	PROB-HWS-2	1	6	1	Probability of significant wave height being higher than given threshold	radon_admin	2024-10-04 10:18:55
 412	P-HPA	1	21	1	Pressure in hPa	\N	\N
 1236	F10-SNOWLOAD-KGM2	1	18	1	10th fractal snowload in EPS	\N	\N
 415	RRON-N	1	30	1	Rain On or Off	\N	\N
@@ -353,7 +346,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1084	ICNCT-0TO1	1	62	1	Ice concentration (proportion)	radon_admin	2022-02-10 05:51:38
 428	SUN-N	1	28	1	Sun on/off	\N	\N
 1031	FF-MEAN-MS	1	15	1	Mean wind speed	\N	\N
-1032	PROB-TW-4	1	6	1	Probability of reaching temperature 35 C in EPS	\N	\N
 431	TSEA-K	1	3	1	Sea Temperature in Kelvins	\N	\N
 432	TSEA-C	1	58	1	Sea Temperature in Celsius	\N	\N
 433	RADR-WM2	1	12	1	Reflected Radiation in Watts per Square Meter	\N	\N
@@ -393,6 +385,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 462	LWS-M	1	4	1	Significant wave length in m	\N	\N
 463	FL-STRTH-KA	1	67	1	Streght Of The Flash In KiloAmperes	\N	\N
 464	FL-ACCSY-KM	1	68	1	Accuracy Of The Flash In Kilometers	\N	\N
+1532	VF-PM2_5-UGM	1	65	1	Vegetation fire plume emissions PM2_5 concentration	radon_admin	2024-09-10 09:06:52
 466	RADLEVT-N	1	69	1	Parameter needed to contain radar level type	\N	\N
 467	ELVANG-D	1	5	1	Elevation angle in degrees	\N	\N
 468	CAPPIHGT-M	1	2	1	Height of CAPPI level	\N	\N
@@ -410,6 +403,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 481	MINELEV-D	1	5	1	Layer between two elevation angles	\N	\N
 482	ACCTIM-H	1	59	1	Accumulation time in hours	\N	\N
 486	COLNUM-N	1	69	1	Number of columns	\N	\N
+231	PROB-TW-1	1	6	1	Probability of temperature being higher than given threshold	radon_admin	2024-10-04 10:19:49
 488	HORRESOL-M	1	2	1	Horizontal resolution	\N	\N
 490	REFLTY-DBZ	1	70	1	Clutter corrected ceflectivity	\N	\N
 491	TOPS-KM	1	68	1	Echo top	\N	\N
@@ -417,10 +411,12 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 495	MINHGT-KM	1	68	1	Minimum height of a layer	\N	\N
 496	MAXELEV-D	1	5	1	Layer between two elevation angles	\N	\N
 497	AZANG-D	1	5	1	Cross section direction	\N	\N
+232	PROB-TW-2	1	6	1	Probability of temperature being higher than given threshold	radon_admin	2024-10-04 10:19:49
 499	RNETLW-WM2	1	12	1	Net long wave radiation	\N	\N
 500	RADLW-WM2	1	12	1	Long wave radiation	\N	\N
 501	RADSW-WM2	1	12	1	Short wave radiation	\N	\N
 1033	FOGINT-N	1	30	2	Fog intensity from 0..2	\N	\N
+233	PROB-TW-3	1	6	1	Probability of temperature being higher than given threshold	radon_admin	2024-10-04 10:19:49
 507	TMAX-24-C	1	58	1	Max temperature in Celsius on the preceding 24 hours period of the date-value	\N	\N
 508	TMIN-24-C	1	58	1	Min temperature in Celsius on the preceding 24 hours period of the date-value	\N	\N
 509	SNR-KGM2	1	32	1	Snowfall rate in mm/s or mm/h	\N	\N
@@ -449,6 +445,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 545	DUV-MED	1	73	1	Daily UV irradiance in skin sensibility units	\N	\N
 546	DUVMAX-MEDH	1	74	1	Maximum intensity of UV irradiance	\N	\N
 547	DUVMAX-HM	1	75	1	Hour and minute of Maximum intensity of UV	\N	\N
+994	PROB-HWS-3	1	6	1	Probability of significant wave height being higher than given threshold	radon_admin	2024-10-04 10:18:55
 554	H0C-M	1	2	1	Height of 0 C level in meters	\N	\N
 555	FLMOM-PA	1	7	1	Scalar momentum flux in Pa	\N	\N
 556	ICEIND-N	1	64	1	Indicator of icing risk for ships	\N	\N
@@ -464,13 +461,16 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1444	DW2-D	1	5	1	Mean wave direction of second swell in degrees	\N	\N
 1445	DW3-D	1	5	1	Mean wave direction of third swell in degrees	\N	\N
 574	AVIVIS-M	1	2	1	Metar visibility in m	\N	\N
+1032	PROB-TW-4	1	6	1	Probability of temperature being higher than given threshold	radon_admin	2024-10-04 10:19:49
 576	CL1-FT	1	82	1	Height of the lowest cloud layer in feet	\N	\N
 577	CL2-FT	1	82	1	Height of the second lowest cloud layer in feet	\N	\N
 578	CL3-FT	1	82	1	Height of the third lowest cloud layer in feet	\N	\N
 579	CL4-FT	1	82	1	Height of the fourth lowest cloud layer in feet	\N	\N
+257	PROB-TC-1	1	6	1	Probability of temperature being lower than given threshold	radon_admin	2024-10-04 10:20:21
 581	TVIRT-K	1	3	1	Virtual temperature	\N	\N
 582	T-MEAN24-C	1	3	1	24 hour mean temperature	\N	\N
 583	CLDCND-KGKG	1	17	1	Cloud condensate	\N	\N
+258	PROB-TC-2	1	6	1	Probability of temperature being lower than given threshold	radon_admin	2024-10-04 10:20:21
 585	HUMFO2-0TO1	1	62	1	Forest ground humidity kg in kg	\N	\N
 590	GRR-MMH	1	32	1	Graupel rate in mm/h	\N	\N
 592	HLCY-M2S2	1	13	1	Storm relative helicity	\N	\N
@@ -480,7 +480,9 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 596	WGV-MS	1	2	1	V-component of wind gust	\N	\N
 597	PARS-WM2	1	12	1	Photosyntetically active radiation at the surface	\N	\N
 171	U-MS	1	15	2	U wind in m/s	wetodb	2018-11-26 06:20:37
+259	PROB-TC-3	1	6	1	Probability of temperature being lower than given threshold	radon_admin	2024-10-04 10:20:21
 601	UVMAXT-H	1	59	1	Hour of UV maximum	\N	\N
+260	PROB-TC-4	1	6	1	Probability of temperature being lower than given threshold	radon_admin	2024-10-04 10:20:21
 606	HM20C-M	1	2	1	Height of -20 C level in meters	\N	\N
 607	CANW-KGM2	1	18	1	Canopy water	\N	\N
 608	STFR-0TO1	1	62	1	Surface type fraction	\N	\N
@@ -490,11 +492,11 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 612	UVI-N	1	30	1	UV index	\N	\N
 613	O3ANOM-PRCNT	1	6	1	Ozone anomaly	\N	\N
 477	SW2WDIR-D	1	5	1	Direction of Waves of Swell 2 in degrees	postgres	2017-04-18 08:12:24
-994	PROB-HWS-3	1	6	1	Probability of significant wave height of at least 6m	\N	\N
 617	GR-KGM2	1	18	1	Graupel precipitation in kg/m2	\N	\N
 618	CRNK-N	1	30	1	Charnock	\N	\N
 636	HRRR-KGM2	1	18	1	Hourly maximum precipitation rate	\N	\N
 1035	SND-KGM3	1	18	1	Snow density in kg/m3	\N	\N
+246	PROB-SN-4	1	6	1	Probability of snowfall reaching some threshold value	radon_admin	2024-10-04 10:21:33
 641	TURB-N	1	64	1	Turbulence, code 11031 in BUFR	\N	\N
 1012	PROB-RR3-1	1	6	1	Probability of Precipitation #1 in 3h	\N	\N
 643	BTURB-M	1	2	1	Base of turbulence in meters	\N	\N
@@ -513,17 +515,29 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 660	UFLMOM-NM2	1	78	1	U-component of momentum flux in N m-2	\N	\N
 661	PRCWAT-KGM2	1	18	1	Precipitable water in mm	\N	\N
 584	GRPRDEV-PRCNT	1	6	1	Growth period precipitation deviation from normal in percent	radon_admin	2023-10-24 04:47:56
+1533	VF-PM10-UGM	1	65	1	Vegetation fire plume emissions PM10 concentration	radon_admin	2024-09-10 09:07:44
+703	IFFG-MS	1	15	1	Instantaneous Wind Gust speed	radon_admin	2024-10-04 07:55:37
+1180	PROB-TC-6	1	6	1	Probability of temperature being lower than given threshold	radon_admin	2024-10-04 10:20:21
+247	PROB-SN-5	1	6	1	Probability of snowfall reaching some threshold value	radon_admin	2024-10-04 10:21:33
+248	PROB-SN-6	1	6	1	Probability of snowfall reaching some threshold value	radon_admin	2024-10-04 10:21:33
+245	PROB-SN-3	1	6	1	Probability of snowfall reaching some threshold value	radon_admin	2024-10-04 10:21:33
+38	PROB-WG-3	1	6	1	Probability of wind gust reaching some threshold value	radon_admin	2024-10-04 10:22:47
+685	PROB-W-1	1	6	1	Probability of wind speed reaching some threshold value	radon_admin	2024-10-04 10:23:14
+686	PROB-W-2	1	6	1	Probability of wind speed reaching some threshold value	radon_admin	2024-10-04 10:23:14
+228	PROB-W-4	1	6	1	Probability of wind speed reaching some threshold value	radon_admin	2024-10-04 10:23:14
+229	PROB-W-5	1	6	1	Probability of wind speed reaching some threshold value	radon_admin	2024-10-04 10:23:14
+230	PROB-W-6	1	6	1	Probability of wind speed reaching some threshold value	radon_admin	2024-10-04 10:23:14
 616	ALBEDOSLR-0TO1	1	62	1	Albedo with solar angle correction	postgres	2017-01-08 18:23:45
+1360	PROB-POT-1	1	6	1	Probability of POT reaching some threshold value	radon_admin	2024-10-04 10:24:03
 1014	PROB-RR3-3	1	6	1	Probability of Precipitation #3 in 3h	\N	\N
 998	POTPRECT-N	1	69	2	Potential precipitation type, calculated for all grid points	\N	\N
 1177	F25-TD-K	1	3	1	25th fractal dewpoint temperature in EPS	\N	\N
 1178	F75-TD-K	1	3	1	75th fractal dewpoint temperature in EPS	\N	\N
 1179	F90-TD-K	1	3	1	90th fractal dewpoint temperature in EPS	\N	\N
-1180	PROB-TC-6	1	6	1	Probability of old #6	\N	\N
-685	PROB-W-1	1	6	1	Probability of reaching wind speed of 10 m/s in EPS	\N	\N
-686	PROB-W-2	1	6	1	Probability of reaching wind speed of 15 m/s in EPS	\N	\N
 687	HUMFOR-0TO1	1	62	1	Forest ground humidity kg in kg	\N	\N
 688	HUMFIE-0TO1	1	62	1	Field ground humidity kg in kg	\N	\N
+1361	PROB-POT-2	1	6	1	Probability of POT reaching some threshold value	radon_admin	2024-10-04 10:24:03
+1362	PROB-POT-3	1	6	1	Probability of POT reaching some threshold value	radon_admin	2024-10-04 10:24:03
 692	RAINMR-KGKG	1	17	1	Rain mixing ratio	\N	\N
 789	F97.5-T-K	1	3	1	97.5th fractal temperature in EPS	\N	\N
 701	POT-PRCNT	1	6	1	Probability of thunderstorms	\N	\N
@@ -531,7 +545,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 698	NSSS-NM2S	1	78	1	Northward surface stress due to turbulent processes, accumulated	\N	\N
 699	TI-S2	1	88	1	Clear Air Turbulence forecasting index	\N	\N
 700	TI2-S2	1	88	1	Clear Air Turbulence forecasting index 2	\N	\N
-703	IFFG-MS	1	15	1	Maximum 3 second wind at 10 m height as defined by WMO including effects of turbulence and convection	\N	\N
 63	CIN-JKG	1	77	1	Convective inhibition (cin)	postgres	2016-03-23 18:50:07
 693	GRAUPMR-KGKG	1	17	1	Graupel mixing ratio	postgres	2016-09-23 07:46:27
 702	TCW-KGM2	1	18	1	Vertically integrated total water (vapour + cloud water + cloud ice)	\N	\N
@@ -759,7 +772,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 985	PM10-UGM3	1	65	1	PM10 consentration	\N	\N
 986	NO-UGM3	1	65	1	Contents of Nitrogen Monoxide	\N	\N
 987	CO-UGM3	1	65	1	Contents of Carbon Monoxide	\N	\N
-995	PROB-HWS-4	1	6	1	Probability of significant wave height of at least 8m	postgres	2017-02-01 12:12:48
 996	DPW-D	1	5	1	Wave principal direction at spectral peak in degrees	\N	\N
 989	O3-UGM3	1	65	1	Contents of Ozone	wetodb	2017-01-11 15:28:31
 990	PM2_5-UGM3	1	65	1	PM2_5 consentration	\N	\N
@@ -787,6 +799,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 439	HSADE1-N	1	30	2	Precalculated weather symbol	postgres	2017-02-09 06:47:41
 1082	ICED-HZ	1	11	1	Ice divergence	\N	\N
 1083	ICEG-MS	1	15	1	Ice growth rate	\N	\N
+995	PROB-HWS-4	1	6	1	Probability of significant wave height being higher than given threshold	radon_admin	2024-10-04 10:18:55
 503	FOGSYM-N	1	30	2	Fog symbol	postgres	2017-02-09 06:47:41
 609	SOILTY-N	1	30	2	Soil type	postgres	2017-02-09 06:47:41
 610	VEGET-N	1	30	2	Vegetation type	postgres	2017-02-09 06:47:41
@@ -794,9 +807,9 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 615	ROADWARN-N	1	69	2	Warning to road users	postgres	2017-02-09 06:47:41
 1504	O3-KGKG	1	17	1	Ozone mass mixing ratio	\N	\N
 642	ICING-N	1	64	2	Icing, code 20041 in BUFR	postgres	2017-02-09 06:47:41
+1024	PROB-TC-5	1	6	1	Probability of temperature being lower than given threshold	radon_admin	2024-10-04 10:20:21
 11	PRECTYPE-N	1	69	2	Precipitation type, large scale or convective	postgres	2017-02-09 06:47:41
 976	POTPRECF-N	1	69	2	Potential precipitation form, calculated for all grid points	postgres	2017-02-09 06:47:41
-1024	PROB-TC-5	1	6	1	Probability of cold #5	\N	\N
 1037	F100-WATLEV-CM	1	63	1	100th fractal sea level height in EPS	\N	\N
 1038	F95-WATLEV-CM	1	63	1	95th fractal sea level height in EPS	\N	\N
 1039	F90-WATLEV-CM	1	63	1	90th fractal sea level height in EPS	\N	\N
@@ -852,7 +865,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1197	F100-TD2M-C	1	3	1	100th fractal dewpoint temperature in EPS	\N	\N
 1199	FROSTSUM-C	1	58	1	Cumulative frost sum over some period of time	\N	\N
 1200	TROPO-FL	1	29	1	Estimated height [FL] of the tropopause	\N	\N
-1501	PROB-UHEL-2	1	6	1	Probability of Updraft Helicity > 25 m2/s2 in EPS	\N	\N
 1202	RACC-KGM2	1	18	1	Rain accumulation in mm	\N	\N
 1203	GDD-C	1	58	1	Growing degree days	\N	\N
 1205	PROB-WG-AGG-1	1	6	1	Probability of reaching wind gust speed more than given value threshold, aggregated over area and/or time	\N	\N
@@ -1048,9 +1060,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1357	SD-TM2	1	91	1	Water equivalent of snow cover in m	\N	\N
 1448	FFG-DUR24H-H	1	59	1	Wind gust duration of gust over 16 m/s, 24h period	\N	\N
 1449	RAJUILMA-N	1	69	1	Severe thunderstorm potential	\N	\N
-1360	PROB-POT-1	1	6	1	Probability of reaching POT of 1	\N	\N
-1361	PROB-POT-2	1	6	1	Probability of reaching POT of 30	\N	\N
-1362	PROB-POT-3	1	6	1	Probability of reaching POT of 60	\N	\N
 1363	RRS-24-MM	1	60	1	Solid Precipitation over last 24 hours water equivalent	\N	\N
 1364	F0-RRS-24-MM	1	18	1	0th fractal RRS in EPS	\N	\N
 1365	F10-RRS-24-MM	1	18	1	10th fractal RRS in EPS	\N	\N
@@ -1117,6 +1126,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1434	RAIL-MEAN-N	1	30	2	Rail traffic condition probability	\N	\N
 1435	POP-0TO1	1	62	1	Probability of precipitation	\N	\N
 1436	CAT-M23S	1	96	1	Clear air turbulence	\N	\N
+241	PROB-RR24-4	1	6	1	Probability of precipitation reaching some threshold value in 24h	radon_admin	2024-10-04 10:24:50
 1421	LC-N	1	64	2	Land cover information using a code table for values	radon_admin	2022-03-11 06:52:59
 1453	LDSA-UM2CM3	1	97	1	Lung deposited surface area (of particles)	\N	\N
 1454	POT-BIASC-PRCNT	1	6	1	Bias-corrected Probability of thunderstorms in prcnt	\N	\N
@@ -1171,9 +1181,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1482	LHE-JM2	1	83	1	Latent heat flux through evaporation	radon_admin	2023-03-27 04:18:41
 1481	LHS-JM2	1	20	1	Latent heat sublimation	radon_admin	2023-03-27 04:18:41
 1373	BLDIS-JM2	1	83	1	Boundary layer dissipation flux	radon_admin	2023-03-27 04:19:38
-1502	PROB-UHEL-3	1	6	1	Probability of Updraft Helicity > 75 m2/s2 in EPS	\N	\N
 1499	WATFR-0TO1	1	62	1	Water fraction	radon_admin	2023-07-19 16:31:20
-1500	PROB-UHEL-1	1	6	1	Probability of Updraft Helicity > 10 m2/s2 in EPS	radon_admin	2023-07-31 10:18:59
 191	RRL-M	1	2	1	Large scale precipitation in m	radon_admin	2023-08-16 04:38:22
 1485	RR-M	1	91	1	Total precipitation in m	radon_admin	2023-08-16 04:39:48
 192	RRC-M	1	2	1	Convective precipitation in m	radon_admin	2023-08-16 04:40:22
@@ -1198,8 +1206,15 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1513	RAINC-1-MM	1	18	1	Convective rain (liquid water) one-hour accumulation	\N	\N
 1514	RAINC-3-MM	1	18	1	Convective rain (liquid water) three-hour accumulation	\N	\N
 1503	FWF-0TO1	1	62	1	Fresh water fraction	\N	\N
+242	PROB-RR24-5	1	6	1	Probability of precipitation reaching some threshold value in 24h	radon_admin	2024-10-04 10:24:50
 502	RADGLO-WM2	1	12	1	Global (short-wave) radiation. Includes both direct and diffuse components	radon_admin	2023-10-09 06:53:22
 498	RNETSW-WM2	1	12	1	Net short wave radiation: amount of solar radiation that reaches the surface of the Earth (both direct and diffuse) minus the amount reflected by the Earth's surface (which is governed by the albedo)	radon_admin	2023-10-09 06:58:29
+1546	PROB-ATMICEG-GH-15CM-LIMIT10	1	6	1	Probability of atmospheric ice growth for 15cm cylinder	radon_admin	2024-10-04 10:33:53
+1547	PROB-ATMICEG-GH-15CM-LIMIT100	1	6	1	Probability of atmospheric ice growth for 15cm cylinder	radon_admin	2024-10-04 10:33:53
+1548	PROB-ATMICEG-GH-15CM-LIMIT200	1	6	1	Probability of atmospheric ice growth for 15cm cylinder	radon_admin	2024-10-04 10:33:53
+1538	PROB-ATMICEG-GH-3CM-LIMIT10	1	6	1	Probability of atmospheric ice growth for 3cm cylinder	radon_admin	2024-10-04 10:34:38
+1539	PROB-ATMICEG-GH-3CM-LIMIT100	1	6	1	Probability of atmospheric ice growth for 3cm cylinder	radon_admin	2024-10-04 10:34:38
+1540	PROB-ATMICEG-GH-3CM-LIMIT200	1	6	1	Probability of atmospheric ice growth for 3cm cylinder	radon_admin	2024-10-04 10:34:38
 39	RTOPLW-WM2	1	12	1	Net long wave radiation, top of atmosphere	radon_admin	2023-03-27 04:20:33
 40	RTOPSW-WM2	1	12	1	Net short wave radiation, top of atmosphere	radon_admin	2023-03-27 04:20:33
 \.
@@ -1209,7 +1224,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1531, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1560, true);
 
 
 --

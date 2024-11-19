@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -34,7 +34,7 @@ COPY public.geotiff_metadata (id, producer_id, attribute, key, mask) FROM stdin;
 13	506	param_name	PRODUCT	\N
 14	110	analysis_time	Timestamp	[0-9]{12}
 15	110	param_name	TIFFTAG_IMAGEDESCRIPTION	COMP:COMP::([A-Z]{4})
-16	110	valid_time	ForecastTimestamp	[0-9]{14}
+16	110	valid_time	ForecastTimestamp	[0-9]{12}
 \.
 
 

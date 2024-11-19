@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -287,6 +287,38 @@ COPY public.param_precision (id, param_id, "precision", last_updater, last_updat
 379	983	1	\N	\N
 381	329	1	\N	\N
 383	158	2	\N	\N
+384	182	3	\N	\N
+385	437	3	\N	\N
+386	1025	3	\N	\N
+387	970	3	\N	\N
+388	764	3	\N	\N
+389	765	3	\N	\N
+390	766	3	\N	\N
+391	1327	3	\N	\N
+392	175	2	\N	\N
+393	1018	3	\N	\N
+394	1019	3	\N	\N
+395	1020	3	\N	\N
+396	1021	3	\N	\N
+397	1022	3	\N	\N
+398	1023	3	\N	\N
+399	36	3	\N	\N
+400	37	3	\N	\N
+401	38	3	\N	\N
+402	225	3	\N	\N
+403	226	3	\N	\N
+404	685	3	\N	\N
+405	686	3	\N	\N
+406	227	3	\N	\N
+407	228	3	\N	\N
+408	229	3	\N	\N
+409	302	3	\N	\N
+410	257	3	\N	\N
+411	258	3	\N	\N
+412	259	3	\N	\N
+413	260	3	\N	\N
+414	1358	3	\N	\N
+415	1359	3	\N	\N
 \.
 
 
@@ -294,7 +326,7 @@ COPY public.param_precision (id, param_id, "precision", last_updater, last_updat
 -- Name: param_precision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_precision_id_seq', 383, true);
+SELECT pg_catalog.setval('public.param_precision_id_seq', 415, true);
 
 
 --
