@@ -115,6 +115,8 @@ for f in producer_class producer_class-data \
 	producer_meta producer_meta-data \
 	projection projection-data \
 	forecast_type forecast_type-data \
+	aggregation aggregation-data \
+	processing_type processing_type-data \
 	earth_shape earth_shape-data \
 	datum datum-data \
 	geom geom-data \
