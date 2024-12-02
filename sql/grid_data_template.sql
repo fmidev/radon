@@ -35,6 +35,11 @@ CREATE TABLE public.grid_data_template (
     forecast_period interval NOT NULL,
     forecast_type_id integer NOT NULL,
     forecast_type_value numeric DEFAULT '-1'::integer NOT NULL,
+    aggregation_id integer,
+    aggregation_period interval,
+    processing_type_id integer,
+    processing_type_value numeric,
+    processing_type_value2 numeric,
     file_location text NOT NULL,
     file_server text NOT NULL,
     file_format_id integer NOT NULL,
@@ -140,6 +145,20 @@ ALTER TABLE ONLY public.grid_data_template
 ALTER TABLE ONLY public.grid_data_template
     ADD CONSTRAINT grid_data_template_param_fkey FOREIGN KEY (param_id) REFERENCES public.param(id);
 
+--
+-- Name: grid_data_template grid_data_template_aggregation_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
+--
+
+ALTER TABLE ONLY public.grid_data_template
+    ADD CONSTRAINT grid_data_template_aggregation_fkey FOREIGN KEY (aggregation_id) REFERENCES public.aggregation(id);
+
+
+--
+-- Name: grid_data_template grid_data_template_processing_type_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
+--
+
+ALTER TABLE ONLY public.grid_data_template
+    ADD CONSTRAINT grid_data_template_processing_type_fkey FOREIGN KEY (processing_type_id) REFERENCES public.processing_type(id);
 
 --
 -- Name: TABLE grid_data_template; Type: ACL; Schema: public; Owner: radon_admin

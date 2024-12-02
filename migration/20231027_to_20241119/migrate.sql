@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS grid_data_template;
+
 CREATE OR REPLACE FUNCTION public.radon_version_f()
  RETURNS TEXT
  LANGUAGE plpgsql
@@ -7,5 +9,3 @@ BEGIN
   RETURN '20241119';
 END;
 $function$
-
-
