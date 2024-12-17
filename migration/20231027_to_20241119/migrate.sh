@@ -38,6 +38,12 @@ SET search_path TO public,data;
 SET search_path TO public,data;
 $table_sql
 $previ_table_sql
+\i $SQLHOME/grid_era5mta_ssv.sql
+SET search_path TO public,data;
+\i $SQLHOME/grid_meps_ssv.sql
+SET search_path TO public,data;
+\i $SQLHOME/grid_mepsmta_ssv.sql
+SET search_path TO public,data;
 COMMIT;
 EOSQL
 )
