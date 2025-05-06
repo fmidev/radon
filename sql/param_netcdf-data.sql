@@ -47,7 +47,6 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 39	49	214	air_temperature_0	\N	\N	\N	\N
 40	49	215	air_temperature_1	\N	\N	\N	\N
 41	49	153	air_temperature	\N	\N	\N	\N
-42	148	432	thetao	\N	\N	\N	\N
 43	148	269	so	\N	\N	\N	\N
 44	148	303	uo	\N	\N	\N	\N
 45	148	304	vo	\N	\N	\N	\N
@@ -135,6 +134,12 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 144	301	1532	cnc_PM25_FRP	\N	\N	\N	\N
 145	301	1533	cnc_PM10_FRP	\N	\N	\N	\N
 146	52	1560	cnc_PNC	\N	\N	\N	\N
+147	148	305	wo	\N	\N	\N	\N
+148	148	717	sla	\N	\N	\N	\N
+42	148	1567	thetao	\N	\N	radon_admin	2025-01-28 11:27:18.713104+00
+149	148	1568	sob	\N	\N	\N	\N
+150	148	1569	bottomT	\N	\N	\N	\N
+151	148	1570	mlotst	\N	\N	\N	\N
 \.
 
 
@@ -142,7 +147,7 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 -- Name: param_netcdf_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_netcdf_id_seq', 146, true);
+SELECT pg_catalog.setval('public.param_netcdf_id_seq', 151, true);
 
 
 --

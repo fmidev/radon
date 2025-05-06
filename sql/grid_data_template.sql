@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -91,6 +91,14 @@ CREATE TRIGGER audit_trigger_row AFTER UPDATE ON public.grid_data_template FOR E
 
 
 --
+-- Name: grid_data_template grid_data_template_aggregation_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
+--
+
+ALTER TABLE ONLY public.grid_data_template
+    ADD CONSTRAINT grid_data_template_aggregation_fkey FOREIGN KEY (aggregation_id) REFERENCES public.aggregation(id);
+
+
+--
 -- Name: grid_data_template grid_data_template_file_protocol_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
 --
 
@@ -145,13 +153,6 @@ ALTER TABLE ONLY public.grid_data_template
 ALTER TABLE ONLY public.grid_data_template
     ADD CONSTRAINT grid_data_template_param_fkey FOREIGN KEY (param_id) REFERENCES public.param(id);
 
---
--- Name: grid_data_template grid_data_template_aggregation_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
---
-
-ALTER TABLE ONLY public.grid_data_template
-    ADD CONSTRAINT grid_data_template_aggregation_fkey FOREIGN KEY (aggregation_id) REFERENCES public.aggregation(id);
-
 
 --
 -- Name: grid_data_template grid_data_template_processing_type_fkey; Type: FK CONSTRAINT; Schema: public; Owner: radon_admin
@@ -159,6 +160,7 @@ ALTER TABLE ONLY public.grid_data_template
 
 ALTER TABLE ONLY public.grid_data_template
     ADD CONSTRAINT grid_data_template_processing_type_fkey FOREIGN KEY (processing_type_id) REFERENCES public.processing_type(id);
+
 
 --
 -- Name: TABLE grid_data_template; Type: ACL; Schema: public; Owner: radon_admin

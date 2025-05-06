@@ -180,6 +180,8 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1556	SDLAKE-M	1	2	1	Snow thickness over lakes in meters	\N	\N
 1560	PNC-NCM3	1	103	1	Particle number concentration in cubic centimeter	\N	\N
 1558	FSNO-0TO1	1	62	1	Fraction of snow in a grid cell	\N	\N
+1561	NH-MEAN-0TO1	1	62	1	Mean high cloud amount	radon_admin	2024-12-11 08:28:56
+1562	NM-MEAN-0TO1	1	62	1	Mean middle cloud amount	\N	\N
 225	PROB-WG-4	1	6	1	Probability of wind gust reaching some threshold value	radon_admin	2024-10-04 10:22:47
 226	PROB-WG-5	1	6	1	Probability of wind gust reaching some threshold value	radon_admin	2024-10-04 10:22:47
 227	PROB-W-3	1	6	1	Probability of wind speed reaching some threshold value	radon_admin	2024-10-04 10:23:14
@@ -190,8 +192,14 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 235	PROB-CAPE-2	1	6	1	Probability of CAPE reaching some threshold value	radon_admin	2024-10-04 10:26:08
 236	PROB-CAPE-3	1	6	1	Probability of CAPE reaching some threshold value	radon_admin	2024-10-04 10:26:08
 237	PROB-CAPE-4	1	6	1	Probability of CAPE reaching some threshold value	radon_admin	2024-10-04 10:26:08
+1563	NL-MEAN-0TO1	1	62	1	Mean low cloud amount	\N	\N
+1564	NH-STDDEV-0TO1	1	62	1	Standard deviation of high cloud amount	\N	\N
+1565	NM-STDDEV-0TO1	1	62	1	Standard deviation of middle cloud amount	\N	\N
+1566	NL-STDDEV-0TO1	1	62	1	Standard deviation of low cloud amount	\N	\N
 1171	EHLCY-M2S2	1	13	1	Effective storm relative helicity	\N	\N
 1172	IRIDGE-CM	1	63	1	Ice ridge thickness	\N	\N
+1567	TSEAP-C	1	58	1	Sea water potential temperature in Celsius	\N	\N
+1568	SALB-PSU	1	86	1	Sea water salinity at sea floor	\N	\N
 261	RR-AVE6-MM	1	60	1	Average precipitation 6 hours in EPS	\N	\N
 268	NC-PRCNT	1	6	1	Convective Cloud Amount	\N	\N
 269	SAL-PSU	1	86	1	Sea water salinity in psu	\N	\N
@@ -346,6 +354,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1084	ICNCT-0TO1	1	62	1	Ice concentration (proportion)	radon_admin	2022-02-10 05:51:38
 428	SUN-N	1	28	1	Sun on/off	\N	\N
 1031	FF-MEAN-MS	1	15	1	Mean wind speed	\N	\N
+1569	TSEAPB-C	1	58	1	Sea water potential temperature at sea floor in Celsius	\N	\N
 431	TSEA-K	1	3	1	Sea Temperature in Kelvins	\N	\N
 432	TSEA-C	1	58	1	Sea Temperature in Celsius	\N	\N
 433	RADR-WM2	1	12	1	Reflected Radiation in Watts per Square Meter	\N	\N
@@ -400,6 +409,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1060	FFG3H-MS	1	15	1	Wind gust speed in m/s, three hour period	\N	\N
 478	RADIUS-KM	1	68	1	Radar product radius in km	\N	\N
 479	MAXHGT-KM	1	68	1	Maximum height of a layer	\N	\N
+1570	MLOTST-M	1	2	1	Ocean mixed layer thickness defined by sigma theta	\N	\N
 481	MINELEV-D	1	5	1	Layer between two elevation angles	\N	\N
 482	ACCTIM-H	1	59	1	Accumulation time in hours	\N	\N
 486	COLNUM-N	1	69	1	Number of columns	\N	\N
@@ -417,6 +427,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 501	RADSW-WM2	1	12	1	Short wave radiation	\N	\N
 1033	FOGINT-N	1	30	2	Fog intensity from 0..2	\N	\N
 233	PROB-TW-3	1	6	1	Probability of temperature being higher than given threshold	radon_admin	2024-10-04 10:19:49
+1571	FEELSLIKE-K	1	3	1	FeelsLike temperature	\N	\N
 507	TMAX-24-C	1	58	1	Max temperature in Celsius on the preceding 24 hours period of the date-value	\N	\N
 508	TMIN-24-C	1	58	1	Min temperature in Celsius on the preceding 24 hours period of the date-value	\N	\N
 509	SNR-KGM2	1	32	1	Snowfall rate in mm/s or mm/h	\N	\N
@@ -1224,7 +1235,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1560, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1571, true);
 
 
 --

@@ -201,6 +201,18 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 131	21	17	\N	\N
 260	8	10	\N	\N
 270	8	10	\N	\N
+265	6	103	\N	\N
+266	6	103	\N	\N
+130	3	105	\N	\N
+130	2	100	\N	\N
+130	1	1	\N	\N
+130	6	103	\N	\N
+130	7	101	\N	\N
+130	8	10	\N	\N
+266	7	102	\N	\N
+120	6	103	\N	\N
+289	6	103	\N	\N
+289	7	101	\N	\N
 \.
 
 

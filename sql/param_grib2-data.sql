@@ -30,7 +30,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 899	260	20	0	6	198	\N	\N	\N	\N	-1
 727	105	25	10	2	1	\N	\N	\N	\N	-1
 901	241	1303	0	202	30	\N	\N	\N	\N	-1
-10	53	218	0	0	17	\N	\N	\N	\N	-1
+1502	10	655	0	19	3	\N	\N	\N	\N	-1
 902	241	1304	0	202	33	\N	\N	\N	\N	-1
 903	241	1305	0	202	22	\N	\N	\N	\N	-1
 13	53	661	0	1	3	\N	\N	\N	\N	-1
@@ -130,7 +130,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 919	241	1316	0	202	44	\N	\N	\N	\N	-1
 650	10	316	0	5	5	\N	\N	wetodb	2019-03-26 06:30:06.980264+00	1
 1431	242	1449	0	7	192	\N	\N	\N	\N	-1
-124	47	218	0	0	17	\N	\N	\N	\N	-1
+1503	240	1571	0	0	200	\N	\N	\N	\N	-1
 1332	260	411	0	2	22	\N	\N	radon_admin	2024-02-12 05:46:09.888697+00	-1
 921	241	1325	0	202	58	\N	\N	\N	\N	-1
 127	47	661	0	1	3	\N	\N	\N	\N	-1
@@ -195,7 +195,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 652	10	979	0	4	7	\N	\N	wetodb	2019-03-26 06:30:06.980264+00	1
 209	131	268	0	6	2	\N	\N	\N	\N	-1
 213	131	581	0	0	1	\N	\N	\N	\N	-1
-218	131	218	0	0	17	\N	\N	\N	\N	-1
+1504	260	1571	0	0	200	\N	\N	\N	\N	-1
 221	131	661	0	1	3	\N	\N	\N	\N	-1
 223	131	441	0	1	7	\N	\N	\N	\N	-1
 224	131	179	0	1	8	\N	\N	\N	\N	-1
@@ -996,6 +996,26 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 1499	286	1033	192	201	55	\N	\N	\N	\N	-1
 1500	286	1181	0	19	193	\N	\N	\N	\N	-1
 1501	286	1182	0	19	192	\N	\N	\N	\N	-1
+1505	120	1571	0	0	200	\N	\N	\N	\N	-1
+1506	285	1571	0	0	200	\N	\N	\N	\N	-1
+1507	286	1571	0	0	200	\N	\N	\N	\N	-1
+1508	287	1571	0	0	200	\N	\N	\N	\N	-1
+1509	288	1571	0	0	200	\N	\N	\N	\N	-1
+1510	289	11	0	1	192	\N	\N	\N	\N	-1
+1511	289	20	0	6	197	\N	\N	\N	\N	-1
+1512	289	189	0	19	194	\N	\N	\N	\N	-1
+1513	289	322	0	1	19	\N	\N	\N	\N	-1
+1514	289	438	0	6	192	\N	\N	\N	\N	-1
+1515	289	442	0	2	192	\N	\N	\N	\N	-1
+1516	289	972	0	6	194	\N	\N	\N	\N	-1
+1517	289	973	0	6	195	\N	\N	\N	\N	-1
+1518	289	974	0	6	196	\N	\N	\N	\N	-1
+1519	289	976	0	1	211	\N	\N	\N	\N	-1
+1520	289	998	0	1	210	\N	\N	\N	\N	-1
+1521	289	1033	192	201	55	\N	\N	\N	\N	-1
+1522	289	1181	0	19	193	\N	\N	\N	\N	-1
+1523	289	1182	0	19	192	\N	\N	\N	\N	-1
+1524	289	1571	0	0	200	\N	\N	\N	\N	-1
 \.
 
 
@@ -1003,7 +1023,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 -- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib2_id_seq', 1501, true);
+SELECT pg_catalog.setval('public.param_grib2_id_seq', 1524, true);
 
 
 --

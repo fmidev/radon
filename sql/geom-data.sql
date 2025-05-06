@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 15.6
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -33,12 +33,16 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 1127	PPNFIN2	8	\N	\N	\N
 1007	ECGLO0100	1	 ECMWF global 0.1 degrees	postgres	2016-03-23 18:20:11.449998+00
 1045	ECEUR0100G2	4	ECMWF Europe, rotated 0.1 degrees, GRIB2 version	\N	\N
+1128	N320	6	\N	\N	\N
 1102	ECEUR0200CAL	1	\N	\N	\N
 1006	COPERNICUS	1	Copernicus, global ocean	postgres	2016-08-29 09:12:27.356279+00
 1047	MOSKRIGING	1	Mos Kriging area over Europe	postgres	2016-08-29 09:14:56.472962+00
 1048	ECERAINTERIM	1	ERA-Interim Global Analysis 500 x 251 0.72 deg	wetodb	2016-09-05 07:25:34.037904+00
+1129	O96	6	\N	\N	\N
+1130	ILMASTO_INTERP_1KM	8	\N	\N	\N
 1059	VANADIS	1	\N	\N	\N
 1061	WAMBALMFC	1	\N	\N	\N
+1131	MEPS10000D	5	\N	\N	\N
 1064	ECGSEA025	1	\N	\N	\N
 608	HBM	1	HIROMB BOOS (HBM) circulation model for Baltic Sea	postgres	2017-02-09 12:13:06.696041+00
 1065	MOSKRIGING2	1	\N	\N	\N
@@ -66,6 +70,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 1093	MEPS2500D	5	\N	\N	\N
 1094	O80	6	\N	wetodb	2018-07-09 07:57:39.309664+00
 999	AROME022	4	Arome malli .22 asteen hilassa	\N	\N
+1132	COPERNICUSNEMO	1	Copernicus Nemo Baltic Sea	\N	\N
 404	ECEDIT125	4	EC editing area in 0.125 deg	\N	\N
 401	ECEUR0125	4	Europe, rotated 0,125 deg	\N	\N
 406	ECEUR025	4	Europe, rotated 0,25 deg	\N	\N
@@ -134,7 +139,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1127, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1132, true);
 
 
 --

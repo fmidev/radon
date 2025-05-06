@@ -23,6 +23,7 @@ SET row_security = off;
 COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_updated) FROM stdin;
 118	244	244	86	\N	\N
 119	104	104	255	\N	\N
+142	265	4	86	\N	\N
 128	5	20	251	\N	\N
 129	291	252	86	\N	\N
 131	220	220	86	\N	\N
@@ -39,13 +40,15 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 19	109	109	86	\N	\N
 21	112	112	86	\N	\N
 130	125	125	86	radon_admin	2023-06-26 12:06:22.958144+00
+143	266	5	86	\N	\N
+144	130	3	98	\N	\N
 25	118	118	86	\N	\N
 26	119	119	86	\N	\N
 41	149	149	88	\N	\N
 96	121	121	86	wetodb	2017-05-29 11:04:22.044312+00
 123	55	2	7	\N	\N
+145	289	221	86	\N	\N
 32	152	152	86	\N	\N
-33	160	160	82	\N	\N
 34	199	3	86	\N	\N
 35	210	210	86	\N	\N
 38	240	240	86	\N	\N
@@ -102,7 +105,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.producer_grib_id_seq', 141, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 145, true);
 
 
 --

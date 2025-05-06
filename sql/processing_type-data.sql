@@ -2,20 +2,25 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.6
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
--- Data for Name: processing_type; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: processing_type; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
-COPY processing_type (id, name, description, last_updater, last_updated) FROM stdin;
+COPY public.processing_type (id, name, description, last_updater, last_updated) FROM stdin;
 1	UNPROCESSED	No processing	\N	\N
 2	PROBGE	Probability greater than or equal	\N	\N
 3	PROBGT	Probability greater than	\N	\N
@@ -40,9 +45,21 @@ COPY processing_type (id, name, description, last_updater, last_updated) FROM st
 22	CLIMATOLOGY	Climate normal or climatology	\N	\N
 23	CATEGORIZED	Categorization of continuous variables	\N	\N
 24	PERCENT_CHANGE	Percentage change relative to baseline	\N	\N
+25	EFI	Extreme Forecast Index	\N	\N
+26	PROBBTW	Probability between two values	\N	\N
+27	PROBNEQ	Probability not equal to	\N	\N
+28	PROB	Probability (no threshold information)	radon_admin	2024-12-16 05:46:36
+29	PROBBTW_AREA	Probability between to values, using an area aggregation	\N	\N
+30	PROBNEQ_AREA	Probability not equal to, using an area aggregation	\N	\N
 \.
 
-SELECT pg_catalog.setval('processing_type_id_seq', 24, true);
+
+--
+-- Name: processing_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
+--
+
+SELECT pg_catalog.setval('public.processing_type_id_seq', 30, true);
+
 
 --
 -- PostgreSQL database dump complete

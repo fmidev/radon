@@ -2,20 +2,25 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.6
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 --
--- Data for Name: aggregation; Type: TABLE DATA; Schema: public; Owner: wetodb
+-- Data for Name: aggregation; Type: TABLE DATA; Schema: public; Owner: radon_admin
 --
 
-COPY aggregation (id, name, description, last_updater, last_updated) FROM stdin;
+COPY public.aggregation (id, name, description, last_updater, last_updated) FROM stdin;
 1	INSTANT	No aggregation	\N	\N
 2	MEAN	Mean over time period	\N	\N
 3	ACCUMULATION	Accumulation over time period	\N	\N
@@ -30,7 +35,13 @@ COPY aggregation (id, name, description, last_updater, last_updated) FROM stdin;
 12	DOMINANCE	Dominant or prevailing value over time period	\N	\N
 \.
 
-SELECT pg_catalog.setval('aggregation_id_seq', 12, true);
+
+--
+-- Name: aggregation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
+--
+
+SELECT pg_catalog.setval('public.aggregation_id_seq', 12, true);
+
 
 --
 -- PostgreSQL database dump complete

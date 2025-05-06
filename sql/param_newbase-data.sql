@@ -1084,6 +1084,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4556	220	189	338	1	0	\N	\N
 4557	220	1182	1382	1	0	\N	\N
 4622	285	169	20	1	0	\N	\N
+4719	260	702	1210	1	0	\N	\N
 4624	285	162	10	1	-273.15	\N	\N
 4625	285	195	2	1	0	\N	\N
 4559	220	998	1235	1	0	\N	\N
@@ -1267,12 +1268,14 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1700	119	242	1075	1	0	\N	\N
 3384	7	426	407	1	0	\N	\N
 1702	119	263	1076	1	0	\N	\N
+4732	266	139	1	0.01	0	\N	\N
 1704	119	264	1077	1	0	\N	\N
 3386	7	153	4	1	-273.15	\N	\N
 2553	121	251	1093	1	0	\N	\N
 1706	119	243	1081	1	0	\N	\N
 1708	119	244	1082	1	0	\N	\N
 1710	119	245	1083	1	0	\N	\N
+4733	266	153	4	1	-273.15	\N	\N
 1712	119	246	1084	1	0	\N	\N
 3388	7	654	276	1	0	\N	\N
 1714	119	247	1085	1	0	\N	\N
@@ -2085,6 +2088,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4706	126	1359	373	100	0	\N	\N
 4705	126	1358	372	100	0	radon_admin	2024-09-30 05:58:38.42408+00
 4653	286	972	273	100	0	radon_admin	2024-11-15 11:21:00.666006+00
+4734	266	162	10	1	-273.15	\N	\N
 4654	286	973	274	100	0	radon_admin	2024-11-15 11:22:59.616395+00
 4632	285	972	273	100	0	radon_admin	2024-11-15 11:23:17.676073+00
 4655	286	974	275	100	0	radon_admin	2024-11-15 11:23:32.898831+00
@@ -2096,6 +2100,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4711	285	322	57	1	0	\N	\N
 4712	286	322	57	1	0	\N	\N
 4713	285	11	56	1	0	\N	\N
+4735	266	166	21	1	0	\N	\N
 2061	260	685	581	100	0	wetodb	2017-12-21 10:04:55.146168+00
 2062	260	686	582	100	0	wetodb	2017-12-21 10:04:55.146168+00
 2063	260	227	1023	100	0	wetodb	2017-12-21 10:04:55.146168+00
@@ -2481,6 +2486,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 3789	270	204	333	1	0	\N	\N
 3790	270	503	334	1	0	\N	\N
 3791	270	439	336	1	0	\N	\N
+4736	266	169	20	1	0	\N	\N
 3793	270	189	338	1	0	\N	\N
 3794	270	404	350	1	0	\N	\N
 3795	270	504	353	1	0	\N	\N
@@ -2609,6 +2615,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1027	109	441	353	1	0	wetodb	2019-06-10 07:44:52.898755+00
 4069	137	598	4806	1	0	\N	\N
 4070	137	598	4807	1	0	\N	\N
+4737	266	171	23	1	0	\N	\N
 4075	260	1285	1423	100	0	\N	\N
 4076	131	461	262	900	0	wetodb	2019-08-23 10:11:35.78154+00
 4077	2026	162	10	1	-273.15	\N	\N
@@ -2822,6 +2829,21 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4350	290	438	79	100	0	radon_admin	2023-03-16 13:43:59.187832+00
 4717	285	1182	1382	1	0	\N	\N
 4718	286	1182	1382	1	0	\N	\N
+4720	260	1561	689	100	0	radon_admin	2024-12-17 09:42:23.282033+00
+4721	260	1562	686	100	0	radon_admin	2024-12-17 09:42:23.282033+00
+4722	260	1563	684	100	0	radon_admin	2024-12-17 09:42:23.282033+00
+4723	260	1564	483	100	0	radon_admin	2024-12-17 09:42:23.282033+00
+4724	260	1565	687	100	0	radon_admin	2024-12-17 09:42:23.282033+00
+4725	260	1566	685	100	0	radon_admin	2024-12-17 09:42:23.282033+00
+4726	242	1561	689	100	0	radon_admin	2024-12-17 09:42:23.282033+00
+4727	242	1562	686	100	0	radon_admin	2024-12-17 09:42:23.282033+00
+4728	242	1563	684	100	0	radon_admin	2024-12-17 09:42:23.282033+00
+4729	242	1564	483	100	0	radon_admin	2024-12-17 09:42:23.282033+00
+4730	242	1565	687	100	0	radon_admin	2024-12-17 09:42:23.282033+00
+4731	242	1566	685	100	0	radon_admin	2024-12-17 09:42:23.282033+00
+4738	266	174	24	1	0	\N	\N
+4739	266	139	472	0.01	0	\N	\N
+4740	266	163	13	1	0	\N	\N
 \.
 
 
@@ -2829,7 +2851,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 -- Name: param_newbase_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_id_seq', 4718, true);
+SELECT pg_catalog.setval('public.param_newbase_id_seq', 4740, true);
 
 
 --

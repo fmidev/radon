@@ -65,7 +65,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 2026	ECMOS	MOS from ECMWF model	3	postgres	2016-05-26 08:42:00	1
 260	MEPSMTA	MEPS postprocessed fields	1	radon_admin	2023-05-08 04:38:09	3
 121	PEPSSCAN	PEPS multi-model ensemble (Scandinavia)	1	radon_admin	2023-05-08 04:33:53	1
-148	COPERNICUS	Copernicus Marine Products	1	radon_admin	2023-05-08 04:34:56	1
+148	COPERNICUSNEMO	Copernicus Nemo Baltic Sea	1	radon_admin	2025-01-29 12:56:21	1
 2156	OASECM	Water level forecast OAAS-ECMWF	3	postgres	2016-05-26 08:42:00	1
 240	ECGMTA	ECMWF postprocessed fields	1	radon_admin	2023-05-08 04:36:51	1
 2158	WETECM	Water level forecast Wetehinen-ECMWF	3	postgres	2016-05-26 08:42:00	1
@@ -79,6 +79,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 261	MEPS_PREOPMTA	MEPS Preop postprocessed fields	1	radon_admin	2023-05-08 04:38:09	3
 115	DIW	De-Icing Weather Index	1	\N	\N	1
 170	ICON_GLO	DWD ICON (Icosahedral Nonhydrostatic) Model	1	radon_admin	2023-07-20 17:56:44	1
+130	AIFS	ECMWF Artificial Intelligence/Integrated Forecasting System	1	\N	\N	1
 134	ECGEPS	ECMWF Ensemble Forecast System	1	postgres	2016-05-26 08:47:01	3
 1016	WATLEV	Water level data from FIMR	3	postgres	2016-05-26 08:59:14	6
 105	MTLICE	Baltic Ice Chart	1	radon_admin	2023-02-01 13:42:34	1
@@ -98,6 +99,9 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 288	VIRENWC_PREOP	Official 10 day forecast, nowcasting part, preoperational	1	radon_admin	2024-06-18 10:52:37	1
 126	FROST	Frost probability	1	\N	\N	1
 190	FMIICING	FMI icing model	1	radon_admin	2024-08-13 16:43:45	1
+265	BRIS	BRIS AI weather model	1	\N	\N	1
+266	BRIS_PREOP	BRIS AI weather model preop	1	\N	\N	1
+289	VIRENWC_HISTORY	Official 10 day forecast history data	1	\N	\N	1
 189	METAN	METNO Scandinavia analysis	1	wetodb	2018-09-19 09:23:51	2
 52	ENFUSER	FMI Air Quality fusion model	1	wetodb	2018-10-05 04:52:34	1
 137	ECGSEASMEAN	ECMWF seasonal forecast mean values	1	\N	\N	1
