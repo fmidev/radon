@@ -2,8 +2,9 @@
 -- PostgreSQL database dump
 --
 
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.6
+-- Dumped by pg_dump version 16.11 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -57,7 +58,6 @@ COPY public.param_precision (id, param_id, "precision", last_updater, last_updat
 337	1227	0	\N	\N
 41	219	2	\N	\N
 314	1089	1	\N	\N
-43	438	2	\N	\N
 44	412	2	\N	\N
 45	701	0	\N	\N
 46	976	0	\N	\N
@@ -319,6 +319,7 @@ COPY public.param_precision (id, param_id, "precision", last_updater, last_updat
 413	260	3	\N	\N
 414	1358	3	\N	\N
 415	1359	3	\N	\N
+43	438	4	\N	\N
 \.
 
 
@@ -332,4 +333,5 @@ SELECT pg_catalog.setval('public.param_precision_id_seq', 415, true);
 --
 -- PostgreSQL database dump complete
 --
+
 

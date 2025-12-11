@@ -2,8 +2,9 @@
 -- PostgreSQL database dump
 --
 
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.6
+-- Dumped by pg_dump version 16.11 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -32,13 +33,12 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 2167	HANSENS	Water level forecast Hansen in ensemble mode, ECMWF source data	3	\N	\N	3
 2168	HANSMTA	Water level forecast Hansens post processed data	3	\N	\N	1
 161	ROADMODEL	Gridded road model from ASI	1	\N	\N	1
-180	FMIBLEND	FMI blend of models	1	\N	\N	3
-181	SMARTMET	Smartmet editor	1	\N	\N	1
+103	WILDFIRES	FMI wildfire forecast	1	\N	\N	1
+267	AILA	Aila AI weather model	1	\N	\N	1
+268	AILA_PREOP	Aila AI weather model preop	1	\N	\N	1
 2027	ECMWF_LS_KALMAN	ECMWF forecast post-processed with Kalman and landscape interpolation	3	\N	\N	1
 147	NEMO	FMI NEMO Ocean Model	1	\N	\N	1
 501	IASIL2	IASI L2 satellite soundings	1	wetodb	2018-02-19 08:44:59	2
-183	BLENDR	FMI blend of models raw fields	1	\N	\N	3
-184	BLENDB	FMI blend of models bias fields	1	\N	\N	3
 7	MNWC	MEPS Nowcasting	1	\N	\N	1
 47	GEM	GEM GDPS global forecast	1	radon_admin	2023-05-08 04:26:09	1
 55	KWBG_UV	Global UV model NOAA	1	\N	\N	1
@@ -66,16 +66,13 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 260	MEPSMTA	MEPS postprocessed fields	1	radon_admin	2023-05-08 04:38:09	3
 121	PEPSSCAN	PEPS multi-model ensemble (Scandinavia)	1	radon_admin	2023-05-08 04:33:53	1
 148	COPERNICUSNEMO	Copernicus Nemo Baltic Sea	1	radon_admin	2025-01-29 12:56:21	1
-2156	OASECM	Water level forecast OAAS-ECMWF	3	postgres	2016-05-26 08:42:00	1
 240	ECGMTA	ECMWF postprocessed fields	1	radon_admin	2023-05-08 04:36:51	1
-2158	WETECM	Water level forecast Wetehinen-ECMWF	3	postgres	2016-05-26 08:42:00	1
+292	ADF	Aerodrome Forecast	1	\N	\N	1
 241	ERA5MTA	ECMWF ERA5 postprocessed fields	1	radon_admin	2023-05-08 04:37:10	1
-2161	OASECRAW	Water level forecast OAAS-EC Raw fields	3	postgres	2016-05-26 08:42:00	1
 243	ECGEPSMTA	ECMWF EPS postprocessed fields	1	radon_admin	2023-05-08 04:37:10	3
 120	ECMOSKRIGING	ECMWF MOS Kriging gridded	1	postgres	2016-06-15 09:29:22	1
-2164	OASECKALMAN	OAAS EC forecast with Kalman filter	3	postgres	2016-05-26 08:42:00	1
 250	GFSMTA	GFS postprocessed fields	1	radon_admin	2023-05-08 04:38:09	1
-182	BLENDW	FMI blend of models weight (MAE) fields	1	wetodb	2018-11-07 13:39:43	3
+293	ADF_PREOP	Aerodrome Forecast Preop	1	\N	\N	1
 261	MEPS_PREOPMTA	MEPS Preop postprocessed fields	1	radon_admin	2023-05-08 04:38:09	3
 115	DIW	De-Icing Weather Index	1	\N	\N	1
 170	ICON_GLO	DWD ICON (Icosahedral Nonhydrostatic) Model	1	radon_admin	2023-07-20 17:56:44	1
@@ -85,8 +82,6 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 105	MTLICE	Baltic Ice Chart	1	radon_admin	2023-02-01 13:42:34	1
 262	MEPSCALIBMTA	Calibrated MEPS postprocessed fields	1	radon_admin	2023-05-08 04:38:09	3
 270	MNWCMTA	MNWC postprocessed fields	1	radon_admin	2023-05-08 04:39:26	1
-280	SMARTMETMTA	SmartMet postprocessed fields	1	radon_admin	2023-05-08 04:39:26	1
-281	SMARTMETNWC	SmartMet Nowcasting	1	radon_admin	2023-05-08 04:41:07	1
 291	CLOUDCAST_PREOP	Cloudcast NWC Preop	1	radon_admin	2023-05-08 04:42:05	1
 2028	ECMOS2	MOS Preop from ECMWF model	3	radon_admin	2023-05-08 04:43:20	1
 125	PANGUWEATHER	PanguWeather global AI model	1	\N	\N	1
@@ -118,13 +113,11 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 521	GLOBCOVER	Global land cover map	1	\N	\N	2
 283	HRNWC	High Resolution Nowcast	1	\N	\N	1
 113	WAM_BALMFC	FMI WAM BALMFC wave model for Baltic Sea	1	radon_admin	2023-05-08 04:30:56	1
-152	HELMI	Helmi Ice Model	1	radon_admin	2023-05-08 04:35:21	2
 153	WAM_HKI	FMI WAM Helsinki wave model	1	radon_admin	2023-05-08 04:35:21	1
 154	WAM_BALMFC_ARCH	FMI WAM BALMFC wave model for archipelago	1	radon_admin	2023-05-08 04:35:21	1
 244	ECGEPSCALIB	ECMWF EPS calibrated fields	1	radon_admin	2023-05-08 04:37:10	3
 271	MNWCMTADEV	MNWC postprocessed fields (preop)	1	radon_admin	2023-05-08 04:39:26	1
 272	MNWC_PREOPMTA	MNWC Preop postprocessed fields	1	radon_admin	2023-05-08 04:39:26	1
-282	SMARTMETNWCDEV	SmartMet Nowcasting Preop	1	radon_admin	2023-05-08 04:41:07	1
 284	HRNWC_PREOP	High Resolution Nowcast Preop	1	radon_admin	2023-05-08 04:41:42	1
 290	CLOUDCAST	Cloudcast NWC	1	radon_admin	2023-05-08 04:42:05	1
 \.
@@ -133,4 +126,5 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 --
 -- PostgreSQL database dump complete
 --
+
 

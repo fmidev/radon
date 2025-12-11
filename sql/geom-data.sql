@@ -2,8 +2,9 @@
 -- PostgreSQL database dump
 --
 
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.6
+-- Dumped by pg_dump version 16.11 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -71,12 +72,15 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 1094	O80	6	\N	wetodb	2018-07-09 07:57:39.309664+00
 999	AROME022	4	Arome malli .22 asteen hilassa	\N	\N
 1132	COPERNICUSNEMO	1	Copernicus Nemo Baltic Sea	\N	\N
+1133	WILDFIRES_1KM	8	\N	radon_admin	2025-06-17 10:43:33.845089+00
 404	ECEDIT125	4	EC editing area in 0.125 deg	\N	\N
 401	ECEUR0125	4	Europe, rotated 0,125 deg	\N	\N
 406	ECEUR025	4	Europe, rotated 0,25 deg	\N	\N
 414	ECSOU025	1	ECMWF Southern hemisphere 0.25 degrees	wetodb	2017-08-30 05:57:41.186514+00
+1134	IASIEUROPE	7	Europe area for IASI L2	radon_admin	2025-07-28 07:12:48.338083+00
 419	ECGLO0125	1	ECMWF global 0.125 degrees	\N	\N
 418	ECGLO1000	1	ECMWF global 1.0 degrees	\N	\N
+1135	PPNFIN3	8	\N	\N	\N
 408	ECNOR1000	1	ECMWF Northern hemisphere 1.0 degrees	\N	\N
 415	ECNOR025	1	ECMWF Northern hemisphere 0.25 degrees	wetodb	2017-08-30 05:59:20.329013+00
 410	ECSOU1000	1	ECMWF Southern hemisphere 1.0 degrees	\N	\N
@@ -139,10 +143,11 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1132, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1135, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
+
 

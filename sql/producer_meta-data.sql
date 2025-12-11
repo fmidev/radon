@@ -2,8 +2,9 @@
 -- PostgreSQL database dump
 --
 
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.11 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -41,10 +42,6 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 5	ensemble size	30	\N	\N
 170	first hybrid level number	1	\N	\N
 170	last hybrid level number	74	\N	\N
-180	ensemble size	5	\N	\N
-184	ensemble size	5	\N	\N
-183	ensemble size	5	\N	\N
-182	ensemble size	5	\N	\N
 270	first hybrid level number	1	\N	\N
 270	last hybrid level number	65	\N	\N
 7	first hybrid level number	1	\N	\N
@@ -87,4 +84,5 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 --
 -- PostgreSQL database dump complete
 --
+
 

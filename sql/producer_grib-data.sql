@@ -2,8 +2,9 @@
 -- PostgreSQL database dump
 --
 
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.6
+-- Dumped by pg_dump version 16.11 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -41,14 +42,15 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 21	112	112	86	\N	\N
 130	125	125	86	radon_admin	2023-06-26 12:06:22.958144+00
 143	266	5	86	\N	\N
-144	130	3	98	\N	\N
+148	103	103	86	\N	\N
 25	118	118	86	\N	\N
 26	119	119	86	\N	\N
 41	149	149	88	\N	\N
 96	121	121	86	wetodb	2017-05-29 11:04:22.044312+00
 123	55	2	7	\N	\N
 145	289	221	86	\N	\N
-32	152	152	86	\N	\N
+149	267	6	86	\N	\N
+146	292	202	86	\N	\N
 34	199	3	86	\N	\N
 35	210	210	86	\N	\N
 38	240	240	86	\N	\N
@@ -63,29 +65,24 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 86	241	241	86	\N	\N
 87	135	139	98	\N	\N
 135	264	215	86	\N	\N
-98	181	181	86	\N	\N
+144	130	4	98	radon_admin	2025-08-29 12:26:53.238109+00
 90	260	204	86	\N	\N
-99	180	180	86	\N	\N
-101	280	201	86	\N	\N
+150	268	7	86	\N	\N
+147	293	203	86	\N	\N
 100	170	2	78	wetodb	2017-11-09 14:48:42.772784+00
-107	182	182	86	\N	\N
 115	137	147	98	\N	\N
 103	261	205	86	\N	\N
 105	120	120	86	\N	\N
 106	501	110	86	\N	\N
-108	183	183	86	\N	\N
-109	184	184	86	\N	\N
 125	272	209	86	\N	\N
 111	270	207	86	\N	\N
 112	135	147	98	\N	\N
 136	190	190	86	\N	\N
 137	285	216	86	\N	\N
-114	281	202	86	\N	\N
 113	189	189	88	wetodb	2018-09-20 10:00:52.201369+00
 28	132	215	98	wetodb	2019-06-11 09:08:14.635523+00
 83	4	0	251	wetodb	2020-02-04 09:33:05.510264+00
 120	271	208	86	\N	\N
-121	282	203	86	\N	\N
 138	286	217	86	\N	\N
 139	287	218	86	\N	\N
 140	288	219	86	\N	\N
@@ -105,10 +102,11 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.producer_grib_id_seq', 145, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 150, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
+
 

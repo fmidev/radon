@@ -2,8 +2,9 @@
 -- PostgreSQL database dump
 --
 
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.6
+-- Dumped by pg_dump version 16.11 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -27,7 +28,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 4	134	171	1	\N	6	\N	\N	\N
 5	134	174	1	\N	6	\N	\N	\N
 6	134	179	1	\N	6	\N	\N	\N
-111	181	139	7	\N	4	\N	\N	\N
+209	268	139	7	\N	4	\N	\N	\N
 8	131	654	8	\N	6	\N	\N	\N
 9	131	187	1	\N	6	\N	\N	\N
 11	131	153	1	0	6	2	wetodb	2018-09-07 09:13:11.514023+00
@@ -104,7 +105,6 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 97	131	214	1	\N	6	\N	\N	\N
 98	131	215	1	\N	6	\N	\N	\N
 100	131	139	1	\N	6	\N	\N	\N
-102	180	139	6	\N	4	\N	\N	\N
 117	53	196	8	\N	6	0	\N	\N
 31	53	197	8	\N	6	0	wetodb	2018-01-24 12:49:15.362908+00
 26	53	198	8	\N	6	0	wetodb	2018-01-24 12:52:26.057698+00
@@ -112,7 +112,6 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 120	53	559	1	\N	6	0	\N	\N
 121	53	426	1	\N	6	0	\N	\N
 125	189	139	7	\N	4	\N	\N	\N
-126	281	139	7	\N	4	\N	\N	\N
 127	109	509	1	0	6	0	\N	\N
 129	107	509	1	0	6	0	\N	\N
 130	107	143	1	0	6	0	\N	\N
@@ -139,7 +138,6 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 157	134	314	1	\N	6	\N	\N	\N
 158	134	316	1	\N	6	\N	\N	\N
 149	243	701	6	0	1	0	wetodb	2020-04-16 08:41:36.233081+00
-164	282	139	7	\N	4	\N	\N	\N
 165	131	411	1	0	6	10	\N	\N
 166	131	1432	1	\N	6	\N	\N	\N
 167	134	1417	1	0	6	2	\N	\N
@@ -149,7 +147,6 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 171	131	1418	1	0	6	2	\N	\N
 172	131	431	1	0	6	0	\N	\N
 173	131	559	1	0	6	0	\N	\N
-174	181	411	16	\N	1	\N	\N	\N
 175	134	426	1	0	6	0	\N	\N
 176	134	48	1	\N	6	\N	\N	\N
 186	170	217	1	\N	6	\N	\N	\N
@@ -181,10 +178,11 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 -- Name: param_level_transform_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_level_transform_id_seq', 208, true);
+SELECT pg_catalog.setval('public.param_level_transform_id_seq', 209, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
+
 

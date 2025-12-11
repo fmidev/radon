@@ -2,8 +2,9 @@
 -- PostgreSQL database dump
 --
 
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.6
+-- Dumped by pg_dump version 16.11 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -69,6 +70,7 @@ COPY public.geom_latitude_longitude (id, name, ni, nj, first_point, di, dj, scan
 226	MT1450820500	145	82	0101000020E61000000000000000003BC00000000000804040	0.5	0.5	+x+y	Europe in fine grid	\N	\N	7	\N
 1007	ECGLO0100	3600	1801	0101000020E610000000000000000000000000000000805640	0.1	0.1	+x-y	 ECMWF global 0.1 degrees	postgres	2016-03-23 18:20:11.449998+00	7	\N
 1126	ECEUR0100CAL	661	451	0101000020E61000000000000000E074400000000000005240	0.1	0.1	+x-y	ECMWF Euro geometry for calibrated data	\N	\N	7	\N
+1133	WILDFIRES_1KM	760	1226	0101000020E6100000E7FBA9F1D24D334054E3A59BC4B04D40	0.2	0.1	+x+y	Wildfire analysis area over Finland in 1km2 grid	\N	\N	\N	\N
 1132	COPERNICUSNEMO	763	774	0101000020E6100000E0EA03404A152240286707E00F814A40	0.02777831256	0.01666584052	+x+y	Copernicus Nemo Baltic Sea	\N	\N	\N	\N
 1006	COPERNICUS	1000	774	0101000020E6100000E0EA03404A152240286707E00F814A40	0.02777831256	0.01666584052	+x+y	Copernicus, global ocean	postgres	2016-08-29 09:12:27.356279+00	\N	\N
 1122	GLOBAL025	1440	721	0101000020E610000000000000008066400000000000805640	0.25	0.25	+x-y	Global latlon area with 0.25 spacing	\N	\N	\N	\N
@@ -84,4 +86,5 @@ COPY public.geom_latitude_longitude (id, name, ni, nj, first_point, di, dj, scan
 --
 -- PostgreSQL database dump complete
 --
+
 

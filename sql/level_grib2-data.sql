@@ -2,8 +2,9 @@
 -- PostgreSQL database dump
 --
 
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.6
+-- Dumped by pg_dump version 16.11 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -55,23 +56,21 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 109	7	101	\N	\N
 134	3	105	\N	\N
 121	6	103	\N	\N
-180	3	105	\N	\N
-180	6	103	\N	\N
-180	1	1	\N	\N
+292	6	103	\N	\N
+293	6	103	\N	\N
+103	1	103	\N	\N
 4	6	103	\N	\N
 4	3	105	\N	\N
-281	6	103	\N	\N
+267	6	103	\N	\N
 4	7	102	\N	\N
 4	5	8	\N	\N
 4	2	100	\N	\N
 4	15	20	\N	\N
 260	12	246	\N	\N
-181	6	103	\N	\N
+267	7	102	\N	\N
 131	1	1	\N	\N
-152	6	103	\N	\N
-152	1	1	\N	\N
-181	16	6	\N	\N
-181	7	101	\N	\N
+268	6	103	\N	\N
+268	7	102	\N	\N
 119	6	103	\N	\N
 10	15	20	\N	\N
 107	2	100	\N	\N
@@ -79,14 +78,10 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 107	1	1	\N	\N
 240	3	105	\N	\N
 107	6	103	\N	\N
-183	6	103	\N	\N
 243	6	103	wetodb	2018-01-29 11:08:58.453597+00
-183	1	1	\N	\N
-280	6	103	\N	\N
 101	6	103	\N	\N
 5	6	103	\N	\N
 291	6	103	\N	\N
-282	16	6	\N	\N
 260	15	20	\N	\N
 260	7	101	\N	\N
 260	2	100	\N	\N
@@ -99,10 +94,6 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 270	15	20	\N	\N
 270	7	101	\N	\N
 270	2	100	\N	\N
-184	6	103	\N	\N
-184	1	1	\N	\N
-182	1	1	\N	\N
-182	6	103	\N	\N
 189	6	103	\N	\N
 189	7	101	\N	\N
 10	6	103	\N	\N
@@ -110,7 +101,6 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 10	5	8	\N	\N
 4	1	1	wetodb	2018-10-08 13:00:08.155521+00
 10	1	1	\N	\N
-281	7	101	\N	\N
 134	1	1	\N	\N
 243	3	105	\N	\N
 4	8	10	\N	\N
@@ -132,7 +122,6 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 125	6	103	\N	\N
 170	6	4	radon_admin	2023-06-13 12:46:20.739033+00
 125	7	101	\N	\N
-281	16	6	\N	\N
 170	18	150	radon_admin	2023-07-10 05:53:43.154+00
 220	6	103	\N	\N
 241	6	103	\N	\N
@@ -149,8 +138,6 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 243	12	246	\N	\N
 104	1	1	\N	\N
 271	6	103	\N	\N
-282	6	103	\N	\N
-282	7	101	\N	\N
 134	8	10	\N	\N
 134	9	106	\N	\N
 290	6	103	\N	\N
@@ -219,4 +206,5 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 --
 -- PostgreSQL database dump complete
 --
+
 

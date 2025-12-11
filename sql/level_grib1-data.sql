@@ -2,8 +2,9 @@
 -- PostgreSQL database dump
 --
 
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.11 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -102,14 +103,11 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 2026	2	100	\N	\N
 301	6	105	\N	\N
 105	6	105	\N	\N
-2161	2	100	\N	\N
 10	7	103	\N	\N
 7	2	100	\N	\N
 500	1	1	\N	\N
 10	6	105	\N	\N
 7	3	109	\N	\N
-2156	2	100	\N	\N
-2158	2	100	\N	\N
 7	5	8	\N	\N
 7	6	105	\N	\N
 112	2	100	\N	\N
@@ -120,46 +118,27 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 189	6	105	\N	\N
 1016	2	100	\N	\N
 2026	3	109	\N	\N
-2161	3	109	\N	\N
-2156	3	109	\N	\N
-2158	3	109	\N	\N
 260	15	20	\N	\N
 112	3	109	\N	\N
 1016	3	109	\N	\N
 2026	1	1	\N	\N
-2161	1	1	\N	\N
-2156	1	1	\N	\N
-2158	1	1	\N	\N
 112	1	1	\N	\N
 1016	1	1	\N	\N
 2026	6	105	\N	\N
-2161	6	105	\N	\N
-2156	6	105	\N	\N
-2158	6	105	\N	\N
 112	6	105	\N	\N
 1016	6	105	\N	\N
 2026	7	102	\N	\N
-2161	7	102	\N	\N
-2156	7	102	\N	\N
-2158	7	102	\N	\N
 112	7	102	\N	\N
 1016	7	102	\N	\N
 2026	4	103	\N	\N
-2161	4	103	\N	\N
-2156	4	103	\N	\N
-2158	4	103	\N	\N
 112	4	103	\N	\N
 1016	4	103	\N	\N
 2026	5	8	\N	\N
 199	15	20	postgres	2017-01-10 19:51:17.063908+00
 120	6	105	postgres	2016-06-16 04:34:16.304016+00
-2161	5	8	\N	\N
-2156	5	8	\N	\N
-2158	5	8	\N	\N
 112	5	8	\N	\N
 1016	5	8	\N	\N
 105	1	1	\N	\N
-152	1	1	\N	\N
 102	6	105	\N	\N
 106	6	105	\N	\N
 101	6	105	\N	\N
@@ -181,4 +160,5 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 --
 -- PostgreSQL database dump complete
 --
+
 
