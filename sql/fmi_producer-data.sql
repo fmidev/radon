@@ -2,9 +2,8 @@
 -- PostgreSQL database dump
 --
 
-
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.11 (Homebrew)
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -39,6 +38,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 2027	ECMWF_LS_KALMAN	ECMWF forecast post-processed with Kalman and landscape interpolation	3	\N	\N	1
 147	NEMO	FMI NEMO Ocean Model	1	\N	\N	1
 501	IASIL2	IASI L2 satellite soundings	1	wetodb	2018-02-19 08:44:59	2
+266	BRIS_PREOP	BRIS AI weather model preop	1	radon_admin	2026-01-29 08:40:00	3
 7	MNWC	MEPS Nowcasting	1	\N	\N	1
 47	GEM	GEM GDPS global forecast	1	radon_admin	2023-05-08 04:26:09	1
 55	KWBG_UV	Global UV model NOAA	1	\N	\N	1
@@ -84,7 +84,6 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 270	MNWCMTA	MNWC postprocessed fields	1	radon_admin	2023-05-08 04:39:26	1
 291	CLOUDCAST_PREOP	Cloudcast NWC Preop	1	radon_admin	2023-05-08 04:42:05	1
 2028	ECMOS2	MOS Preop from ECMWF model	3	radon_admin	2023-05-08 04:43:20	1
-125	PANGUWEATHER	PanguWeather global AI model	1	\N	\N	1
 16	WASP	WASP analysis	1	\N	\N	2
 263	MEPS_ML	MEPS machine learning corrected fields	1	\N	\N	1
 264	MEPS_ML_PREOP	MEPS preop machine learning corrected fields	1	\N	\N	1
@@ -95,7 +94,6 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 126	FROST	Frost probability	1	\N	\N	1
 190	FMIICING	FMI icing model	1	radon_admin	2024-08-13 16:43:45	1
 265	BRIS	BRIS AI weather model	1	\N	\N	1
-266	BRIS_PREOP	BRIS AI weather model preop	1	\N	\N	1
 289	VIRENWC_HISTORY	Official 10 day forecast history data	1	\N	\N	1
 189	METAN	METNO Scandinavia analysis	1	wetodb	2018-09-19 09:23:51	2
 52	ENFUSER	FMI Air Quality fusion model	1	wetodb	2018-10-05 04:52:34	1
@@ -126,5 +124,4 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 --
 -- PostgreSQL database dump complete
 --
-
 

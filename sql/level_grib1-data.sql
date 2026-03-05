@@ -2,9 +2,8 @@
 -- PostgreSQL database dump
 --
 
-
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.11 (Homebrew)
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -160,5 +159,4 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 --
 -- PostgreSQL database dump complete
 --
-
 

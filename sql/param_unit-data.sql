@@ -2,9 +2,8 @@
 -- PostgreSQL database dump
 --
 
-
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.11 (Homebrew)
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -108,6 +107,7 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 102	K-2	One hundreth of a Kelvin	\N	\N
 103	N cm-3	Number in cubic centimeter	\N	\N
 104	wildfires km-2	Wildfires per square kilometer	\N	\N
+105	kt hft-1	Knots per hectofeet	\N	\N
 \.
 
 
@@ -121,5 +121,4 @@ SELECT pg_catalog.setval('public.param_unit_id_seq', 104, true);
 --
 -- PostgreSQL database dump complete
 --
-
 

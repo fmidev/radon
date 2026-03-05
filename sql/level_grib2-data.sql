@@ -2,9 +2,8 @@
 -- PostgreSQL database dump
 --
 
-
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.11 (Homebrew)
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -71,6 +70,8 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 131	1	1	\N	\N
 268	6	103	\N	\N
 268	7	102	\N	\N
+134	2	100	\N	\N
+266	2	100	\N	\N
 119	6	103	\N	\N
 10	15	20	\N	\N
 107	2	100	\N	\N
@@ -117,11 +118,8 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 242	1	1	\N	\N
 242	3	105	\N	\N
 242	6	103	\N	\N
-125	2	100	\N	\N
 170	19	166	\N	\N
-125	6	103	\N	\N
 170	6	4	radon_admin	2023-06-13 12:46:20.739033+00
-125	7	101	\N	\N
 170	18	150	radon_admin	2023-07-10 05:53:43.154+00
 220	6	103	\N	\N
 241	6	103	\N	\N
@@ -206,5 +204,4 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 --
 -- PostgreSQL database dump complete
 --
-
 

@@ -2,9 +2,8 @@
 -- PostgreSQL database dump
 --
 
-
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.11 (Homebrew)
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -429,8 +428,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1033	FOGINT-N	1	30	2	Fog intensity from 0..2	\N	\N
 233	PROB-TW-3	1	6	1	Probability of temperature being higher than given threshold	radon_admin	2024-10-04 10:19:49
 1571	FEELSLIKE-K	1	3	1	FeelsLike temperature	\N	\N
-507	TMAX-24-C	1	58	1	Max temperature in Celsius on the preceding 24 hours period of the date-value	\N	\N
-508	TMIN-24-C	1	58	1	Min temperature in Celsius on the preceding 24 hours period of the date-value	\N	\N
+1595	WSHR-KTHFT	1	105	1	Wind shear per 100ft	\N	\N
 509	SNR-KGM2	1	32	1	Snowfall rate in mm/s or mm/h	\N	\N
 510	SNACC-KGM2	1	18	1	Snowfall accumulation  in mm	\N	\N
 514	GRORIENT-D	1	5	1	Grid orientation	\N	\N
@@ -565,6 +563,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 693	GRAUPMR-KGKG	1	17	1	Graupel mixing ratio	postgres	2016-09-23 07:46:27
 702	TCW-KGM2	1	18	1	Vertically integrated total water (vapour + cloud water + cloud ice)	\N	\N
 767	SNOWMR-KGKG	1	17	1	Snow mixing ratio	\N	\N
+1596	WSHR-MAX-KTHFT	1	105	1	Maximum wind shear per 100ft	\N	\N
 44	SD-KGM2	1	18	1	Water equivalent of snow cover in mm	postgres	2016-09-30 11:17:15
 790	F95-T-K	1	3	1	95th fractal temperature in EPS	\N	\N
 704	LCL-K	1	3	1	Temperature of LCL in K	\N	\N
@@ -583,7 +582,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1069	BLI-K	1	3	1	Best lifted index (to 500 hPa)	\N	\N
 1070	BRTMP-K	1	3	1	Brightness temperature	\N	\N
 711	EL-K	1	3	1	Temperature of EL in K	\N	\N
-1182	WEATHERNUMBER-N	1	69	2	Weather number describing the state of weather, precursor to Smart weather symbol	\N	\N
 1262	LFC-LAST-M	1	2	1	Height of last LFC in meters	\N	\N
 1074	WMIXE-JKG	1	77	1	Wind mixing energy	\N	\N
 1075	VPTMP-K	1	3	1	Virtual potential temperature	\N	\N
@@ -808,7 +806,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1057	F50-RR-MM	1	18	1	50th fractal precipitation in EPS	\N	\N
 1081	GPA-GPM	1	8	1	Geopotential Height Anomaly	\N	\N
 2	PRECFORM-N	1	69	2	Precipitation form	postgres	2017-02-09 06:47:41
-696	PRECFORM3-N	3	69	2	Precipitation form, triplicate parameter for HIMAN purposes	postgres	2017-02-09 06:47:41
 189	HESSAA-N	1	30	2	Simple weather symbol fo HS and others	postgres	2017-02-09 06:47:41
 429	RAIN-N	1	28	2	Rain on/off	postgres	2017-02-09 06:47:41
 430	WET-N	1	28	2	Wetness on/off	postgres	2017-02-09 06:47:41
@@ -871,8 +868,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1184	TMAX06-K	1	3	1	Maximum temperature at 06 UTC in Kelvin	\N	\N
 1185	TMAX18-K	1	3	1	Maximum temperature at 18 UTC in Kelvin	\N	\N
 1186	TMIN18-K	1	3	1	Minimum temperature at 18 UTC in Kelvin	\N	\N
-1187	TMAX-24-K	1	3	1	Maximum temperature in Kelvin on the preceding 24 hours period of the date-value	\N	\N
-1188	TMIN-24-K	1	3	1	Minimum temperature in Kelvin on the preceding 24 hours period of the date-value	\N	\N
 1190	F5-TD2M-C	1	3	1	5th fractal dewpoint temperature in EPS	\N	\N
 1191	F10-TD2M-C	1	3	1	10th fractal dewpoint temperature in EPS	\N	\N
 1192	F25-TD2M-C	1	3	1	25th fractal dewpoint temperature in EPS	\N	\N
@@ -886,6 +881,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1578	FL-MPLTY-MEAN-N	1	69	1	Mean value of multiplicity Of The Flash, strikes / time unit / area	\N	\N
 1202	RACC-KGM2	1	18	1	Rain accumulation in mm	\N	\N
 1203	GDD-C	1	58	1	Growing degree days	\N	\N
+1187	TMAX-24-K	1	3	1	Maximum temperature during the preceding 24 hour period	radon_admin	2026-01-30 10:49:16
 1205	PROB-WG-AGG-1	1	6	1	Probability of reaching wind gust speed more than given value threshold, aggregated over area and/or time	\N	\N
 1206	PROB-HAIL-AGG-1	1	6	1	Probability of hail, aggregated over area and/or time	\N	\N
 1207	PROB-RR-AGG-1	1	6	1	Probability of reaching some precipitation threshold value, aggregated over area and/or time	\N	\N
@@ -920,7 +916,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1385	FORESTLENGTH-DM	1	95	1	Forest (tree) average length in dm	\N	\N
 1386	FORESTCANOPY-PRCNT	1	6	1	Forest canopy opacity in percents	\N	\N
 1148	PROB-CBTCU-1	1	6	1	Probability of CB-clouds	\N	\N
-1198	PRECFORM4-N	1	69	2	Precipitation form, fourth version	\N	\N
 1446	POTMAX24H-PRCNT	1	6	1	Maximum probability of thunder in 24 hours	\N	\N
 1151	PROB-SN3-1	1	6	1	Probability of snowfall reaching some threshold value	\N	\N
 1152	PROB-SN3-2	1	6	1	Probability of snowfall reaching some threshold value	\N	\N
@@ -957,7 +952,6 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1224	SOILWET2-M	1	2	1	Surface soil wetness in m at level 2	\N	\N
 598	SOILWET-M3M3	1	2	1	Surface soil wetness	wetodb	2018-11-12 05:51:10
 1225	SNACC-H	1	59	1	Hours since last snowfall	\N	\N
-322	PRECFORM2-N	1	69	2	Precipitation form, duplicate parameter for HIMAN purposes	wetodb	2018-11-26 06:20:11
 1227	SNOWDRIFT-N	1	30	1	Snow drift index	\N	\N
 1226	SNDACC-N	1	30	1	Snow drift accumulation since last snowfall	wetodb	2018-11-15 15:05:06
 174	V-MS	1	15	2	V wind in m/s	wetodb	2018-11-26 06:20:37
@@ -1241,12 +1235,21 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1548	PROB-ATMICEG-GH-15CM-LIMIT200	1	6	1	Probability of atmospheric ice growth for 15cm cylinder	radon_admin	2024-10-04 10:33:53
 1591	CLCOV2-0TO1	1	62	1	Cloud cover in second lowest layer	\N	\N
 1592	CLCOV3-0TO1	1	62	1	Cloud cover in third lowest layer	\N	\N
+1593	PROB-TW-0	1	6	1	Probability of temperature being higher than given threshold	\N	\N
 1585	ICING-TOP-FT	1	82	1	Top of icing in hft	\N	\N
 1586	ICING-BASE-FT	1	82	1	Base of icing in hft	\N	\N
 1584	ICING-BASE-FL	1	29	1	Base of icing in flight level	radon_admin	2025-08-07 10:07:32
 1583	ICING-TOP-FL	1	29	1	Top of icing in flight level	radon_admin	2025-08-07 10:07:32
 1539	PROB-ATMICEG-GH-3CM-2	1	6	1	Probability of atmospheric ice growth for 3cm cylinder	radon_admin	2025-10-09 12:43:36
 1540	PROB-ATMICEG-GH-3CM-3	1	6	1	Probability of atmospheric ice growth for 3cm cylinder	radon_admin	2025-10-09 12:44:12
+696	PRECFORM3-N	3	69	2	Precipitation form, parameter version 3	radon_admin	2026-01-30 05:16:16
+322	PRECFORM2-N	1	69	2	Precipitation form, parameter version 2	radon_admin	2026-01-30 05:16:16
+1198	PRECFORM4-N	1	69	2	Precipitation form, parameter version 4	radon_admin	2026-01-30 05:16:16
+1182	WEATHERNUMBER-N	1	69	2	Weather number describing the state of weather	radon_admin	2026-01-30 10:47:16
+507	TMAX-24-C	1	58	1	Maximum temperature during the preceding 24 hour period	radon_admin	2026-01-30 10:49:16
+1188	TMIN-24-K	1	3	1	Minimum temperature during the preceding 24 hour period	radon_admin	2026-02-11 12:01:59
+508	TMIN-24-C	1	58	1	Minimum temperature during the preceding 24 hour period	radon_admin	2026-02-11 12:03:12
+1594	EFI-FF--1TO1	1	90	2	Extreme Forecast Index for wind speed	\N	\N
 39	RTOPLW-WM2	1	12	1	Net long wave radiation, top of atmosphere	radon_admin	2023-03-27 04:20:33
 40	RTOPSW-WM2	1	12	1	Net short wave radiation, top of atmosphere	radon_admin	2023-03-27 04:20:33
 \.
@@ -1256,11 +1259,10 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1592, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1596, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
-
 

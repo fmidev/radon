@@ -2,9 +2,8 @@
 -- PostgreSQL database dump
 --
 
-
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.11 (Homebrew)
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -40,7 +39,6 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 18	107	107	86	\N	\N
 19	109	109	86	\N	\N
 21	112	112	86	\N	\N
-130	125	125	86	radon_admin	2023-06-26 12:06:22.958144+00
 143	266	5	86	\N	\N
 148	103	103	86	\N	\N
 25	118	118	86	\N	\N
@@ -108,5 +106,4 @@ SELECT pg_catalog.setval('public.producer_grib_id_seq', 150, true);
 --
 -- PostgreSQL database dump complete
 --
-
 

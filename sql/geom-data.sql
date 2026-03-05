@@ -2,9 +2,8 @@
 -- PostgreSQL database dump
 --
 
-
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.11 (Homebrew)
+-- Dumped by pg_dump version 15.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -82,6 +81,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 418	ECGLO1000	1	ECMWF global 1.0 degrees	\N	\N
 1135	PPNFIN3	8	\N	\N	\N
 408	ECNOR1000	1	ECMWF Northern hemisphere 1.0 degrees	\N	\N
+1136	MEPS2500_METNO	5	\N	\N	\N
 415	ECNOR025	1	ECMWF Northern hemisphere 0.25 degrees	wetodb	2017-08-30 05:59:20.329013+00
 410	ECSOU1000	1	ECMWF Southern hemisphere 1.0 degrees	\N	\N
 1095	MEPSSCAN2500G2	5	\N	\N	\N
@@ -143,11 +143,10 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1135, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1136, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
-
 
