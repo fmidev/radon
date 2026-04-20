@@ -79,10 +79,14 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 107	1	1	\N	\N
 240	3	105	\N	\N
 107	6	103	\N	\N
+600	1	1	\N	\N
 243	6	103	wetodb	2018-01-29 11:08:58.453597+00
+600	2	100	\N	\N
+600	3	105	\N	\N
 101	6	103	\N	\N
 5	6	103	\N	\N
 291	6	103	\N	\N
+600	6	103	\N	\N
 260	15	20	\N	\N
 260	7	101	\N	\N
 260	2	100	\N	\N
@@ -95,6 +99,10 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 270	15	20	\N	\N
 270	7	101	\N	\N
 270	2	100	\N	\N
+600	7	101	\N	\N
+600	8	10	\N	\N
+600	12	246	\N	\N
+600	15	20	\N	\N
 189	6	103	\N	\N
 189	7	101	\N	\N
 10	6	103	\N	\N
@@ -102,6 +110,7 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 10	5	8	\N	\N
 4	1	1	wetodb	2018-10-08 13:00:08.155521+00
 10	1	1	\N	\N
+601	1	1	\N	\N
 134	1	1	\N	\N
 243	3	105	\N	\N
 4	8	10	\N	\N
@@ -118,8 +127,12 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 242	1	1	\N	\N
 242	3	105	\N	\N
 242	6	103	\N	\N
+601	2	100	\N	\N
 170	19	166	\N	\N
+601	3	105	\N	\N
 170	6	4	radon_admin	2023-06-13 12:46:20.739033+00
+601	6	103	\N	\N
+601	7	101	\N	\N
 170	18	150	radon_admin	2023-07-10 05:53:43.154+00
 220	6	103	\N	\N
 241	6	103	\N	\N
@@ -136,6 +149,8 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 243	12	246	\N	\N
 104	1	1	\N	\N
 271	6	103	\N	\N
+601	8	10	\N	\N
+601	12	246	\N	\N
 134	8	10	\N	\N
 134	9	106	\N	\N
 290	6	103	\N	\N
@@ -198,6 +213,7 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 120	6	103	\N	\N
 289	6	103	\N	\N
 289	7	101	\N	\N
+601	15	20	\N	\N
 \.
 
 

@@ -600,6 +600,11 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 1013	271	1391	0	2	194	\N	\N	\N	\N	-1
 1574	240	1595	0	2	247	\N	\N	\N	\N	-1
 1434	288	442	0	2	192	\N	\N	\N	\N	-1
+1576	270	439	0	19	199	\N	\N	radon_admin	2026-03-31 03:57:18.568781+00	-1
+1577	272	439	0	19	199	\N	\N	radon_admin	2026-03-31 03:57:18.568781+00	-1
+1579	270	189	0	19	200	\N	\N	\N	\N	-1
+1580	272	189	0	19	200	\N	\N	\N	\N	-1
+1581	272	164	0	6	200	\N	\N	\N	\N	-1
 1029	240	1431	0	192	4	\N	\N	\N	\N	-1
 1030	260	1431	0	192	4	\N	\N	\N	\N	-1
 1031	243	1431	0	192	4	\N	\N	\N	\N	-1
@@ -1010,7 +1015,7 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 -- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib2_id_seq', 1575, true);
+SELECT pg_catalog.setval('public.param_grib2_id_seq', 1581, true);
 
 
 --

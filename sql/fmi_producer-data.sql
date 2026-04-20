@@ -39,6 +39,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 147	NEMO	FMI NEMO Ocean Model	1	\N	\N	1
 501	IASIL2	IASI L2 satellite soundings	1	wetodb	2018-02-19 08:44:59	2
 266	BRIS_PREOP	BRIS AI weather model preop	1	radon_admin	2026-01-29 08:40:00	3
+600	ILME	Aviation data	1	\N	\N	3
 7	MNWC	MEPS Nowcasting	1	\N	\N	1
 47	GEM	GEM GDPS global forecast	1	radon_admin	2023-05-08 04:26:09	1
 55	KWBG_UV	Global UV model NOAA	1	\N	\N	1
@@ -66,6 +67,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 260	MEPSMTA	MEPS postprocessed fields	1	radon_admin	2023-05-08 04:38:09	3
 121	PEPSSCAN	PEPS multi-model ensemble (Scandinavia)	1	radon_admin	2023-05-08 04:33:53	1
 148	COPERNICUSNEMO	Copernicus Nemo Baltic Sea	1	radon_admin	2025-01-29 12:56:21	1
+601	ILME_PREOP	Aviation data preop	1	\N	\N	3
 240	ECGMTA	ECMWF postprocessed fields	1	radon_admin	2023-05-08 04:36:51	1
 292	ADF	Aerodrome Forecast	1	\N	\N	1
 241	ERA5MTA	ECMWF ERA5 postprocessed fields	1	radon_admin	2023-05-08 04:37:10	1
