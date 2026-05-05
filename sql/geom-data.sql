@@ -85,6 +85,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 415	ECNOR025	1	ECMWF Northern hemisphere 0.25 degrees	wetodb	2017-08-30 05:59:20.329013+00
 410	ECSOU1000	1	ECMWF Southern hemisphere 1.0 degrees	\N	\N
 1137	MEPS1500D	5	\N	\N	\N
+1138	SMARTMET1500	2	\N	\N	\N
 1095	MEPSSCAN2500G2	5	\N	\N	\N
 1103	OPERAEUROPE	7	\N	\N	\N
 1104	PPNFIN	8	\N	\N	\N
@@ -144,7 +145,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1137, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1138, true);
 
 
 --

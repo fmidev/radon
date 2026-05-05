@@ -74,6 +74,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 103	261	205	86	\N	\N
 105	120	120	86	\N	\N
 106	501	110	86	\N	\N
+124	8	12	251	radon_admin	2026-04-22 06:37:53.411389+00
 125	272	209	86	\N	\N
 111	270	207	86	\N	\N
 112	135	147	98	\N	\N
@@ -94,7 +95,6 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 27	131	158	98	postgres	2024-11-12 11:35:44.872396+00
 80	134	158	98	postgres	2024-11-12 11:35:44.872396+00
 29	133	106	98	postgres	2024-11-12 11:35:44.872396+00
-124	8	43	233	radon_admin	2026-03-27 14:06:05.234387+00
 \.
 
 

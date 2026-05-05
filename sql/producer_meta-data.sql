@@ -79,6 +79,14 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 134	hybrid level type	hybrid	\N	\N
 7	hybrid level type	hybrid	\N	\N
 270	hybrid level type	hybrid	\N	\N
+601	first hybrid level number	1	\N	\N
+601	last hybrid level number	65	\N	\N
+601	hybrid level type	hybrid	\N	\N
+601	ensemble size	1	\N	\N
+600	first hybrid level number	1	\N	\N
+600	last hybrid level number	65	\N	\N
+600	hybrid level type	hybrid	\N	\N
+600	ensemble size	1	\N	\N
 \.
 
 
