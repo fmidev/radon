@@ -104,6 +104,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 97	131	214	1	\N	6	\N	\N	\N
 98	131	215	1	\N	6	\N	\N	\N
 100	131	139	1	\N	6	\N	\N	\N
+210	131	18	1	0	6	0	\N	\N
 117	53	196	8	\N	6	0	\N	\N
 31	53	197	8	\N	6	0	wetodb	2018-01-24 12:49:15.362908+00
 26	53	198	8	\N	6	0	wetodb	2018-01-24 12:52:26.057698+00
@@ -177,7 +178,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 -- Name: param_level_transform_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_level_transform_id_seq', 209, true);
+SELECT pg_catalog.setval('public.param_level_transform_id_seq', 210, true);
 
 
 --

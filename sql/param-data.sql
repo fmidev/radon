@@ -115,7 +115,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 143	LC-0TO1	1	62	1	Land Cover, 1=land, 0=sea	\N	\N
 144	VV-HPAS	1	61	1	Vertical Velocity in hPa/s	\N	\N
 1523	F50-CEIL-2-M	1	2	1	50th fractal of ceiling 2 in EPS	\N	\N
-146	SR-M	1	2	1	Surface Roughness in Meters	\N	\N
+1597	RR-15M-MM	1	60	1	Precipitation over the last 15 minutes	\N	\N
 147	SM-KGM2	1	18	1	Soil Moisture Content in Kg per square meter	\N	\N
 148	IC-0TO1	1	62	1	Ice Cover, 1=ice, 0=no ice	\N	\N
 149	FC-0TO1	1	62	1	Forest Cover, 1=Forest, 0=No Forest	\N	\N
@@ -429,6 +429,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 233	PROB-TW-3	1	6	1	Probability of temperature being higher than given threshold	radon_admin	2024-10-04 10:19:49
 1571	FEELSLIKE-K	1	3	1	FeelsLike temperature	\N	\N
 1595	WSHR-KTHFT	1	105	1	Wind shear per 100ft	\N	\N
+146	SR-M	1	2	1	Surface roughness	radon_admin	2026-05-06 04:30:34
 509	SNR-KGM2	1	32	1	Snowfall rate in mm/s or mm/h	\N	\N
 510	SNACC-KGM2	1	18	1	Snowfall accumulation  in mm	\N	\N
 514	GRORIENT-D	1	5	1	Grid orientation	\N	\N
@@ -1259,7 +1260,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1596, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1597, true);
 
 
 --

@@ -71,6 +71,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 240	ECGMTA	ECMWF postprocessed fields	1	radon_admin	2023-05-08 04:36:51	1
 292	ADF	Aerodrome Forecast	1	\N	\N	1
 241	ERA5MTA	ECMWF ERA5 postprocessed fields	1	radon_admin	2023-05-08 04:37:10	1
+100	WILDFIRES_HISTORY	FMI wildfire analysis history data	1	\N	\N	2
 243	ECGEPSMTA	ECMWF EPS postprocessed fields	1	radon_admin	2023-05-08 04:37:10	3
 120	ECMOSKRIGING	ECMWF MOS Kriging gridded	1	postgres	2016-06-15 09:29:22	1
 250	GFSMTA	GFS postprocessed fields	1	radon_admin	2023-05-08 04:38:09	1

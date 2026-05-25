@@ -57,7 +57,6 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 121	6	103	\N	\N
 292	6	103	\N	\N
 293	6	103	\N	\N
-103	1	103	\N	\N
 4	6	103	\N	\N
 4	3	105	\N	\N
 267	6	103	\N	\N
@@ -214,6 +213,8 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 289	6	103	\N	\N
 289	7	101	\N	\N
 601	15	20	\N	\N
+100	1	1	\N	\N
+103	1	1	radon_admin	2026-05-07 13:28:42.029545+00
 \.
 
 

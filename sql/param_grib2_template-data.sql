@@ -656,7 +656,7 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1374	0	6	13	\N	\N	-1
 1363	1	0	210	wetodb	2020-07-13 10:50:21.532454+00	1
 1388	0	1	79	\N	\N	-1
-1430	0	4	196	\N	\N	-1
+146	2	0	1	\N	\N	-1
 181	0	1	210	1	\N	1
 1434	0	202	83	\N	\N	-1
 1435	1	1	192	\N	\N	-1
@@ -686,7 +686,6 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 1469	0	1	22	\N	\N	-1
 502	0	4	3	\N	\N	0
 764	0	1	205	\N	\N	1
-1430	0	4	196	\N	\N	0
 500	0	5	3	\N	\N	0
 499	0	5	5	\N	\N	0
 501	0	4	7	\N	\N	0
@@ -751,9 +750,11 @@ COPY public.param_grib2_template (param_id, discipline, category, number, last_u
 977	0	0	0	\N	\N	102
 1233	0	1	8	\N	\N	102
 1232	0	2	22	\N	\N	102
+1430	0	4	52	\N	\N	-1
 1229	0	1	8	\N	\N	103
 1230	0	2	22	\N	\N	103
 1594	0	2	1	\N	\N	102
+1430	0	4	52	\N	\N	0
 238	0	200	50	\N	\N	1
 239	0	200	51	\N	\N	1
 240	0	200	52	\N	\N	1

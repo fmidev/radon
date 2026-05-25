@@ -64,7 +64,6 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 86	241	241	86	\N	\N
 87	135	139	98	\N	\N
 135	264	215	86	\N	\N
-144	130	4	98	radon_admin	2025-08-29 12:26:53.238109+00
 90	260	204	86	\N	\N
 150	268	7	86	\N	\N
 147	293	203	86	\N	\N
@@ -75,6 +74,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 105	120	120	86	\N	\N
 106	501	110	86	\N	\N
 124	8	12	251	radon_admin	2026-04-22 06:37:53.411389+00
+153	100	100	86	\N	\N
 125	272	209	86	\N	\N
 111	270	207	86	\N	\N
 112	135	147	98	\N	\N
@@ -92,9 +92,10 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 126	283	212	86	\N	\N
 127	284	213	86	\N	\N
 5	47	47	54	radon_admin	2024-06-13 07:52:20.50328+00
-27	131	158	98	postgres	2024-11-12 11:35:44.872396+00
-80	134	158	98	postgres	2024-11-12 11:35:44.872396+00
-29	133	106	98	postgres	2024-11-12 11:35:44.872396+00
+27	131	161	98	postgres	2026-05-12 10:30:28.529901+00
+80	134	161	98	postgres	2026-05-12 10:30:28.529901+00
+29	133	109	98	postgres	2026-05-12 10:30:28.529901+00
+144	130	5	98	postgres	2026-05-12 10:30:28.529901+00
 \.
 
 
@@ -102,7 +103,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.producer_grib_id_seq', 152, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 153, true);
 
 
 --
