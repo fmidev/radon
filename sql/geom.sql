@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict IdqdLGWbD0tqnRC7EZ3qxwPGEPAfUaFgEHDEN0IzGRfAQIo3Y50c7yNCKKGKjRi
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -62,7 +64,7 @@ CREATE SEQUENCE public.geom_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.geom_id_seq OWNER TO radon_admin;
+ALTER SEQUENCE public.geom_id_seq OWNER TO radon_admin;
 
 --
 -- Name: geom_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -134,4 +136,6 @@ GRANT SELECT,UPDATE ON SEQUENCE public.geom_id_seq TO radon_rw;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict IdqdLGWbD0tqnRC7EZ3qxwPGEPAfUaFgEHDEN0IzGRfAQIo3Y50c7yNCKKGKjRi
 

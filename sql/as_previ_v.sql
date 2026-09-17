@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict oCYoL87HXKh6CnXnN4Dhzof2qRbJ0HkYuHnRosleaFpSWa4iqlBN2byS2WwTITl
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -38,7 +40,7 @@ CREATE VIEW public.as_previ_v AS
   WHERE ((a.producer_id = p.id) AND (pg.relname = (a.partition_name)::name));
 
 
-ALTER TABLE public.as_previ_v OWNER TO radon_admin;
+ALTER VIEW public.as_previ_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE as_previ_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -50,4 +52,6 @@ GRANT SELECT ON TABLE public.as_previ_v TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict oCYoL87HXKh6CnXnN4Dhzof2qRbJ0HkYuHnRosleaFpSWa4iqlBN2byS2WwTITl
 

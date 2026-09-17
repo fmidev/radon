@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict b1Pre0tLhFIcSR9gldq6iTC1vrXqdc2YwtwrSichdZ2UNbVMKsO5kRn3rNwcXht
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -40,7 +42,7 @@ CREATE VIEW public.param_grib2_v AS
      LEFT JOIN public.level l ON ((g.level_id = l.id)));
 
 
-ALTER TABLE public.param_grib2_v OWNER TO radon_admin;
+ALTER VIEW public.param_grib2_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE param_grib2_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -52,4 +54,6 @@ GRANT SELECT ON TABLE public.param_grib2_v TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict b1Pre0tLhFIcSR9gldq6iTC1vrXqdc2YwtwrSichdZ2UNbVMKsO5kRn3rNwcXht
 

@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict XaLywzjOlXi7pWL0tfhQYdfVwKdQCpIfsPNQi2FalLdJ2hrZV2F5KKHgBQqf1xO
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -53,7 +55,7 @@ CREATE SEQUENCE public.previ_meta_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.previ_meta_id_seq OWNER TO radon_admin;
+ALTER SEQUENCE public.previ_meta_id_seq OWNER TO radon_admin;
 
 --
 -- Name: previ_meta_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -164,4 +166,6 @@ GRANT SELECT,UPDATE ON SEQUENCE public.previ_meta_id_seq TO radon_rw;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict XaLywzjOlXi7pWL0tfhQYdfVwKdQCpIfsPNQi2FalLdJ2hrZV2F5KKHgBQqf1xO
 

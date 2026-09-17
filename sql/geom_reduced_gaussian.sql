@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict TnKebRUu8WPE5ZPX9CWcBrimRv2Gi3raM5N13f7jOL1n0NPCQnqB2OAHVLcVeva
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -131,4 +133,6 @@ GRANT SELECT ON TABLE public.geom_reduced_gaussian TO radon_ro;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict TnKebRUu8WPE5ZPX9CWcBrimRv2Gi3raM5N13f7jOL1n0NPCQnqB2OAHVLcVeva
 

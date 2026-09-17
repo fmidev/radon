@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict 7jT3i7kXyXNjGZCVQ1tnK0nCcM4ccdginVrpdv5FIG0f9vTmoyNqugHmbbOKDel
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -44,7 +46,7 @@ CREATE VIEW public.geom_reduced_gaussian_v AS
   WHERE ((g.id = grg.id) AND (g.projection_id = 6));
 
 
-ALTER TABLE public.geom_reduced_gaussian_v OWNER TO radon_admin;
+ALTER VIEW public.geom_reduced_gaussian_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE geom_reduced_gaussian_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -56,4 +58,6 @@ GRANT SELECT ON TABLE public.geom_reduced_gaussian_v TO radon_ro;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict 7jT3i7kXyXNjGZCVQ1tnK0nCcM4ccdginVrpdv5FIG0f9vTmoyNqugHmbbOKDel
 

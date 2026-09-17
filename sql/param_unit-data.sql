@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict uqrjD0gk4CDgkq7hJdfwWcRIYf9haMtG2cQohTwucze1jvYvf9BohJb7kFt38wz
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -115,10 +117,12 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 -- Name: param_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_unit_id_seq', 104, true);
+SELECT pg_catalog.setval('public.param_unit_id_seq', 106, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict uqrjD0gk4CDgkq7hJdfwWcRIYf9haMtG2cQohTwucze1jvYvf9BohJb7kFt38wz
 

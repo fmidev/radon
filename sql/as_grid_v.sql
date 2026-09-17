@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict FBT5e2MmL4haD7z3KxWSdcxwWZpAXDPU6B7cZ5a2G3rg25FSksxUf1666Bw1seu
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -41,7 +43,7 @@ CREATE VIEW public.as_grid_v AS
   WHERE ((a.geometry_id = g.id) AND (a.producer_id = f.id));
 
 
-ALTER TABLE public.as_grid_v OWNER TO radon_admin;
+ALTER VIEW public.as_grid_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE as_grid_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -53,4 +55,6 @@ GRANT SELECT ON TABLE public.as_grid_v TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict FBT5e2MmL4haD7z3KxWSdcxwWZpAXDPU6B7cZ5a2G3rg25FSksxUf1666Bw1seu
 

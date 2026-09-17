@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict INWgp5kvubFU2dlJ9iP4EVfBLX6bjJ2jQdnuAZ0svLdTWG7cTfENIgVcTGpYzqN
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -46,7 +48,7 @@ CREATE VIEW public.geom_stereographic_v AS
   WHERE ((g.id = gs.id) AND (g.projection_id = 2));
 
 
-ALTER TABLE public.geom_stereographic_v OWNER TO radon_admin;
+ALTER VIEW public.geom_stereographic_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE geom_stereographic_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -58,4 +60,6 @@ GRANT SELECT ON TABLE public.geom_stereographic_v TO radon_ro;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict INWgp5kvubFU2dlJ9iP4EVfBLX6bjJ2jQdnuAZ0svLdTWG7cTfENIgVcTGpYzqN
 

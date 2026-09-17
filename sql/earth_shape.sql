@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict P2JEG9dAAOHXHg7SGgpzdA0kzIOXqKVbzKNhG7Ia7uKNYSXDucrSmhjKBzbIj8b
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -49,7 +51,7 @@ CREATE SEQUENCE public.earth_shape_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.earth_shape_id_seq OWNER TO radon_admin;
+ALTER SEQUENCE public.earth_shape_id_seq OWNER TO radon_admin;
 
 --
 -- Name: earth_shape_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -97,4 +99,6 @@ GRANT SELECT ON TABLE public.earth_shape TO radon_ro;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict P2JEG9dAAOHXHg7SGgpzdA0kzIOXqKVbzKNhG7Ia7uKNYSXDucrSmhjKBzbIj8b
 

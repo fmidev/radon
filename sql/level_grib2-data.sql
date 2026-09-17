@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict AA6cPtNBQueh9HSGJsGEVR4uEEu1u0gYQuqRFZ9HfLyr9v0rgRDrsXx9fHtklnC
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -57,6 +59,7 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 121	6	103	\N	\N
 292	6	103	\N	\N
 293	6	103	\N	\N
+268	2	100	\N	\N
 4	6	103	\N	\N
 4	3	105	\N	\N
 267	6	103	\N	\N
@@ -221,4 +224,6 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict AA6cPtNBQueh9HSGJsGEVR4uEEu1u0gYQuqRFZ9HfLyr9v0rgRDrsXx9fHtklnC
 

@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict 8uLeGpAjFssQ2vyKDN1ldKSyvJYn8cHro4Olxqh7B6dfGeIRRHXXu8AiKQC0pcc
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -429,6 +431,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 233	PROB-TW-3	1	6	1	Probability of temperature being higher than given threshold	radon_admin	2024-10-04 10:19:49
 1571	FEELSLIKE-K	1	3	1	FeelsLike temperature	\N	\N
 1595	WSHR-KTHFT	1	105	1	Wind shear per 100ft	\N	\N
+612	UVI-N	1	30	1	Clear sky UV index	radon_admin	2026-05-27 12:50:18
 146	SR-M	1	2	1	Surface roughness	radon_admin	2026-05-06 04:30:34
 509	SNR-KGM2	1	32	1	Snowfall rate in mm/s or mm/h	\N	\N
 510	SNACC-KGM2	1	18	1	Snowfall accumulation  in mm	\N	\N
@@ -501,8 +504,8 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 608	STFR-0TO1	1	62	1	Surface type fraction	\N	\N
 1034	CLDTOP-FT	1	82	1	Cloud top height in feet	\N	\N
 474	SW1WDIR-D	1	5	1	Direction of Waves of Swell 1 in degrees	postgres	2017-04-18 08:12:24
-611	UVIMAX-N	1	30	1	UV index maximum	\N	\N
-612	UVI-N	1	30	1	UV index	\N	\N
+1598	CBTCU-FT	1	82	2	Cb/TCu cloud base height at 100 ft resolution	\N	\N
+1599	CBTCU-PRCNT	1	6	2	Cb/TCu cloud cover	\N	\N
 613	O3ANOM-PRCNT	1	6	1	Ozone anomaly	\N	\N
 477	SW2WDIR-D	1	5	1	Direction of Waves of Swell 2 in degrees	postgres	2017-04-18 08:12:24
 617	GR-KGM2	1	18	1	Graupel precipitation in kg/m2	\N	\N
@@ -807,6 +810,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1057	F50-RR-MM	1	18	1	50th fractal precipitation in EPS	\N	\N
 1081	GPA-GPM	1	8	1	Geopotential Height Anomaly	\N	\N
 2	PRECFORM-N	1	69	2	Precipitation form	postgres	2017-02-09 06:47:41
+611	UVIMAX-N	1	30	1	Clear sky UV index maximum under solar noon	radon_admin	2026-05-27 12:50:18
 189	HESSAA-N	1	30	2	Simple weather symbol fo HS and others	postgres	2017-02-09 06:47:41
 429	RAIN-N	1	28	2	Rain on/off	postgres	2017-02-09 06:47:41
 430	WET-N	1	28	2	Wetness on/off	postgres	2017-02-09 06:47:41
@@ -869,6 +873,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1184	TMAX06-K	1	3	1	Maximum temperature at 06 UTC in Kelvin	\N	\N
 1185	TMAX18-K	1	3	1	Maximum temperature at 18 UTC in Kelvin	\N	\N
 1186	TMIN18-K	1	3	1	Minimum temperature at 18 UTC in Kelvin	\N	\N
+1603	ICING-SEV-TOP-FL	1	29	2	Top of severe icing in flight level	\N	\N
 1190	F5-TD2M-C	1	3	1	5th fractal dewpoint temperature in EPS	\N	\N
 1191	F10-TD2M-C	1	3	1	10th fractal dewpoint temperature in EPS	\N	\N
 1192	F25-TD2M-C	1	3	1	25th fractal dewpoint temperature in EPS	\N	\N
@@ -917,6 +922,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1385	FORESTLENGTH-DM	1	95	1	Forest (tree) average length in dm	\N	\N
 1386	FORESTCANOPY-PRCNT	1	6	1	Forest canopy opacity in percents	\N	\N
 1148	PROB-CBTCU-1	1	6	1	Probability of CB-clouds	\N	\N
+1604	ICING-SEV-BASE-FL	1	29	2	Base of severe icing in flight level	\N	\N
 1446	POTMAX24H-PRCNT	1	6	1	Maximum probability of thunder in 24 hours	\N	\N
 1151	PROB-SN3-1	1	6	1	Probability of snowfall reaching some threshold value	\N	\N
 1152	PROB-SN3-2	1	6	1	Probability of snowfall reaching some threshold value	\N	\N
@@ -953,6 +959,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1224	SOILWET2-M	1	2	1	Surface soil wetness in m at level 2	\N	\N
 598	SOILWET-M3M3	1	2	1	Surface soil wetness	wetodb	2018-11-12 05:51:10
 1225	SNACC-H	1	59	1	Hours since last snowfall	\N	\N
+1605	ICING-SEV-TOP-FT	1	82	2	Top of severe icing in hft	\N	\N
 1227	SNOWDRIFT-N	1	30	1	Snow drift index	\N	\N
 1226	SNDACC-N	1	30	1	Snow drift accumulation since last snowfall	wetodb	2018-11-15 15:05:06
 174	V-MS	1	15	2	V wind in m/s	wetodb	2018-11-26 06:20:37
@@ -1250,7 +1257,13 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 507	TMAX-24-C	1	58	1	Maximum temperature during the preceding 24 hour period	radon_admin	2026-01-30 10:49:16
 1188	TMIN-24-K	1	3	1	Minimum temperature during the preceding 24 hour period	radon_admin	2026-02-11 12:01:59
 508	TMIN-24-C	1	58	1	Minimum temperature during the preceding 24 hour period	radon_admin	2026-02-11 12:03:12
+1600	H0C-1ST-FT	1	82	1	FMI computed first freezing level in feets	radon_admin	2026-06-30 07:21:19
+1601	H0C-2ND-FT	1	82	1	FMI computed second freezing level in feets	radon_admin	2026-06-30 07:21:19
+1602	H0C-HIGHEST-FT	1	82	1	FMI computed highest freezing level in feets	radon_admin	2026-06-30 07:21:19
+1606	ICING-SEV-BASE-FT	1	82	2	Base of severe icing in hft	\N	\N
+1610	FORECAST-RELIABILITY-N	1	30	2	Forecast reliability index based on T-STDDEV-K	\N	\N
 1594	EFI-FF--1TO1	1	90	2	Extreme Forecast Index for wind speed	\N	\N
+1609	DAYLIGHT-0OR1	1	28	2	Boolean value of daylight	radon_admin	2026-08-20 11:55:05
 39	RTOPLW-WM2	1	12	1	Net long wave radiation, top of atmosphere	radon_admin	2023-03-27 04:20:33
 40	RTOPSW-WM2	1	12	1	Net short wave radiation, top of atmosphere	radon_admin	2023-03-27 04:20:33
 \.
@@ -1260,10 +1273,12 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1597, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1610, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict 8uLeGpAjFssQ2vyKDN1ldKSyvJYn8cHro4Olxqh7B6dfGeIRRHXXu8AiKQC0pcc
 

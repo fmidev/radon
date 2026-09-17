@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict yHLEaYCxghvVBZ7Hy2Vgxxbd3VUQwnR3aSUmcCFyVb94LgkdsncxYRdBYIo5YfP
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -47,6 +49,7 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 39	49	214	air_temperature_0	\N	\N	\N	\N
 40	49	215	air_temperature_1	\N	\N	\N	\N
 41	49	153	air_temperature	\N	\N	\N	\N
+152	155	996	VPED	\N	\N	\N	\N
 43	148	269	so	\N	\N	\N	\N
 44	148	303	uo	\N	\N	\N	\N
 45	148	304	vo	\N	\N	\N	\N
@@ -140,6 +143,41 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 149	148	1568	sob	\N	\N	\N	\N
 150	148	1569	bottomT	\N	\N	\N	\N
 151	148	1570	mlotst	\N	\N	\N	\N
+153	155	447	VHM0	\N	\N	\N	\N
+188	155	462	VLPK	\N	\N	\N	\N
+155	155	453	VTPK	\N	\N	\N	\N
+156	155	471	VMDR_SW	\N	\N	\N	\N
+157	155	469	VHM0_SW	\N	\N	\N	\N
+158	155	470	VTM01_SW	\N	\N	\N	\N
+159	155	451	VCMX	\N	\N	\N	\N
+160	155	450	SPR	\N	\N	\N	\N
+161	156	996	VPED	\N	\N	\N	\N
+162	156	447	VHM0	\N	\N	\N	\N
+189	156	462	VLPK	\N	\N	\N	\N
+164	156	453	VTPK	\N	\N	\N	\N
+165	156	471	VMDR_SW	\N	\N	\N	\N
+166	156	469	VHM0_SW	\N	\N	\N	\N
+167	156	470	VTM01_SW	\N	\N	\N	\N
+168	156	451	VCMX	\N	\N	\N	\N
+169	156	450	SPR	\N	\N	\N	\N
+170	157	996	VPED	\N	\N	\N	\N
+171	157	447	VHM0	\N	\N	\N	\N
+190	157	462	VLPK	\N	\N	\N	\N
+173	157	453	VTPK	\N	\N	\N	\N
+174	157	471	VMDR_SW	\N	\N	\N	\N
+175	157	469	VHM0_SW	\N	\N	\N	\N
+176	157	470	VTM01_SW	\N	\N	\N	\N
+177	157	451	VCMX	\N	\N	\N	\N
+178	157	450	SPR	\N	\N	\N	\N
+179	158	996	VPED	\N	\N	\N	\N
+180	158	447	VHM0	\N	\N	\N	\N
+191	158	462	VLPK	\N	\N	\N	\N
+182	158	453	VTPK	\N	\N	\N	\N
+183	158	471	VMDR_SW	\N	\N	\N	\N
+184	158	469	VHM0_SW	\N	\N	\N	\N
+185	158	470	VTM01_SW	\N	\N	\N	\N
+186	158	451	VCMX	\N	\N	\N	\N
+187	158	450	SPR	\N	\N	\N	\N
 \.
 
 
@@ -147,10 +185,12 @@ COPY public.param_netcdf (id, producer_id, param_id, netcdf_name, level_id, leve
 -- Name: param_netcdf_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_netcdf_id_seq', 151, true);
+SELECT pg_catalog.setval('public.param_netcdf_id_seq', 191, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict yHLEaYCxghvVBZ7Hy2Vgxxbd3VUQwnR3aSUmcCFyVb94LgkdsncxYRdBYIo5YfP
 

@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict sA0HBSZRbzz6mhg7TIe2d6AhkjfcVmBpZWIueoGzMe3FPI1boxFRg2hwXC3PjNB
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -37,4 +39,6 @@ SELECT pg_catalog.setval('public.datum_id_seq', 1, false);
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict sA0HBSZRbzz6mhg7TIe2d6AhkjfcVmBpZWIueoGzMe3FPI1boxFRg2hwXC3PjNB
 

@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict pTpTjcL8Y0Tdd80dfPaSxZMBH5XR7wK7eNm6TYFrGQZg2KRG2meGGBM24J5h9d1
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -47,7 +49,7 @@ CREATE SEQUENCE public.interpolation_method_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.interpolation_method_id_seq OWNER TO radon_admin;
+ALTER SEQUENCE public.interpolation_method_id_seq OWNER TO radon_admin;
 
 --
 -- Name: interpolation_method_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -103,4 +105,6 @@ GRANT SELECT ON TABLE public.interpolation_method TO radon_ro;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict pTpTjcL8Y0Tdd80dfPaSxZMBH5XR7wK7eNm6TYFrGQZg2KRG2meGGBM24J5h9d1
 

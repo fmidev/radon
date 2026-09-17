@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict GLMmT6HGSBHc8Zbu4t2gSxi2Zqkn3bsNUHHXmJv8oeLp3bhiS2OrQJpQbQMTlxj
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -132,4 +134,6 @@ GRANT SELECT ON TABLE public.geom_rotated_latitude_longitude TO radon_ro;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict GLMmT6HGSBHc8Zbu4t2gSxi2Zqkn3bsNUHHXmJv8oeLp3bhiS2OrQJpQbQMTlxj
 

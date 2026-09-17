@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict sxObIBdn7dFh9us3Rkjxj5ChrnnCzLqf4e1LwSIq6s7h42eKuM5aQx1OhsVpdcC
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -134,4 +136,6 @@ GRANT INSERT,DELETE,UPDATE ON TABLE public.geom_lambert_equal_area TO radon_rw;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict sxObIBdn7dFh9us3Rkjxj5ChrnnCzLqf4e1LwSIq6s7h42eKuM5aQx1OhsVpdcC
 

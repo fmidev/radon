@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict 9JfBj0T99TvJUswLN2WlalVZDmi7TcFl2wKOPfQeLv9E0MTu8KZSGckL14Psm0U
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -47,7 +49,7 @@ CREATE SEQUENCE public.param_precision_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.param_precision_id_seq OWNER TO radon_admin;
+ALTER SEQUENCE public.param_precision_id_seq OWNER TO radon_admin;
 
 --
 -- Name: param_precision_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -119,4 +121,6 @@ GRANT SELECT,UPDATE ON SEQUENCE public.param_precision_id_seq TO radon_rw;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict 9JfBj0T99TvJUswLN2WlalVZDmi7TcFl2wKOPfQeLv9E0MTu8KZSGckL14Psm0U
 

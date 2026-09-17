@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict 6J3yImoqzQasM8K3YNhvFVvscFhgAQ9Ic5yhZFX2Id8RTnfenZRFk8cj5p4ew38
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -45,4 +47,6 @@ SELECT pg_catalog.setval('public.geotiff_metadata_id_seq', 17, true);
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict 6J3yImoqzQasM8K3YNhvFVvscFhgAQ9Ic5yhZFX2Id8RTnfenZRFk8cj5p4ew38
 

@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict jfPXE1QcaSnUIOSmUh3DlQ53QusBp66aiusemgw7sPq16lt16LOiQGUOG4rvE0M
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -86,9 +88,13 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 410	ECSOU1000	1	ECMWF Southern hemisphere 1.0 degrees	\N	\N
 1137	MEPS1500D	5	\N	\N	\N
 1138	SMARTMET1500	2	\N	\N	\N
+1139	WW3_BALTIC	1	\N	\N	\N
+1140	WW3_GOF	1	\N	\N	\N
 1095	MEPSSCAN2500G2	5	\N	\N	\N
 1103	OPERAEUROPE	7	\N	\N	\N
 1104	PPNFIN	8	\N	\N	\N
+1141	WW3_AS	1	\N	\N	\N
+1142	WW3_ORRE	1	\N	\N	\N
 377	FMIPEPS1	1	Kauhasen PEPS-alue	\N	\N
 24	GEM0240	1	Canadian global 0.24 degree resolution forecast	\N	\N
 26	GFS0250	1	Washington global 0.25 degree resolution	\N	\N
@@ -145,10 +151,12 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1138, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1142, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict jfPXE1QcaSnUIOSmUh3DlQ53QusBp66aiusemgw7sPq16lt16LOiQGUOG4rvE0M
 

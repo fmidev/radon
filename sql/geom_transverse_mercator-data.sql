@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict Hn66A3PzYseJj6Y22tnMbmN5S3tnkzQ2sisc82dFnAO0SmK3P2wid70tGAIIYbW
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -31,4 +33,6 @@ COPY public.geom_transverse_mercator (id, name, ni, nj, first_point, di, dj, sca
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict Hn66A3PzYseJj6Y22tnMbmN5S3tnkzQ2sisc82dFnAO0SmK3P2wid70tGAIIYbW
 

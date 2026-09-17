@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict Ii6Zt5iAZScXzipkGF47oR3dPwuiFddJDZ4a4Hk6P63Q0Z2xTkl15vKHkCRm0Df
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -53,8 +55,6 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 261	ensemble size	1	\N	\N
 10	first hybrid level number	1	\N	\N
 270	ensemble size	1	\N	\N
-10	last hybrid level number	65	\N	\N
-261	last hybrid level number	65	\N	\N
 261	first hybrid level number	1	\N	\N
 244	ensemble size	51	\N	\N
 170	hybrid level type	general	\N	\N
@@ -87,10 +87,16 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 600	last hybrid level number	65	\N	\N
 600	hybrid level type	hybrid	\N	\N
 600	ensemble size	1	\N	\N
+10	hybrid level type	hybrid	\N	\N
+10	last hybrid level number	90	\N	\N
+261	hybrid level type	hybrid	\N	\N
+261	last hybrid level number	90	\N	\N
 \.
 
 
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict Ii6Zt5iAZScXzipkGF47oR3dPwuiFddJDZ4a4Hk6P63Q0Z2xTkl15vKHkCRm0Df
 

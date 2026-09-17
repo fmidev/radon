@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict Su5DRaJvgoOC5QcnBQt7qqdWiEtacZUw0JvBCUoPg3BNkEVqiZP3HU073huapHx
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -315,6 +317,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2619	240	1033	327	1	0	\N	\N
 387	240	2	57	1	0	\N	\N
 1948	250	336	875	1	-273.15	\N	\N
+4760	268	441	353	1	0	\N	\N
 1949	250	337	874	1	-273.15	\N	\N
 395	53	559	59	1	0	\N	\N
 1858	149	304	1147	1	0	\N	\N
@@ -2744,10 +2747,12 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 -- Name: param_newbase_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_id_seq', 4759, true);
+SELECT pg_catalog.setval('public.param_newbase_id_seq', 4760, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict Su5DRaJvgoOC5QcnBQt7qqdWiEtacZUw0JvBCUoPg3BNkEVqiZP3HU073huapHx
 

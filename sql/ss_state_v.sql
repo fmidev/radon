@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict yQYilnHWxOn1pYg1C5QIDwYvpZgCXllyLClOaAFyIbbqx0OWeXhxNzXgMdtVMf5
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -42,7 +44,7 @@ CREATE VIEW public.ss_state_v AS
   WHERE ((a.producer_id = s.producer_id) AND (a.geometry_id = s.geometry_id) AND (a.analysis_time = s.analysis_time) AND ((s.producer_id <> ALL (ARRAY[4, 260])) OR ((s.forecast_period - ('01:00:00'::interval * ((((3)::numeric - (EXTRACT(hour FROM s.analysis_time) % (3)::numeric)) % (3)::numeric))::double precision)) >= '00:00:00'::interval)));
 
 
-ALTER TABLE public.ss_state_v OWNER TO radon_admin;
+ALTER VIEW public.ss_state_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE ss_state_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -54,4 +56,6 @@ GRANT SELECT ON TABLE public.ss_state_v TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict yQYilnHWxOn1pYg1C5QIDwYvpZgCXllyLClOaAFyIbbqx0OWeXhxNzXgMdtVMf5
 

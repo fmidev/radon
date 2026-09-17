@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict 7tpYyIrMI4fA6UTInQMVH0TrfbXWOQZOtTeBUPp50vOUiXzLegTWLHd82HrnMnC
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -50,7 +52,7 @@ CREATE SEQUENCE public.station_network_mapping_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.station_network_mapping_id_seq OWNER TO radon_admin;
+ALTER SEQUENCE public.station_network_mapping_id_seq OWNER TO radon_admin;
 
 --
 -- Name: station_network_mapping_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -123,4 +125,6 @@ GRANT INSERT,DELETE,UPDATE ON TABLE public.station_network_mapping TO radon_rw;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict 7tpYyIrMI4fA6UTInQMVH0TrfbXWOQZOtTeBUPp50vOUiXzLegTWLHd82HrnMnC
 

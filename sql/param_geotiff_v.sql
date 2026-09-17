@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict 5fsEWH34QB60jnLp6cDMG64QaGGpYlG9VPUbSujx9pf6UwxkdJZOLCmEy9yEVuD
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -33,7 +35,7 @@ CREATE VIEW public.param_geotiff_v AS
      JOIN public.param p ON ((p.id = n.param_id)));
 
 
-ALTER TABLE public.param_geotiff_v OWNER TO radon_admin;
+ALTER VIEW public.param_geotiff_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE param_geotiff_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -45,4 +47,6 @@ GRANT SELECT ON TABLE public.param_geotiff_v TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict 5fsEWH34QB60jnLp6cDMG64QaGGpYlG9VPUbSujx9pf6UwxkdJZOLCmEy9yEVuD
 

@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict Ss0ipJygIBT94KoWewnvguXdVcNfuVD50rfRmGsUGKk2JS75lSrxUNOfqy3q1cz
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -46,4 +48,6 @@ SELECT pg_catalog.setval('public.aggregation_id_seq', 12, true);
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict Ss0ipJygIBT94KoWewnvguXdVcNfuVD50rfRmGsUGKk2JS75lSrxUNOfqy3q1cz
 

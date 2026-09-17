@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict cBeL0isdUv3DS2zQI3mkDslLzpg22VMQC5j2XgZEvjIyhP0fVwBPhno0ph6jOC5
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -61,7 +63,7 @@ CREATE SEQUENCE public.processing_type_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.processing_type_id_seq OWNER TO radon_admin;
+ALTER SEQUENCE public.processing_type_id_seq OWNER TO radon_admin;
 
 --
 -- Name: processing_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -119,4 +121,6 @@ GRANT INSERT,DELETE,UPDATE ON TABLE public.processing_type TO radon_rw;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict cBeL0isdUv3DS2zQI3mkDslLzpg22VMQC5j2XgZEvjIyhP0fVwBPhno0ph6jOC5
 

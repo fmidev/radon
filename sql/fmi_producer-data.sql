@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict 1WXAbsB2irDnpoeAUhtyVwcfajmqRmTIghGpKX6tsslc4xqvdwcTzY5tdisIY4o
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -74,8 +76,10 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 100	WILDFIRES_HISTORY	FMI wildfire analysis history data	1	\N	\N	2
 243	ECGEPSMTA	ECMWF EPS postprocessed fields	1	radon_admin	2023-05-08 04:37:10	3
 120	ECMOSKRIGING	ECMWF MOS Kriging gridded	1	postgres	2016-06-15 09:29:22	1
+155	WW3_BALTIC	Wavewatch_3 wave model for Baltic Sea	1	\N	\N	1
 250	GFSMTA	GFS postprocessed fields	1	radon_admin	2023-05-08 04:38:09	1
 293	ADF_PREOP	Aerodrome Forecast Preop	1	\N	\N	1
+156	WW3_GOF	Wavewatch_3 wave model for Gulf of Finland	1	\N	\N	1
 261	MEPS_PREOPMTA	MEPS Preop postprocessed fields	1	radon_admin	2023-05-08 04:38:09	3
 115	DIW	De-Icing Weather Index	1	\N	\N	1
 170	ICON_GLO	DWD ICON (Icosahedral Nonhydrostatic) Model	1	radon_admin	2023-07-20 17:56:44	1
@@ -85,6 +89,8 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 105	MTLICE	Baltic Ice Chart	1	radon_admin	2023-02-01 13:42:34	1
 262	MEPSCALIBMTA	Calibrated MEPS postprocessed fields	1	radon_admin	2023-05-08 04:38:09	3
 270	MNWCMTA	MNWC postprocessed fields	1	radon_admin	2023-05-08 04:39:26	1
+157	WW3_AS	Wavewatch_3 wave model for Archipelago Sea	1	\N	\N	1
+158	WW3_ORRE	Wavewatch_3 wave model for Orrengrund area	1	\N	\N	1
 291	CLOUDCAST_PREOP	Cloudcast NWC Preop	1	radon_admin	2023-05-08 04:42:05	1
 2028	ECMOS2	MOS Preop from ECMWF model	3	radon_admin	2023-05-08 04:43:20	1
 16	WASP	WASP analysis	1	\N	\N	2
@@ -127,4 +133,6 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict 1WXAbsB2irDnpoeAUhtyVwcfajmqRmTIghGpKX6tsslc4xqvdwcTzY5tdisIY4o
 

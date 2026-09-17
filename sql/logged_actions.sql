@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict oC6E4PV1V9y19KGkeZyGOswzyIGfjfRZxIPyZt7Lza1i16H62mcFk6NPa1JdXfm
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -56,7 +58,7 @@ CREATE SEQUENCE audit.logged_actions_event_id_seq
     CACHE 1;
 
 
-ALTER TABLE audit.logged_actions_event_id_seq OWNER TO postgres;
+ALTER SEQUENCE audit.logged_actions_event_id_seq OWNER TO postgres;
 
 --
 -- Name: logged_actions_event_id_seq; Type: SEQUENCE OWNED BY; Schema: audit; Owner: postgres
@@ -90,4 +92,6 @@ GRANT SELECT ON TABLE audit.logged_actions TO radon_rw;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict oC6E4PV1V9y19KGkeZyGOswzyIGfjfRZxIPyZt7Lza1i16H62mcFk6NPa1JdXfm
 

@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict gSCGsrxN8XMISHNZMNRXj7LWzH4pjPnUDnLoW3xWIgZZIf4cZzpj2F8rJ2c19ku
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -47,7 +49,7 @@ CREATE SEQUENCE public.datum_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.datum_id_seq OWNER TO radon_admin;
+ALTER SEQUENCE public.datum_id_seq OWNER TO radon_admin;
 
 --
 -- Name: datum_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -88,4 +90,6 @@ GRANT SELECT ON TABLE public.datum TO radon_ro;
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict gSCGsrxN8XMISHNZMNRXj7LWzH4pjPnUDnLoW3xWIgZZIf4cZzpj2F8rJ2c19ku
 

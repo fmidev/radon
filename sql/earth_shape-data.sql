@@ -2,8 +2,10 @@
 -- PostgreSQL database dump
 --
 
+\restrict qLMZpbqh7UZcA5s2flUK1gsQxJvWGyMLCLhYKL0MbCzevKUslaOuRx3oMF1rIrG
+
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 15.3
+-- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -44,4 +46,6 @@ SELECT pg_catalog.setval('public.earth_shape_id_seq', 10, true);
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict qLMZpbqh7UZcA5s2flUK1gsQxJvWGyMLCLhYKL0MbCzevKUslaOuRx3oMF1rIrG
 
