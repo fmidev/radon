@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 7tpYyIrMI4fA6UTInQMVH0TrfbXWOQZOtTeBUPp50vOUiXzLegTWLHd82HrnMnC
+\restrict KciMpBtHvEigTK1Bw4lIhVQmj4FB3XFOoC33mGPbiYuWHBdNcXrzPUJiQWd3Uhy
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -126,5 +126,5 @@ GRANT INSERT,DELETE,UPDATE ON TABLE public.station_network_mapping TO radon_rw;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 7tpYyIrMI4fA6UTInQMVH0TrfbXWOQZOtTeBUPp50vOUiXzLegTWLHd82HrnMnC
+\unrestrict KciMpBtHvEigTK1Bw4lIhVQmj4FB3XFOoC33mGPbiYuWHBdNcXrzPUJiQWd3Uhy
 

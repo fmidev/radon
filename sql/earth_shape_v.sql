@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 9PWeLDpohUWVeUVOu8RsbN2Raw2HyXgJQCrHMqeRvOLHzZqP6EUShIacBSxTA2d
+\restrict dwA3ec2LHF0hjFmkcFNVvWUrVE6EPvQPOAryyuQT1HygGRAUpKCXAGDbtGlxzpl
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -50,5 +50,5 @@ GRANT SELECT ON TABLE public.earth_shape_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 9PWeLDpohUWVeUVOu8RsbN2Raw2HyXgJQCrHMqeRvOLHzZqP6EUShIacBSxTA2d
+\unrestrict dwA3ec2LHF0hjFmkcFNVvWUrVE6EPvQPOAryyuQT1HygGRAUpKCXAGDbtGlxzpl
 

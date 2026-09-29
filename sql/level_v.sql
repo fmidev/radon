@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict qF3Rj5SMJus7oe9wS5fe9UiDBA2sKKiTZ1BEYgEybJ0pEAEQp4pKmcjwAI6ZMNr
+\restrict kS1OeVrW6ZRdX0maAWi1db4MlLBjqYQ1Ga4GrhaAmYAkfbwMcmeLzv8qOR6WclQ
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -46,5 +46,5 @@ GRANT SELECT ON TABLE public.level_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict qF3Rj5SMJus7oe9wS5fe9UiDBA2sKKiTZ1BEYgEybJ0pEAEQp4pKmcjwAI6ZMNr
+\unrestrict kS1OeVrW6ZRdX0maAWi1db4MlLBjqYQ1Ga4GrhaAmYAkfbwMcmeLzv8qOR6WclQ
 

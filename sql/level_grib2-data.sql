@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict AA6cPtNBQueh9HSGJsGEVR4uEEu1u0gYQuqRFZ9HfLyr9v0rgRDrsXx9fHtklnC
+\restrict Kfql5t1Q06NeMuDIdQK4G5yo94cdsdBnpucK6QTXNQHcct0KGB5qh5tBeTjLHep
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -218,6 +218,7 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 601	15	20	\N	\N
 100	1	1	\N	\N
 103	1	1	radon_admin	2026-05-07 13:28:42.029545+00
+267	2	100	\N	\N
 \.
 
 
@@ -225,5 +226,5 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 -- PostgreSQL database dump complete
 --
 
-\unrestrict AA6cPtNBQueh9HSGJsGEVR4uEEu1u0gYQuqRFZ9HfLyr9v0rgRDrsXx9fHtklnC
+\unrestrict Kfql5t1Q06NeMuDIdQK4G5yo94cdsdBnpucK6QTXNQHcct0KGB5qh5tBeTjLHep
 

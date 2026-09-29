@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict ws4dgarCoccFJwkthkUv2JGnDRyhlgBZu08zbRJUsBDwjiS2pSVwQMHBWKvbKot
+\restrict pfTsWXIc9dYHm8aEkP6ce9ktUc4IxcZEcYNEUb674PsRrjxUmc917HNfaniz6uR
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -102,5 +102,5 @@ GRANT SELECT,UPDATE ON SEQUENCE public.himan_run_statistics_id_seq TO radon_rw;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict ws4dgarCoccFJwkthkUv2JGnDRyhlgBZu08zbRJUsBDwjiS2pSVwQMHBWKvbKot
+\unrestrict pfTsWXIc9dYHm8aEkP6ce9ktUc4IxcZEcYNEUb674PsRrjxUmc917HNfaniz6uR
 

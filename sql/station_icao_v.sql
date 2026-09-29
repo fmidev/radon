@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 1mwglXvMHl75n2RaUPxZpCjsMaMAOpeF1PGAbBhkljoiGngcUIiQRQMpSGsMtuj
+\restrict uQBKwfI8k6BvcukQSHSI7c0BvGyKURpjIViOJYfNhBL4E8auKIJsHXcxRlKc5gk
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -47,5 +47,5 @@ GRANT SELECT ON TABLE public.station_icao_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 1mwglXvMHl75n2RaUPxZpCjsMaMAOpeF1PGAbBhkljoiGngcUIiQRQMpSGsMtuj
+\unrestrict uQBKwfI8k6BvcukQSHSI7c0BvGyKURpjIViOJYfNhBL4E8auKIJsHXcxRlKc5gk
 

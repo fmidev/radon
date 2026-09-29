@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict XSS8T6QIJXGdRLhhmOGeeKFMhqKZpoYNkdelhceoVCXeeeOJ2yPjMwzzvqHY427
+\restrict fBbHLHmoTgXymWZc74ia3cYSc45MFE5VkULvhJLuFHIwIW4DHPfXuIo2dO1yffK
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -114,6 +114,7 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 120	53	559	1	\N	6	0	\N	\N
 121	53	426	1	\N	6	0	\N	\N
 125	189	139	7	\N	4	\N	\N	\N
+211	267	139	7	\N	4	\N	\N	\N
 127	109	509	1	0	6	0	\N	\N
 129	107	509	1	0	6	0	\N	\N
 130	107	143	1	0	6	0	\N	\N
@@ -180,12 +181,12 @@ COPY public.param_level_transform (id, producer_id, param_id, other_level_id, ot
 -- Name: param_level_transform_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_level_transform_id_seq', 210, true);
+SELECT pg_catalog.setval('public.param_level_transform_id_seq', 211, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict XSS8T6QIJXGdRLhhmOGeeKFMhqKZpoYNkdelhceoVCXeeeOJ2yPjMwzzvqHY427
+\unrestrict fBbHLHmoTgXymWZc74ia3cYSc45MFE5VkULvhJLuFHIwIW4DHPfXuIo2dO1yffK
 

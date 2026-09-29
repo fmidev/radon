@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict Su5DRaJvgoOC5QcnBQt7qqdWiEtacZUw0JvBCUoPg3BNkEVqiZP3HU073huapHx
+\restrict crlA0RdeLY9JOMIrXWhxkwKsgVQRjEndhTDq2x9M6HfNLtCMNnxhzD5a7ORfjgc
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -1041,6 +1041,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 3974	260	1211	1063	100	0	\N	\N
 2527	121	225	586	1	0	\N	\N
 4742	268	181	355	1	0	radon_admin	2025-10-23 07:56:26.722832+00
+4761	267	139	1	0.01	0	\N	\N
 1426	119	225	586	1	0	\N	\N
 3338	501	163	13	1	0	\N	\N
 1428	119	226	587	1	0	\N	\N
@@ -1346,6 +1347,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 1792	105	278	1149	1	0	\N	\N
 4759	266	441	353	1	0	radon_admin	2026-01-23 05:27:29.00499+00
 1794	105	279	1150	1	0	\N	\N
+4762	267	139	472	0.01	0	\N	\N
 1796	105	306	1151	1	0	\N	\N
 3400	7	523	143	1	0	\N	\N
 1798	105	280	1152	0.01	0	\N	\N
@@ -1501,6 +1503,11 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2273	241	903	4621	0.01	0	\N	\N
 2274	241	904	4622	0.01	0	\N	\N
 2275	241	905	4623	0.01	0	\N	\N
+4763	267	153	4	1	-237.15	\N	\N
+4764	267	162	10	1	-237.15	\N	\N
+4765	267	163	13	1	0	\N	\N
+4766	267	166	21	1	0	\N	\N
+4767	267	169	20	1	0	\N	\N
 2276	241	906	4624	1	0	\N	\N
 2277	241	907	4625	1	0	\N	\N
 2379	4	655	180	1	0	\N	\N
@@ -1528,6 +1535,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2298	241	928	4646	1	0	\N	\N
 2299	241	929	4647	1	0	\N	\N
 2300	241	930	4648	1	0	\N	\N
+4768	267	171	23	1	0	\N	\N
 2302	241	932	4650	1	0	\N	\N
 2301	241	931	4649	1	0	postgres	2016-12-09 11:18:51.99503+00
 2303	241	933	4651	1	0	\N	\N
@@ -1540,6 +1548,8 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 2310	241	940	4658	1	0	\N	\N
 2311	241	941	4659	1	0	\N	\N
 2312	241	942	4660	1	0	\N	\N
+4769	267	174	24	1	0	\N	\N
+4770	267	181	355	1000	0	\N	\N
 2313	241	943	4661	1	0	\N	\N
 2314	241	944	4662	1	0	\N	\N
 2315	241	945	4663	1	0	\N	\N
@@ -1595,6 +1605,7 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 4658	286	441	353	1	0	\N	\N
 4659	286	139	1	0.01	0	\N	\N
 4685	264	162	10	1	-273.15	\N	\N
+4771	267	441	353	1	0	\N	\N
 4578	287	438	79	100	0	radon_admin	2024-04-18 11:49:56.040571+00
 2360	250	895	4613	0.01	0	\N	\N
 2361	250	966	4668	0.01	0	\N	\N
@@ -2747,12 +2758,12 @@ COPY public.param_newbase (id, producer_id, param_id, univ_id, scale, base, last
 -- Name: param_newbase_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_id_seq', 4760, true);
+SELECT pg_catalog.setval('public.param_newbase_id_seq', 4771, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Su5DRaJvgoOC5QcnBQt7qqdWiEtacZUw0JvBCUoPg3BNkEVqiZP3HU073huapHx
+\unrestrict crlA0RdeLY9JOMIrXWhxkwKsgVQRjEndhTDq2x9M6HfNLtCMNnxhzD5a7ORfjgc
 

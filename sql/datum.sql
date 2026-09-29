@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict gSCGsrxN8XMISHNZMNRXj7LWzH4pjPnUDnLoW3xWIgZZIf4cZzpj2F8rJ2c19ku
+\restrict kJPYvqP4fc1aVHmFd5tay9f3b4DgivCu35pYz0R9Q7xtM2yA20zmSyn2VhRAMs0
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -91,5 +91,5 @@ GRANT SELECT ON TABLE public.datum TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict gSCGsrxN8XMISHNZMNRXj7LWzH4pjPnUDnLoW3xWIgZZIf4cZzpj2F8rJ2c19ku
+\unrestrict kJPYvqP4fc1aVHmFd5tay9f3b4DgivCu35pYz0R9Q7xtM2yA20zmSyn2VhRAMs0
 

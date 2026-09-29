@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict d1cD8gXXStOdnb5YybTa1B7bPD9rjRZas7hRf7otmaZXfYRMhKClDukY4tx0kVg
+\restrict XLtBxUnHrd6RRj5oABQSftxqxxhs2KdWYXnW6IN4FP9vuC9giXXpwoYl5EWOJlm
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -49,5 +49,5 @@ GRANT SELECT ON TABLE public.param_grib2_template_v TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict d1cD8gXXStOdnb5YybTa1B7bPD9rjRZas7hRf7otmaZXfYRMhKClDukY4tx0kVg
+\unrestrict XLtBxUnHrd6RRj5oABQSftxqxxhs2KdWYXnW6IN4FP9vuC9giXXpwoYl5EWOJlm
 

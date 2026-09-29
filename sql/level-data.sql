@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 5vu7xBd0Yg0ZK9qNAYWoeIZaDZ7O32sSsfZsSB00jgbp9107RDKKxLUd5mV93Vd
+\restrict Ju4uknNUsmit8jyqNNcGlLcyKzaCYGv4DSbs5U9M7gJONSBgZpb2IN3fcIuhWaX
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -58,5 +58,5 @@ SELECT pg_catalog.setval('public.level_id_seq', 18, true);
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 5vu7xBd0Yg0ZK9qNAYWoeIZaDZ7O32sSsfZsSB00jgbp9107RDKKxLUd5mV93Vd
+\unrestrict Ju4uknNUsmit8jyqNNcGlLcyKzaCYGv4DSbs5U9M7gJONSBgZpb2IN3fcIuhWaX
 

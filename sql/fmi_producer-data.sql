@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 1WXAbsB2irDnpoeAUhtyVwcfajmqRmTIghGpKX6tsslc4xqvdwcTzY5tdisIY4o
+\restrict ONMJAs4OEvKsYnSPjzh029R1hhuyCDJATeDSYtZM60zWl7cqo0JLY7xsFLrP9pE
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -134,5 +134,5 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 1WXAbsB2irDnpoeAUhtyVwcfajmqRmTIghGpKX6tsslc4xqvdwcTzY5tdisIY4o
+\unrestrict ONMJAs4OEvKsYnSPjzh029R1hhuyCDJATeDSYtZM60zWl7cqo0JLY7xsFLrP9pE
 

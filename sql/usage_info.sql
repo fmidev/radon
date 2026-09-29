@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 0KLRSyqa8GurNo0QNtPWqCKjF0xcbw9CbTOcgPIjfnrVz3nvIu2l2keDUQBN5R2
+\restrict vpiaAkhlw5OLwTRG9QpYFWUnsvb9QslZc6xeWgrNCZDXhTD1FT57mBAWpea8LXl
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -63,5 +63,5 @@ GRANT INSERT,DELETE,UPDATE ON TABLE public.usage_info TO radon_rw;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 0KLRSyqa8GurNo0QNtPWqCKjF0xcbw9CbTOcgPIjfnrVz3nvIu2l2keDUQBN5R2
+\unrestrict vpiaAkhlw5OLwTRG9QpYFWUnsvb9QslZc6xeWgrNCZDXhTD1FT57mBAWpea8LXl
 

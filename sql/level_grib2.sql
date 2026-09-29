@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict K0SeEyBdpYmb2iIMjMNRKRd9hT3rUDCxG6gM3uRXJs8lPLkrtaMlEv6KPPdGL6L
+\restrict g3gmcmdp62NZ0a1qa8Rhx4MJrk5qxrcUQ3ElJbCENDKbwqfDi9oFMcWBiwGbuOf
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -86,5 +86,5 @@ GRANT SELECT ON TABLE public.level_grib2 TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict K0SeEyBdpYmb2iIMjMNRKRd9hT3rUDCxG6gM3uRXJs8lPLkrtaMlEv6KPPdGL6L
+\unrestrict g3gmcmdp62NZ0a1qa8Rhx4MJrk5qxrcUQ3ElJbCENDKbwqfDi9oFMcWBiwGbuOf
 

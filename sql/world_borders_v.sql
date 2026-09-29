@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict FIm6SBDURaN9QHrdjc1KvZJvafMa5Jp5Kez9f0voMeNMFJXGuL5IgrsBGXvbChM
+\restrict bqNM4IjYsSegclcjU30nmgq2qc5LOLc01SC0YbAuI7TzBASsDpR5qWiEzjryNn9
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -52,5 +52,5 @@ GRANT SELECT ON TABLE public.world_borders_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict FIm6SBDURaN9QHrdjc1KvZJvafMa5Jp5Kez9f0voMeNMFJXGuL5IgrsBGXvbChM
+\unrestrict bqNM4IjYsSegclcjU30nmgq2qc5LOLc01SC0YbAuI7TzBASsDpR5qWiEzjryNn9
 

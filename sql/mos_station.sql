@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 3L3dqj8snhNhackp47pdRJy9IrzgC0RfFRQ2NLH8XGpKlN7jiN0MyOSEW9KoFSh
+\restrict C8cccBhjcsab87LfhbYOVbKmNpjY1Y0ACyXyVfb2hf8Ltiq9DbmUDRynyIz7UhF
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -89,5 +89,5 @@ CREATE TRIGGER mos_station_store_last_updated_trg BEFORE UPDATE ON public.mos_st
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 3L3dqj8snhNhackp47pdRJy9IrzgC0RfFRQ2NLH8XGpKlN7jiN0MyOSEW9KoFSh
+\unrestrict C8cccBhjcsab87LfhbYOVbKmNpjY1Y0ACyXyVfb2hf8Ltiq9DbmUDRynyIz7UhF
 
