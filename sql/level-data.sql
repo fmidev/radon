@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict Ju4uknNUsmit8jyqNNcGlLcyKzaCYGv4DSbs5U9M7gJONSBgZpb2IN3fcIuhWaX
+\restrict tVqsYdd5IJwVsW82f5FEHsBJ5cGtOvYTYU1agFgMBXCXQfeuxg9RtV1kagibigy
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -58,5 +58,5 @@ SELECT pg_catalog.setval('public.level_id_seq', 18, true);
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Ju4uknNUsmit8jyqNNcGlLcyKzaCYGv4DSbs5U9M7gJONSBgZpb2IN3fcIuhWaX
+\unrestrict tVqsYdd5IJwVsW82f5FEHsBJ5cGtOvYTYU1agFgMBXCXQfeuxg9RtV1kagibigy
 

@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict Kfql5t1Q06NeMuDIdQK4G5yo94cdsdBnpucK6QTXNQHcct0KGB5qh5tBeTjLHep
+\restrict M7FDboqerGoTtGRf8YgxdbFvelPgQhLNQ8K23BBoMpHckFf337YWEaO1h23c4zd
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -219,6 +219,10 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 100	1	1	\N	\N
 103	1	1	radon_admin	2026-05-07 13:28:42.029545+00
 267	2	100	\N	\N
+7	15	4	\N	\N
+8	15	4	\N	\N
+4	15	4	\N	\N
+602	1	1	\N	\N
 \.
 
 
@@ -226,5 +230,5 @@ COPY public.level_grib2 (producer_id, level_id, grib_level_id, last_updater, las
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Kfql5t1Q06NeMuDIdQK4G5yo94cdsdBnpucK6QTXNQHcct0KGB5qh5tBeTjLHep
+\unrestrict M7FDboqerGoTtGRf8YgxdbFvelPgQhLNQ8K23BBoMpHckFf337YWEaO1h23c4zd
 

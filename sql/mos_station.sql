@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict C8cccBhjcsab87LfhbYOVbKmNpjY1Y0ACyXyVfb2hf8Ltiq9DbmUDRynyIz7UhF
+\restrict Fg2aKa7Cfz9eGhzuy3C6g7QHFHDDsnhZZtnNWeoqpv62mUY2TSEARrO4IoInm4Z
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -54,7 +54,7 @@ CREATE SEQUENCE public.mos_station_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.mos_station_id_seq OWNER TO radon_admin;
+ALTER TABLE public.mos_station_id_seq OWNER TO radon_admin;
 
 --
 -- Name: mos_station_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -89,5 +89,5 @@ CREATE TRIGGER mos_station_store_last_updated_trg BEFORE UPDATE ON public.mos_st
 -- PostgreSQL database dump complete
 --
 
-\unrestrict C8cccBhjcsab87LfhbYOVbKmNpjY1Y0ACyXyVfb2hf8Ltiq9DbmUDRynyIz7UhF
+\unrestrict Fg2aKa7Cfz9eGhzuy3C6g7QHFHDDsnhZZtnNWeoqpv62mUY2TSEARrO4IoInm4Z
 

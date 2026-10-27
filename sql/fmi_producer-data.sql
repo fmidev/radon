@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict ONMJAs4OEvKsYnSPjzh029R1hhuyCDJATeDSYtZM60zWl7cqo0JLY7xsFLrP9pE
+\restrict u3c9TLjKK5dcLbOLHuzRmqKTW7n4Eq1DEXvmsRFbDffSfal1yc3N2bbzmdELu5Q
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -55,7 +55,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 106	TIENHOITO	FMI road maintenance model	1	postgres	2016-05-26 08:42:00	1
 107	LAPSFIN	LAPS analysis (Finland)	1	radon_admin	2023-05-08 04:28:57	2
 109	LAPSSCAN	LAPS analysis (Scandinavia)	1	radon_admin	2023-05-08 04:28:57	2
-122	ECMOSKRIGING_DEV	ECMWF MOS development version	1	radon_admin	2023-05-08 04:31:45	1
+602	WRM	Winter road maintenance forecast	1	\N	\N	1
 118	ECKALLAPS	Kalman filtered prognosis from EC forecasts	1	postgres	2016-05-26 08:42:00	1
 119	FMI_PEPS	Kauhasen PEPS-yhdistelmä	1	postgres	2016-05-26 08:42:00	1
 132	ECGSEF	ECMWF fine mesh marine model	1	postgres	2016-05-26 08:42:00	1
@@ -93,6 +93,7 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 158	WW3_ORRE	Wavewatch_3 wave model for Orrengrund area	1	\N	\N	1
 291	CLOUDCAST_PREOP	Cloudcast NWC Preop	1	radon_admin	2023-05-08 04:42:05	1
 2028	ECMOS2	MOS Preop from ECMWF model	3	radon_admin	2023-05-08 04:43:20	1
+122	ECMOSKRIGING_DEV	ECMWF preop machine learning corrected fields	1	radon_admin	2026-10-08 11:47:02	1
 16	WASP	WASP analysis	1	\N	\N	2
 263	MEPS_ML	MEPS machine learning corrected fields	1	\N	\N	1
 264	MEPS_ML_PREOP	MEPS preop machine learning corrected fields	1	\N	\N	1
@@ -134,5 +135,5 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 -- PostgreSQL database dump complete
 --
 
-\unrestrict ONMJAs4OEvKsYnSPjzh029R1hhuyCDJATeDSYtZM60zWl7cqo0JLY7xsFLrP9pE
+\unrestrict u3c9TLjKK5dcLbOLHuzRmqKTW7n4Eq1DEXvmsRFbDffSfal1yc3N2bbzmdELu5Q
 

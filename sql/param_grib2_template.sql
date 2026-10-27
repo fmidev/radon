@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict WM5Jl7MQ9Mxj5sbRrO4Ep3sg1N75cSIQ1ENWwsdOlKsRgmNmpITmhz3943I2iLz
+\restrict 5Crga7jM3mbcjnTm4LIXGXjKx4dI6eIgAr6c3gF6yZrcIRsFrebUuqwaqsSqu15
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -76,5 +76,5 @@ GRANT SELECT ON TABLE public.param_grib2_template TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict WM5Jl7MQ9Mxj5sbRrO4Ep3sg1N75cSIQ1ENWwsdOlKsRgmNmpITmhz3943I2iLz
+\unrestrict 5Crga7jM3mbcjnTm4LIXGXjKx4dI6eIgAr6c3gF6yZrcIRsFrebUuqwaqsSqu15
 

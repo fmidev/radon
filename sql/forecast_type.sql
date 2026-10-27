@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict KukeLYNofJZ1e6WJuez9oTIDo5EV3jQ8va07BgSWLU516yl68vNeKzkcrLNNftF
+\restrict 74hXT4F6ylKKIxyPv7YL69Oqe8Uwm7IQpkTlYqBasaOIstOy9cUMxMv7e7ZR21Q
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -49,7 +49,7 @@ CREATE SEQUENCE public.forecast_type_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.forecast_type_id_seq OWNER TO radon_admin;
+ALTER TABLE public.forecast_type_id_seq OWNER TO radon_admin;
 
 --
 -- Name: forecast_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -106,5 +106,5 @@ GRANT SELECT ON TABLE public.forecast_type TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict KukeLYNofJZ1e6WJuez9oTIDo5EV3jQ8va07BgSWLU516yl68vNeKzkcrLNNftF
+\unrestrict 74hXT4F6ylKKIxyPv7YL69Oqe8Uwm7IQpkTlYqBasaOIstOy9cUMxMv7e7ZR21Q
 

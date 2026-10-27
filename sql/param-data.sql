@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict ZhHURyfNuoftFg10cpn5Gt0vz3eh75WnT4lYkZ1L0zkFXI3tOHWeEpFXWrWCxIG
+\restrict csEyIj78MHacWSJHBHFa6UN34BiKSHDBP7kbd4gYn7WTKPoPy3n93dc7R6EO5gH
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1262,6 +1262,16 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1602	H0C-HIGHEST-FT	1	82	1	FMI computed highest freezing level in feets	radon_admin	2026-06-30 07:21:19
 1606	ICING-SEV-BASE-FT	1	82	2	Base of severe icing in hft	\N	\N
 1610	FORECAST-RELIABILITY-N	1	30	2	Forecast reliability index based on T-STDDEV-K	\N	\N
+1611	SNR-MM	1	60	1	Snowfall rate in mm	\N	\N
+1612	PROB-PLOW-ISE-0TO1	1	62	1	Probability of snow plowing on road class Ise	\N	\N
+1613	PROB-PLOW-IS-0TO1	1	62	1	Probability of snow plowing on road class Is	\N	\N
+1614	PROB-PLOW-IB-0TO1	1	62	1	Probability of snow plowing on road class Ib	\N	\N
+1615	PROB-SALT-ISE-0TO1	1	62	1	Probability of salting on road class Ise	\N	\N
+1616	PROB-SALT-IS-0TO1	1	62	1	Probability of salting on road class Is	\N	\N
+1617	PROB-SALT-IB-0TO1	1	62	1	Probability of salting on road class Ib	\N	\N
+1618	INVERSION-K	1	3	1	Inversion in degrees	\N	\N
+1619	INVERSION-TOP-FT	1	82	1	Inversion top in feet	\N	\N
+1620	INVERSION-BASE-FT	1	82	1	Inversion base in feet	\N	\N
 1594	EFI-FF--1TO1	1	90	2	Extreme Forecast Index for wind speed	\N	\N
 1609	DAYLIGHT-0OR1	1	28	2	Boolean value of daylight	radon_admin	2026-08-20 11:55:05
 39	RTOPLW-WM2	1	12	1	Net long wave radiation, top of atmosphere	radon_admin	2023-03-27 04:20:33
@@ -1273,12 +1283,12 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1610, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1620, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict ZhHURyfNuoftFg10cpn5Gt0vz3eh75WnT4lYkZ1L0zkFXI3tOHWeEpFXWrWCxIG
+\unrestrict csEyIj78MHacWSJHBHFa6UN34BiKSHDBP7kbd4gYn7WTKPoPy3n93dc7R6EO5gH
 

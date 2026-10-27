@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict Vq5gTSvxcTpiC7ENArFpvAohZfqbwjWQLyZyhIeVGgVaEE9v096C9RfYhvywBHX
+\restrict LPx4Yd0H2KyLccSFFVgXm5OjQd7mZQXCJTv7cjPsqgPemZGLi0RPNGQA1LdrnSJ
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -129,6 +129,67 @@ COPY public.param_newbase_name (id, univ_id, name, last_updater, last_updated) F
 119	1411	Convective Severity Index (FMI)	\N	\N
 120	23	U Component of Wind	\N	\N
 121	24	V Component of Wind	\N	\N
+122	4546	DewPoint F0	\N	\N
+123	4545	DewPoint F1	\N	\N
+124	4536	DewPoint F100	\N	\N
+125	4542	DewPoint F12.5	\N	\N
+126	4544	DewPoint F2.5	\N	\N
+127	4543	DewPoint F5	\N	\N
+128	4541	DewPoint F50	\N	\N
+129	4540	DewPoint F87.5	\N	\N
+130	4539	DewPoint F95	\N	\N
+131	4538	DewPoint F97.5	\N	\N
+132	4537	DewPoint F99	\N	\N
+133	877	Temperature F0	\N	\N
+134	4507	Temperature F1	\N	\N
+135	876	Temperature F10	\N	\N
+136	871	Temperature F100	\N	\N
+137	4504	Temperature F12.5	\N	\N
+138	4506	Temperature F2.5	\N	\N
+139	875	Temperature F25	\N	\N
+140	4505	Temperature F5	\N	\N
+141	874	Temperature F50	\N	\N
+142	873	Temperature F75	\N	\N
+143	4503	Temperature F87.5	\N	\N
+144	872	Temperature F90	\N	\N
+145	4502	Temperature F95	\N	\N
+146	4501	Temperature F97.5	\N	\N
+147	4500	Temperature F99	\N	\N
+148	4613	Pressure F100	\N	\N
+149	4618	Pressure F50	\N	\N
+150	4623	Pressure F0	\N	\N
+151	4668	Pressure F90	\N	\N
+152	4669	Pressure F75	\N	\N
+153	4670	Pressure F25	\N	\N
+154	4671	Pressure F10	\N	\N
+155	4672	Global Radiation F0	\N	\N
+156	4673	Global Radiation F10	\N	\N
+157	4674	Global Radiation F25	\N	\N
+158	4675	Global Radiation F50	\N	\N
+159	4676	Global Radiation F75	\N	\N
+160	4677	Global Radiation F90	\N	\N
+161	4678	Global Radiation F100	\N	\N
+165	1113	Wind Speed F50	\N	\N
+162	1110	Wind Speed F100	radon_admin	2026-10-12 05:22:53.263075+00
+163	1111	Wind Speed F90	radon_admin	2026-10-12 05:22:53.263075+00
+164	1112	Wind Speed F75	radon_admin	2026-10-12 05:22:53.263075+00
+166	1114	Wind Speed F25	\N	\N
+167	1115	Wind Speed F10	\N	\N
+168	1116	Wind Speed F0	\N	\N
+169	881	Total Cloud Cover F100	\N	\N
+170	882	Total Cloud Cover F90	\N	\N
+171	883	Total Cloud Cover F75	\N	\N
+172	884	Total Cloud Cover F50	\N	\N
+173	885	Total Cloud Cover F25	\N	\N
+174	886	Total Cloud Cover F10	\N	\N
+175	887	Total Cloud Cover F0	\N	\N
+176	891	Toal Precipitation F100	\N	\N
+177	892	Toal Precipitation F90	\N	\N
+178	893	Toal Precipitation F75	\N	\N
+179	894	Toal Precipitation F50	\N	\N
+180	895	Toal Precipitation F25	\N	\N
+181	896	Toal Precipitation F10	\N	\N
+182	897	Toal Precipitation F0	\N	\N
 \.
 
 
@@ -136,12 +197,12 @@ COPY public.param_newbase_name (id, univ_id, name, last_updater, last_updated) F
 -- Name: param_newbase_name_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_newbase_name_id_seq', 121, true);
+SELECT pg_catalog.setval('public.param_newbase_name_id_seq', 182, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Vq5gTSvxcTpiC7ENArFpvAohZfqbwjWQLyZyhIeVGgVaEE9v096C9RfYhvywBHX
+\unrestrict LPx4Yd0H2KyLccSFFVgXm5OjQd7mZQXCJTv7cjPsqgPemZGLi0RPNGQA1LdrnSJ
 

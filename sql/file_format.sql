@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict 8YRN7kPG6bLVIqNEo1E3FRQZgBMFr514JU247gmUBVnnDF3utRvey1zOhuQKsYa
+\restrict OIA68kDGY6H74670JanYTJB3zn3UPAb23ZvE9eUVX9ZQPk2ZqacuKnPZReqZoDo
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -50,7 +50,7 @@ CREATE SEQUENCE public.file_format_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.file_format_id_seq OWNER TO radon_admin;
+ALTER TABLE public.file_format_id_seq OWNER TO radon_admin;
 
 --
 -- Name: file_format_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -99,5 +99,5 @@ GRANT SELECT ON TABLE public.file_format TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 8YRN7kPG6bLVIqNEo1E3FRQZgBMFr514JU247gmUBVnnDF3utRvey1zOhuQKsYa
+\unrestrict OIA68kDGY6H74670JanYTJB3zn3UPAb23ZvE9eUVX9ZQPk2ZqacuKnPZReqZoDo
 

@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict Ikc4NxyX2YSTCAXf7PvrWkh9ge48qKQQZDpI4Z63leOHtDeMbIW9txC8ZvhDi9n
+\restrict fQwoG6zSC8dBeAeRqmDwwhP95rHQbGjeniZMybXH7VV5lSv4Sd2zx3cBjnfh2IG
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -34,7 +34,7 @@ CREATE VIEW public.param_precision_v AS
   WHERE (pp.param_id = p.id);
 
 
-ALTER VIEW public.param_precision_v OWNER TO radon_admin;
+ALTER TABLE public.param_precision_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE param_precision_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -47,5 +47,5 @@ GRANT SELECT ON TABLE public.param_precision_v TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Ikc4NxyX2YSTCAXf7PvrWkh9ge48qKQQZDpI4Z63leOHtDeMbIW9txC8ZvhDi9n
+\unrestrict fQwoG6zSC8dBeAeRqmDwwhP95rHQbGjeniZMybXH7VV5lSv4Sd2zx3cBjnfh2IG
 

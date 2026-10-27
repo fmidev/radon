@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict YxN3W0fxCjD67qfAJ0dCNjOx6T9gAIt01SIn86APwdbjNMfboUMNVeh9HUfzcbi
+\restrict Z56wnXe3KvHCAVhwN4n5HL1lqX53tcnakiRRsRvfSZpohrMfnPIgukYVohUNGS9
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -90,5 +90,5 @@ GRANT SELECT ON TABLE public.ss_forecast_status TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict YxN3W0fxCjD67qfAJ0dCNjOx6T9gAIt01SIn86APwdbjNMfboUMNVeh9HUfzcbi
+\unrestrict Z56wnXe3KvHCAVhwN4n5HL1lqX53tcnakiRRsRvfSZpohrMfnPIgukYVohUNGS9
 

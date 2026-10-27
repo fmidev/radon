@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict qK0gV1M8cCMrRUeILpwxJlJPVKxpfE6ELAMThIA6tuxV1SW8gSd6ODTz2DRoQBZ
+\restrict aRhRC1vBaHRI4KYlazLbqYwiooTxU4cTCx8aCdDjRa4j7X6Ab9pRYaSLNbKBDmc
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -43,5 +43,5 @@ SELECT pg_catalog.setval('public.producer_type_id_seq', 6, true);
 -- PostgreSQL database dump complete
 --
 
-\unrestrict qK0gV1M8cCMrRUeILpwxJlJPVKxpfE6ELAMThIA6tuxV1SW8gSd6ODTz2DRoQBZ
+\unrestrict aRhRC1vBaHRI4KYlazLbqYwiooTxU4cTCx8aCdDjRa4j7X6Ab9pRYaSLNbKBDmc
 

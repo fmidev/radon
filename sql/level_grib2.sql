@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict g3gmcmdp62NZ0a1qa8Rhx4MJrk5qxrcUQ3ElJbCENDKbwqfDi9oFMcWBiwGbuOf
+\restrict XYyNYGYVyvWzcZkEFTuUb17X46ZWXUMLhL6dY4lBfN2hw23hjDY34DdDfUBK2cN
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -86,5 +86,5 @@ GRANT SELECT ON TABLE public.level_grib2 TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict g3gmcmdp62NZ0a1qa8Rhx4MJrk5qxrcUQ3ElJbCENDKbwqfDi9oFMcWBiwGbuOf
+\unrestrict XYyNYGYVyvWzcZkEFTuUb17X46ZWXUMLhL6dY4lBfN2hw23hjDY34DdDfUBK2cN
 

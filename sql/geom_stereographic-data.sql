@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict VmrB7WEbmVjiEjVKyGGgktyXTq5hfgIZ07AE9GJY93k1Gp85XGDOfBQBsQZgHRo
+\restrict hKhshunuZ0TXUnN8hCqFmVD4jYqLVhrJsSdGL3BcmS7RPr71KYi6MH2Rxzh1R8g
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -44,5 +44,5 @@ COPY public.geom_stereographic (id, name, ni, nj, first_point, di, dj, scanning_
 -- PostgreSQL database dump complete
 --
 
-\unrestrict VmrB7WEbmVjiEjVKyGGgktyXTq5hfgIZ07AE9GJY93k1Gp85XGDOfBQBsQZgHRo
+\unrestrict hKhshunuZ0TXUnN8hCqFmVD4jYqLVhrJsSdGL3BcmS7RPr71KYi6MH2Rxzh1R8g
 

@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict lMAprUmYcV7My3CEOIdiqUFVttIzfTvdJqUAeQ6z2VzsUTEeulXjgZDl1L8q4gt
+\restrict yL6JxOSCz3f4Y7ewPHTk2kaKuKffeR1Hb7dyXq0EOpuP1gAdyizEGf0UwtIUayw
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -50,7 +50,7 @@ CREATE SEQUENCE public.file_protocol_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.file_protocol_id_seq OWNER TO radon_admin;
+ALTER TABLE public.file_protocol_id_seq OWNER TO radon_admin;
 
 --
 -- Name: file_protocol_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -99,5 +99,5 @@ GRANT SELECT ON TABLE public.file_protocol TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict lMAprUmYcV7My3CEOIdiqUFVttIzfTvdJqUAeQ6z2VzsUTEeulXjgZDl1L8q4gt
+\unrestrict yL6JxOSCz3f4Y7ewPHTk2kaKuKffeR1Hb7dyXq0EOpuP1gAdyizEGf0UwtIUayw
 

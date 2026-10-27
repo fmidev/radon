@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict fJ1rlj5lFbx2ZN2R9molxepl8pnFh9aAhzp7MJm6utHWHAGkqPMimhM5EaJmKnw
+\restrict EJHfZ11eIz2Js6o5fAfdpwvqeAfQflqIFKmyjwo0eq3JqQt7sOsWU9nUIGdMat5
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -66,6 +66,7 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 86	241	241	86	\N	\N
 87	135	139	98	\N	\N
 135	264	215	86	\N	\N
+154	602	239	86	\N	\N
 90	260	204	86	\N	\N
 150	268	7	86	\N	\N
 147	293	203	86	\N	\N
@@ -105,12 +106,12 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.producer_grib_id_seq', 153, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 154, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict fJ1rlj5lFbx2ZN2R9molxepl8pnFh9aAhzp7MJm6utHWHAGkqPMimhM5EaJmKnw
+\unrestrict EJHfZ11eIz2Js6o5fAfdpwvqeAfQflqIFKmyjwo0eq3JqQt7sOsWU9nUIGdMat5
 

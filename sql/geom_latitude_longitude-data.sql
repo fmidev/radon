@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict YHV9erdobeT5urdBhfC11a9pmw7OC9aYT4AX5mDGrDPMsWzSz9ZiY9gg0UNn44G
+\restrict AoC1raR3oHca8VdyVMUj80ok4FBrpbf1MEFtVkvhHK2MsjWrYSaoMJEoJWhaHBa
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -84,6 +84,7 @@ COPY public.geom_latitude_longitude (id, name, ni, nj, first_point, di, dj, scan
 1115	NEMO801738_UV	801	738	0101000020E6100000BD60FBBFA6F11F4030490260FECF4A40	0.02777767181	0.01666641235	+x+y	FMI NEMO Model v.2023, running on ATOS	\N	\N	\N	\N
 1123	WAMEC	331	391	0101000020E610000000000000000022400000000000804A40	0.06666599959	0.03333329409	+x+y	WAM EC	\N	\N	\N	\N
 1120	DEMEUROPE00027	40536	20196	0101000020E610000000000000000044C06666666666465440	0.002777777778	0.002777777778	+x-y	DEM geometry for Europe	\N	\N	4	\N
+1143	FIN01005	109	205	0101000020E61000003333333333B33440CDCCCCCCCCEC4D40	0.1	0.05	+x+y	Finland regular lat-lon grid, 0.1 deg lon x 0.05 deg lat	\N	\N	\N	\N
 411	MTSOU1000	361	90	0101000020E610000000000000008066C000000000008056C0	1	1	+x+y	ECMWF MTA Southern hemisphere 1.0 degrees	\N	\N	7	\N
 \.
 
@@ -92,5 +93,5 @@ COPY public.geom_latitude_longitude (id, name, ni, nj, first_point, di, dj, scan
 -- PostgreSQL database dump complete
 --
 
-\unrestrict YHV9erdobeT5urdBhfC11a9pmw7OC9aYT4AX5mDGrDPMsWzSz9ZiY9gg0UNn44G
+\unrestrict AoC1raR3oHca8VdyVMUj80ok4FBrpbf1MEFtVkvhHK2MsjWrYSaoMJEoJWhaHBa
 

@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict gIbU7gcOcxq1CHrPX1IdWnou1hJGXjMQ0SixyCRee2Hvuf0Jxdxcvri7STTlpKk
+\restrict bO5t54f6K91uDm7fKxW3xFAZdba4C1fqajpwgOaPrTs7FkDLdLY55QnWC1XmjCV
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -69,7 +69,7 @@ CREATE SEQUENCE public.param_grib2_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.param_grib2_id_seq OWNER TO radon_admin;
+ALTER TABLE public.param_grib2_id_seq OWNER TO radon_admin;
 
 --
 -- Name: param_grib2_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -163,5 +163,5 @@ GRANT SELECT,UPDATE ON SEQUENCE public.param_grib2_id_seq TO radon_rw;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict gIbU7gcOcxq1CHrPX1IdWnou1hJGXjMQ0SixyCRee2Hvuf0Jxdxcvri7STTlpKk
+\unrestrict bO5t54f6K91uDm7fKxW3xFAZdba4C1fqajpwgOaPrTs7FkDLdLY55QnWC1XmjCV
 

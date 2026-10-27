@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict Ju1PlVM9dfWZdmZRooDCknXG7oR5SfzaS6Dgv9VM8NN7RXcr4kSQYvy5vrD288I
+\restrict Uz9uPZSEFhJFL3H8I1t7cd76MLeajSrbvFIMhqUJPZtpr4iww9WNJVNiUoIeebx
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -37,7 +37,7 @@ CREATE VIEW public.station_v AS
   WHERE public.st_contains(w.geom, s."position");
 
 
-ALTER VIEW public.station_v OWNER TO radon_admin;
+ALTER TABLE public.station_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE station_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -50,5 +50,5 @@ GRANT SELECT ON TABLE public.station_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Ju1PlVM9dfWZdmZRooDCknXG7oR5SfzaS6Dgv9VM8NN7RXcr4kSQYvy5vrD288I
+\unrestrict Uz9uPZSEFhJFL3H8I1t7cd76MLeajSrbvFIMhqUJPZtpr4iww9WNJVNiUoIeebx
 

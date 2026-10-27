@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict S6xs2EhssXtDMt8AOU7VTpHfqgtZwFFWlcfbTILk0MMxhP8K0lKO6dWLb0fdlkd
+\restrict FKMc0c3c6wbarVUFeZW9ygp801Wmbd9sv6asoJ0uRVg4IsjbPBgIzW1kwaMZHNw
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -50,5 +50,5 @@ COPY public.geom_rotated_latitude_longitude (id, name, ni, nj, first_point, di, 
 -- PostgreSQL database dump complete
 --
 
-\unrestrict S6xs2EhssXtDMt8AOU7VTpHfqgtZwFFWlcfbTILk0MMxhP8K0lKO6dWLb0fdlkd
+\unrestrict FKMc0c3c6wbarVUFeZW9ygp801Wmbd9sv6asoJ0uRVg4IsjbPBgIzW1kwaMZHNw
 

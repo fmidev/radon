@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict zf54iOGAPk6u6mU7q55npbXNheyQrcO97RObihpVINkyyHnWDQAFIsobc5jq7sF
+\restrict DQqzcDfpuYaAJqjbgG7csafIYoc1WQaAeLJ0SNSaS6JvyaOQSjqCR5UzToPioJy
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -36,7 +36,7 @@ CREATE VIEW public.station_probability_limit_v AS
   WHERE ((l.station_id = s.id) AND (l.param_id = p.id));
 
 
-ALTER VIEW public.station_probability_limit_v OWNER TO radon_admin;
+ALTER TABLE public.station_probability_limit_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE station_probability_limit_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -49,5 +49,5 @@ GRANT SELECT ON TABLE public.station_probability_limit_v TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict zf54iOGAPk6u6mU7q55npbXNheyQrcO97RObihpVINkyyHnWDQAFIsobc5jq7sF
+\unrestrict DQqzcDfpuYaAJqjbgG7csafIYoc1WQaAeLJ0SNSaS6JvyaOQSjqCR5UzToPioJy
 

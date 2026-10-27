@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict c8AsIYxMGBQv1GNWwXtlBnWLNO0MwH4XitVs0T3luNZT2qMuHmQfwpT2vX0dGmg
+\restrict SwfohFAUhdSCAGKAXm10eiwtZ7pes0KMqCXGBhZoYD1YmXbbbjtaNMtoa9dTNOw
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -47,7 +47,7 @@ CREATE VIEW public.geom_rotated_latitude_longitude_v AS
   WHERE ((g.id = grll.id) AND (g.projection_id = 4));
 
 
-ALTER VIEW public.geom_rotated_latitude_longitude_v OWNER TO radon_admin;
+ALTER TABLE public.geom_rotated_latitude_longitude_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE geom_rotated_latitude_longitude_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -60,5 +60,5 @@ GRANT SELECT ON TABLE public.geom_rotated_latitude_longitude_v TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict c8AsIYxMGBQv1GNWwXtlBnWLNO0MwH4XitVs0T3luNZT2qMuHmQfwpT2vX0dGmg
+\unrestrict SwfohFAUhdSCAGKAXm10eiwtZ7pes0KMqCXGBhZoYD1YmXbbbjtaNMtoa9dTNOw
 

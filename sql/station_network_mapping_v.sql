@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict d3i34e94xOGYnszEL8i74VzRBo2zb4qTtIqNKTOTBF62BQdoU0pacO8KfQPtgcJ
+\restrict N39whg8XSSp1iAareKjlMSIOczxzMp46gi9mtCDPvShZtyqNed4Z7ieGJaoTnJA
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -39,7 +39,7 @@ CREATE VIEW public.station_network_mapping_v AS
   WHERE ((s.station_id = ss.id) AND (s.network_id = n.id));
 
 
-ALTER VIEW public.station_network_mapping_v OWNER TO radon_admin;
+ALTER TABLE public.station_network_mapping_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE station_network_mapping_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -52,5 +52,5 @@ GRANT SELECT ON TABLE public.station_network_mapping_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict d3i34e94xOGYnszEL8i74VzRBo2zb4qTtIqNKTOTBF62BQdoU0pacO8KfQPtgcJ
+\unrestrict N39whg8XSSp1iAareKjlMSIOczxzMp46gi9mtCDPvShZtyqNed4Z7ieGJaoTnJA
 

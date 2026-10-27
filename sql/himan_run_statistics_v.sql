@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict wcyc5AQoF8STjtT4qLXaqbWeF6Rf3UDlnLykMdec1iap3npVtIeNtoC4c5i7fp8
+\restrict 9T4pKhkTT5SYdaNmI0S8fodTRSlIEDYhVGWaySoJGzWd7aWizfIZ18uDCDrg8QS
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -32,7 +32,7 @@ CREATE VIEW public.himan_run_statistics_v AS
    FROM public.himan_run_statistics;
 
 
-ALTER VIEW public.himan_run_statistics_v OWNER TO radon_admin;
+ALTER TABLE public.himan_run_statistics_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE himan_run_statistics_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -45,5 +45,5 @@ GRANT SELECT ON TABLE public.himan_run_statistics_v TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict wcyc5AQoF8STjtT4qLXaqbWeF6Rf3UDlnLykMdec1iap3npVtIeNtoC4c5i7fp8
+\unrestrict 9T4pKhkTT5SYdaNmI0S8fodTRSlIEDYhVGWaySoJGzWd7aWizfIZ18uDCDrg8QS
 

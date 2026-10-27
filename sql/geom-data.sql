@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict V6T1uHTcm27UMrzR6WjjfVXGCJhJIx6L7WCdk4NClxKvipHCWGczfAGZ4hz1fvn
+\restrict lgSR6mTKrJKxhFiIADd7P5ORHd131L2UEEtRxr11fbaexRm091Hc9RdGWyCMdaN
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -95,6 +95,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 1104	PPNFIN	8	\N	\N	\N
 1141	WW3_AS	1	\N	\N	\N
 1142	WW3_ORRE	1	\N	\N	\N
+1143	FIN01005	1	Finland regular lat-lon grid, 0.1 deg lon x 0.05 deg lat	\N	\N
 377	FMIPEPS1	1	Kauhasen PEPS-alue	\N	\N
 24	GEM0240	1	Canadian global 0.24 degree resolution forecast	\N	\N
 26	GFS0250	1	Washington global 0.25 degree resolution	\N	\N
@@ -151,12 +152,12 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1142, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1143, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict V6T1uHTcm27UMrzR6WjjfVXGCJhJIx6L7WCdk4NClxKvipHCWGczfAGZ4hz1fvn
+\unrestrict lgSR6mTKrJKxhFiIADd7P5ORHd131L2UEEtRxr11fbaexRm091Hc9RdGWyCMdaN
 

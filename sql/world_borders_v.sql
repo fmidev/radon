@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict bqNM4IjYsSegclcjU30nmgq2qc5LOLc01SC0YbAuI7TzBASsDpR5qWiEzjryNn9
+\restrict 9PRoD4AIigmeFHWYF7QuLaUeWXiAFv435haUvWxtFgmZ7alPAaeTQDFTdmmw3QE
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -39,7 +39,7 @@ CREATE VIEW public.world_borders_v AS
    FROM public."tm_world_borders-0.3";
 
 
-ALTER VIEW public.world_borders_v OWNER TO radon_admin;
+ALTER TABLE public.world_borders_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE world_borders_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -52,5 +52,5 @@ GRANT SELECT ON TABLE public.world_borders_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict bqNM4IjYsSegclcjU30nmgq2qc5LOLc01SC0YbAuI7TzBASsDpR5qWiEzjryNn9
+\unrestrict 9PRoD4AIigmeFHWYF7QuLaUeWXiAFv435haUvWxtFgmZ7alPAaeTQDFTdmmw3QE
 

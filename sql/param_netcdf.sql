@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict oOtO26yB7sm1Bcgto4Fm38sylaYEjBYOkSI5uAAwCLuFRByOdZGsUDQegZeKO0v
+\restrict fggQE7BBzd3pdQEsUv3HcHRocvU8Frqf35gekiwmICnqLC4KOOrkJQYEDoVZ1Sf
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -66,7 +66,7 @@ CREATE SEQUENCE public.param_netcdf_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.param_netcdf_id_seq OWNER TO radon_admin;
+ALTER TABLE public.param_netcdf_id_seq OWNER TO radon_admin;
 
 --
 -- Name: param_netcdf_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -147,5 +147,5 @@ GRANT SELECT ON TABLE public.param_netcdf TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict oOtO26yB7sm1Bcgto4Fm38sylaYEjBYOkSI5uAAwCLuFRByOdZGsUDQegZeKO0v
+\unrestrict fggQE7BBzd3pdQEsUv3HcHRocvU8Frqf35gekiwmICnqLC4KOOrkJQYEDoVZ1Sf
 

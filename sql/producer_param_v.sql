@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict Sx2LfyOsosCD6cbrnuhN7pFpoksiJn1UREihiatdYJan74sRzhxPzmwbEZWBw2m
+\restrict UBUvZBnCKjIzkRGX4qKZ3ybU4cTuUewQcmExVnQEoI2fWvcycfcFOeMVJcglpQt
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -108,7 +108,7 @@ CREATE VIEW public.producer_param_v AS
   GROUP BY po.id, po.name, pa.id, pa.name, pa.version;
 
 
-ALTER VIEW public.producer_param_v OWNER TO radon_admin;
+ALTER TABLE public.producer_param_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE producer_param_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -121,5 +121,5 @@ GRANT SELECT ON TABLE public.producer_param_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Sx2LfyOsosCD6cbrnuhN7pFpoksiJn1UREihiatdYJan74sRzhxPzmwbEZWBw2m
+\unrestrict UBUvZBnCKjIzkRGX4qKZ3ybU4cTuUewQcmExVnQEoI2fWvcycfcFOeMVJcglpQt
 

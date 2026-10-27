@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict e0mjjfmtq3uNydhS4swaRARPQpQ7Q5vTVXgMJ1XpJvExGhjerXBjBGhKtDeHPLP
+\restrict pYfzqbrkwvvdIvgfIW89wCNrcteBzez5ThuXlwk3YcmMfMRwwJSyH2jv1EnFooA
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -55,7 +55,7 @@ CREATE SEQUENCE public.table_meta_grid_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.table_meta_grid_id_seq OWNER TO radon_admin;
+ALTER TABLE public.table_meta_grid_id_seq OWNER TO radon_admin;
 
 --
 -- Name: table_meta_grid_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -142,5 +142,5 @@ GRANT SELECT,UPDATE ON SEQUENCE public.table_meta_grid_id_seq TO radon_rw;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict e0mjjfmtq3uNydhS4swaRARPQpQ7Q5vTVXgMJ1XpJvExGhjerXBjBGhKtDeHPLP
+\unrestrict pYfzqbrkwvvdIvgfIW89wCNrcteBzez5ThuXlwk3YcmMfMRwwJSyH2jv1EnFooA
 

@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict DAPOLbVTAu4wkaFHpsnAQJQ57X26Uu97SfaGoIiY1qjeg7KJJ0bgrY6wBU5g2cW
+\restrict RjtAu56fkRsPOuaEodkxZjmooU0QYLa1xHw9WvdoKb3NOwa8CMJSRm0aL3v9lZY
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -18798,5 +18798,5 @@ SELECT pg_catalog.setval('public.mos_station_id_seq', 75044, true);
 -- PostgreSQL database dump complete
 --
 
-\unrestrict DAPOLbVTAu4wkaFHpsnAQJQ57X26Uu97SfaGoIiY1qjeg7KJJ0bgrY6wBU5g2cW
+\unrestrict RjtAu56fkRsPOuaEodkxZjmooU0QYLa1xHw9WvdoKb3NOwa8CMJSRm0aL3v9lZY
 

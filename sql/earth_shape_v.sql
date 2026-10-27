@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict dwA3ec2LHF0hjFmkcFNVvWUrVE6EPvQPOAryyuQT1HygGRAUpKCXAGDbtGlxzpl
+\restrict enJvf05jLksWcRccpm1elmMp6iNgsSR0XPyWBNszOuwSU4NMyf2QN2n1ADmpCQC
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -37,7 +37,7 @@ CREATE VIEW public.earth_shape_v AS
    FROM public.earth_shape;
 
 
-ALTER VIEW public.earth_shape_v OWNER TO radon_admin;
+ALTER TABLE public.earth_shape_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE earth_shape_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -50,5 +50,5 @@ GRANT SELECT ON TABLE public.earth_shape_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict dwA3ec2LHF0hjFmkcFNVvWUrVE6EPvQPOAryyuQT1HygGRAUpKCXAGDbtGlxzpl
+\unrestrict enJvf05jLksWcRccpm1elmMp6iNgsSR0XPyWBNszOuwSU4NMyf2QN2n1ADmpCQC
 

@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict T8dPR6pow18od14DVcRTgXLZKddK83SZihNuzMUyh7xGcuEo8foYe2NPxNHSZLk
+\restrict hQUlAgGWDjrV5LPu3CDdIq6wuGRQjEbjUBTH9pzduuwoHJ4MjFsTEq2gA2Ev9Bv
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -50,7 +50,7 @@ CREATE SEQUENCE public.geotiff_metadata_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.geotiff_metadata_id_seq OWNER TO radon_admin;
+ALTER TABLE public.geotiff_metadata_id_seq OWNER TO radon_admin;
 
 --
 -- Name: geotiff_metadata_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: radon_admin
@@ -93,5 +93,5 @@ GRANT SELECT ON TABLE public.geotiff_metadata TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict T8dPR6pow18od14DVcRTgXLZKddK83SZihNuzMUyh7xGcuEo8foYe2NPxNHSZLk
+\unrestrict hQUlAgGWDjrV5LPu3CDdIq6wuGRQjEbjUBTH9pzduuwoHJ4MjFsTEq2gA2Ev9Bv
 

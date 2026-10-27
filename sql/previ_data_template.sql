@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict AS6y3yfOXpTfLOuAKoJrnwDxfM2KHCRObuGuzaNr5R0he1cpq9QHWZH1d4YGn6v
+\restrict gsxifYP0cbiMGNwRF5axdG4lPIF3nGKmaPWR7IIhcYjvaIt4m6Rl7v1lF5zfrhf
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -118,5 +118,5 @@ GRANT SELECT ON TABLE public.previ_data_template TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict AS6y3yfOXpTfLOuAKoJrnwDxfM2KHCRObuGuzaNr5R0he1cpq9QHWZH1d4YGn6v
+\unrestrict gsxifYP0cbiMGNwRF5axdG4lPIF3nGKmaPWR7IIhcYjvaIt4m6Rl7v1lF5zfrhf
 

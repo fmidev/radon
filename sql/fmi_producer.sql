@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict Oc1hgTsEk8nFMoFpGFihYKUwYEdL90vILqqe1bGSbTiyCeKFCjYDUl5iJlHueHV
+\restrict 9B5x1cYHEyoaHDbuFQXvnwyKY9nSi4ESswZsC1VlOR6YcYyuMKUNYIsCtHUiIBW
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -138,5 +138,5 @@ GRANT SELECT ON TABLE public.fmi_producer TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Oc1hgTsEk8nFMoFpGFihYKUwYEdL90vILqqe1bGSbTiyCeKFCjYDUl5iJlHueHV
+\unrestrict 9B5x1cYHEyoaHDbuFQXvnwyKY9nSi4ESswZsC1VlOR6YcYyuMKUNYIsCtHUiIBW
 

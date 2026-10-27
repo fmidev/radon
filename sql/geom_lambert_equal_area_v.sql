@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict J5XpIPC9qqD1SA4jsE0lzvKRfyJw2zDk4b7iWW2WMlq33ONqGD3dM2rf6wOk6cm
+\restrict TQEQNKh0B8tM4H0PW3qFhTweO5OLHOwtgNcTawC7smBaJJqfPjTbyKNe1gixTCV
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -47,7 +47,7 @@ CREATE VIEW public.geom_lambert_equal_area_v AS
   WHERE ((g.id = gs.id) AND (g.projection_id = 7));
 
 
-ALTER VIEW public.geom_lambert_equal_area_v OWNER TO radon_admin;
+ALTER TABLE public.geom_lambert_equal_area_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE geom_lambert_equal_area_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -60,5 +60,5 @@ GRANT SELECT ON TABLE public.geom_lambert_equal_area_v TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict J5XpIPC9qqD1SA4jsE0lzvKRfyJw2zDk4b7iWW2WMlq33ONqGD3dM2rf6wOk6cm
+\unrestrict TQEQNKh0B8tM4H0PW3qFhTweO5OLHOwtgNcTawC7smBaJJqfPjTbyKNe1gixTCV
 

@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict uQBKwfI8k6BvcukQSHSI7c0BvGyKURpjIViOJYfNhBL4E8auKIJsHXcxRlKc5gk
+\restrict sR8lTzZ5rPvWGINbuvglMMLuY0BcnLrq7qB86rnUnBINftcoXrYRBWGR28U042Q
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -34,7 +34,7 @@ CREATE VIEW public.station_icao_v AS
   WHERE ((s.id = m.station_id) AND (m.network_id = 2));
 
 
-ALTER VIEW public.station_icao_v OWNER TO radon_admin;
+ALTER TABLE public.station_icao_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE station_icao_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -47,5 +47,5 @@ GRANT SELECT ON TABLE public.station_icao_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict uQBKwfI8k6BvcukQSHSI7c0BvGyKURpjIViOJYfNhBL4E8auKIJsHXcxRlKc5gk
+\unrestrict sR8lTzZ5rPvWGINbuvglMMLuY0BcnLrq7qB86rnUnBINftcoXrYRBWGR28U042Q
 

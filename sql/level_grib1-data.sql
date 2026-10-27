@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict Bx6WsU4aHKfT6xAN4ENE40m12pNbWqLntjg0ycoDnL2WzCMv2xVxtHb5AaQLcjZ
+\restrict OsLXbmzXBOTBRTEJoXxHEbugfhjvJpN0scioplA4hIHFN3vX2gEWT4hxVGW9SiX
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -163,5 +163,5 @@ COPY public.level_grib1 (producer_id, level_id, grib_level_id, last_updater, las
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Bx6WsU4aHKfT6xAN4ENE40m12pNbWqLntjg0ycoDnL2WzCMv2xVxtHb5AaQLcjZ
+\unrestrict OsLXbmzXBOTBRTEJoXxHEbugfhjvJpN0scioplA4hIHFN3vX2gEWT4hxVGW9SiX
 

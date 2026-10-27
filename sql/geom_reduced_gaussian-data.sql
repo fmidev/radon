@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict g5tFd7EMnk1JldIeLUNxERL4q8ZtUeCIikwpkZrkgLGeA3xVKLchuEjH3q4Zqyt
+\restrict w9gPcIrvHUzhcBgydmsuiQ9HTOqLCkhcmqpNefitfxLhmMwhm6cxOfdYZet72fN
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -33,5 +33,5 @@ COPY public.geom_reduced_gaussian (id, name, nj, first_point, last_point, scanni
 -- PostgreSQL database dump complete
 --
 
-\unrestrict g5tFd7EMnk1JldIeLUNxERL4q8ZtUeCIikwpkZrkgLGeA3xVKLchuEjH3q4Zqyt
+\unrestrict w9gPcIrvHUzhcBgydmsuiQ9HTOqLCkhcmqpNefitfxLhmMwhm6cxOfdYZet72fN
 

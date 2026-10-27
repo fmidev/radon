@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict 2ZwdWCWmIWcrK61gLncjtNKWyftrjC23i3KR9BC2KIVUffRSkrur3WPh1BqfqdJ
+\restrict am1dxG4x6WpAD7FuZeXnSgkhTZEAidaYd7xb7iaoJtmxqs8ahct11NaJPn87dSU
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -78,5 +78,5 @@ GRANT INSERT,DELETE,UPDATE ON TABLE public.ss_state TO radon_rw;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 2ZwdWCWmIWcrK61gLncjtNKWyftrjC23i3KR9BC2KIVUffRSkrur3WPh1BqfqdJ
+\unrestrict am1dxG4x6WpAD7FuZeXnSgkhTZEAidaYd7xb7iaoJtmxqs8ahct11NaJPn87dSU
 

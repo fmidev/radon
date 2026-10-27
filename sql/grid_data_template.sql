@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict bIl6Gh8jfuz5M5qX4tr7nOq5eER3PeKp0MlJOIQv1dDxp44iXII954nbRQTQvkv
+\restrict CW7E04zX79UwW5YQPeavUyM2lHgNrz6VBphhIBtn3qFGoHUiTUY24ya3CVtNpDu
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -176,5 +176,5 @@ GRANT INSERT,DELETE,UPDATE ON TABLE public.grid_data_template TO radon_rw;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict bIl6Gh8jfuz5M5qX4tr7nOq5eER3PeKp0MlJOIQv1dDxp44iXII954nbRQTQvkv
+\unrestrict CW7E04zX79UwW5YQPeavUyM2lHgNrz6VBphhIBtn3qFGoHUiTUY24ya3CVtNpDu
 

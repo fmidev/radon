@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict c3cfap9c83JMeSjKqg14evTwq5lXPMSrCcUgumZMCa0ONbkNWdLOZWADVx3ZTuw
+\restrict ridmt0ummdvggEThz2xgkTFKOrvgaPe8yUoX0dW6nA1BP0sYZjSB5eW9CsW8Y9o
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -100,7 +100,7 @@ CREATE VIEW public.grid_era5mta_ssv_updating_year AS
    FROM raw;
 
 
-ALTER VIEW public.grid_era5mta_ssv_updating_year OWNER TO radon_admin;
+ALTER TABLE public.grid_era5mta_ssv_updating_year OWNER TO radon_admin;
 
 --
 -- Name: TABLE grid_era5mta_ssv_updating_year; Type: ACL; Schema: public; Owner: radon_admin
@@ -114,5 +114,5 @@ GRANT SELECT ON TABLE public.grid_era5mta_ssv_updating_year TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict c3cfap9c83JMeSjKqg14evTwq5lXPMSrCcUgumZMCa0ONbkNWdLOZWADVx3ZTuw
+\unrestrict ridmt0ummdvggEThz2xgkTFKOrvgaPe8yUoX0dW6nA1BP0sYZjSB5eW9CsW8Y9o
 

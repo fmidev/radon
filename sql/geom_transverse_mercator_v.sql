@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict 3U3jct0lh8hNiumhtp3T2RV1lUyZ5clqysQDX0zBqf3NXuRfOK580N1BfCaWcQA
+\restrict udY82fzHAJu61ucxTG6ZUI6iYSdTeXbdPNkernwa0zKdxarVScIMeAhVt3vl58L
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -48,7 +48,7 @@ CREATE VIEW public.geom_transverse_mercator_v AS
   WHERE ((g.id = gs.id) AND (g.projection_id = 8));
 
 
-ALTER VIEW public.geom_transverse_mercator_v OWNER TO radon_admin;
+ALTER TABLE public.geom_transverse_mercator_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE geom_transverse_mercator_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -61,5 +61,5 @@ GRANT SELECT ON TABLE public.geom_transverse_mercator_v TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 3U3jct0lh8hNiumhtp3T2RV1lUyZ5clqysQDX0zBqf3NXuRfOK580N1BfCaWcQA
+\unrestrict udY82fzHAJu61ucxTG6ZUI6iYSdTeXbdPNkernwa0zKdxarVScIMeAhVt3vl58L
 

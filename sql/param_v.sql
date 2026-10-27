@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict Lu9lteU91HBtNyKeHk1uKaoxnNMJTk2j4XSMQPM20GCdbbzW9My3w2Hr2lDbF51
+\restrict 3cTZdTZjccdshjWCIbpR3ZsZsowh8ljk6zcdR69vXH4dSMbXzUJ6RmMM1PvedCp
 
 -- Dumped from database version 15.2
--- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 15.15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -37,7 +37,7 @@ CREATE VIEW public.param_v AS
   WHERE ((p.unit_id = u.id) AND (p.interpolation_id = i.id));
 
 
-ALTER VIEW public.param_v OWNER TO radon_admin;
+ALTER TABLE public.param_v OWNER TO radon_admin;
 
 --
 -- Name: TABLE param_v; Type: ACL; Schema: public; Owner: radon_admin
@@ -50,5 +50,5 @@ GRANT SELECT ON TABLE public.param_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Lu9lteU91HBtNyKeHk1uKaoxnNMJTk2j4XSMQPM20GCdbbzW9My3w2Hr2lDbF51
+\unrestrict 3cTZdTZjccdshjWCIbpR3ZsZsowh8ljk6zcdR69vXH4dSMbXzUJ6RmMM1PvedCp
 
