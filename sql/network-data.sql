@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict sbl5UXtdhgX1Q5prpv34VDdSaAZf0kz6DK0vEkbTtnBM127wrukLBr2NF8EnNsR
+\restrict vZnddV2C2CLSSII5hgFGhgh9d9uPoGijSsLfnxupGDssR0Kom50OwCwC7UbRx3q
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -35,5 +35,5 @@ COPY public.network (id, name, description, last_updater, last_updated) FROM std
 -- PostgreSQL database dump complete
 --
 
-\unrestrict sbl5UXtdhgX1Q5prpv34VDdSaAZf0kz6DK0vEkbTtnBM127wrukLBr2NF8EnNsR
+\unrestrict vZnddV2C2CLSSII5hgFGhgh9d9uPoGijSsLfnxupGDssR0Kom50OwCwC7UbRx3q
 

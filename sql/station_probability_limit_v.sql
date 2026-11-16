@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict DQqzcDfpuYaAJqjbgG7csafIYoc1WQaAeLJ0SNSaS6JvyaOQSjqCR5UzToPioJy
+\restrict GuWo81GJ4KikIX8wCYAxyGQLe7HThviKOn0dGx97YLo7WtVzyiC1VuYTLQOuc5Z
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -49,5 +49,5 @@ GRANT SELECT ON TABLE public.station_probability_limit_v TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict DQqzcDfpuYaAJqjbgG7csafIYoc1WQaAeLJ0SNSaS6JvyaOQSjqCR5UzToPioJy
+\unrestrict GuWo81GJ4KikIX8wCYAxyGQLe7HThviKOn0dGx97YLo7WtVzyiC1VuYTLQOuc5Z
 

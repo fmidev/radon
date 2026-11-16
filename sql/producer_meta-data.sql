@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict OfbiTIEMwSxngt9pcenbCl3n5bdPj9YgK11tUQCwFLwPTfQYl5qlNgutvKKOzF3
+\restrict 3mEMjdcIt7oFVMBQ7vFStcFkvlJ03oR0S8PJjyt2ZwcQ4iOwkN2ReiElx623mHp
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -48,9 +48,7 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 8	hybrid level type	hybrid	\N	\N
 272	hybrid level type	hybrid	\N	\N
 270	first hybrid level number	1	\N	\N
-270	last hybrid level number	65	\N	\N
 7	first hybrid level number	1	\N	\N
-7	last hybrid level number	65	\N	\N
 10	ensemble size	1	\N	\N
 261	ensemble size	1	\N	\N
 10	first hybrid level number	1	\N	\N
@@ -92,6 +90,8 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 261	hybrid level type	hybrid	\N	\N
 267	ensemble size	10	\N	\N
 268	ensemble size	10	\N	\N
+270	last hybrid level number	90	\N	\N
+7	last hybrid level number	90	\N	\N
 261	last hybrid level number	90	\N	\N
 \.
 
@@ -100,5 +100,5 @@ COPY public.producer_meta (producer_id, attribute, value, last_updater, last_upd
 -- PostgreSQL database dump complete
 --
 
-\unrestrict OfbiTIEMwSxngt9pcenbCl3n5bdPj9YgK11tUQCwFLwPTfQYl5qlNgutvKKOzF3
+\unrestrict 3mEMjdcIt7oFVMBQ7vFStcFkvlJ03oR0S8PJjyt2ZwcQ4iOwkN2ReiElx623mHp
 

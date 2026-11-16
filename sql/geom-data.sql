@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict lgSR6mTKrJKxhFiIADd7P5ORHd131L2UEEtRxr11fbaexRm091Hc9RdGWyCMdaN
+\restrict oDjCY3cib8h6H4SYRJiyKMRFU6pA0wFcejW1GPY9YZYKQhy8Z8pfwDOHtjwwnJV
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -103,6 +103,7 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 997	HARMONIE022	4	Harmonie malli .22 asteen hilassa	\N	\N
 1078	MEPSSCAN2500	5	\N	wetodb	2017-09-06 06:50:47.915318+00
 609	HELMI	1	Area of Helmi ice model	\N	\N
+1144	NWCSAFSCAND3000	5	\N	radon_admin	2026-11-16 06:49:26.226297+00
 3	KWBCONEDEG	1	Washington global one degree resolution	\N	\N
 1097	VANADISG	1	\N	\N	\N
 40	LAPS3000	2	LAPS Analysis Area over Finland	\N	\N
@@ -152,12 +153,12 @@ COPY public.geom (id, name, projection_id, description, last_updater, last_updat
 -- Name: geom_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geom_id_seq', 1143, true);
+SELECT pg_catalog.setval('public.geom_id_seq', 1144, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict lgSR6mTKrJKxhFiIADd7P5ORHd131L2UEEtRxr11fbaexRm091Hc9RdGWyCMdaN
+\unrestrict oDjCY3cib8h6H4SYRJiyKMRFU6pA0wFcejW1GPY9YZYKQhy8Z8pfwDOHtjwwnJV
 

@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict u3c9TLjKK5dcLbOLHuzRmqKTW7n4Eq1DEXvmsRFbDffSfal1yc3N2bbzmdELu5Q
+\restrict mqN1ni9SxrOSt3g4hCQ7gcnmu14HwhHjlC9JT9ud3KLbqwu2Rq46mhoE3iY6Hhh
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -115,19 +115,25 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 104	LUKE	Luonnonvarakeskus	1	wetodb	2020-06-16 07:32:36	2
 502	NWCSAF	NWCSAF satellite products	1	\N	\N	2
 503	NWCSAFMTA	NWCSAF post processed products	1	\N	\N	2
+610	ILME_EC	ECMWF data for aviation forecast	1	\N	\N	1
+611	ILME_EC_PREOP	ECMWF preop data for aviation forecast	1	\N	\N	1
 504	NWCSAF_POLAR	NWCSAF polar orbiting satellite products	1	\N	\N	2
 505	NWCSAFMTA_POLAR	NWCSAF polar orbiting satellite post processed products	1	\N	\N	2
 520	VIEWFINDER	Viewfinder digital elevation map	1	\N	\N	2
 521	GLOBCOVER	Global land cover map	1	\N	\N	2
 283	HRNWC	High Resolution Nowcast	1	\N	\N	1
 113	WAM_BALMFC	FMI WAM BALMFC wave model for Baltic Sea	1	radon_admin	2023-05-08 04:30:56	1
+508	NWCSAFMTGMTA	NWCSAF satellite products from MTG post processed products	1	\N	\N	2
 153	WAM_HKI	FMI WAM Helsinki wave model	1	radon_admin	2023-05-08 04:35:21	1
 154	WAM_BALMFC_ARCH	FMI WAM BALMFC wave model for archipelago	1	radon_admin	2023-05-08 04:35:21	1
 244	ECGEPSCALIB	ECMWF EPS calibrated fields	1	radon_admin	2023-05-08 04:37:10	3
 271	MNWCMTADEV	MNWC postprocessed fields (preop)	1	radon_admin	2023-05-08 04:39:26	1
 272	MNWC_PREOPMTA	MNWC Preop postprocessed fields	1	radon_admin	2023-05-08 04:39:26	1
+507	NWCSAFMTG	NWCSAF satellite products from MTG	1	radon_admin	2026-11-16 06:57:03	2
 284	HRNWC_PREOP	High Resolution Nowcast Preop	1	radon_admin	2023-05-08 04:41:42	1
 290	CLOUDCAST	Cloudcast NWC	1	radon_admin	2023-05-08 04:42:05	1
+480	EUMETSAT_MSG	EUMETSAT MSG satellite	1	\N	\N	2
+481	EUMETSAT_MTG	EUMETSAT MTG satellite	1	\N	\N	2
 \.
 
 
@@ -135,5 +141,5 @@ COPY public.fmi_producer (id, name, description, class_id, last_updater, last_up
 -- PostgreSQL database dump complete
 --
 
-\unrestrict u3c9TLjKK5dcLbOLHuzRmqKTW7n4Eq1DEXvmsRFbDffSfal1yc3N2bbzmdELu5Q
+\unrestrict mqN1ni9SxrOSt3g4hCQ7gcnmu14HwhHjlC9JT9ud3KLbqwu2Rq46mhoE3iY6Hhh
 

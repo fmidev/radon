@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict DQ9AAAdLD4VP8uaEDIstDcBdfGQ2WvaIuKtBEWD0bjjNDSr8L7bXZgQ2YgIly8R
+\restrict IM89vUhKzG1hpUIIgCUMxuUbtrsOEIVbM1rf2bcuBLidbipY78OXIKIytIXKKQA
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -117,5 +117,5 @@ GRANT SELECT ON TABLE public.station TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict DQ9AAAdLD4VP8uaEDIstDcBdfGQ2WvaIuKtBEWD0bjjNDSr8L7bXZgQ2YgIly8R
+\unrestrict IM89vUhKzG1hpUIIgCUMxuUbtrsOEIVbM1rf2bcuBLidbipY78OXIKIytIXKKQA
 

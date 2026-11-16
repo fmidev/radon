@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict vbNU1aDnjfe1P1Gk0dye8NGWvub9hA3EMCv5gatfDSpZJw6HY2bLOfqHZeAS9bA
+\restrict gY6GnEIGOx8LluOUu1AacuCfAJxWgLZ6YR6E60kt5MqPtdwmLHQuIQNvbbz8xR3
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -53,6 +53,15 @@ COPY public.param_geotiff (id, producer_id, param_id, geotiff_name, last_updater
 29	506	502	MDSSFTD	\N	\N
 30	110	441	ACRR	\N	\N
 31	110	324	RATE	\N	\N
+32	507	1422	ct	\N	\N
+33	507	1423	ct_quality	\N	\N
+34	507	1424	cma	\N	\N
+35	507	1425	cma_quality	\N	\N
+36	507	272	ctth_tempe	\N	\N
+37	507	220	ctth_alti	\N	\N
+38	507	1426	ctth_pres	\N	\N
+39	507	1427	ctth_effectiv	\N	\N
+40	507	1428	ctth_quality	\N	\N
 \.
 
 
@@ -60,12 +69,12 @@ COPY public.param_geotiff (id, producer_id, param_id, geotiff_name, last_updater
 -- Name: param_geotiff_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_geotiff_id_seq', 31, true);
+SELECT pg_catalog.setval('public.param_geotiff_id_seq', 40, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict vbNU1aDnjfe1P1Gk0dye8NGWvub9hA3EMCv5gatfDSpZJw6HY2bLOfqHZeAS9bA
+\unrestrict gY6GnEIGOx8LluOUu1AacuCfAJxWgLZ6YR6E60kt5MqPtdwmLHQuIQNvbbz8xR3
 

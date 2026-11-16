@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict EJHfZ11eIz2Js6o5fAfdpwvqeAfQflqIFKmyjwo0eq3JqQt7sOsWU9nUIGdMat5
+\restrict W4GXvtYWsZDGFtnM7eAWc8rOTh7xd1gFSTYorLe5IQUT4hUZHpLQaeIZPjmOLdU
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -83,17 +83,21 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 112	135	147	98	\N	\N
 136	190	190	86	\N	\N
 137	285	216	86	\N	\N
+155	610	222	86	\N	\N
 113	189	189	88	wetodb	2018-09-20 10:00:52.201369+00
 28	132	215	98	wetodb	2019-06-11 09:08:14.635523+00
 83	4	0	251	wetodb	2020-02-04 09:33:05.510264+00
 120	271	208	86	\N	\N
+156	611	223	86	\N	\N
 138	286	217	86	\N	\N
 139	287	218	86	\N	\N
 140	288	219	86	\N	\N
 110	7	10	251	radon_admin	2022-09-04 17:22:45.245932+00
 122	290	251	86	radon_admin	2021-12-10 05:59:35.157977+00
+157	480	0	254	\N	\N
 126	283	212	86	\N	\N
 127	284	213	86	\N	\N
+158	481	1	254	\N	\N
 5	47	47	54	radon_admin	2024-06-13 07:52:20.50328+00
 27	131	161	98	postgres	2026-05-12 10:30:28.529901+00
 80	134	161	98	postgres	2026-05-12 10:30:28.529901+00
@@ -106,12 +110,12 @@ COPY public.producer_grib (id, producer_id, ident, centre, last_updater, last_up
 -- Name: producer_grib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.producer_grib_id_seq', 154, true);
+SELECT pg_catalog.setval('public.producer_grib_id_seq', 158, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict EJHfZ11eIz2Js6o5fAfdpwvqeAfQflqIFKmyjwo0eq3JqQt7sOsWU9nUIGdMat5
+\unrestrict W4GXvtYWsZDGFtnM7eAWc8rOTh7xd1gFSTYorLe5IQUT4hUZHpLQaeIZPjmOLdU
 

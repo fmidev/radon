@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict hKhshunuZ0TXUnN8hCqFmVD4jYqLVhrJsSdGL3BcmS7RPr71KYi6MH2Rxzh1R8g
+\restrict xODcFSJCw0u37rHXSkYgjDngbjhl6OTKVbUiD6aLIlhwG1PKircRACRbM6qUZuL
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -44,5 +44,5 @@ COPY public.geom_stereographic (id, name, ni, nj, first_point, di, dj, scanning_
 -- PostgreSQL database dump complete
 --
 
-\unrestrict hKhshunuZ0TXUnN8hCqFmVD4jYqLVhrJsSdGL3BcmS7RPr71KYi6MH2Rxzh1R8g
+\unrestrict xODcFSJCw0u37rHXSkYgjDngbjhl6OTKVbUiD6aLIlhwG1PKircRACRbM6qUZuL
 

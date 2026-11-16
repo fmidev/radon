@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict w5kubBPlGq4bAlWLFLJAhpE5zZpLeBkLsf0w6J3qD4bAhlcLqe1e6iUJcvlEql7
+\restrict PxVWignA96WrtW53HJR3ZMbKatcel61yc6WK2bDq5k7G7zE3wddVC14KcLdtAiD
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -71,5 +71,5 @@ GRANT SELECT ON TABLE public.producer_meta TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict w5kubBPlGq4bAlWLFLJAhpE5zZpLeBkLsf0w6J3qD4bAhlcLqe1e6iUJcvlEql7
+\unrestrict PxVWignA96WrtW53HJR3ZMbKatcel61yc6WK2bDq5k7G7zE3wddVC14KcLdtAiD
 

@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict t1wobrH5vSAnupmkUuxrTzDre4yPxfqISimaB89j9EpfdTd8lYuGejUUoFf5Pka
+\restrict QMQeHdYWZoLscdf4nDOx0EJRxgcJ8DTaXWMqZXgUQyAZOMpM5ioe6IBco6zOWTk
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -47,5 +47,5 @@ GRANT SELECT ON TABLE public.station_wmo_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict t1wobrH5vSAnupmkUuxrTzDre4yPxfqISimaB89j9EpfdTd8lYuGejUUoFf5Pka
+\unrestrict QMQeHdYWZoLscdf4nDOx0EJRxgcJ8DTaXWMqZXgUQyAZOMpM5ioe6IBco6zOWTk
 

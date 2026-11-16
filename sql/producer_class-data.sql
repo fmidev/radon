@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict iHidHME9BaETTlAuUhMvGZpYURCcjnGzAAnkaj1F4F63yLmIkT9Qf6FQjfZuhw1
+\restrict rw7tdtlvjxLxhJufgdL6qaRfxPkaOgO2wsM4RwE6Jhrf68XO6k4mAb24nucyuB0
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -39,5 +39,5 @@ SELECT pg_catalog.setval('public.producer_class_id_seq', 33, true);
 -- PostgreSQL database dump complete
 --
 
-\unrestrict iHidHME9BaETTlAuUhMvGZpYURCcjnGzAAnkaj1F4F63yLmIkT9Qf6FQjfZuhw1
+\unrestrict rw7tdtlvjxLxhJufgdL6qaRfxPkaOgO2wsM4RwE6Jhrf68XO6k4mAb24nucyuB0
 

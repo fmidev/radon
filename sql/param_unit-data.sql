@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict z50fSiLMIJ72c0w6Uf2beWhcNI5hJne39sn9jbEpgaiqBc27fXW3nE7GUzHXv47
+\restrict 4cS0TWpsE6DTwokJtPBrQEjYAEOWoHY6e7SwLSfgHnN3tKzQfftYBHy0gIA0NjB
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -110,6 +110,7 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 103	N cm-3	Number in cubic centimeter	\N	\N
 104	wildfires km-2	Wildfires per square kilometer	\N	\N
 105	kt hft-1	Knots per hectofeet	\N	\N
+107	mW m-2 sr-1 (cm-1)-1	Milliwatts per square metre, per steradian, per unit wavenumber	\N	\N
 \.
 
 
@@ -117,12 +118,12 @@ COPY public.param_unit (id, name, description, last_updater, last_updated) FROM 
 -- Name: param_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_unit_id_seq', 106, true);
+SELECT pg_catalog.setval('public.param_unit_id_seq', 107, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict z50fSiLMIJ72c0w6Uf2beWhcNI5hJne39sn9jbEpgaiqBc27fXW3nE7GUzHXv47
+\unrestrict 4cS0TWpsE6DTwokJtPBrQEjYAEOWoHY6e7SwLSfgHnN3tKzQfftYBHy0gIA0NjB
 

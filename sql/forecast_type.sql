@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 74hXT4F6ylKKIxyPv7YL69Oqe8Uwm7IQpkTlYqBasaOIstOy9cUMxMv7e7ZR21Q
+\restrict C4yABi1rmL3PO9nF84xDe1lC5eEOkTOOKacz8sH5tKDTBUhDtfT5nYE1YtUhJXR
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -106,5 +106,5 @@ GRANT SELECT ON TABLE public.forecast_type TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 74hXT4F6ylKKIxyPv7YL69Oqe8Uwm7IQpkTlYqBasaOIstOy9cUMxMv7e7ZR21Q
+\unrestrict C4yABi1rmL3PO9nF84xDe1lC5eEOkTOOKacz8sH5tKDTBUhDtfT5nYE1YtUhJXR
 

@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 1oybhBWDajJpntwjJaZURWOKEtDBWk1hrGHTFWBUJIPCuL5zKxyO7XuiX4AjIqN
+\restrict wpGJChkLqAHEYlRvSFExiacB8YE9nAtSB4fuecITKZyeqqKVVfExEWm9H8KhPMn
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -48,5 +48,5 @@ GRANT SELECT ON TABLE public.level_grib2_v TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 1oybhBWDajJpntwjJaZURWOKEtDBWk1hrGHTFWBUJIPCuL5zKxyO7XuiX4AjIqN
+\unrestrict wpGJChkLqAHEYlRvSFExiacB8YE9nAtSB4fuecITKZyeqqKVVfExEWm9H8KhPMn
 

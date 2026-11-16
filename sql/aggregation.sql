@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict Gfs8NxQQKnPsGKhy4P4f1tcxJcGwzOshvhQBwSHKzKSMVPhwcTJslE6s1MoVvZN
+\restrict utJUeKfQDD2YW71AaRwNobTGIPTGslOMLQNfxhAwrDyXIcgXlnmnqkGqA7DShDa
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -122,5 +122,5 @@ GRANT INSERT,DELETE,UPDATE ON TABLE public.aggregation TO radon_rw;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Gfs8NxQQKnPsGKhy4P4f1tcxJcGwzOshvhQBwSHKzKSMVPhwcTJslE6s1MoVvZN
+\unrestrict utJUeKfQDD2YW71AaRwNobTGIPTGslOMLQNfxhAwrDyXIcgXlnmnqkGqA7DShDa
 

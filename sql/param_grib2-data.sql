@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict gJ0UKbhCrYIVtvjNQHyVwxdWRzVn48H2Co4QTeOCcLgPO7yeYWfOHWHbbMpxFrD
+\restrict UwGMvLdKMkl4MEDn8oLfEWNdkc6nZweQdQN8XEdWTqou4ldCOK7XW1DFkqFyJlu
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -1103,6 +1103,8 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 1689	260	1618	0	19	208	\N	\N	\N	\N	-1
 1690	260	1619	0	19	209	\N	\N	\N	\N	-1
 1691	260	1620	0	19	210	\N	\N	\N	\N	-1
+1693	508	1427	0	1	83	\N	\N	\N	\N	-1
+1695	481	1621	3	1	192	\N	\N	radon_admin	2026-11-16 12:07:20.649417+00	-1
 \.
 
 
@@ -1110,12 +1112,12 @@ COPY public.param_grib2 (id, producer_id, param_id, discipline, category, number
 -- Name: param_grib2_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_grib2_id_seq', 1691, true);
+SELECT pg_catalog.setval('public.param_grib2_id_seq', 1695, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict gJ0UKbhCrYIVtvjNQHyVwxdWRzVn48H2Co4QTeOCcLgPO7yeYWfOHWHbbMpxFrD
+\unrestrict UwGMvLdKMkl4MEDn8oLfEWNdkc6nZweQdQN8XEdWTqou4ldCOK7XW1DFkqFyJlu
 

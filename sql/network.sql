@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict BJ9gUMYiRm7CEJh9jVjnNHoy4tlZbDry1D2mhavUPTeLlUYnTV9rWTmiudwj93D
+\restrict OfVHxShKkqqnLVQW3h62rQengpdp9C9YhXrfn4gUNWLlC4zthCAqSKFHAk3OjGT
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -78,5 +78,5 @@ GRANT SELECT ON TABLE public.network TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict BJ9gUMYiRm7CEJh9jVjnNHoy4tlZbDry1D2mhavUPTeLlUYnTV9rWTmiudwj93D
+\unrestrict OfVHxShKkqqnLVQW3h62rQengpdp9C9YhXrfn4gUNWLlC4zthCAqSKFHAk3OjGT
 

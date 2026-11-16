@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict Fg2aKa7Cfz9eGhzuy3C6g7QHFHDDsnhZZtnNWeoqpv62mUY2TSEARrO4IoInm4Z
+\restrict 2VQYvDnNdwbsf1WM4PJLe0NzjSbVpW6JaNasMYPaY2aY37OzMgghYc2TW8qEY02
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -89,5 +89,5 @@ CREATE TRIGGER mos_station_store_last_updated_trg BEFORE UPDATE ON public.mos_st
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Fg2aKa7Cfz9eGhzuy3C6g7QHFHDDsnhZZtnNWeoqpv62mUY2TSEARrO4IoInm4Z
+\unrestrict 2VQYvDnNdwbsf1WM4PJLe0NzjSbVpW6JaNasMYPaY2aY37OzMgghYc2TW8qEY02
 

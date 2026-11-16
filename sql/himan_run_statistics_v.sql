@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 9T4pKhkTT5SYdaNmI0S8fodTRSlIEDYhVGWaySoJGzWd7aWizfIZ18uDCDrg8QS
+\restrict LtbAcP7yESTiLEjpDfEQha1hn5qGt3M8qgWcqBs67ZisjaepeYPGImmPwqplset
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -45,5 +45,5 @@ GRANT SELECT ON TABLE public.himan_run_statistics_v TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 9T4pKhkTT5SYdaNmI0S8fodTRSlIEDYhVGWaySoJGzWd7aWizfIZ18uDCDrg8QS
+\unrestrict LtbAcP7yESTiLEjpDfEQha1hn5qGt3M8qgWcqBs67ZisjaepeYPGImmPwqplset
 

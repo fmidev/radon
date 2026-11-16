@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict pfP0jqnvU3wimO8UhiCPAEFWjFHr3SWEe0XpaiWV5lI4kCAoICEJMxWSbDqgzu8
+\restrict 39CyWafaJXTUNffDucEyGfcr5G30Yk5aa7lbBGVGuBJi1qoNoqaHnkeMUJzfsuz
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -100,5 +100,5 @@ GRANT SELECT ON TABLE public.earth_shape TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict pfP0jqnvU3wimO8UhiCPAEFWjFHr3SWEe0XpaiWV5lI4kCAoICEJMxWSbDqgzu8
+\unrestrict 39CyWafaJXTUNffDucEyGfcr5G30Yk5aa7lbBGVGuBJi1qoNoqaHnkeMUJzfsuz
 

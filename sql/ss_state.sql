@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict am1dxG4x6WpAD7FuZeXnSgkhTZEAidaYd7xb7iaoJtmxqs8ahct11NaJPn87dSU
+\restrict eNAddoa1bKMAr08enirUBb3rbHIzl52X8zThq97DBwcLBKt3va2HZvFew8XaSVp
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -78,5 +78,5 @@ GRANT INSERT,DELETE,UPDATE ON TABLE public.ss_state TO radon_rw;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict am1dxG4x6WpAD7FuZeXnSgkhTZEAidaYd7xb7iaoJtmxqs8ahct11NaJPn87dSU
+\unrestrict eNAddoa1bKMAr08enirUBb3rbHIzl52X8zThq97DBwcLBKt3va2HZvFew8XaSVp
 

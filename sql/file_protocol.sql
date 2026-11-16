@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict yL6JxOSCz3f4Y7ewPHTk2kaKuKffeR1Hb7dyXq0EOpuP1gAdyizEGf0UwtIUayw
+\restrict DYxF0N4y7S343UUDBtLH7wFRqJx2auVmZqtwBeImjMscSIpJtb1BFwFgDZGzHZa
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -99,5 +99,5 @@ GRANT SELECT ON TABLE public.file_protocol TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict yL6JxOSCz3f4Y7ewPHTk2kaKuKffeR1Hb7dyXq0EOpuP1gAdyizEGf0UwtIUayw
+\unrestrict DYxF0N4y7S343UUDBtLH7wFRqJx2auVmZqtwBeImjMscSIpJtb1BFwFgDZGzHZa
 

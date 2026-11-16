@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 9B5x1cYHEyoaHDbuFQXvnwyKY9nSi4ESswZsC1VlOR6YcYyuMKUNYIsCtHUiIBW
+\restrict EWuAutTiOTxc4xOhvAcfzCKLzvwRsImf9NWgnql4PurOY9duJbf3TY1zyxbbVT0
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -138,5 +138,5 @@ GRANT SELECT ON TABLE public.fmi_producer TO radon_ro;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 9B5x1cYHEyoaHDbuFQXvnwyKY9nSi4ESswZsC1VlOR6YcYyuMKUNYIsCtHUiIBW
+\unrestrict EWuAutTiOTxc4xOhvAcfzCKLzvwRsImf9NWgnql4PurOY9duJbf3TY1zyxbbVT0
 

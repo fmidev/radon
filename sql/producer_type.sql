@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict ivLisC3J2FIKdQ6wWUsmOh0ncbX6svyZcAob4hZ8dgeBnvku4wkOvghuGOG2UHs
+\restrict VcfgYDaM28BX1pMhZEh6xfZjkN6tJ3clIn0S23UOhTyoUgXOC1ObZG5OL4r6MYN
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -113,5 +113,5 @@ GRANT SELECT,UPDATE ON SEQUENCE public.producer_type_id_seq TO radon_rw;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict ivLisC3J2FIKdQ6wWUsmOh0ncbX6svyZcAob4hZ8dgeBnvku4wkOvghuGOG2UHs
+\unrestrict VcfgYDaM28BX1pMhZEh6xfZjkN6tJ3clIn0S23UOhTyoUgXOC1ObZG5OL4r6MYN
 

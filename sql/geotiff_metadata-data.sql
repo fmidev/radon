@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 9khA5ZB2o06E82Q1SfGoRdTB3Af5YCUejV8RDUJE7sGIs85wzf0kqRZ6u8zcyTb
+\restrict evqfkktECDyPuhUZX6bGWlvUD1r5lRR28VQ2KjBCtjNKy5EqM7tMTgXxXK3rane
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -23,6 +23,8 @@ SET row_security = off;
 --
 
 COPY public.geotiff_metadata (id, producer_id, attribute, key, mask) FROM stdin;
+18	507	param_name	NETCDF_VARNAME	([a-z_]*)
+19	507	producer_id	NETCDF_VARNAME	([0-9]*)
 8	502	param_name	NETCDF_VARNAME	([a-z_]*)
 5	115	param_name		<Item name="Quantity" unit="%">([A-Za-z0-9 ]*)</Item>
 9	502	producer_id	NETCDF_VARNAME	([0-9]*)
@@ -41,12 +43,12 @@ COPY public.geotiff_metadata (id, producer_id, attribute, key, mask) FROM stdin;
 -- Name: geotiff_metadata_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.geotiff_metadata_id_seq', 17, true);
+SELECT pg_catalog.setval('public.geotiff_metadata_id_seq', 19, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 9khA5ZB2o06E82Q1SfGoRdTB3Af5YCUejV8RDUJE7sGIs85wzf0kqRZ6u8zcyTb
+\unrestrict evqfkktECDyPuhUZX6bGWlvUD1r5lRR28VQ2KjBCtjNKy5EqM7tMTgXxXK3rane
 

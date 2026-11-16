@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict KyrlqgsKH4QhbraSZv7gen0SqSvDkNIKAXPO1eYhPZ70gBqI7yMf1gHELyxmGSy
+\restrict bkXKFMYTcxEDXldUs9KHJKzRb392pQhGgC3XulUqaI23xakkTDl0i7QZB5iFfPC
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -35,6 +35,7 @@ COPY public.geom_lambert_conformal (id, name, ni, nj, first_point, di, dj, scann
 1137	MEPS1500D	1581	1781	0101000020E61000005760C8EA56CFD13FA1A3552DE9284940	1500	1500	+x+y	15	63.3	63.3	0101000020E6100000000000000000000000000000008056C0	MEPS scandinavia 1500 metre area version D	\N	\N	7	\N
 1136	MEPS2500_METNO	849	969	0101000020E6100000AF5FB01BB6ADF93F3DD7F7E120D14940	2500	2500	+x+y	15	63.3	63.3	\N	MEPS scandinavia 2500 meter area, trimmed 50 datapoints	\N	\N	7	\N
 1112	MEPS1000D	2371	2671	0101000020E61000005760C8EA56CFD13FA1A3552DE9284940	1000	1000	+x+y	15	63.3	63.3	0101000020E6100000000000000000000000000000008056C0	MEPS scandinavia 1000 metre area version D	\N	\N	7	\N
+1144	NWCSAFSCAND3000	795	894	0101000020E61000009FFAACD7992232C0A11BB34FB4305240	2998.207688	3000.56524	+x-y	15	63.3	63.3	\N	NWCSAF grid over ~MEPS2500D area in 2.6km	\N	\N	4	\N
 \.
 
 
@@ -42,5 +43,5 @@ COPY public.geom_lambert_conformal (id, name, ni, nj, first_point, di, dj, scann
 -- PostgreSQL database dump complete
 --
 
-\unrestrict KyrlqgsKH4QhbraSZv7gen0SqSvDkNIKAXPO1eYhPZ70gBqI7yMf1gHELyxmGSy
+\unrestrict bkXKFMYTcxEDXldUs9KHJKzRb392pQhGgC3XulUqaI23xakkTDl0i7QZB5iFfPC
 

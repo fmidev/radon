@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict csEyIj78MHacWSJHBHFa6UN34BiKSHDBP7kbd4gYn7WTKPoPy3n93dc7R6EO5gH
+\restrict 7wxFUemMX4h4muEFBpDafZpjYO7Kjxob6ZruyP3n0IhHfYm3P0SAjG57S504xPi
 
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.15
@@ -1272,6 +1272,7 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 1618	INVERSION-K	1	3	1	Inversion in degrees	\N	\N
 1619	INVERSION-TOP-FT	1	82	1	Inversion top in feet	\N	\N
 1620	INVERSION-BASE-FT	1	82	1	Inversion base in feet	\N	\N
+1621	VIS04-MWM2SRCM	1	107	1	Radiance at 0.44um	\N	\N
 1594	EFI-FF--1TO1	1	90	2	Extreme Forecast Index for wind speed	\N	\N
 1609	DAYLIGHT-0OR1	1	28	2	Boolean value of daylight	radon_admin	2026-08-20 11:55:05
 39	RTOPLW-WM2	1	12	1	Net long wave radiation, top of atmosphere	radon_admin	2023-03-27 04:20:33
@@ -1283,12 +1284,12 @@ COPY public.param (id, name, version, unit_id, interpolation_id, description, la
 -- Name: param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: radon_admin
 --
 
-SELECT pg_catalog.setval('public.param_id_seq', 1620, true);
+SELECT pg_catalog.setval('public.param_id_seq', 1621, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict csEyIj78MHacWSJHBHFa6UN34BiKSHDBP7kbd4gYn7WTKPoPy3n93dc7R6EO5gH
+\unrestrict 7wxFUemMX4h4muEFBpDafZpjYO7Kjxob6ZruyP3n0IhHfYm3P0SAjG57S504xPi
 
