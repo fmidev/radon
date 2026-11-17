@@ -4,7 +4,7 @@ CREATE OR REPLACE FUNCTION public.radon_version_f()
  STABLE STRICT SECURITY DEFINER
 AS $function$
 BEGIN
-  RETURN '20241119';
+  RETURN '20261117';
 END;
 $function$
 

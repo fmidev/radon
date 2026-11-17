@@ -127,6 +127,7 @@ for f in producer_class producer_class-data \
 	geom_lambert_equal_area geom_lambert_equal_area-data \
 	geom_reduced_gaussian geom_reduced_gaussian-data \
 	geom_transverse_mercator geom_transverse_mercator-data \
+	geom_geostationary \
 	geotiff_metadata geotiff_metadata-data \
 	level level-data \
 	level_grib1 level_grib1-data \
