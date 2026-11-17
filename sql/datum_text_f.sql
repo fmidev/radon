@@ -14,7 +14,7 @@ BEGIN
     RETURN '+R=' || a;
 
   ELSIF a IS NOT NULL AND b IS NOT NULL THEN
-    RETURN '+a=' || a || '+b=' || b;
+    RETURN '+a=' || a || ' +b=' || b;
   END IF;
 
   RETURN '';
