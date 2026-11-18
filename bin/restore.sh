@@ -124,7 +124,7 @@ for f in producer_class producer_class-data \
 	geom_rotated_latitude_longitude geom_rotated_latitude_longitude-data \
 	geom_stereographic geom_stereographic-data \
 	geom_lambert_conformal geom_lambert_conformal-data \
-	geom_lambert_equal_area \
+	geom_lambert_equal_area geom_lambert_equal_area-data \
 	geom_reduced_gaussian geom_reduced_gaussian-data \
 	geom_transverse_mercator geom_transverse_mercator-data \
 	geotiff_metadata geotiff_metadata-data \
